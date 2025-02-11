@@ -1,0 +1,23 @@
+.page-artikels {
+  padding: 9rem 2% 1rem;
+}
+.page-artikels .page-artikel {
+  max-width: 90rem;
+  margin: 1;
+}
+.page-artikel h1, h2 {
+  font-family: var(--harga-font);
+  padding: 1rem 0 0;
+}
+
+.page-artikel h1 span, h2 span {
+  color: var(--bash);
+}
+
+.page-artikel p {
+  text-align: justify;
+}
+.page-artikel p span {
+  font-style: italic;
+  color: var(--alpa);
+}
