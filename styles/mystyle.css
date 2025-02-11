@@ -1,0 +1,988 @@
+@import url(https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap);
+
+:root {
+  --bash: #f4d430;
+  --alpa: #f7e378;
+  --bg: #010101;
+  --kin: #133;
+  --pita: #e00;
+  --blok: #000;
+  --text: #fff;
+  --btn: #182d62;
+  --harga: #008000;
+  --linear: linear-gradient(45deg, #f4d430, #000);
+  --judul-font: "Kavoon", serif;
+  --body1-font: "Nunito", serif;
+  --harga-font: "Rum Raisin", serif;
+  --bonus: "Miltonian Tattoo", serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body1-font);
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem;
+  background-color: rgba(1,1,1,0.8);
+  border-bottom: 1px solid var(--bash);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-nav span {
+  color: var(--bash);
+}
+
+.navbar .navbar-menu {
+  left: 0;
+  color: var(--text);
+}
+.navbar .navbar-menu a {
+  color: var(--text);
+  margin: 0 1rem;
+}
+
+.navbar .navbar-menu a:hover {
+  color: var(--bash);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.navbar .navbar-logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  font-style: italic;
+  font-family: var(--judul-font);
+}
+
+.navbar .navbar-logo span {
+  color: var(--bash);
+}
+
+.navbar .navbar-nav a {
+  color: var(--text);
+  font-family: var(--judul-font);
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--bash);
+}
+
+.navbar .navbar-nav a::after {
+  content: ' ';
+  display: block;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1rem solid var(--bash);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--text);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--bash);
+}
+
+
+
+/* Shopping Cart */
+#shopping-cart-button {
+  position: relative;
+}
+
+#shopping-cart-button .quantity-badge {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: var(--bash);
+  border-radius: 50%;
+  border: 1px solid var(--bg);
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--judul-font);
+  color: var(--bg);
+}
+
+.shopping-cart {
+ position: absolute;
+ top: 100%;
+ right: -100%;
+ width: 30rem;
+ height: 100vh;
+ padding: 0 1.5rem;
+ background: var(--alpa);
+ color: var(--bg);
+ transition: 0.4s linear;
+}
+
+.shopping-cart.active {
+  right: 0;
+}
+
+.shopping-cart .cart-item {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--pita);
+  position: relative;
+}
+
+.shopping-cart img {
+height: 6rem;
+border: 0.3px solid var(--bg);
+box-shadow: 1px 1px 3px #133;
+}
+
+.shopping-cart h3 {
+  font-size: 1.4rem;
+  font-family: var(--judul-font);
+}
+
+.shopping-cart .item-price {
+  font-size: 1.2rem;
+  font-family: var(--harga-font);
+}
+
+.shopping-cart .cart-item #add, .shopping-cart .cart-item #remove {
+  display: inline-block;
+  padding: 1px 5px;
+  cursor: pointer;
+  margin: 0 8px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid var(--bg);
+  color: var(--bg);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.shopping-cart h4 {
+  font-size: 1.6rem;
+  margin-top: -1rem;
+  text-align: center;
+  font-family: var(--harga-font);
+  font-weight: italic;
+}
+
+.shopping-cart h4 span {
+  text-align: right;
+}
+
+/* Chekout Form */
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed var(--bg);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.form-container h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-container form {
+  width: 100%;
+  text-align: center;
+}
+
+.form-container label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.form-container span {
+  text-align: right;
+  font-weight: bold;
+}
+
+.form-container input {
+  background-color: var(--text);
+  font-family: var(--body1-font);
+  border-radius: 5px;
+  border: 0.5px solid var(--bg);
+  padding: 5px;
+  font-size: 1rem;
+  width: 70%;
+}
+
+.form-container .checkout-button {
+  padding: 6px 14px;
+  background-color: var(--btn);
+  font-family: var(--body1-font);
+  color: var(--text);
+  font-weight: italic;
+  font-size: 1rem;
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px var(--bg);
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+.form-container .checkout-button.disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+
+/* Home */
+.home-artikel {
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.home-artikel,
+.artikels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-artikel .utama {
+  width: auto;
+  height: auto;
+}
+  
+.home-artikel .utama h2,
+.artikels .artikel h2 {
+  font-family: var(--harga-font);
+  color: var(--bash);
+}
+
+.home-artikel .utama p,
+.artikels .artikel p {
+  text-align: justify;
+}
+
+.home-artikel .utama .thumbnail,
+.artikels .artikel .thumbnail {
+  float: left;
+  margin-right: 2px;
+  margin-top: 2px;
+  text-align: center;
+  }
+  
+.utama .thumbnail img{
+  width: 25vw;
+  height: auto;
+  margin-right: 5px;
+  border: 0.2px solid var(--text);
+}
+
+.artikel .thumbnail img {
+  width: 15vw;
+  height: auto;
+  margin-right: 5px;
+  border: 0.2px solid var(--text);
+  }
+
+.artikels .artikel {
+  flex: 1;
+  width: 50%;
+/*  background-color: rgba(255,255,244,0.2); */
+  padding: 10px;
+  border: 1px solid var(--text);
+  }
+
+.utama a, .artikels .artikel a {
+  color: var(--bash);
+}
+  
+.sidebar {
+  flex: 1;
+  color: black;
+  width: 20%;
+  display: flex;
+  padding: 2px;
+  height: auto;
+  background: ;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+.cube-container {
+  width: 200px;
+  height: 200px;
+  }
+
+/* Kubus */
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 5s linear infinite;
+  }
+
+/* Sisi-sisi kubus */
+.cube div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 6px;
+  border: 2px solid var(--text);
+  box-shadow: 0 0 10px var(--text);
+  text-align: center;
+  line-height: 100%;
+  font-weight: bold;
+  }
+
+.front { transform: translateZ(100px);  background: radial-gradient(circle, #f53, #a00, #900); }
+.back { transform: rotateY(180deg) translateZ(100px); background: radial-gradient(circle, #ff8, #ff0, #fe2); }
+.left { transform: rotateY(-90deg) translateZ(100px); background: radial-gradient(circle, #0f0, #392, #372); }
+.right { transform: rotateY(90deg) translateZ(100px); background: radial-gradient(circle, #0af, #00f, #04f); }
+.top { transform: rotateX(90deg) translateZ(100px); background: radial-gradient(circle, #ff0, #f90, #f80); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background: radial-gradient(circle, #c7e, #82b, #81b); }
+
+/* Animasi Rotasi */
+@keyframes rotate {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+
+
+/* Hero Section */
+.hero {
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/images00.png');
+ /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 60px;
+  
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1,1,3,1) 4%, rgba(255,255,255,0) 55%);
+}
+
+.hero .content {
+  padding: 1.4rem;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3rem;
+  color: var(--text);
+  text-shadow: 1px 1px 3px rgba(1,1,1,0.8);
+  line-height: 1.2;
+  font-family: var(--judul-font);
+}
+
+.hero .content h1 span {
+  color: var(--bash);
+}
+
+.hero .content p {
+  
+  margin-top: 1rem;
+  line-height: 1.3;
+  font-weight: 200;
+  font-style: italic;
+  text-shadow: 1px 1px 2px var(--bg);
+  mix-blend-mode: differenc;
+  color: var(--text);
+  background: linear-gradient(110deg, rgba(1,1,3,0.3), rgba(255,255,255,0));
+}
+
+
+/* Produk Section */
+.produk, .contact, .books  {
+  padding: 6rem 7% 1.4rem;
+  text-align: center;
+}
+
+.produk h2, .contact h2, .books h2, .about h2, .minigame h2, .disclaimer h2 {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.produk p, .contact p {
+  max-width: 70rem;
+  line-height: 1;
+  margin: auto;
+  font-size: rem;
+}
+
+.produk .row {
+  display: flex;
+  flex-wrap: flex-wrap;
+  margin-top: 5rem;
+  justify-content: auto;
+  
+}
+
+.produk .row .menu-card {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.produk .row .menu-card img {
+  border-radius: 50%;
+  width: 15rem;
+  height: auto;
+}
+
+.produk .row .menu-card .menu-card-tittle {
+  margin: 1rem auto 0.5rem;
+  font-family: var(--judul-font);
+  font-size: 2rem;
+  color: var(--bash);
+}
+
+.produk .row .menu-card .menu-card-tittle span {
+  color: var(--text);
+}
+
+.produk .row .menu-card .tag-line {
+  font-style: italic;
+}
+
+.produk .menu-card .menu-card-price {
+  color: var(--bash);
+  font-family: var(--harga-font);
+}
+
+.produk .row .btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 2rem;
+  display: inline-block;
+  font-size: rem;
+  color: var(--bg);
+  background-color: var(--bash);
+  font-family: var(--judul-font);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(16,85,85,0.5);
+}
+
+/* Books Section */
+.books .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.books .book-card {
+  text-align: center;
+  border: 1px solid var(--alpa);
+  padding: 2rem;
+}
+
+.books .book-img {
+  padding: 1rem 0;
+}
+
+.books .book-img img {
+  height: 35rem;
+  border: 1px solid var(--bg);
+}
+
+.books .book-content h3, .modal .book-content h3 {
+  font-size: 3rem;
+  font-family: var(--judul-font);
+}
+
+.books .book-stars {
+  font-size: ;
+  padding: 0.8rem;
+  color: var(--bash);
+}
+
+.books .book-stars .starsfll {
+  fill: var(--bash);
+}
+
+.books .book-price {
+  background-color: var(--alpa);
+  border-radius: 10px;
+  border: 2px dashed var(--pita);
+  padding: 3rem;
+  font-family: var(--harga-font);
+}
+
+.books .book-price span {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  color: var(--pita);
+}
+
+.books .book-price p {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--harga);
+}
+
+.books .book-price .discon {
+  position: relative;
+  padding: 0;
+  font-size: ;
+}
+
+.books .book-price .discon::before {
+  content: '35%';
+  position: absolute;
+  top: -35px;
+  right: -25px;
+  background-color: var(--pita);
+  color: var(--text);
+  font-weight: bold;
+  padding: 5px 15px;
+  transform: rotate(0deg);
+  transform-origin: top-right;
+}
+
+.books .book-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.books .book-icons a {
+  width: 4rem;
+  height: 4rem;
+  color: var(--text);
+  margin: 3rem;
+  border: 1px solid var(--alpa);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.books .book-icons a:hover {
+  background-color: var(--bash);
+  border:  1px solid var(--bash);
+}
+
+
+
+/* About Section  */
+.about {
+  padding: 5rem 2% 2rem;
+  min-height: 90vw;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/images01.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.about::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1,1,3,1) 8%, rgba(255,255,255,0) 50%);
+}
+
+.about h2, .produk h2, .books h2, .disclaimer h2, .minigame h2, .contact h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-family: var(--judul-font);
+  font-style: italic;
+}
+
+.about h2 span, .produk h2 span, .books h2 span, .minigame h2 span {
+  color: var(--bash);
+}
+
+.about .content, .minigame .content, .disclaimer .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+  grid-column: span 1;
+}
+
+.about p, .minigame .content p, .disclaimer p {
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  line-height: 1;
+  font-size: 1.4rem;
+}
+
+/* Mini Game Section */
+.minigame {
+  display: relative;
+}
+.minigame .content {
+  position: relative;
+}
+.minigame .content #bgvideo {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.minigame .content .playbtn {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  margin: 50px;
+  justify-content: center;
+}
+
+.minigame .minigame-buttons {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 0;
+ max-width: 100%;
+ margin: 0;
+ }
+ 
+ .minigame .minigame-buttons button {
+   width: 96%;
+   height: 5vh;
+   margin: 1rem;
+   font-size: 2vh;
+   color: var(--text)
+   font-family: var(--body1-font);
+   cursor: pointer;
+   background-color: var(--harga);
+   border: 1px solid var(--bash);
+   box-shadow: 0 1.5rem var(--bash);
+   border-radius: 7px;
+   }
+
+ .minigame .minigame-buttons button:active { 
+   box-shadow: 0 0.5rem var(--bash);
+   background-color: var(--btn);
+   transform: translateY(1rem);
+ }
+ 
+ .minigame .minigame-buttons .game-btn {
+   font-family: var(--body1-font);
+ }
+
+
+/* Disclaimer Section */
+.disclaimer, .minigame {
+  padding: 6rem 2% 1rem;
+}
+
+.disclaimer .content p, .minigame p {
+  max-width: 90rem;
+  margin: 1;
+}
+.disclaimer .content p span {
+  font-weight: bold;
+  color: var(--bash);
+}
+
+
+/* Contact Section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: var(--kin);
+  }
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: var(--body1-font);
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid var(--text);
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: var(--bash);
+  font-family: var(--body1-font);
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: var(--bg);
+  background-color: var(--bash);
+  font-family: var(--judul-font);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--alpa);
+  text-align: center;
+  padding: 3rem;
+  margin-top: 3rem;
+  color: var(--kin);
+}
+
+footer .links a:hover, footer .credit a:hover {
+  color: var(--pita);
+  font-style: italic;
+  font-weight: 800;
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: var(--kin);
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-style: italic;
+}
+footer .credit a {
+  color: var(--kin);
+  font-weight: 800;
+}
+
+/* Pesan pop-up */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  }
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--alpa);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  height: 75%;
+  }
+  
+.popup-content h2 {
+  text-align: center;
+  font-family: var(--judul-font);
+  color: var(--bg);
+  line-height: 3rem;
+  font-size: 3rem;
+}
+
+.popup-content img {
+  width: 30rem;
+  height: 17rem;
+  text-align: justify;
+  
+  margin: 1rem auto;
+  
+}
+
+.popup-content .popup-paragraph {
+  text-align: justify;
+  color: var(--bg);
+  margin: 1rem auto;
+}
+
+.popup-content .close-popup {
+ padding: 6px 14px;
+ background-color: var(--pita);
+ color: var(--text);
+ font-size: 1rem;
+ border-radius: 7px;
+ box-shadow: 1px 1px 3px var(--bg);
+ margin: 2rem 0;
+ cursor: pointer;
+ font-family: var(--body1-font);
+ }
+ 
+ 
+ 
+
+
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: var(--text);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.8s;
+  }
+  
+  .navbar .navbar-nav.active {
+    left: 0;
+    background: var(--linear);
+  }
+  
+  .navbar .navbar-nav a {
+    color: var(--text);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+.artikels {
+  flex-direction: column;
+  }
+.artikels .artikel {
+  width: 100%;
+}
+
+.sidebar {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+  }
+
+.books .book-price .discon::before {
+  top: -20px;
+  right: -25px;
+}
+
+  .about .row {
+    flex-wrap: wrap;
+    grid-template-columns: 1fr;
+  }
+ .about .row .about-img {
+    grid-column: span 1;
+  }
+    
+ .about .row .content {
+    grid-column: span 1;
+  }
+  
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .map {
+    height: 30rem;
+  }
+  
+  .contact .row form {
+    padding-top: 0;
+  }
+  .disclaimer p, .minigame p {
+    font-size: 1.2rem;
+  }
+  
+
+
+
+/* Mobile Phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
