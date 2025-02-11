@@ -445,7 +445,7 @@ box-shadow: 1px 1px 3px #133;
 
 /* Produk Section */
 .produk, .contact, .books  {
-  padding: 6rem 7% 1.4rem;
+  padding: 6rem 5% 1.4rem;
   text-align: center;
 }
 
@@ -491,8 +491,13 @@ box-shadow: 1px 1px 3px #133;
   color: var(--text);
 }
 
-.produk .row .menu-card .tag-line {
+.produk .row .menu-card .tag-line,
+.produk .row .menu-card .tag-line-center {
   font-style: italic;
+}
+
+.produk .tag-line-center {
+  text-align: justify;
 }
 
 .produk .menu-card .menu-card-price {
