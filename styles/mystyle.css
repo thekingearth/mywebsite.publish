@@ -478,6 +478,7 @@ box-shadow: 1px 1px 3px #133;
   border-radius: 50%;
   width: 15rem;
   height: auto;
+  box-shadow: 0 0 10px var(--text);
 }
 
 .produk .row .menu-card .menu-card-tittle {
