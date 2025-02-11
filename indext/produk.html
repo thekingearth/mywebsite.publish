@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="../styles/artikels.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Produk jasa Kami</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="scripts/bookitems.js"></script>
+  
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="../index.html" class="navbar-logo"><span>Kin</span>Basari</a>
+  
+  <div class="navbar-nav">
+    <a href="produk.html">Produk<span>Me</span></a>
+    <a href="books.html">Books<span>Me</span></a>
+    <a href="about.html">About<span>Me</span></a>
+    <a href="minigame.html">Mini<span>game</span></a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.tottal)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.tottal)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled" type="submit" id="checkout-button" value="checkout" id="trigger">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Produk Section start -->
+<section class="produk">
+  <h2>Produk<span>Me</span></h2>
+  <p class="tag-line-center">Menyediakan jasa pembuatan website online shop, website portofolio, aplikasi, dan game terpercaya dengan harga terjangkau. Setiap proyek dikerjakan dengan profesionalisme tinggi dan perhatian terhadap detail, memastikan hasil yang memuaskan dan sesuai dengan keinginanmu. Mari bekerja sama untuk menciptakan solusi digital terbaik bagi bisnis atau proyek pribadimu.</p>
+  <div class="row">
+    <div class="menu-card">
+      <img src="jasa/imgjasa.png" alt= Jasa Create Olshop class="menu-card-img">
+      <h3 class="menu-card-tittle">Jasa buat <span>web Onlineshop</span></h3>
+      <p class="tag-line">Jasa pembuatan website online shop profesional untuk meningkatkan penjualan dan memperluas jangkauan bisnismu. Dengan desain responsif, fitur lengkap, integrasi pembayaran, dan kemudahan pengelolaan. Cocok untuk berbagai jenis produk dan layanan.</p>
+      <p class="menu-card-price">Rp 315.000,00</p>
+    </div>
+    <div class="menu-card">
+      <img src="jasa/imgjasa.png" alt="Jasa Create Website" class="menu-card-img">
+      <h3 class="menu-card-tittle">Jasa buat <span>web Portofolio</span></h3>
+      <p class="tag-line">Jasa pembuatan website portofolio profesional untuk menampilkan karya dan pencapaianmu secara elegan. Dengan menghadirkan desain modern, responsif, dan mudah diakses, sehingga portofoliomu dapat menarik perhatian klien atau perekrut dengan tampilan yang menonjol dan navigasi yang intuitif.</p>
+      <p class="menu-card-price">Rp 110.000,00</p>
+      
+    </div>
+    </div>
+   <div class="row">
+    <div class="menu-card">
+      <img src="jasa/imgjasa.png" alt= Jasa Create Olshop class="menu-card-img">
+      <h3 class="menu-card-tittle">Jasa buat <span>Aplikasi</span></h3>
+      <p class="tag-line-center">jasa pembuatan aplikasi dan Game online, maupun offline untuk platform mobile dan desktop. Sedikit pengalaman dan keahlianku dalam teknologi, aku siap membantumu mengembangkan aplikasi yang sesuai dengan kebutuhan bisnis atau proyek pribadi. Mulai dari perancangan, pengembangan, hingga pengujian. Akan Ku pastikan setiap tahap dikerjakan dengan profesionalisme tinggi untuk menghasilkan aplikasi yang fungsional, user-friendly, dan sesuai dengan harapan. Baik untuk Android, iOS, maupun desktop.</p>
+      <p class="menu-card-price">Rp 405.000,00</p>
+    </div>
+    </div>
+
+</section>
+<!-- Produk Section end -->
+
+
+<!-- Footer start -->
+<Footer>
+
+
+<div class="links">
+  <a href="../index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="disclaimer.html">Disclaimer</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="credit">
+  <p>Created by <a href="index.html">Kin Basari</a> | &copy; 2025.</p>
+</div>
+</Footer>
+<!-- Footer end -->
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+
+</body>
+</html>
