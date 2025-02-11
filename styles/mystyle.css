@@ -614,9 +614,10 @@ box-shadow: 1px 1px 3px #133;
   align-items: center;
 }
 
-.books .book-icons a:hover {
+.books .book-icons a:active {
   background-color: var(--bash);
-  border:  1px solid var(--bash);
+  border:  1px solid var(--pita);
+  color: var(--pita);
 }
 
 
