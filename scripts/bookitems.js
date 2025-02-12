@@ -88,7 +88,7 @@ document.addEventListener("alpine:init", () => {
         get quantity() {
             return this.items.reduce((sum, item) => sum + item.quantity, 0);
         },
-        get total() {
+        get tottal() {
             return this.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
         },
         add(item) {
