@@ -54,7 +54,7 @@
       <div class="item-price">
         <span x-text="rupiah(item.price)"></span> 
         <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
-        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+        <span x-text="item.quantity"></span>
         <button id="add" @click="$store.cart.add(item)">&plus;</button> 
         <span x-text="rupiah(item.tottal)"></span>
       </div>
@@ -148,7 +148,7 @@
 <script src="../scripts/popup.js"></script>
 <!-- Footer -->
   <script>
-     loadFooter();
+    loadFooter();
   </script>
 </body>
 </html>
