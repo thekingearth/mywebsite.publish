@@ -81,5 +81,32 @@ const rupiah = (number) => {
 };
 
 
-// Modal
+// quantity badge
+document.addEventListener("alpine:init", () => {
+    Alpine.store("cart", {
+        items: JSON.parse(localStorage.getItem("cart")) || [],
+        get quantity() {
+            return this.items.reduce((sum, item) => sum + item.quantity, 0);
+        },
+        get total() {
+            return this.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        },
+        add(item) {
+            let found = this.items.find((i) => i.id === item.id);
+            if (found) {
+                found.quantity++;
+            } else {
+                this.items.push({ ...item, quantity: 1 });
+            }
+            this.saveCart();
+        },
+        remove(id) {
+            this.items = this.items.filter((item) => item.id !== id);
+            this.saveCart();
+        },
+        saveCart() {
+            localStorage.setItem("cart", JSON.stringify(this.items));
+        }
+    });
+});
 
