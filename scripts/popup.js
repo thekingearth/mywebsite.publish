@@ -20,8 +20,8 @@ function createPopup() {
     paragraph1.textContent = "Informasi mengenai stok buku";
 
     let image = document.createElement("img");
-    image.src = "books/mybooks.png"; // Pastikan path benar
-    image.alt = "books 1";
+    image.src = "../books/mybooks.png"; // Pastikan path benar
+    image.alt = "informasi detail buku";
 
     let horizontalRule = document.createElement("hr");
 
