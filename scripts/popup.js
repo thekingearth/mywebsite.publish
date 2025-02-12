@@ -59,17 +59,16 @@ function closePopup() {
     }
 }
 
-// Pastikan elemen #trigger ada sebelum menambahkan event listener
+// Pastikan elemen dengan class "trigger" ada sebelum menambahkan event listener
 document.addEventListener("DOMContentLoaded", function () {
-    let trigger = document.getElementById("trigger");
-    if (trigger) {
+    let triggers = document.querySelectorAll(".trigger"); // Menggunakan class "trigger"
+    triggers.forEach(trigger => {
         trigger.addEventListener("click", function (event) {
             event.preventDefault();
             showPopup();
         });
-    }
+    });
 });
-
 
 function loadFooter() {
     document.write(`
