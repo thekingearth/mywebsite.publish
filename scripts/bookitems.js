@@ -12,16 +12,16 @@ document.addEventListener('alpine:init', () => {
   
   Alpine.store('cart', {
     items: [],
-    tottal: 0,
+    total: 0,
     quantity: 0,
     add(newItem) {
       // apakah ada barang yang sama d cart
       const cartItem = this.items.find((item) => item.id === newItem.id);
-      // Jija belum ada / kosong
+      // Jika belum ada / kosong
       if(!cartItem) {
-      this.items.push({...newItem, quantity: 1, tottal: newItem.price  });
+      this.items.push({...newItem, quantity: 1, total: newItem.price  });
       this.quantity++;
-      this.tottal += newItem.price;
+      this.total += newItem.price;
       } else {
         // jika barang ada cek Apakah barang Ada atau sama di cart
         this.items = this.items.map((item) => {
@@ -29,11 +29,11 @@ document.addEventListener('alpine:init', () => {
           if(item.id !== newItem.id) {
             return item;
           } else {
-            // Jika barang sudah ada, tambah jumlah dan tottal
+            // Jika barang sudah ada, tambah jumlah dan total
             item.quantity++;
-            item.tottal = item.price * item.quantity;
+            item.total = item.price * item.quantity;
             this.quantity++;
-            this.tottal += item.price;
+            this.total += item.price;
             return item;
           }
         });
@@ -51,9 +51,9 @@ document.addEventListener('alpine:init', () => {
             return item;
           } else {
             item.quantity--;
-            item.tottal = item.price * item.quantity;
+            item.total = item.price * item.quantity;
             this.quantity--;
-            this.tottal -= item.price;
+            this.total -= item.price;
             return item;
           }
         });
@@ -61,7 +61,7 @@ document.addEventListener('alpine:init', () => {
         // Jika barang sisa 1
         this.items = this.items.filter((item) => item.id !== id);
         this.quantity--;
-        this.tottal -= cartItem.price;
+        this.total -= cartItem.price;
       }
     },
   });
@@ -88,7 +88,7 @@ document.addEventListener("alpine:init", () => {
         get quantity() {
             return this.items.reduce((sum, item) => sum + item.quantity, 0);
         },
-        get tottal() {
+        get total() {
             return this.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
         },
         add(item) {
