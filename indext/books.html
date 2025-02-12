@@ -54,7 +54,7 @@
       <div class="item-price">
         <span x-text="rupiah(item.price)"></span> 
         <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
-        <span x-text="item.quantity"></span>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
         <button id="add" @click="$store.cart.add(item)">&plus;</button> 
         <span x-text="rupiah(item.tottal)"></span>
       </div>
@@ -139,23 +139,6 @@
 <!-- Buku Section end -->
 
 
-<!-- Footer start -->
-<Footer>
-
-
-<div class="links">
-  <a href="../index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="disclaimer.html">Disclaimer</a>
-  <a href="contact.html">Contact</a>
-</div>
-
-<div class="credit">
-  <p>Created by <a href="index.html">Kin Basari</a> | &copy; 2025.</p>
-</div>
-</Footer>
-<!-- Footer end -->
-
 
 <!--feather icons-->
 <script>
@@ -163,6 +146,9 @@
 </script>
 <script src="../scripts/myscript.js"></script>
 <script src="../scripts/popup.js"></script>
-
+<!-- Footer -->
+  <script>
+     loadFooter();
+  </script>
 </body>
 </html>
