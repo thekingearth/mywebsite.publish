@@ -31,6 +31,10 @@ html {
   scroll-behavior: smooth;
 }
 
+tittle {
+  color: transparent;
+}
+
 body {
   font-family: var(--body1-font);
   background-color: var(--bg);
@@ -742,9 +746,9 @@ box-shadow: 1px 1px 3px #133;
   max-width: 90rem;
   margin: 1;
 }
-.disclaimer .content p span {
+.disclaimer .content h4 {
   font-weight: bold;
-  color: var(--bash);
+  color: var(--alpa);
 }
 
 
