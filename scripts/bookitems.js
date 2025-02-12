@@ -14,24 +14,25 @@ document.addEventListener("alpine:init", () => {
   // Store Keranjang Belanja
   Alpine.store("cart", {
     items: JSON.parse(localStorage.getItem("cart")) || [],
-    
-    // Hitung total jumlah item
+
+    // Hitung total jumlah item di keranjang
     get quantity() {
       return this.items.reduce((sum, item) => sum + item.quantity, 0);
     },
 
-    // Hitung total harga
+    // Hitung total harga semua item
     get total() {
-      return this.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      return this.items.reduce((sum, item) => sum + item.total, 0);
     },
 
     add(newItem) {
       const cartItem = this.items.find((item) => item.id === newItem.id);
 
       if (!cartItem) {
-        this.items.push({ ...newItem, quantity: 1 });
+        this.items.push({ ...newItem, quantity: 1, total: newItem.price });
       } else {
         cartItem.quantity++;
+        cartItem.total = cartItem.price * cartItem.quantity;
       }
 
       this.saveCart();
@@ -43,6 +44,7 @@ document.addEventListener("alpine:init", () => {
       if (cartItem) {
         if (cartItem.quantity > 1) {
           cartItem.quantity--;
+          cartItem.total = cartItem.price * cartItem.quantity;
         } else {
           this.items = this.items.filter((item) => item.id !== id);
         }
@@ -57,7 +59,7 @@ document.addEventListener("alpine:init", () => {
   });
 });
 
-// Konversi angka ke format rupiah
+// Konversi angka ke format Rupiah
 const rupiah = (number) => {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
