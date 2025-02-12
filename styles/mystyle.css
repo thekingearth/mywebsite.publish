@@ -624,7 +624,7 @@ box-shadow: 1px 1px 3px #133;
 
 /* About Section  */
 .about {
-  padding: 5rem 2% 2rem;
+  padding: 5rem 0 2rem;
   min-height: 90vw;
   display: flex;
   align-items: center;
@@ -655,6 +655,10 @@ box-shadow: 1px 1px 3px #133;
   color: var(--bash);
 }
 
+.about h3 span {
+  color: var(--bash);
+}
+
 .about .content, .minigame .content, .disclaimer .content {
   flex: 1 1 35rem;
   padding: 0 1rem;
@@ -667,6 +671,11 @@ box-shadow: 1px 1px 3px #133;
   line-height: 1;
   font-size: 1.4rem;
 }
+
+.about p span {
+  font-style: italic;
+}
+
 
 /* Mini Game Section */
 .minigame {
