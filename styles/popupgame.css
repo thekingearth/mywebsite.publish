@@ -1,4 +1,4 @@
-.popup-overlay {
+.popup-games {
   display: flex;
   position: fixed;
   top: 0;
@@ -9,7 +9,7 @@
   z-index: 999;
   }
 
-.popup-content {
+.popup-game {
   display: fixed;
   position: absolute;
   top: 50%;
@@ -24,7 +24,7 @@
   height: 75%;
   }
   
-.popup-content .close-popup {
+.popup-game .close-popup {
  padding: 0 30px;
  margin-top: 5px;
  display: inline-block;
@@ -39,7 +39,7 @@
  }
 
   
-.popup-content h2 {
+.popup-game h2 {
   text-align: center;
   font-family: var(--harga-font);
   color: var(--bg);
@@ -47,7 +47,7 @@
   padding: 1rem;
 }
 
-.popup-content p {
+.popup-game p {
   text-align: justify;
   color: var(--bg);
   margin: 0;
@@ -57,12 +57,12 @@
   line-height: 1;
 }
 
-.popup-content p span {
+.popup-game p span {
   color: var(--pita);
   font-weight: bold;
   font-size: 1.7rem;
 }
-.popup-content .end-prg {
+.popup-game .end-prg {
   color: var(--pita);
   text-align: center;
   font-weight: bold;
