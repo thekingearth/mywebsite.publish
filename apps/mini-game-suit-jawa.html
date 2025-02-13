@@ -33,7 +33,7 @@ body {
 <!-- Alpine style -->
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <!-- my aplikasi -->
-<script src="scripts/bookitems.js"></script>
+<script src="../scripts/bookitems.js"></script>
   
 </head>
 <body>
@@ -102,9 +102,6 @@ body {
 <!-- shopping cart end -->
 </nav>
 <!-- navbar end -->
-<!-- Hero Section start -->
-
-<!--Hero Section end-->
 
 
 <!-- Audio Controls -->
@@ -113,13 +110,11 @@ body {
 <audio id="serisound" src="../sound/arny.mp3"></audio>
 <audio id="buttonSound" src="../sound/press.mp3"></audio>
 
-  <!-- popup content -->
 
 <!-- Game Section start -->
 <section class="game">
   <main class="content">
 <div id="suit-game" class="suit-game">
-<div class="content">
 <h1>Pilih <span>Sesukamu</span></h1>
   <div class="choices">
   <button id="play-pressbtn" class="choice" onclick="playGame('Gajah')">🐘</button>
@@ -128,13 +123,12 @@ body {
  </div>
  <div class="result" id="result"></div>
 </div>
-</div>
   </main>
 </section>
 <!-- Game Section end -->
   
 
-
+<!-- Pop up Game -->
 <div class="popup-games" id="popup-game">
  <div class="popup-game">
 <button onclick="closeIntruksi()" class="close-popup">Start</button>
@@ -159,8 +153,6 @@ body {
 <script src="../scripts/myscript.js"></script>
 <script src="../scripts/suitgame.js"></script>
 <script src="../scripts/popup.js"></script>
-<script src="../scripts/popupgame.js"></script>
-
 
 </body>
 </html>
