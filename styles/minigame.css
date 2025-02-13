@@ -1,0 +1,169 @@
+@import url(https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Sniglet:wght@400;800&display=swap);
+
+:root {
+  --bash: #f4d430;
+  --alpa: #f7e378;
+  --bg: #010101;
+  --kin: #133;
+  --pita: #e00;
+  --blok: #000;
+  --text: #fff;
+  --btn: #182d62;
+  --harga: #008000;
+  --opsi: #ff7f00;
+  --abstrak: linear-gradient(135deg, #ffd099, #e5c2ad, #ccb5c1, #b3a7d4, #9999e8);
+  --linear: linear-gradient(45deg, #f4d430, #000);
+  --judul-font: "Kavoon", serif;
+  --body1-font: "Nunito", serif;
+  --body2-font: "Sniglet", serif;
+  --harga-font: "Rum Raisin", serif;
+  --mouse-font: "Mouse Memoirs", serif;
+  --bonus: "Miltonian Tattoo", serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body1-font);
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+
+.game {
+  padding: 0 1% 1rem;
+}
+
+.game .content h4 {
+  font-weight: bold;
+  color: var(--alpa);
+}
+
+  #colorText {
+  font-size: 90px;
+  font-family: var(--body2-font);
+  margin: 20px 0;
+  font-weight: bold;
+  }
+button {
+  padding: 10px 20px;
+  font-size: 2rem;
+  margin: 10px;
+  font-family: var(--body2-font);
+  border: 1px solid var(--blok);
+  border-radius: 5px;
+  color: var(--text);
+  cursor: pointer;
+  background-color: var(--opsi);
+  font-weight: 100;
+  user-select: none;
+  height: 40px;
+  }
+button:active {
+  background-color: var(--pita);
+  transform: translateY(3px);
+  }
+  
+#timer {
+  font-size: 1.5rem;
+  color: var(--pita);
+  align-items: center;
+  
+  }
+  
+#gameOver {
+  font-family: var(--mouse-font);
+  color: var(--blok);
+  font-size: 2.5rem;
+  margin-top: 20px;
+  }
+
+.content {
+  text-align: center;
+  display: fixed;
+  }
+  
+h1 {
+  position: flex;
+  padding: 10px -20px;
+  font-size: 60px;
+  }
+
+
+
+/* Suit game */
+.suit-game h1 {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-family: var(--judul-font);
+  font-style: italic;
+}
+
+.suit-game h1 span {
+  color: var(--bash);
+}
+
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  max-width: 100%;
+  margin: 10px auto;
+  }
+  
+.choices button {
+  width: 30wh;
+  height: 10vh;
+  background-color: var(--bg);
+  font-family: var(--badan2-font);
+  color: var(--bg);
+  font-weight: bold;
+  font-size: 7rem;
+  border: 1px solid var(--bash);
+  border-radius: 7px;
+  box-shadow: 0 2rem var(--bash);
+  margin: 2px;
+  cursor: pointer;
+  }
+  
+.choices button:hover {
+background-color: #000;
+}
+  
+.choices button:active {
+background-color: var(--pita);
+box-shadow: 0 5px var(--bash);
+transform: translateY(2.5rem);
+}
+    
+.result {
+margin-top: 30px;
+font-size: 20px;
+color: #fff;
+text-align: center;
+min-height: 50px;
+}
+
+.result span {
+color: var(--bash);
+}
+.hasilnya {
+font-size: 8rem;
+}
