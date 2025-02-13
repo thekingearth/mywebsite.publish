@@ -85,3 +85,21 @@ function loadFooter() {
         </footer>
     `);
 }
+
+
+
+// Pop up Game
+function showIntruksi() {
+  document.getElementById('popup').style.display = 'block';
+  }
+function closeIntruksi() {
+  document.getElementById('popup').style.display = 'none';
+  }
+  
+  
+  function showIntruksi() {
+  document.getElementById('popup').style.display = 'block';
+  }
+function closeIntruksi() {
+  document.getElementById('popup').style.display = 'none';
+  }
