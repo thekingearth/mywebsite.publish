@@ -112,7 +112,10 @@
     <i data-feather="user"></i>
     <input type="text" id="name" placeholder="Nama">
   </div>
-  
+  <div class="input-group">
+    <i data-feather="phone"></i>
+    <input type="number" id="number" placeholder="No. Hp">
+  </div>
   <div class="input-group">
     <i data-feather="at-sign"></i>
     <input type="email" id="email" placeholder="Email">
@@ -146,8 +149,9 @@
             event.preventDefault();
             
             emailjs.send("service_n537v9y", "template_97rvpm2", {
+                to_email: "airinprimaferra@gmail.com",
                 from_name: document.getElementById("name").value,
-                
+                hone_number: document.getElementById("number").value,
                 from_email: document.getElementById("email").value,
                 message: document.getElementById("message").value
             }).then(
