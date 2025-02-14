@@ -69,3 +69,51 @@
   font-style: italic;
 }
 
+
+/* Human jump */
+.jump-game #gameOverPopup {
+ display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background: var(--alpa);
+ border: 2px solid var(--pita);
+ padding: 10px;
+ width: 80%;
+ height: 60%;
+ text-align: center;
+ z-index: 9999;
+}
+.jump-game #gameOverPopup h2, .jump-game .final {
+  align-items: center;
+}
+.jump-game #gameOverPopup p {
+  align-items: justify;
+}
+.jump-game #gameOverPopup p span {
+  color: var(--pita);
+}
+.jump-game #gameOverPopup button {
+  font-family: var(--badan1-font);
+  font-weight: bold;
+}
+
+.jump-game #gameOverPopup .pgf-end {
+  text-align: justify;
+  font-size: 10px;
+}
+.jump-game #gameOverPopup .pgf-end h4 {
+  font-size: 20px;
+  color: var(--pita);
+}
+
+.jump-game #gameOverPopup .pgf-end p {
+  font-style: italic;
+  text-align: justify;
+}
+
+.jump-game #gameOverPopup .pgf-end p span {
+  color: var(--pita);
+  font-weight: bold;
+}
