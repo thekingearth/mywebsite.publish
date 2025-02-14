@@ -198,12 +198,11 @@ font-size: 8rem;
 
 .rubik-game .controls {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
   justify-content: center;
   text-align: center;
   margin-top: 2px;
-  color: var(--text);
   }
 
 .rubik-game .controls button {
@@ -215,7 +214,8 @@ font-size: 8rem;
   background: var(--linear1);
   box-shadow: 0 2px 4px #006;
   font-family: var(--body1-font);
-  gap: 2px;
+  gap: 5px;
+  color: var(--text);
   }
 
 .rubik-game .shufflebtn {
@@ -227,6 +227,7 @@ font-size: 8rem;
   box-shadow: 0 2px 4px #000;
   justify-content: center;
   text-align: center;
+  align-items: center;
   }
 
 .rubik-game .controls button:active, .rubik-game .shufflebtn:active {
