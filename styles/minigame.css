@@ -97,7 +97,7 @@ body {
 
 
 /* Suit game */
-.suit-game h1, .rubik-game h1 {
+.suit-game h1, .rubik-game h1, puzzle-game h1 {
   margin-bottom: 1rem;
   text-align: left;
   font-size: 3rem;
@@ -106,7 +106,7 @@ body {
   font-style: italic;
   text-shadow: 0 0 5px #000;
 }
-.suit-game h1 span, .rubik-game h1 span {
+.suit-game h1 span, .rubik-game h1 span, .puzzle-game h1 span {
   color: var(--bash);
 }
 
@@ -236,4 +236,63 @@ font-size: 8rem;
 .rubik-game .controls button:active, .rubik-game .shufflebtn:active {
   background: var(--pita);
   transform: translateY(5px);
+  }
+
+/* Puzzle game 4x4 */
+.puzzlegame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-family: var(--judul-font);
+  }
+
+.puzzlegame .level {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: var(--harga-font);
+  font-style: italic;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  }
+
+.puzzlegame .container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(4, 90px);
+  grid-gap: 2px;
+  justify-content: center;
+  margin: auto;
+  background: ;
+  padding: 2px;
+  width: 100wh;
+  height: auto;
+  font-family: var(--body1-font);
+  font-weight: bold;
+  box-shadow: 0 0 5px #006;
+  }
+
+.puzzlegame .tile {
+  height: 90px;
+  margin: 0;
+  background: var(--linear1);
+  color: var(--text);
+  text-shadow: 0 2px 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  }
+
+.puzzlegame .tile.empty {
+  background: var(--alpa);
+  cursor: default;
+  }
+
+.puzzlegame .level {
+  font-size: 20px;
+  margin: 10px 0;
   }
