@@ -198,11 +198,12 @@ font-size: 8rem;
 
 .rubik-game .controls {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   justify-content: center;
   text-align: center;
   margin-top: 2px;
+  color: var(--text);
   }
 
 .rubik-game .controls button {
