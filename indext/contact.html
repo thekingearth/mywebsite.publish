@@ -149,28 +149,27 @@
     document.getElementById("emailForm").addEventListener("submit", function(event) {
         event.preventDefault();
 
-        // Ambil nilai input dari form
-        let userName = document.getElementById("name").value.trim();
-        let userEmail = document.getElementById("email").value.trim();
-        let userNumber = document.getElementById("number").value.trim();
-        let userMessage = document.getElementById("message").value.trim();
-
         // Validasi input
-        if (!userName || !userEmail || !userNumber || !userMessage) {
-            alert("Harap isi semua kolom sebelum mengirim email.");
+        const name = document.getElementById("name").value.trim();
+        const number = document.getElementById("number").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !number || !email || !message) {
+            alert("Semua bidang harus diisi!");
             return;
         }
-      // Kirim email menggunakan EmailJS
+
         emailjs.send("service_n537v9y", "template_97rvpm2", {
             to_email: "airinprimaferra@gmail.com",
-            from_name: userName,
-            from_email: userEmail,
-            phone_number: userNumber,
-            message: userMessage
+            from_name: name,
+            phone_number: number,
+            from_email: email,
+            message: message
         }).then(
             function(response) {
                 alert("Email berhasil dikirim!");
-                document.getElementById("emailForm").reset(); // Reset form setelah berhasil
+                document.getElementById("emailForm").reset();
             },
             function(error) {
                 alert("Gagal mengirim email: " + JSON.stringify(error));
