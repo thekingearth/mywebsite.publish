@@ -143,39 +143,32 @@
     </script>
 <script>
   (function() {
-        emailjs.init("gCr6Ll2tNM6y2L71U");
-    })();
-
-    document.getElementById("emailForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        // Validasi input
-        const name = document.getElementById("name").value.trim();
-        const number = document.getElementById("number").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        if (!name || !number || !email || !message) {
-            alert("Semua bidang harus diisi!");
+            emailjs.init("gCr6Ll2tNM6y2L71U");
+        })();
+        document.getElementById("emailForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+          
+            const userEmail = document.getElementById("email").value;
+            if (!userEmail) {
+            alert("Email tidak boleh kosong!");
             return;
-        }
-
-        emailjs.send("service_n537v9y", "template_97rvpm2", {
-            to_email: "airinprimaferra@gmail.com",
-            from_name: name,
-            phone_number: number,
-            from_email: email,
-            message: message
-        }).then(
-            function(response) {
-                alert("Email berhasil dikirim!");
-                document.getElementById("emailForm").reset();
-            },
-            function(error) {
-                alert("Gagal mengirim email: " + JSON.stringify(error));
             }
-        );
-    });
+            
+            emailjs.send("service_n537v9y", "template_97rvpm2", {
+                to_email: "airinprimaferra@gmail.com",
+                from_name: document.getElementById("name").value,
+                phone_number: document.getElementById("number").value,
+                from_email: userEmail,
+                message: document.getElementById("message").value
+            }).then(
+                function(response) {
+                    alert("Email berhasil dikirim!");
+                },
+                function(error) {
+                    alert("Gagal mengirim email: " + JSON.stringify(error));
+                }
+            );
+        });
 </script>
 
 </body>
