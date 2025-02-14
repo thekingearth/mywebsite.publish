@@ -132,6 +132,7 @@ body {
   box-shadow: 0 2rem var(--bash);
   margin: 2px;
   cursor: pointer;
+  font-weight: 100;
   }
   
 .suit-game .choices button:hover {
@@ -208,7 +209,7 @@ font-size: 8rem;
   width: 10rem;
   padding: 10px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 100;
   cursor: pointer;
   background: var(--linear1);
   box-shadow: 0 2px 4px #006;
@@ -219,9 +220,11 @@ font-size: 8rem;
 .rubik-game .shufflebtn {
   width: 70%;
   font-family: var(--body2-font);
-  font-weight: bold;
+  font-weight: 100;
   background: var(--abstrak);
   box-shadow: 0 2px 4px #000;
+  justify-content: center;
+  text-align: center;
   }
 
 .rubik-game .controls button:active, .rubik-game .shufflebtn:active {
