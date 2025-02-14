@@ -143,26 +143,40 @@
     </script>
 <script>
   (function() {
-            emailjs.init("gCr6Ll2tNM6y2L71U");
-        })();
-        document.getElementById("emailForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            emailjs.send("service_n537v9y", "template_97rvpm2", {
-                to_email: "airinprimaferra@gmail.com",
-                from_name: document.getElementById("name").value,
-                hone_number: document.getElementById("number").value,
-                from_email: userEmail,
-                message: document.getElementById("message").value
-            }).then(
-                function(response) {
-                    alert("Email berhasil dikirim!");
-                },
-                function(error) {
-                    alert("Gagal mengirim email: " + JSON.stringify(error));
-                }
-            );
-        });
+        emailjs.init("gCr6Ll2tNM6y2L71U");
+    })();
+
+    document.getElementById("emailForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Ambil nilai input dari form
+        let userName = document.getElementById("name").value.trim();
+        let userEmail = document.getElementById("email").value.trim();
+        let userNumber = document.getElementById("number").value.trim();
+        let userMessage = document.getElementById("message").value.trim();
+
+        // Validasi input
+        if (!userName || !userEmail || !userNumber || !userMessage) {
+            alert("Harap isi semua kolom sebelum mengirim email.");
+            return;
+        }
+      // Kirim email menggunakan EmailJS
+        emailjs.send("service_n537v9y", "template_97rvpm2", {
+            to_email: "airinprimaferra@gmail.com",
+            from_name: userName,
+            from_email: userEmail,
+            phone_number: userNumber,
+            message: userMessage
+        }).then(
+            function(response) {
+                alert("Email berhasil dikirim!");
+                document.getElementById("emailForm").reset(); // Reset form setelah berhasil
+            },
+            function(error) {
+                alert("Gagal mengirim email: " + JSON.stringify(error));
+            }
+        );
+    });
 </script>
 
 </body>
