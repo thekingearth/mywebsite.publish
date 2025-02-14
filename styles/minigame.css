@@ -97,7 +97,7 @@ body {
 
 
 /* Suit game */
-.suit-game h1, .rubik-game h1, puzzle-game h1 {
+.suit-game h1, .rubik-game h1, .puzzle-game h1 {
   margin-bottom: 1rem;
   text-align: left;
   font-size: 3rem;
@@ -239,7 +239,7 @@ font-size: 8rem;
   }
 
 /* Puzzle game 4x4 */
-.puzzlegame {
+.puzzle-game {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,7 +249,7 @@ font-size: 8rem;
   font-family: var(--judul-font);
   }
 
-.puzzlegame .level {
+.puzzle-game .level {
   font-size: 20px;
   margin-bottom: 15px;
   font-family: var(--harga-font);
@@ -258,7 +258,7 @@ font-size: 8rem;
   text-shadow: 0 0 5px #000;
   }
 
-.puzzlegame .container {
+.puzzle-game .container {
   display: grid;
   position: relative;
   grid-template-columns: repeat(4, 90px);
@@ -274,7 +274,7 @@ font-size: 8rem;
   box-shadow: 0 0 5px #006;
   }
 
-.puzzlegame .tile {
+.puzzle-game .tile {
   height: 90px;
   margin: 0;
   background: var(--linear1);
@@ -287,12 +287,12 @@ font-size: 8rem;
   cursor: pointer;
   }
 
-.puzzlegame .tile.empty {
+.puzzle-game .tile.empty {
   background: var(--alpa);
   cursor: default;
   }
 
-.puzzlegame .level {
+.puzzle-game .level {
   font-size: 20px;
   margin: 10px 0;
   }
