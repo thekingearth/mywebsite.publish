@@ -148,17 +148,14 @@
         document.getElementById("emailForm").addEventListener("submit", function(event) {
             event.preventDefault();
           
-            const userEmail = document.getElementById("email").value;
-            if (!userEmail) {
-            alert("Email tidak boleh kosong!");
-            return;
-            }
+            
+            
             
             emailjs.send("service_n537v9y", "template_97rvpm2", {
                 to_email: "airinprimaferra@gmail.com",
                 from_name: document.getElementById("name").value,
                 phone_number: document.getElementById("number").value,
-                from_email: userEmail,
+                from_email: document.getElementById("email").value,
                 message: document.getElementById("message").value
             }).then(
                 function(response) {
