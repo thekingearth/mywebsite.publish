@@ -14,7 +14,7 @@
   --opsi: #ff7f00;
   --abstrak: linear-gradient(135deg, #ffd099, #e5c2ad, #ccb5c1, #b3a7d4, #9999e8);
   --linear: linear-gradient(45deg, #f4d430, #000);
-  --lenear1: linear-gradient(135deg, #3e1d0a, #6c2604, #5c1817, #844205);
+  --linear1: linear-gradient(135deg, #3e1d0a, #6c2604, #5c1817, #844205);
   --judul-font: "Kavoon", serif;
   --body1-font: "Nunito", serif;
   --body2-font: "Sniglet", serif;
@@ -209,18 +209,19 @@ font-size: 8rem;
   width: 10rem;
   padding: 10px;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: bold;
   cursor: pointer;
   background: var(--linear1);
   box-shadow: 0 2px 4px #006;
-  font-family: var(--body2-font);
+  font-family: var(--body1-font);
   gap: 2px;
   }
 
 .rubik-game .shufflebtn {
   width: 70%;
-  font-family: var(--body2-font);
-  font-weight: 100;
+  padding: 10px;
+  font-family: var(--body1-font);
+  font-weight: bold;
   background: var(--abstrak);
   box-shadow: 0 2px 4px #000;
   justify-content: center;
