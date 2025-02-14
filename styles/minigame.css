@@ -218,6 +218,12 @@ font-size: 8rem;
   color: var(--text);
   }
 
+.rubik-game .extra-btn {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
 .rubik-game .shufflebtn {
   width: 70%;
   padding: 10px;
@@ -225,9 +231,6 @@ font-size: 8rem;
   font-weight: bold;
   background: var(--abstrak);
   box-shadow: 0 2px 4px #000;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
   }
 
 .rubik-game .controls button:active, .rubik-game .shufflebtn:active {
