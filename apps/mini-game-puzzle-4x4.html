@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="../styles/minigame.css">
+  <link rel="stylesheet" href="../styles/popupgame.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Mini Game Puzzle 4x4</title>
+
+<!-- mystyle -->
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--abstrak);
+  animation: gradientAnimation 6s ease infinite;
+}
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+  }
+  
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+  
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="../index.html" class="navbar-logo"><span>Kin</span>Basari</a>
+  
+  <div class="navbar-nav">
+    <a href="produk.html">Produk<span>Me</span></a>
+    <a href="books.html">Books<span>Me</span></a>
+    <a href="about.html">About<span>Me</span></a>
+    <a href="minigame.html">Mini<span>game</span></a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+
+<!-- Game Section start -->
+<section class="game">
+  <main class="content">
+   <p></p><br>
+   <br>
+   <div class="puzzlegame">
+       <h1>Puzzle <span>Game</span></h1>
+       <p><div class="level">Level: <span id="level">1</span></div></p>
+       <p><div class="container" id="puzzle"></div></p>
+   </div>
+  </main>
+</section>
+<!-- Game Section end -->
+
+<!-- Tambahkan elemen audio -->
+<audio id="moveSound" src="../sound/press.mp3"></audio>
+<audio id="levelCompleteSound" src="../sound/arny.mp3"></audio>
+
+<!-- Pop up intruksi game -->
+<div class="popup-games" id="popup-game">
+ <div class="popup-game">
+<button onclick="closeIntruksi()" class="close-popup">Start</button>
+ <h2>Aturan Permainan</h2>
+ <p></p>
+ <hr>
+<p><span>Tujuan: </span>Susun angka dari 1 hingga 15 secara berurutan (1, 2, 3, ..., 15) di dalam grid 4x4, disusun mulai dari kiri ke kanan dan atas ke bawah, dengan satu kotak kosong di bagian bawah kanan.</p>
+<p><span>Cara Bermain: </span>
+<br><span class="baris-popup">1. </span>Grid terdiri dari angka-angka 1 hingga 15, serta satu kotak kosong <i style="font-size: 12px;">(16 slot total).</i>
+<br><span class="baris-popup">2. </span>Geser angka di dekat kotak kosong ke posisi kotak kosong untuk mengatur urutan angka.
+<br><span class="baris-popup">3. </span>Ulangi langkah ini hingga semua angka tersusun sesuai urutan.</p>
+
+<p><span>Strategi Dasar: </span>
+<br><span class="baris-popup">1. </span>Fokus pada penyusunan baris atau kolom secara bertahap.
+<br><span class="baris-popup">2. </span>Mulailah dengan menyusun angka di baris pertama, diikuti baris kedua, dan seterusnya.
+<br><span class="baris-popup">3. </span>Jangan terlalu banyak mengacak baris yang sudah tersusun.</p>
+
+<br>
+<p class="end-prg">Selamat bermain dan semoga sukses dalam menyusun puzzle dengan cepat</p>
+</div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+ <script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<script src="../scripts/puzzle4x4.js"></script>
+
+</body>
+</html>
