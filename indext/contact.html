@@ -6,11 +6,63 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../styles/mystyle.css">
   <link rel="icon" type="image/png" href="../img/favicon.png">
-  <title>Mini Game Guess Color</title>
+  <title>Contact Me</title>
 
 <!-- mystyle -->
 <style>
 
+.pesan-us {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--alpa);
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid red;
+  box-shadow: 0px 0px 10px rgba(255, 250, 255, 0.4);
+  text-align: center;
+  z-index: 1000;
+  }
+
+.pesan-us .area-popup {
+  max-width: 400px;
+  }
+  
+.pesan-us .area-popup button {
+  margin: 5px;
+  padding: 5px;
+  background-color: var(--pita);
+  color: var(--text);
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px var(--bg);
+  cursor: pointer;
+  font-family: var(--body1-font);
+ }
+
+.pesan-us .area-popup h2,
+.pesan-us .area-popup h3 {
+  font-family: var(--harga-font);
+  color: var(--harga);
+}
+
+.pesan-us .area-popup p {
+  color: #000;
+}
+
+.kontak-me {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  }
+      
 </style>
 <!-- feather icons-->
 <script src="https://unpkg.com/feather-icons"></script>
@@ -131,6 +183,23 @@
 </section>
 <!-- Contact Section end -->
 
+<!-- Pop up contact -->
+<div class="kontak-me" id="kontak-me"></div>
+<div id="popup-success" class="pesan-us">
+ <div class="area-popup">
+   <button onclick="closeMessage()">Close</button>
+   <h2>Sukses</h2>
+   <p>Pesan berhasil dikirim</p>
+  </div>
+</div>
+
+<div id="popup-wrong" class="pesan-us">
+ <div class="area-popup">
+ <button onclick="closeMessage()">Periksa</button>
+ <h3>Pesan tidak terkirim</h3>
+ <p>Periksa kembali, apakah yang kamu masukkan sudah benar!</p>
+ </div>
+</div>
 
 <!--feather icons-->
 <script>
@@ -142,26 +211,38 @@
         loadFooter();
     </script>
 <script>
-  (function() {
-            emailjs.init("gCr6Ll2tNM6y2L71U");
-        })();
-        document.getElementById("emailForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-          
-            emailjs.send("service_n537v9y", "template_97rvpm2", {
-                nama: document.getElementById("nama").value,
-                phone_number: document.getElementById("number").value,
-                nama_mael: document.getElementById("namamael").value,
-                message: document.getElementById("message").value
-            }).then(
-                function(response) {
-                    alert("Email berhasil dikirim!");
-                },
-                function(error) {
-                    alert("Gagal mengirim email: " + JSON.stringify(error));
-                }
-            );
-        });
+(function() {
+  emailjs.init("gCr6Ll2tNM6y2L71U");
+  })();
+  document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.send("service_n537v9y", "template_97rvpm2", {
+      nama: document.getElementById("nama").value,
+      phone_number: document.getElementById("number").value,
+      nama_mael: document.getElementById("namamael").value,
+      message: document.getElementById("message").value
+      }).then(
+        function(response) {
+          showMessage('popup-success');
+          },
+          function(error) {
+            showMessage('popup-wrong');
+            }
+          );
+      });
+        
+        
+        
+function showMessage(id) {
+  document.getElementById(id).style.display = 'block';
+  document.getElementById('kontak-me').style.display = 'block';
+  }
+
+function closeMessage() {
+  document.querySelectorAll('.pesan-us').forEach(popup => popup.style.display = 'none');
+  document.getElementById('kontak-me').style.display = 'none';
+  }
 </script>
 
 </body>
