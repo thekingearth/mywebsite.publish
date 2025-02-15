@@ -110,7 +110,7 @@
 <form action="" id="emailForm">
   <div class="input-group">
     <i data-feather="user"></i>
-    <input type="text" id="name" placeholder="Nama" required>
+    <input type="text" id="nama" placeholder="Nama" required>
   </div>
   <div class="input-group">
     <i data-feather="phone"></i>
@@ -118,7 +118,7 @@
   </div>
   <div class="input-group">
     <i data-feather="at-sign"></i>
-    <input type="email" id="email" placeholder="Email" required>
+    <input type="email" id="namamael" placeholder="Email" required>
   </div>
   <div class="input-group">
     <i data-feather="mail"></i>
@@ -149,9 +149,9 @@
             event.preventDefault();
           
             emailjs.send("service_n537v9y", "template_97rvpm2", {
-                sender: document.getElementById("name").value,
+                nama: document.getElementById("nama").value,
                 phone_number: document.getElementById("number").value,
-                from_email: document.getElementById("email").value,
+                nama_mael: document.getElementById("namamael").value,
                 message: document.getElementById("message").value
             }).then(
                 function(response) {
