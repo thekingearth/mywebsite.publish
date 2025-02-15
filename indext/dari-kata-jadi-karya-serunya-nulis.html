@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="../styles/artikels.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Dari Kata Jadi Karya, Serunya Nulis</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+  
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="../index.html" class="navbar-logo"><span>Kin</span>Basari</a>
+  
+  <div class="navbar-nav">
+    <a href="produk.html">Produk<span>Me</span></a>
+    <a href="books.html">Books<span>Me</span></a>
+    <a href="minigame.html">Mini<span>game</span></a>
+    <a href="about.html">About<span>Me</span></a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Dari Kata Jadi Karya,
+  <br>Serunya <span>Nulis </span>Tanpa <span>Batasan</span></h1>
+    <br>
+  <p>Pernah nggak sih kamu ngerasa kalau tiap kali duduk sendirian, atau lagi nggak ngapa ngapain, tiba-tiba munculah semua ide-ide aneh, nyeleneh, atau mungkin extreme di kepala dan ingin di tulis? Nah, di situlah yang namanya keajaiban terasa dimulai dari kata-kata yang sederhana, kamu bisa menciptakan karya yang unik dan penuh warna. Menulis itu nggak harus selalu formal atau terstruktur, yang penting itu prosesnya dan keseruannya laah!!</p>
+  
+  <br>
+  <h2>Bebaskan Imajinasi, <span>Lepasin Penat</span></h2>
+  <p>Namanya aja manusia pasti nggak pengen hidupnya terlalu dikekang dengan sesuatu yang nyebelin, begitu juga dengan menulis, terkadang tekanan untuk menulis dengan sempurna malah bikin ide-ide kita terkekang. Coba deh, sesekali kamu nulis tanpa mikirin aturan-aturan baku. Tulislah apa adanya, biarkan pikiranmu mengalir bebas. Entah itu curahan hati, cerita fiksi, atau bahkan sekadar catatan harian, semua itu punya nilai tersendiri. Ingat, karya yang muncul dari kata-kata yang tulus itu selalu punya daya tarik yang kuat.</p>
+  
+  <br>
+  <h2>Nulis Itu Seperti <span>Ngobrol Santai</span></h2>
+  <p>Bayangin aja, nulis itu ibarat ngobrol santai dengan diri sendiri <span>(tapi jangan sampai ketawa-ketawa sendiri juga)</span> atau teman dekat. Kamu nggak perlu mikirin tata bahasa yang kaku atau struktur kalimat yang sempurna. Yang penting, kamu bisa mengekspresikan ide dan perasaanmu dengan jujur. Kadang, dari obrolan santai inilah lahir ide-ide segar yang kemudian bisa diolah jadi karya yang lebih mendalam.</p>
+  
+  <br>
+  <h2>Proses Kreatif yang <span>Menggugah</span></h2>
+  <p>Menulis tanpa batasan itu ngajarin kita untuk lebih mengenal diri sendiri. Jadi pas nulis kayak diajak untuk merenung bareng untuk mengeksplorasi pikiran, dan bahkan memahami emosi yang selama ini tersembunyi. Proses ini nggak cuma ngebuat kamu lebih kreatif, tapi juga ngebantu buat mahamin sisi-sisi lain diri sendiri yang mungkin selama ini terabaikan. Dan yang paling penting itu setiap kata yang kamu tulis bakal jadi jejak dari perjalanan kreatifmu..</p>
+  
+  <br>
+  <h2>Kata Jadi Karya, <span>Cerita Jadi Inspirasi</span></h2>
+  <p>Setiap orang punya cerita yang unik termasuk kamu, cerita itu muncul dari hal-hal sederhana yang terjadi sehari-hari. Mungkin dari percakapan singkat, pengalaman lucu, cerita ngakak, atau bahkan kejadian yang agak absurd, dan senyum-senyum sendiri saat kamu tiba-tiba ingat. Dengan menulis, kamu mengubah kata-kata itu menjadi karya yang bisa menginspirasi orang lain. Nggak ada aturan baku, yang ada cuma keinginan untuk berbagi dan menyebarkan semangat positif lewat tulisanmu.</p>
+  
+  <br>
+  <h2>Tips Biar Nulis <span>Lebih Asyik</span></h2>
+  <p>Mulai tulis apa saja yang terlintas di pikiranmu, jangan khawatir kalau awalnya terdengar berantakan kaya jalan aspal yang berlobang dimana-mana, terus asah kemampuanmu dan temukan gaya tulisan yang paling cocok. Temukan tempat yang bikin kamu nyaman, biarpun itu di pojok kamar, gudang bekas material, atau bahkan gubuk tengah sawah hehehe... Suasana yang nyaman bisa membantu pikiranmu mengalir lebih bebas.</p>
+  
+<br>
+<h3>Catatan:</h3>
+<p>Nulis tanpa batas itu seru banget, bisa diartikan kayak ngajak kita buat terus kreatif dan nemuin hal-hal baru dari diri sendiri. Jadi, kapan lagi coba, kamu bisa looh ubah setiap kata-kata biasa jadi sesuatu yang bisa ngefek ke orang lain? Ayo mulai nulis dengan semangat, biarin imajinasi ngalir bebas! Karena, siapa tahu, karya kerenmu dimulai dari sebaris kata yang ditulis dengan hati dan jujur.</p>
+</div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
