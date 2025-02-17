@@ -80,7 +80,7 @@ function loadFooter() {
                 <a href="../menu/contact.html">Contact</a>
             </div>
             <div class="credit">
-                <p>Created by <a href="../CNAME">Kin Basari</a> | &copy; 2025.</p>
+                <p>Created by <a href="https://www.kinbasari.my.id">Kin Basari</a> | &copy; 2025.</p>
             </div>
         </footer>
     `);
