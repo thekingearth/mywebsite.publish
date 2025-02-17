@@ -75,9 +75,9 @@ function loadFooter() {
         <footer>
             <div class="links">
                 <a href="../index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="disclaimer.html">Disclaimer</a>
-                <a href="contact.html">Contact</a>
+                <a href="../menu/about.html">About</a>
+                <a href="../menu/disclaimer.html">Disclaimer</a>
+                <a href="../menu/contact.html">Contact</a>
             </div>
             <div class="credit">
                 <p>Created by <a href="../index.html">Kin Basari</a> | &copy; 2025.</p>
