@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Kisah Inspiratif yang Bikin Hidup Lebih Bersemangat</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+  
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="../index.html" class="navbar-logo"><span>Kin</span>Basari</a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Kisah Inspiratif yang Bikin
+  <br>Hidup <span>Lebih Bersemangat</span></h1>
+    <br>
+  <p>Siapa yang suka ngeluh terus ngelamun dan ngebayangin hidup menjadi sesuatu yang sangat indah? <span>kalau ada berarti kita satu frekuensi bre hehehe... </span> Gimana yak, mang bener sih hidup itu kadang ada nyebelin-nyebelinnya, udah banyak tantangan dan rintangan yang bikin pengen nyerah banget. Tapi, mau gimana lagi kita seakan-akan dipaksa untuk tetap semangat ngenjalaninnya karena tuntutan dari berbagai hal, jadi untuk berusaha ngilangin sesuatu yang membuat hidup bosan dan mau menyerah kalian perlu baca artikel ini, di sini aku telat merangkum ada beberapa kisah-kisah keren dari orang-orang yang sukses setelah jatuh bangun dan akhirnya bisa menjadi orang yang sangat dikagumi diri berbagai negara. Semoga ini bisa bisa jadi penyemangat buat kita. Nih, beberapa cerita inspiratif yang bisa bikin kamu makin semangat ngejalanin hidup!.</p>
+  
+  <br>
+  <h2>Thomas Alva Edison: Kegigihan Membuat Dunia <span>Menjadi Terang</span></h2>
+  <p>Edison, si penemu kece, pernah gagal ribuan kali sebelum akhirnya berhasil nyiptain bohlam listrik. Tapi doi nggak baper sama kegagalannya, malah anggap itu bagian dari proses sukses. Dengan usaha terus-menerus, akhirnya dia bisa bikin dunia jadi lebih terang <span>seterang masa depan kamu dan aku ketika hidup bersama. </span>eiitsss...</p>
+  
+  <br>
+  <h2>Colonel Sanders: Sukses di <span>Usia Kakek-Kakek</span></h2>
+  <p>Harland Sanders, si pendiri KFC, harus ngalamin banyak banget penolakan sebelum akhirnya resep ayam gorengnya diterima. Bayangin aja, doi baru sukses di umur 65 tahun! Ini bukti kalau sukses nggak kenal umur, yang penting gas terus!.</p>
+  
+  <br>
+  <h2>Nick Vujicic: Hidup <span>Tanpa Batas</span></h2>
+  <p>Nick Vujicic lahir tanpa tangan dan kaki, tapi dia nggak sedih berkepanjangan. Malah, dia jadi motivator dunia yang ngebantu banyak orang biar tetep semangat. Kisahnya ngajarin kita buat nggak nyerah meskipun ada kekurangan.</p>
+  
+  <br>
+  <h2>Oprah Winfrey: Dari Nol Sampai <span>Jadi Boss</span></h2>
+  <p>Oprah Winfrey dulu hidup susah dan banyak cobaan. Tapi dia nggak nyerah dan terus berjuang sampai akhirnya jadi salah satu wanita paling berpengaruh di dunia. Dia buktiin kalau masa lalu bukan alasan buat nggak sukses.</p>
+  
+  <br>
+  <h2>Stephen Hawking: Jenius di Balik <span>Keterbatasan</span></h2>
+  <p>Stephen Hawking didiagnosis kena penyakit ALS yang bikin dia kehilangan hampir semua fungsi tubuhnya, <span>btw aku nggak banyak tahu tuh tentang penyakit ALS. </span>Tapi dia tetep produktif dan bikin banyak teori keren di dunia sains. Bukti kalau otak encer dan semangat tinggi bisa ngalahin batasan apa pun!.</p>
+  
+  <br>
+  <h2>Harus Pede</h2>
+  <p>Terakhir dan paling penting, kamu harus percaya diri! Kadang orang tuh nggak nyadar bakatnya karena mereka kebanyakan minder. Jadi, stop ngeraguin diri sendiri dan ayo mulai percaya kalau kamu itu punya sesuatu yang spesial!.</p>
+  
+<br>
+<h3>Catatan:</h3>
+<p>Dari cerita-cerita ini, kita bisa belajar kalau kunci sukses itu gigih, kerja keras, dan nggak gampang nyerah. Nggak peduli seberapa berat rintangannya, kalau kamu tetep usaha, sukses pasti bisa diraih!.</p>
+</div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
