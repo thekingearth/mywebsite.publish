@@ -74,7 +74,7 @@ function loadFooter() {
     document.write(`
         <footer>
             <div class="links">
-                <a href="../index.html">Home</a>
+                <a href="www.kinbasari.my.id">Home</a>
                 <a href="../menu/about.html">About</a>
                 <a href="../menu/disclaimer.html">Disclaimer</a>
                 <a href="../menu/contact.html">Contact</a>
