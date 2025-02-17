@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Ketahui Bakat Terpendammu</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+  
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="../index.html" class="navbar-logo"><span>Kin</span>Basari</a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Ketahui Bakat <span>Terpendammu</span></h1>
+    <br>
+  <p>Bro and sist! Pernah nggak sih kamu tuh bilang gini, <span>"Gue tuh jago di bidang apa, ya?"</span> atau <span>"Bakat gue tuh sebenernya apa, sih?"</span> Nah, kalau pernah, selamat! Kamu nggak sendirian, karena banyak orang yang masih bingung sama bakat terpendam mereka. Tapi tenang, aku bakal bantu buat nemuin bakat terpendammu dengan cara yang santai dan fun!!</p>
+  
+  <br>
+  <h2>Coba Banyak Hal di <span>Berbagai Bidang</span></h2>
+  <p>Jangan takut buat nyoba hal baru, bisa aja yak bakat kamu tuh ada di sesuatu yang bahkan belum pernah kamu sentuh. Coba aja mulai dari hobi baru, kayak ngegambar, masak, main musik, atau bahkan bikin konten TokTok <span>tapi jangan joget² alay juga.</span> Siapa tau dari situ kamu nemuin passion yang selama ini nggak kamu sadarin.</p>
+  
+  <br>
+  <h2>Dengerin Pendapat <span>Orang Sekitar</span></h2>
+  <p>Pernah nggak sih ada yang bilang ke kamu, <span>"Eh, lu tuh jago banget ngomong depan orang!" </span>atau <span>"Rajungan, lu kalo nyanyi ternyata suaranya bagus banget yak!" </span>Nah, bisa jadi itu petunjuk kalau kamu punya bakat di situ. Memang bener kadang orang lain tuh bisa ngelihat sesuatu di diri kita yang nggak kita sadari.</p>
+  
+  <br>
+  <h2>Lihat apa yang Kamu <span>Suka Lakuin</span></h2>
+  <p>Bakat sering kali berhubungan sama hal yang kita suka. Jadi kalau kamu nggak kerasa capek ngelakuin sesuatu atau malah ketagihan buat ngelakuinnya, itu bisa jadi tanda kalau di situ lah bakat mu. Misalnya, kalau kamu suka banget ngutak-atik komputer, mungkin aja kamu itu berbakat di dunia per IT an atau coding <span>tapi jangan belajar jadi hacker nakal yak.</span></p>
+  
+  <br>
+  <h2>Ikut Tes <span>Kepribadian atau Bakat</span></h2>
+  <p>Kalau masih bingung, coba deh ikut tes bakat atau kepribadian. Banyak banget tes gratis yang bisa kamu temuin di internet buat bantu kamu yang masih belum nemuin potensi tersembunyi dalam diri sendiri. Kadang hasilnya bisa bikin kamu mikir, <span>"Eh iya juga, ya!"</span></p>
+  
+  <br>
+  <h2>Jangan Takut <span>Gagal</span></h2>
+  <p>Bakat itu bukan sesuatu yang tiba-tiba muncul tanpa usaha, bisa jadi kamu punya bakat, tapi nggak berkembang karena kurang latihan. Jadi, jangan takut gagal! Semua orang berbakat pasti pernah ngalamin fase gagal dulu sebelum akhirnya sukses.</p>
+  
+  <br>
+  <h2>Harus Pede</h2>
+  <p>Terakhir dan paling penting, kamu harus percaya diri! Kadang orang tuh nggak nyadar bakatnya karena mereka kebanyakan minder. Jadi, stop ngeraguin diri sendiri dan ayo mulai percaya kalau kamu itu punya sesuatu yang spesial!.</p>
+  
+<br>
+<h3>Catatan:</h3>
+<p>Bakat terpendam itu nggak akan muncul kalau kamu cuma diem aja. Jadi, mulai eksplor diri sendiri, jangan takut buat nyoba, dan tetap semangat! Siapa tau, suatu hari nanti bakatmu bisa jadi sumber kesuksesanmu! So, sekarang udah siap buat nemuin bakat terpendammu? Gaskeun!</p>
+</div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
