@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Stop Minder Langkah Simpel Buat Upgrade Diri</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6RC05CL34F"></script>
+<script src="../scripts/scriptme.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="../index.html" class="navbar-logo"><span>Kin</span>Basari</a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Stop Minder!!
+  <br>Langkah Simpel Buat <span>Upgrade Diri</span></h1>
+  <p class="detail-tanggal">Thursday, 13 February 2025
+  <br>By Kin Basari</p>
+    <br>
+  <p>Jangan sibuk mencari yang ganteng atau cantik, karena ganteng atau cantik itu cuma lapisan luar. Apa kamu pernah ngeliat tulisan itu? Jadi gini, cantik dan ganteng itu adalah sosok yang diidam-idamkan kebanyakan orang, banyak orang yang rela mengeluarkan isi dompet untuk bisa memiliki paras cantik atau ganteng, lalu bagaimana dengan orang yang memiliki fisik kurang mendukung. Apakah ini alasan utama Kenapa orang kadang ngerasa minder?</p>
+  <br>
+  <p>Bro, sis, pernah gak sih kamu ngerasa minder? Kayak tiba-tiba insecure ngeliat orang lain lebih jago, lebih cakep, lebih sukses, atau lebih apa aja yang bikin kamu ngerasa kecil? Ya, wajar sih, tapi serius deh, kenapa harus minder? Nih, aku kasih tau beberapa upaya supaya hilang kata minder dari kehidupanmu dan stop dari sekarang!</p>
+  
+  <br>
+  <h2>Semua Orang Punya <span>Kekurangan</span></h2>
+  <p>Percaya deh, nggak ada manusia yang sempurna. Mungkin kamu liat orang lain kayaknya perfect banget, tapi kamu nggak tau aja gimana perjuangan dan kelemahan mereka di balik layar. Jangan fokus sama kekuranganmu doang, coba deh liat kelebihanmu juga, pastinya kamu punya sesuatu yang bisa dibanggain!</p>
+  
+  <br>
+  <h2>Hidup Bukan <span>Kompetisi</span></h2>
+  <p>Yoi, hidup tuh bukan ajang lomba siapa yang lebih keren, lebih kaya, atau lebih sukses. Semua orang punya jalan masing-masing, bro! Kamu nggak perlu ngebandingin diri sama orang lain, karena mereka punya perjalanan yang beda dari kamu. Fokus aja sama diri sendiri <span>atau fokus mikirin masa depan kita bersama juga nggak apa-apa.</span></p>
+  
+  <br>
+  <h2>Kamu Lebih Berharga Dari yang <span>Kamu Kira</span></h2>
+  <p>Serius, kadang kita terlalu keras sama diri sendiri. Padahal, banyak hal keren yang udah kita lakuin tapi malah kita anggap sepele. Mulai sekarang, coba deh apresiasi diri sendiri. Setiap langkah kecil itu tetep progress.</p>
+  
+  <br>
+  <h2>Orang Lain Gak Sebegitu <span>Pedulinya</span></h2>
+  <p>Kamu takut dikomentarin orang? Percaya deh, orang-orang tuh lebih sibuk mikirin diri mereka sendiri dibandingin nge-judge kamu. Jadi, buat apa minder kalau ujung-ujungnya mereka juga nggak mikirin kamu selama itu nggak ganggu hidup mereka? <span>cuma aku yang mikirin kamu. hehehe...</span></p>
+  
+  <br>
+  <h2>Kesempatan Datang Buat <span>yang Berani</span></h2>
+  <p>Kalau kamu terus minder, kamu bakalan terus ngelewatin banyak kesempatan emas. Orang sukses itu bukan yang paling pinter atau paling hebat, tapi yang paling berani buat maju. Kamu nggak akan tau hasilnya kalau gak nyoba bro!</p>
+  
+  <br>
+  <h2>Kamu itu Lebih Unik <span>dari Mereka</span></h2>
+  <p>Nggak ada orang lain yang bisa jadi kamu selain diri kamu sendiri. Keunikanmu itu yang bikin kamu spesial <span>(lebih spesial dari martabak spesial).</span> Jangan buang waktu buat pengen jadi orang lain. mending fokus buat upgrade versi terbaik dari diri sendiri.</p>
+  
+<br>
+<h3>Catatan:</h3>
+<p>Mulai sekarang stop minder dan mulai percaya diri! Hidup itu terlalu singkat buat terus-terusan ngerasa kurang, kurang itu bukan sesuatu yang lebih, dan kalau kamu terus-terusan ngerasa kurang pasti akan selalu ngerasa kurang meskipun sudah lebih. Gaskeun bro, kamu itu lebih kuat dari yang kamu pikirin!</p>
+</div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
