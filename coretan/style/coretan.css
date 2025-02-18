@@ -1,6 +1,8 @@
+
 .page-artikels {
   padding: 9rem 2% 1rem;
 }
+
 .page-artikels .page-artikel {
   max-width: 90rem;
   margin: 1;
@@ -21,8 +23,34 @@
 .page-artikel p {
   text-align: justify;
 }
+
 .page-artikel p span {
   font-style: italic;
   color: var(--alpa);
+}
+  
+.page-artikel .baca-juga {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.page-artikel .baca-juga h2 {
+  margin-bottom: 5px;
+}
+
+.page-artikel .baca-juga h3 {
+  font-family: var(--harga-font);
+}
+
+.page-artikel .baca-juga ul {
+  list-style: none;
+  padding: 0;
+}
+.page-artikel .baca-juga li {
+  margin-bottom: 5px;
+}
+
+.page-artikel .baca-juga a {
+  color: var(--bash);
 }
 
