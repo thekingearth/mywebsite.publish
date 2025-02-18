@@ -70,11 +70,11 @@ const rupiah = (number) => {
 
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QHXL65D77"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ18SK1ZLH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-7QHXL65D77');
+  gtag('config', 'G-DZ18SK1ZLH');
 </script>
