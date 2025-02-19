@@ -7,12 +7,12 @@
   max-width: 90rem;
   margin: 1;
 }
-.page-artikel h1, h2 {
+.page-artikel h1, .page-artikel h2, .page-artikel h3 {
   font-family: var(--harga-font);
   padding: 1rem 0 0;
 }
 
-.page-artikel h1 span, h2 span {
+.page-artikel h1 span, .page-artikel h2 span, .page-artikel h3 span {
   color: var(--bash);
 }
 
@@ -22,6 +22,10 @@
 
 .page-artikel p {
   text-align: justify;
+}
+
+.page-artikel .note-artikel {
+  font-family: var(--body1-font);
 }
 
 .page-artikel p span {
