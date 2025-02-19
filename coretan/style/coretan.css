@@ -32,6 +32,8 @@
 .page-artikel .baca-juga {
   margin-top: 20px;
   padding: 5px;
+  border-radius: 3px;
+  border: 1px solid var(--alpa);
 }
 
 .page-artikel .baca-juga h2 {
