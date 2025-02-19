@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const folderPath = '../'; // Ganti dengan path folder artikel
+  const folderPath = '../coretan/'; // Ganti dengan path folder artikel
   const articles = [
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
