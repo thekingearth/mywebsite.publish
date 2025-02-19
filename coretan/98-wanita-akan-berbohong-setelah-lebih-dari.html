@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>98% Wanita Akan Berbohong Setelah Lebih dari 10 Percakapan</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6RC05CL34F"></script>
+<script src="../scripts/scriptme.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>98% Wanita Akan <span>Berbohong</span>
+  <br>Setelah Lebih dari <span>10 Percakapan</span></h1>
+  <p class="detail-tanggal">Thursday, 13 February 2025
+  <br>By Kin Basari</p>
+    <br>
+  <p>Bro, kamu pernah kan ngobrol sama cewek? Terus makin lama makin ngerasa ada yang ‘off’ dari ceritanya? Atau pernah nggak sih kamu denger atau ngalamin sendiri, cewek bilang <span>"Aku nggak papa", </span>padahal matanya udah kayak abis nonton drakor episode terakhir? Atau yang lebih klasik lagi, <span>"Terserah", </span>tapi ternyata kamu salah milih dan ujung-ujungnya kena omel? Nah, sebenernya kenapa sih cewek suka bohong? Ternyata, ada teori menarik yang bilang kalau 98% wanita bakal bohong setelah lebih dari 10 kali obrolan. Yuk, kita bahas bareng-bareng!</p>
+  
+  <br>
+  <h2>Kenapa Bisa <span>Begitu?</span></h2>
+  <p>Sebelum langsung nge-judge, kita harus ngerti dulu alasan di balik ini semua. Sebenernya, kebohongan kecil atau yang biasa disebut <span>“white lies” </span>sering terjadi dalam komunikasi, bukan cuma di kalangan cewek, tapi juga cowok <span>hayoo ngaku.</span> Nah, ini beberapa alasan kenapa cewek kadang ngebohong setelah ngobrol lebih dari 10 kali:</p>
+  
+  <br>
+  <h3>Menjaga Perasaan <span>Lawan Bicara</span></h3>
+  <p>Cewek biasanya lebih peka sama perasaan orang lain. Jadi, kalau udah makin akrab dan ngerasa deket, mereka bisa aja kasih jawaban yang aman biar nggak nyakitin lawan bicara.</p>
+  
+  <br>
+  <h3>Pandai Menyesuaikan <span>Diri</span></h3>
+  <p>Dalam proses ngobrol, cewek mungkin mulai ngerasa perlu menyesuaikan cerita biar makin nyambung atau menarik. Kadang, ada bumbu-bumbu tambahan biar percakapannya nggak hambar.</p>
+  
+  <br>
+  <h3>Ingin Terlihat <span>Lebih Baik</span></h3>
+  <p>Siapa sih yang nggak pengen terlihat keren di mata orang lain? Ini bukan berarti cewek pembohong, tapi kadang mereka sedikit memoles cerita biar lebih menarik.</span></p>
+  
+  <br>
+  <h3>Ngetes <span>Lawan Bicara</span></h3>
+  <p>Nah, ini yang paling seru! Beberapa cewek sengaja ngomong hal yang beda dikit <span>terutama sama cowok </span>buat ngecek apakah lawan bicaranya peka atau nggak, <span>jadi harus peka yak kalo lagi ngobrol sama cewek.</span></p>
+
+  <br>
+  <h2>Tapi, Apa Ini Berarti <span>Cewek Pembohong?</span></h2>
+  <p>Nggak juga! Faktanya, cowok juga sering ngelakuin hal yang sama <span>kecuali kin basari, </span> kebohongan kecil dalam komunikasi adalah hal yang wajar, terutama buat menjaga hubungan tetap asik dan nggak canggung. Yang penting, selama itu bukan kebohongan besar yang bisa merusak kepercayaan, ya sah-sah aja, ya nggak sih?</p>
+  
+  <br>
+  <h2>Jadi, Gimana Cara <span>Ngahadapinya?</span></h2>
+  <p>Kalau kamu curiga cewek mulai meleset dari cerita awalnya, jangan langsung nuduh. Coba aja santai dan lihat dari sudut pandang mereka. Bisa jadi itu cuma bagian dari usaha mereka buat nyiptain suasana lebih nyaman. Tapi kalau udah masuk ke ranah manipulasi, nah, waktunya eksekusi!</p>
+  
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Mulai sekarang stop minder dan mulai percaya diri! Hidup itu terlalu singkat buat terus-terusan ngerasa kurang, kurang itu bukan sesuatu yang lebih, dan kalau kamu terus-terusan ngerasa kurang pasti akan selalu ngerasa kurang meskipun sudah lebih. Gaskeun bro, kamu itu lebih kuat dari yang kamu pikirin!</p>
+<br>
+
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+</div>
+</div>
+</div>
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
