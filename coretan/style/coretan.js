@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const folderPath = '../coretan/'; // Ganti dengan path folder artikel
   const articles = [
+    { file: '98-wanita-akan-berbohong-setelah-lebih-dari.html', tittle: '98% Wanita Akan Berbohong Setelah 10 Percakapan' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
     { file: 'ketahui-bakat-terpendammu.html', title: 'Ketahui Bakat Terpendammu' },
