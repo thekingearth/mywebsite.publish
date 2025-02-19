@@ -68,3 +68,19 @@ const rupiah = (number) => {
   }).format(number);
 };
 
+
+
+(function() {
+  // Script Google Analytics
+  var script = document.createElement('script');
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-6RC05CL34F';
+  script.async = true;
+  document.head.appendChild(script);
+// ID Google Analytics
+  script.onload = function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6RC05CL34F');
+  };
+})();
