@@ -77,8 +77,20 @@ body {
 #hamburger-menu {
   display: none;
 }
+.navbar .navbar-logo h3 {
+  font-family: var(--judul-font);
+  color: var(--text);
+  overflow: hidden;
+  position: absolute;
+  animation: typing 0.8s infinite alternate;
+  }
 
-.navbar .navbar-logo {
+@keyframes typing {
+  0% { top: -20px;}
+  100% { top: 5px;}
+  }
+
+.navbar .navbar-logo h1 {
   font-size: 3rem;
   font-weight: 700;
   color: var(--text);
@@ -86,7 +98,7 @@ body {
   font-family: var(--judul-font);
 }
 
-.navbar .navbar-logo span {
+.navbar .navbar-logo h1 span {
   color: var(--bash);
 }
 
