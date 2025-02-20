@@ -437,7 +437,7 @@ box-shadow: 1px 1px 3px #133;
 .hero .content h1 {
   font-size: 3rem;
   color: var(--text);
-  text-shadow: 1px 1px 3px rgba(1,1,1,0.8);
+  text-shadow: 0 0 4px #000;
   line-height: 1.2;
   font-family: var(--judul-font);
 }
