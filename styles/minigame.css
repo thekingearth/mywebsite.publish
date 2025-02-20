@@ -120,7 +120,7 @@ body {
   }
   
 .suit-game .choices button {
-  width: 30wh;
+  width: 35wh;
   height: 10vh;
   background-color: var(--bg);
   font-family: var(--body2-font);
