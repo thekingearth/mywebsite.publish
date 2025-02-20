@@ -55,7 +55,7 @@ body {
   }
 
  .guess-game #colorText {
-  font-size: 90px;
+  font-size: 80px;
   font-family: var(--body2-font);
   margin: 20px 0;
   font-weight: bold;
