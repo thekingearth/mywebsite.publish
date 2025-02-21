@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Khodam Warisan Leluhur Benarkah Bisa Diturunkan?</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Khodam Warisan Leluhur
+  <br>Benarkah <span>Bisa Diturunkan?</span></h1>
+  <p class="detail-tanggal">Friday, 21 February 2025
+  <br>By Kin Basari</p>
+    <br>
+  <p>Yoo bro, Kamu pernah denger cerita-cerita soal khodam yang bisa diwarisin dari leluhur? Katanya, kalau misal ada kakek atau buyutmu yang punya khodam, maka kamu bakalan juga bisa dapet jatahnya. Tapi kamu percaya nggak sama adanya khodam, maksudku itu beneran nggak sih khodam itu? Atau khodam itu cuma mitos yang udah lama beredar? Yuk, mending kita bahas bareng tentang khodam dengan santai!</p>
+  
+  <br>
+  <h2>Apa itu <span>Khodam</span></h2>
+  <p>Buat yang belum tau, khodam itu katanya istilah buat makhluk gaib atau sosok tak terlihat yang digambarin jadi pendamping manusia, <span> pendamping ini yang dimaksud bukan istri atau suami yak.</span> Tapi ada juga yang bilang khodam ini bisa bantu jaga keselamatan, khodam bisa ngasih ilmu sakti, atau khodam juga bisa bikin pengaruh seseorang makin kuat <span>waaah berati yang punya khodam itu orang sakti dong.</span> Pokoknya, kesannya itu keren banget deh kalau punya khodam! Tapi kalau dipikir-pikir lagi, khodam ini kayaknya lebih mirip sama cerita di film daripada fakta yang bisa dibuktiin dari khodam-khodaman gini.</p>
+  
+  <br>
+  <h2>Khodam Beneran Bisa <span>Diturunkan</span></h2>
+  <p>Khodam memang bisa di turunin. Naaah, kalau mitos yang sering aku denger sih gitu yak, intinya kalau kamu ada anggota keluarga yang punya khodam, dia bisa nurunin ke keturunannya biar punya khodam juga, jadi kamu juga bakalan bisa punya khodam. Biasanya khodam ini dikaitin sama ilmu kebatinan, kejawen, atau warisan spiritual dari jaman dulu. Misalnya, kalau kakekmu dulu dukun atau penganut ilmu tertentu pasti dia punya khodam, dan katanya kamu bisa dapet <span>“bonus” </span>berupa khodam peninggalannya. Tapi, ada nggak sih bukti nyata tentang per khodam an kalau ini beneran kejadian?</p>
+  
+  <br>
+  <h2>Jawaban Dari Hal <span>Tentang Khodam</span></h2>
+  <p>Sampe sekarang nggak ada bukti ilmiah atau logis yang bisa ngebuktiin kalau khodam bisa diwarisin kayak harta benda. Yang ada, ini lebih ke sugesti atau kepercayaan yang udah ditanam sejak kecil tentamg khodam. Kalau dari kecil kamu udah sering denger cerita soal keluarga punya khodam, lama-lama kamu bisa ngerasa <span>“oh iya, gue juga punya khodam nih,” </span>padahal itu mah cuma efek psikologis</p>
+  
+  <br>
+  <h2>Pengaruh Mindset dan Sugesti <span>Tentang Khodam</span></h2>
+  <p>Sebenernya, kalau kamu percaya banget sama sesuatu kayak khodam atau apa saja, otak atau pikiran kamu bisa bikin itu ngerasa makin nyata. Ini namanya efek placebo atau sugesti. Makanya, banyak orang yang yakin mereka punya khodam, padahal mungkin itu cuma pikiran mereka sendiri yang ngebentuk keyakinan punya khodam.</p>
+  <br>
+  <p>Bahkan, kalau ada kejadian aneh dalam hidup seseorang, sering kali langsung dikaitin sama khodam warisan. Padahal, bisa jadi itu juga cuma kebetulan atau efek dari pola pikir mereka sendiri. Misalnya, kamu tiba-tiba dapet rejeki nomplok, terus kamu mikir, <span>“wah, ini pasti khodam kakek gue yang bantuin,” </span>padahal mungkin emang karena usaha kamu sendiri bukan malah dari khodam.</p>
+  
+  <br>
+  <h2>Kesimpulan <span>Tentang Khodam</span></h2>
+  <p>Jadi kalau ngomongin soal khodam warisan leluhur, ini lebih ke kepercayaan daripada fakta. Nggak ada bukti konkret yang bisa nunjukin kalau khodam atau makhluk gaib ini beneran bisa diwarisin turun-temurun. Yang ada, kepercayaan ini terus hidup karena diceritain dari generasi ke generasi. Kalau nggak coba deh kamu masuk ke live streaming pembaca khodam, terus kamu tulis nama kamu di situ, minta host nya kasih tau khodam kamu, maka hostnya akan ngasih tahu khodam kamu itu apa. Tapi jangan seneng dulu coba kamu tanya lagi di hari beda terus kamu ngelakuin hal yang sama mungkin juga host nya bakal ngasih tahu khordam mu beda dari khodam yang sebelumnya.</p>
+  
+  <br>
+  <h3 class="note-artikel">Catatan:</h3>
+  <p>Kalau kamu ngerasa punya khodam, coba deh cek lagi, itu beneran ada kodhamnya atau cuma karena efek dari cerita yang kamu denger sejak kecil. Jangan-jangan kekuatan terbesar yang kamu punya selama ini bukan dari khodam, tapi dari dirimu sendiri!</p>
+  
+  <br>
+  <div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
