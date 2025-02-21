@@ -6,7 +6,7 @@
     const moveSound = document.getElementById("moveSound");
 
     function generatePuzzle(level) {
-      const size = 5; // Puzzle 4x4
+      const size = 4; // Puzzle 4x4
       const tiles = Array.from({ length: size * size }, (_, i) => i + 1);
       tiles[size * size - 1] = ""; // Empty tile
 
@@ -42,7 +42,7 @@
       const tiles = Array.from(puzzleContainer.children);
       const emptyTileIndex = tiles.findIndex((tile) => tile.classList.contains("empty"));
 
-      const size = 5; // Puzzle 4x4
+      const size = 4; // Puzzle 4x4
       const validMoves = [
         emptyTileIndex - size,
         emptyTileIndex + size,
