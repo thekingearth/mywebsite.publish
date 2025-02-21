@@ -261,7 +261,7 @@ font-size: 8rem;
 .puzzle-game .container {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(4, 85px);
+  grid-template-columns: repeat(5, 50px);
   grid-gap: 2px;
   justify-content: center;
   margin: auto;
@@ -275,7 +275,7 @@ font-size: 8rem;
   }
 
 .puzzle-game .tile {
-  height: 85px;
+  height: 50px;
   margin: 0;
   background: var(--linear1);
   color: var(--text);
