@@ -190,6 +190,37 @@
   </div>
   <p>Membahas hasil penelitian atau survei yang menunjukkan bahwa sebagian besar wanita cenderung berbohong setelah berbicara dengan seseorang, entah karena alasan tertentu atau alasan psikologis di balik kebohongan tersebut.. <a href="../coretan/98-wanita-akan-berbohong-setelah-lebih-dari.html">Read more</a></p>
 </div>
+<hr>
+
+
+<div class="hidden group">
+<div class="artikel">
+  <h2><a href="../coretan/khodam-warisan-leluhur-dan-bisa-diturunin.html">Khodam Warisan Leluhur dan Bisa Diturunin</a></h2>
+  <div class="thumbnail">
+    <a href="../coretan/khodam-warisan-leluhur-dan-bisa-diturunin.html">
+  <img src="img/thumb/thumb08.jpg" alt="Kin Basari Khodam Warisan Leluhur dan Bisa Diturunin">
+    </a>
+  </div>
+  <p>Beberapa pandangan menyebutkan bahwa khodam bisa diwariskan dari leluhur ke keturunan, terutama jika diperoleh melalui amalan tertentu atau benda pusaka. Namun, ada juga yang berpendapat bahwa khodam hanya mengikuti individu yang... <a href="../coretan/khodam-warisan-leluhur-dan-bisa-diturunin.html">Read more</a></p>
+</div>
+<hr>
+<div class="artikel">
+  <h2><a href="../coretan/sangat-rugi-nonton-video-alur-film.html">Sangat Rugi Nonton Video Alur Film!</a></h2>
+  <div class="thumbnail">
+    <a href="../coretan/sangat-rugi-nonton-video-alur-film.html">
+  <img src="img/thumb/thumb08.jpg" alt="Kin Basari Sangat Rugi Nonton Video Alur Film">
+    </a>
+  </div>
+  <p>Alur film biasanya cuma rangkuman cerita, jadi banyak detail kecil yang dilewatin, seperti dialog penting, simbolisme, atau adegan yang membangun karakter. Padahal, detail-detail ini bisa bikin film lebih bermakna dan keren... <a href="../coretan/
+  sangat-rugi-nonton-video-alur-film.html"
+  >Read more</a></p>
+</div>
+<hr>
+</div>
+</div>
+<br>
+<div class="btn-more">
+<button id="loadMore">Tampilkan Lebih Banyak</button>
 </div>
 <!-- Artikel Section end -->
 
@@ -204,5 +235,27 @@
   <script>
     loadFooter();
   </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let groups = document.querySelectorAll(".group.hidden");
+  let button = document.getElementById("loadMore");
+  let index = 0;
+
+  button.addEventListener("click", function () {
+    if (index < groups.length) {
+      groups[index].classList.remove("hidden");
+      index++;
+      if (index === groups.length) {
+        button.innerText = "Tampilkan Lebih Sedikit";
+        }
+      } else {
+        // Reset kembali ke awal
+        groups.forEach(group => group.classList.add("hidden"));
+        index = 0;
+        button.innerText = "Tampilkan Lebih Banyak";
+        }
+    });
+ });
+</script>
 </body>
 </html>
