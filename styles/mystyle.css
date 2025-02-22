@@ -360,6 +360,7 @@ box-shadow: 1px 1px 3px #133;
 }
 
 .btn-more button {
+  font-family: var(--body1-font);
   color: var(--alpa);
   width: 200px;
   padding: 10px;
