@@ -331,6 +331,10 @@ box-shadow: 1px 1px 3px #133;
   border: 0.2px solid var(--text);
 }
 
+.utama a, .artikels .artikel a {
+  color: var(--bash);
+}
+
 .artikel .thumbnail img {
   width: 15vw;
   height: auto;
@@ -341,13 +345,27 @@ box-shadow: 1px 1px 3px #133;
 .artikels .artikel {
   flex: 1;
   width: 50%;
-/*  background-color: rgba(255,255,244,0.2); */
   padding: 10px;
   border: 1px solid var(--text);
   }
 
-.utama a, .artikels .artikel a {
-  color: var(--bash);
+.artikels .hidden {
+  display: none
+  }
+  
+.btn-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+}
+
+.btn-more button {
+  background: var(--bash);
+  border-radius: 7px;
+  padding: 10px;
+  margin: 15px;
+  width: 200px;
 }
   
 .sidebar {
