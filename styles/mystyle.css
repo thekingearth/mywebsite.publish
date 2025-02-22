@@ -349,7 +349,7 @@ box-shadow: 1px 1px 3px #133;
   border: 1px solid var(--text);
   }
 
-.artikels .hidden {
+.artikels-hidd .hidden {
   display: none
   }
   
@@ -363,7 +363,7 @@ box-shadow: 1px 1px 3px #133;
   font-family: var(--body1-font);
   color: var(--alpa);
   width: 200px;
-  padding: 10px;
+  padding: 5px;
   margin: 15px;
   background: var(--bg);
   border: 2px solid var(--alpa);
