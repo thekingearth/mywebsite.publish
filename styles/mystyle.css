@@ -349,12 +349,17 @@ box-shadow: 1px 1px 3px #133;
   border: 1px solid var(--text);
   }
 
+.artikels-hidd {
+  margin-top: 50px;
+  }
+
 .artikels-hidd .hidden {
   display: none
   }
   
 .btn-more {
   display: flex;
+  margin-top: 50px;
   align-items: center;
   justify-content: center;
 }
@@ -366,7 +371,7 @@ box-shadow: 1px 1px 3px #133;
   padding: 5px;
   margin: 15px;
   background: var(--bg);
-  border: 2px solid var(--alpa);
+  border: 1px solid var(--alpa);
   border-radius: 20px;
 }
 
