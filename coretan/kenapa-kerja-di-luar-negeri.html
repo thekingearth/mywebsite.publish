@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Orang Indonesia Kerja di Luar Negeri, <span>Kenapa Sih?</span></h1>
+    <br>
+  <p>Belakangan ini, jagat maya lagi rame sama trend <span>#KaburAjaDulu.</span> Entah itu di TikTok, Twitter, atau Instagram, semua pada heboh pakai hashtag ini buat ngegambarin momen-momen absurd yang mendingan dihindari daripada dihadapi. Nah, ternyata trend ini juga nyambung banget sama fenomena orang Indonesia yang memilih kerja di luar negeri. Kok bisa?</p>
+  
+  <br>
+  <h2>Apa Itu <span>#KaburAjaDulu?</span></h2>
+  <p><span>#KaburAjaDulu</span> adalah tren di mana orang memilih buat <span>“melarikan diri” </span>dari situasi yang bikin ribet, males, atau terlalu drama. Dari mulai kabur pas lagi ditagih utang, sampai pura-pura ada urusan mendesak pas ketemu mantan di jalan, semua masuk dalam kategori ini.</p>
+  <br>
+  <p>Nah, kalau dikaitin sama kerja di luar negeri, banyak juga orang Indonesia yang memilih <span>#KaburAjaDulu</span> dari kondisi kerja di dalam negeri. Bukan berarti kabur dalam arti negatif, tapi lebih ke cari kesempatan yang lebih baik di luar sana.</p>
+  
+  <br>
+  <h1>Kenapa Banyak Orang Indonesia
+  <br>Pilih Kerja <span>di Luar Negeri?</span></h1>
+  <p>Banyak orang Indo yang kuliah di luar negri tapi giliran udah lulus malah nglanjutin kerja disana, Padahal bisa kuliah di luar negeri itu juga make beasiswa dari Indonesia tapi setelah selesai kuliah malah kerja di sana Stay di sana. Sebenernya itu pilihan sih, yang mana kita tahu pasti mereka pengen punya masa depan yang lebih baik ketimbang pulang ke Indonesia. Dan ada beberapa alasan mengapa mereka lebih memilih Stay dan kerja di sana ketiban pulang ke Indonesia.</p>
+  
+  <br>
+  <h2>Gaji Lebih <span>Besar</span></h2>
+  <p>Di luar negeri, gaji tuh kayak level up di game langsung naik drastis! Misalnya kerja di Jepang, Korea, atau negara-negara Timur Tengah, bisa bikin dompet lebih tebal dari novel Harry Potter. Belum lagi tunjangan kece macam asuransi kesehatan, tunjangan keluarga, sampai fasilitas kerja yang bikin betah. Pokoknya, kerja keras di sana, saldo rekening auto bahagia!</p>
+  
+  <br>
+  <h2>Kesempatan Karier <span>Lebih Baik</span></h2>
+  <p>Banyak yang bilang kalau di Indo karier kayak naik tangga, sedangkan di luar negeri bisa naik eskalator! Apalagi buat yang kerja di bidang teknologi, engineering, atau kesehatan. Di negara maju, lingkungan kerja lebih inovatif dan penuh kesempatan buat berkembang. Bayangin aja, dokter di Eropa bisa mainan teknologi medis terbaru, insinyur bisa ngerjain proyek gede. Karier makin ngebut, masa depan makin cerah!</p>
+
+  <br>
+  <h2>Pengalaman Baru</h2>
+  <p>Kerja di luar negeri bukan cuma soal cuan, tapi juga petualangan! Bisa kenal budaya baru, belajar bahasa asing, dan ngerasain hidup di lingkungan yang beda. Plus, bisa bangun koneksi profesional dengan orang-orang keren dari berbagai belahan dunia. Siapa tahu, dari networking malah dapat peluang kerja yang lebih kece di masa depan. Intinya, kerja di luar negeri tuh kayak main game open-world serunya nggak habis-habis!</p>
+  
+  <br>
+  <h2>Fasilitas dan <span>Keuntungan Kerja</span></h2>
+  <p>Di beberapa negara, pekerja dimanjain banget! Ada tunjangan kesehatan, pendidikan, dan jaminan sosial yang bikin hidup lebih nyaman. Infrastruktur lebih mantap, sistem kesehatan lebih canggih, dan kualitas pendidikan buat anak-anak juga top-tier. Jadi, kalau kerja di luar negeri, bukan cuma gaji yang naik level, tapi juga kualitas hidup. Hidup makin nyaman, stress makin berkurang endingnya auto win!</p>
+  
+  <br>
+  <h3 class="note-artikel">Catatan:</h3>
+  <p>Meskipun <span>#KaburAjaDulu</span> ini cuma bercandaan, tapi di baliknya ada pesan kalau terkadang kita butuh <span>"me time"</span> atau jeda sebelum menghadapi masalah. Begitu juga dengan orang Indonesia yang memilih kerja di luar negeri. Mereka nggak sekadar <span>"kabur"</span> tapi berjuang buat kehidupan yang lebih baik. Tapi dengan adanya ini negara kita Indonesia yang dikenal sebagai negara berkembang kehilangan banyak ketenagakerjaan yang terdidik seperti dokter insinyur guru dan profesi lainnya yang milih bekerja negara orang.</p>
+
+  <br>
+  <div class="baca-juga">
+  <h2>Baca Juga:</h2>
+  <h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
