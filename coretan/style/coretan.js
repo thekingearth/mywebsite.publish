@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: '98-wanita-akan-berbohong-setelah-lebih-dari.html', tittle: '98% Wanita Akan Berbohong Setelah 10 Percakapan' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
+    { file: 'kenapa-kerja-di-luar-negeri.html', tittle: 'Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?' },
     { file: 'ketahui-bakat-terpendammu.html', title: 'Ketahui Bakat Terpendammu' },
     { file: 'khodam-warisan-leluhur-dan-bisa-diturunin.html', tittle: 'Khodam Warisan Leluhur dan Bisa Diturunin' },
     { file: 'kisah-inspiratif-untuk-semangat.hidup.html', title: 'Kisah Inspiratif yang Bikin Hidup Lebih Bersemangat' },
