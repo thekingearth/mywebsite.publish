@@ -856,7 +856,7 @@ box-shadow: 1px 1px 3px #133;
 }
 .privacy h1 {
   font-family: var(--judul-font);
-  font-size: px;
+  font-size: 27px;
 }
 .privacy h1 span {
   color: var(--bash);
