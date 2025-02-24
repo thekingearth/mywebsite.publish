@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const folderPath = '../coretan/'; // Ganti dengan path folder artikel
   const articles = [
     { file: '98-wanita-akan-berbohong-setelah-lebih-dari.html', tittle: '98% Wanita Akan Berbohong Setelah 10 Percakapan' },
+    { file: 'bahaya-rip-current-arus-laut.html', tittle: 'Bahaya Rip Current Arus Laut 2 Meter Perdetik' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
     { file: 'kenapa-kerja-di-luar-negeri.html', tittle: 'Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?' },
