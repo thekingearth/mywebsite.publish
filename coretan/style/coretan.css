@@ -32,7 +32,17 @@
   font-style: italic;
   color: var(--alpa);
 }
-  
+.page-artikel p .heder3 {
+  font-family: var(--harga-font);
+  font-style: normal;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.page-artikel p .heder3 span {
+  font-style: normal;
+  color: var(--bash);
+}
+
 .page-artikel .baca-juga {
   margin-top: 20px;
   padding: 5px;
