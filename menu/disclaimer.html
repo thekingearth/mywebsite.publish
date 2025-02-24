@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/mystyle.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <tittle>Kin Basari Disclaimer</tittle>
+
+<!-- mystyle -->
+<style>
+.privacy {
+  padding: 7rem 0 7rem;
+}
+.privacy h1 {
+  font-family: var(--judul-font);
+  font-size: 27px;
+}
+.privacy h1 span {
+  color: var(--bash);
+}
+.privacy h2, .privacy h3, .privacy h4 {
+  font-family: var(--harga-font);
+}
+.privacy ul {
+  list-style: none;
+  padding: 0;
+}
+.privacy a {
+  color: var(--alpa);
+}
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="scripts/bookitems.js"></script>
+
+</head>
+
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="menu/produk.html">Produk<span>Me</span></a>
+    <a href="menu/books.html">Books<span>Me</span></a>
+    <a href="menu/minigame.html">Mini<span>game</span></a>
+    <a href="menu/about.html">About<span>Me</span></a>
+    <a href="menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Privacy Section start -->
+
+<section class="privacy">
+<h1>Disclaimer</h1>
+<p>Last updated: February 24, 2025</p>
+<br>
+<h2>Interpretation and Definitions</h2>
+<h3>Interpretation</h3>
+<p>The words of which the initial letter is capitalized have meanings defined under the following conditions.
+The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+<h3>Definitions</h3>
+<p>For the purposes of this Disclaimer:</p>
+<ul>
+<li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Disclaimer) refers to coretan kin basari.</li>
+<li><strong>Service</strong> refers to the Website.</li>
+<li><strong>You</strong> means the individual accessing the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+<li><strong>Website</strong> refers to coretan kin basari, accessible from <a href="https://www.kinbasari.my.id" rel="external nofollow noopener" target="_blank">https://www.kinbasari.my.id</a></li>
+</ul>
+<br>
+<h2>Disclaimer</h2>
+<p>The information contained on the Service is for general information purposes only.</p>
+<p>The Company assumes no responsibility for errors or omissions in the contents of the Service.</p>
+<p>In no event shall the Company be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service. The Company reserves the right to make additions, deletions, or modifications to the contents on the Service at any time without prior notice. This Disclaimer has been created with the help of the <a href="https://www.termsfeed.com/disclaimer-generator/" target="_blank">Disclaimer Generator</a>.</p>
+<p>The Company does not warrant that the Service is free of viruses or other harmful components.</p>
+<br>
+<h2>External Links Disclaimer</h2>
+<p>The Service may contain links to external websites that are not provided or maintained by or in any way affiliated with the Company.</p>
+<p>Please note that the Company does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.</p>
+<br>
+<h2>Errors and Omissions Disclaimer</h2>
+<p>The information given by the Service is for general guidance on matters of interest only. Even if the Company takes every precaution to ensure that the content of the Service is both current and accurate, errors can occur. Plus, given the changing nature of laws, rules and regulations, there may be delays, omissions or inaccuracies in the information contained on the Service.</p>
+<p>The Company is not responsible for any errors or omissions, or for the results obtained from the use of this information.</p>
+<br>
+<h2>Fair Use Disclaimer</h2>
+<p>The Company may use copyrighted material which has not always been specifically authorized by the copyright owner. The Company is making such material available for criticism, comment, news reporting, teaching, scholarship, or research.</p>
+<p>The Company believes this constitutes a &quot;fair use&quot; of any such copyrighted material as provided for in section 107 of the United States Copyright law.</p>
+<p>If You wish to use copyrighted material from the Service for your own purposes that go beyond fair use, You must obtain permission from the copyright owner.</p>
+<br>
+<h2>Views Expressed Disclaimer</h2>
+<p>The Service may contain views and opinions which are those of the authors and do not necessarily reflect the official policy or position of any other author, agency, organization, employer or company, including the Company.</p>
+<p>Comments published by users are their sole responsibility and the users will take full responsibility, liability and blame for any libel or litigation that results from something written in or as a direct result of something written in a comment. The Company is not liable for any comment published by users and reserves the right to delete any comment for any reason whatsoever.</p>
+<br>
+<h2>No Responsibility Disclaimer</h2>
+<p>The information on the Service is provided with the understanding that the Company is not herein engaged in rendering legal, accounting, tax, or other professional advice and services. As such, it should not be used as a substitute for consultation with professional accounting, tax, legal or other competent advisers.</p>
+<p>In no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever arising out of or in connection with your access or use or inability to access or use the Service.</p>
+<br>
+<h2>&quot;Use at Your Own Risk&quot; Disclaimer</h2>
+<p>All information in the Service is provided &quot;as is&quot;, with no guarantee of completeness, accuracy, timeliness or of the results obtained from the use of this information, and without warranty of any kind, express or implied, including, but not limited to warranties of performance, merchantability and fitness for a particular purpose.</p>
+<p>The Company will not be liable to You or anyone else for any decision made or action taken in reliance on the information given by the Service or for any consequential, special or similar damages, even if advised of the possibility of such damages.</p>
+<br>
+<h2>Contact Us</h2>
+<p>If you have any questions about this Disclaimer, You can contact Us:</p>
+<ul>
+<li>By visiting this page on our website: <a href="https/www.kinbasari.my.id/menu/contact" rel="external nofollow noopener" target="_blank">https/www.kinbasari.my.id/menu/contact</a></li>
+</ul>
+</section>
+
+<!-- Privacy Section end -->
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="scripts/myscript.js"></script>
+<script src="scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
