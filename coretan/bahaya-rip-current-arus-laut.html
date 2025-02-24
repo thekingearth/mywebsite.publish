@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Bahaya Rip Current: Jangan Main-main Sama Arus Laut!</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Bahaya <span>Rip Current, </span>Jangan
+  <br>Main-main sama <span>Arus Laut!</span></h1>
+    <br>
+  <p>Senja dan pantai adalah dua kata yang sangat indah kalau dilukiskan, hidup lagi pening-peningnya kepala kayak kerasa mau pecah, itu tandanya butuh liburan atau sekedar refreshing diri apalagi bisa santai kayak di pantai. Tapi buat kamu yang doyan liburan ke pantai, pernah nggak sih dengar istilah rip current? Kalau belum, mending kamu baca artikel ini sampai habis biar nggak salah langkah pas lagi asyik main di laut. Soalnya, rip current ini bisa jadi jebakan mematikan buat siapa aja, termasuk perenang yang jago sekalipun!</p>
+  
+  <br>
+  <h2>Apa Itu Rip <span>Current?</span></h2>
+<p>Oke, jadi rip current itu bukan hantu laut atau jin penunggu pantai yang suka narik orang ke tengah laut, ya! Aku sih nggak percaya hal mistis begitu. Rip current ini murni fenomena alam yang terjadi karena pergerakan arus laut. Sederhananya, ini adalah arus kuat yang bergerak dari pantai ke tengah laut dalam jalur sempit. Bisa dibilang, kayak jalan tol buat air laut yang kecepatannya bisa mencapai 2 meter per detik. Gokil, kan?</p>
+  
+  <br>
+  <h2>Kenapa Rip Current <span>Sangat Berbahaya?</span></h2>
+  <p>Nah, karena arus ini kuat banget, banyak orang yang nggak sadar terseret jauh dari pantai. Paniknya, mereka biasanya malah berenang melawan arus buat balik ke daratan. Padahal itu kesalahan fatal! Rip current nggak bakal kalah cuma gara-gara kamu berenang ngelawan arahnya. Yang ada, kamu malah kelelahan dan bisa tenggelam. Ngeri, kan?</p>
+  
+  <br>
+  <h1>Cara Mengenali <span>Rip Current</span></h1>
+  <p>Nggak kayak perempuan yang susah buat dikenali, rip current itu mudah banget buat dikenali. Jadi biar kamu nggak kejebak, coba perhatiin beberapa ciri-ciri rip current berikut ini sebelum nyebur ke laut:</p>
+  
+  
+  <br>
+  <h2>Perhatiin Bedanya <span>Warna Air</span></h2>
+  <p>Rip current biasanya kelihatan kayak jalur air yang lebih gelap di antara ombak yang pecah. Bisa aja keliatan lebih kalem dibanding sekitarnya, tapi aslinya bahaya banget!</p>
+
+  <br>
+  <h2>Lhiat Pola <span>Ombaknya</span></h2>
+  <p>Biasanya rip current muncul di tempat ombaknya nggak pecah, keliatan kayak jalur air yang lebih tenang di antara ombak yang lagi gulung-gulung.</p>
+  
+  <br>
+  <h2>Pantau Gerakan Buih atau <span>Rumput Laut</span></h2>
+  <p>Kalau buih, rumput laut, atau sampah kecil pada ngalir cepet ke laut lepas dalam satu jalur sempit, bisa jadi itu tanda ada rip current.</p>
+  
+  <br>
+  <h2>Tanya Lifeguard</h2>
+  <p>Kalau ada penjaga pantai, mending tanya dulu posisi rip current sebelum nyebur. Kadang juga ada papan peringatan soal arus ini di beberapa pantai. Kalau kamu lihat tanda-tanda ini, mending cari tempat lain buat berenang.</p>
+  
+  <br>
+  <h1>Gimana Cara Selamat dari <span>Rip Current?</span></h1>
+  <p>Rip current atau arus rip adalah arus kuat yang mengalir dari pantai menuju laut. Kalau kamu memang lagi apes atau sial banget sampai kejebak rip current, jangan panik bro! Nih, ada beberapa langkah buat nyelamatin diri:</p>
+  
+  <br>
+  <p><b class="heder3">Jangan Panik, <span>Tetap Tenang </span></b>Kalau kebawa arus, jangan panik! Tenangin diri dulu biar nggak makin capek.</p>
+  <br>
+  <p><b class="heder3">Jangan Lawan <span>Arus </span></b>Rip current itu kuat banget, kalau kamu berenang ngelawan arus, bakal cepet capek. Mending renang ke samping <span>(paralel ke pantai) </span>sampai keluar dari arusnya.</p>
+  <br>
+  <p><b class="heder3">Biarin Arus <span>Mendorong dulu </span></b>Kalau susah renang ke samping, biarin aja arus ngebawa kamu ke laut lepas dulu. Biasanya arusnya bakal melemah, baru deh kamu bisa berenang balik ke pantai dengan lebih santai.</p>
+  <br>
+  <p><b class="heder3">Minta <span>Tolong </span></b>Kalau udah nggak kuat, angkat tangan tinggi-tinggi dan lambaikan biar orang di pantai atau lifeguard bisa nolongin.</p>
+  <br>
+  <p><b class="heder3">Pakai Pelampung <span>Kalau ada </span></b>Kalau kamu nggak yakin sama kemampuan berenangmu, mending pakai pelampung atau alat bantu lainnya sebelum nyebur ke laut.</p>
+  <br>
+  <p><b class="heder3">Jangan Berenang <span>Sendirian </span></b>Selalu berenang bareng temen atau di area yang ada lifeguard-nya. Lebih aman dan kalau ada apa-apa ada yang bisa ngebantuin.</p>
+  
+  
+  <br>
+  <h3 class="note-artikel">Catatan:</h3>
+  <p>Rip current itu bukan mitos atau kutukan laut, tapi fenomena alam yang bisa membahayakan siapa aja. Jadi, sebelum main air di pantai, pastiin kamu paham bahayanya dan tahu cara menghadapinya. Santai boleh, asal tetap waspada! Kalau kamu lihat tanda-tanda rip current, mending main di tempat yang lebih aman. Ingat, keselamatan nomor satu, bro!</p>
+
+  <br>
+  <div class="baca-juga">
+  <h2>Baca Juga:</h2>
+  <h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
