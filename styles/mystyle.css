@@ -850,6 +850,27 @@ box-shadow: 1px 1px 3px #133;
   transform: translateY(1.5rem);
 }
 
+/* Privacy Section */
+.privacy {
+  padding: 7rem 0 7rem;
+}
+.privacy h1 {
+  font-family: var(--judul-font);
+  font-size: px;
+}
+.privacy h1 span {
+  color: var(--bash);
+}
+.privacy h2, .privacy h3, .privacy h4 {
+  font-family: var(--harga-font);
+}
+.privacy ul {
+  list-style: none;
+  padding: 0;
+}
+.privacy a {
+  color: var(--alpa);
+}
 
 
 /* Footer */
