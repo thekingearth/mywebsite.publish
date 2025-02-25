@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Self Discovery Perjalanan Menemukan Makna dan Tujuan Hidup</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Self-Discovery: <span>Perjalanan </span>Menemukan
+  <br>Makna dan <span>Tujuan Hidup</span></h1>
+  <p class="detail-tanggal">Wednesday, 26 February 2025
+  <br>By Kin Basari</p>
+    <br>
+  <p>Guys, pernah nggak ngerasa kayak hidupmu tuh gini-gini aja? Kayak tiap hari bangun, kerja, atau kuliah, terus tidur lagi. Mungkin kamu mulai bertanya-tanya, <span>"Sebenernya gue hidup buat apa sih?" </span>Nah, kalau kamu lagi ada di fase ini, selamat! Kamu lagi ada di perjalanan self-discovery alias pencarian diri sendiri.</p>
+  
+  <br>
+  <h2>Apa Itu <span>Self-Discovery?</span></h2>
+  <p>Self-discovery tuh bukan cuma tentang nyari hobi baru atau cobain hal-hal seru. Ini lebih dari sekadar eksplorasi, tapi lebih ke memahami diri sendiri, semacem apa yang bikin kamu bahagia, apa yang jadi nilai hidupmu, dan apa yang bener-bener kamu mau dalam hidup. Intinya, ini adalah proses kamu buat lebih kenal sama diri sendiri.</p>
+
+  <br>
+  <h2>Kenapa Self-Discovery <span>itu Penting</span></h2>
+  <p>Bayangin kalau kamu jalan tanpa tujuan, pasti kamu bakal bingung dan capek sendiri, kan? Nah, begitu juga dengan hidup. Tanpa tahu makna dan tujuan, kita bakal gampang ngerasa hampa atau bahkan terjebak di rutinitas yang nggak bikin kita berkembang. Dengan memahami diri sendiri, kamu jadi bisa buat keputusan yang lebih sesuai sama keinginanmu dan nggak gampang kebawa arus.</p>
+  
+  <br>
+  <h1>Cara Menemukan <span>Diri Sendiri</span></h1>
+  <p>Nah, sekarang gimana caranya? Tenang, nggak ada cara instan, tapi ada beberapa langkah yang bisa kamu coba:</p>
+
+  <h3>Explorasi <span>Hal Baru</span></h3>
+  <p>Coba sesuatu yang di luar kebiasaan kamu, entah itu baca buku genre baru, ikut komunitas, atau jalan-jalan ke tempat yang belum pernah kamu kunjungin. Dari situ, kamu bisa nemuin apa yang bener-bener bikin kamu excited.</p>
+
+  <h3>Kenali Nilai dan <span>Prinsip Hidup</span></h3>
+  <p>Tanya ke diri sendiri, apa sih yang bener-bener penting buat kamu? Apakah itu keluarga, kebebasan, kreativitas, impian, atau yang lainnya? Dengan tahu nilai-nilai ini, kamu bisa lebih gampang menentukan arah hidup.</p>
+
+  <h3>Journaling atau <span>Refleksi Diri</span></h3>
+  <p>Kadang, pikiran kita terlalu berantakan buat dipahami langsung. Coba tulis apa yang kamu rasain, target hidup, atau bahkan sekadar cerita sehari-hari. Dari situ, kamu bisa lebih ngerti pola pikir dan keinginanmu.</p>
+
+  <h3>Keluar dari <span>Zona Nyaman</span></h3>
+  <p>Serem sih, tapi penting banget. Keluar dari zona nyaman bikin kamu ketemu pengalaman baru yang bisa ngasih perspektif berbeda tentang hidup.</p>
+
+  <h3>Dengerin Diri Sendiri, <span>Bukan Ekspektasi</span></h3>
+  <p>Orang Kadang kita sibuk nurutin ekspektasi orang tua, society, atau media sosial. Padahal, hidup ini tentang kamu. Jadi, fokus sama apa yang bikin kamu bahagia dan puas, bukan cuma yang bikin orang lain seneng.</p>
+  <br>
+  <h2>Perjalanan yang Nggak Ada <span>Ujungnya</span></h2>
+  <p>Self-discovery itu bukan destinasi, tapi perjalanan seumur hidup. Seiring waktu, kamu bakal terus berkembang dan berubah. Yang penting, jangan takut buat eksplorasi, nikmati prosesnya, dan jangan bandingin diri sama orang lain.</p>
+
+  <br>
+  <h2>Manfaat mengenali <span>diri sendiri</span></h2>
+  <h3>Lebih <span>Percaya diri</span></h3>
+  <p>Kalau kamu udah tahu kelebihan dan kekuranganmu, kamu bakal lebih pede dalam ngejalanin hidup. Nggak gampang minder atau ngebandingin diri sama orang lain.</p>
+
+  <h3>Nggak Gampang Terpengaruh <span>Orang Lain</span></h3>
+  <p>Kamu bakal lebih kuat dalam mengambil keputusan tanpa harus ikut-ikutan tren atau pendapat orang lain. Hidup kamu jadi lebih autentik dan nggak penuh kepalsuan.</p>
+
+  <h3>Bisa Ambil Keputusan yang <span>Lebih Tepat</span></h3>
+  <p>Karena kamu udah paham apa yang kamu mau dan butuhin, jadi lebih bijak dalam memilih jalan hidup, entah itu soal karier, hubungan, atau gaya hidup.</p>
+
+  <h3>Lebih Bahagia dan <span>Tenang</span></h3>
+  <p>Nggak ada lagi perasaan kosong atau bingung soal hidup. Kamu tahu apa yang bikin kamu bahagia dan bisa fokus ke hal-hal yang beneran berarti buat diri sendiri.</p>
+
+  <h3>Bisa Kelola Emosi <span>dengan Baik</span></h3>
+  <p>Mengenal diri sendiri berarti juga memahami emosi. Jadi, kalau ada masalah, kamu nggak gampang meledak atau stres berlebihan karena kamu udah tahu cara ngadepinnya.</p>
+
+  <h3>Hubungan dengan Orang Lain <span>Jadi Lebih Sehat</span></h3>
+  <p>Karena kamu udah nyaman sama diri sendiri, kamu bisa ngejalanin hubungan yang lebih tulus dan sehat dengan orang lain, tanpa drama atau ketergantungan yang berlebihan.</p>
+
+  <h3>Punya Tujuan Hidup <span>yang Jelas</span></h3>
+  <p>Kamu nggak bakal jalanin hidup sekadar <span>"ngalir aja," </span>tapi punya arah yang jelas karena kamu tahu apa yang kamu pengin dan gimana cara mencapainya.</p>
+  
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Jujur aja, banyak orang yang lebih sibuk nyari validasi dari orang lain daripada bener-bener ngerti apa yang mereka mau. Padahal, kalau udah paham siapa diri sendiri, hidup bakal terasa lebih ringan dan bermakna. Kenapa? Karena nggak bakal gampang kebawa arus, terus tahu apa yang bikin happy, dan bisa ambil keputusan dengan lebih mantap.</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
