@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const folderPath = '../coretan/'; // Ganti dengan path folder artikel
+  const folderPath = '../coretan/';
   const articles = [
     { file: '98-wanita-akan-berbohong-setelah-lebih-dari.html', tittle: '98% Wanita Akan Berbohong Setelah 10 Percakapan' },
     { file: 'bahaya-rip-current-arus-laut.html', tittle: 'Bahaya Rip Current Arus Laut 2 Meter Perdetik' },
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'menulis-itu-healing-tumpahin-pikiran-legain-hati.html', title: 'Menulis Itu Healing! Tumpahin Pikiran, Legain Hati' },
     { file: 'sangat-rugi-nonton-video-alur-film.html', tittle: 'Sangat Rugi Nonton Video Alur Film' },
     { file: 'self-discovery-perjalanan-menemukan-makna-hidup.html', tittle: 'Self Discovery Perjalanan Menemukan Tujuan Hidup' },
-    { file: 'seni-engendalikan-diri-stoikisme-rahasia-kebahagiaan.html', tittle: 'Seni Mengendalikan Diri Stoikisme Rahasia Kebahagiaan' },
+    { file: 'seni-mengendalikan-diri-stoikisme-rahasia-kebahagiaan.html', tittle: 'Seni Mengendalikan Diri Stoikisme Rahasia Kebahagiaan' },
     { file: 'stop-minder-langkah-simpel-buat-up.html', title: 'Stop Minder! Langkah simpel buat Upgrade Diri' }
     ];
 
