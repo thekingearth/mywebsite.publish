@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Seni Mengendalikan Diri Stoikisme dan Rahasia Kebahagiaan Sejati</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Seni Mengendalikan Diri: <span>Stoikisme</span> dan 
+  <br>Rahasia <span>Kebahagiaan Sejati</span></h1>
+  <p class="detail-tanggal">Thursday, 26 February 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Eh kamu pernah denger lagu yang ada penggalan liriknya gini nggak? <span>"Tiada yang meminta seperti ini, tapi menurutku Tuhan itu baik".</span> Dari penggalan lirik itu menggambarkan bahwa Tuhan sejatinya tidaklah jahat. <b>Kullukum ra'in wa kullukum mas'ulun an ra'iyyatihi.</b> <span>"Setiap kita adalah pemimpin dan setiap pemimpin akan dimintai pertanggung jawaban atas apa yang dipimpinnya. Kita dimintai pertanggung jawaban atas tiga hal pertama pikiran, kedua hati atau emosi kita, ketiga respon atau pilihan sikap kita atas apa yang terjadi di sekitar kita".</span> Sisi positifnya sih kita masih sempet ngerasain semua itu, yang dimana itu adalah bagian dari kehidupan kalau nggak sempet ngerasain semua itu berarti kita udah nggak hidup lagi.</p>
+  <br>
+  <p>Yang namanya hidup itu memang kadang kayak roller coaster? Kadang di atas, kadang di bawah, dan sering kali kita kebawa emosi sama hal-hal yang sebenernya nggak penting-penting amat. Nah, di sinilah stoikisme masuk sebagai ilmu buat kamu yang pengen tetap kalem dan bahagia di tengah kekacauan hidup.</p>
+  
+  <br>
+  <h2>Apa Itu <span>Stoikisme?</span></h2>
+  <p>Singkatnya, stoikisme adalah filosofi kuno dari Yunani yang ngajarin kita buat fokus ke hal yang bisa kita kendaliin dan santai aja sama yang di luar kontrol kita. Jadi, nggak perlu buang energi buat marah-marah ke hujan yang bikin kamu kehujanan atau kesel sama orang yang ngegas di jalan. Santai aja, bro!</p>
+
+  <br>
+  <h1>Rahasia Bahagia Ala <span>Stoikisme</span></h1>
+  <p>Kebahagiaan yang beneran itu nggak cuma datang dari hal-hal eksternal kayak harta, duit, status, atau pujian orang lain <span>(meskipun kadang itu penting juga sih),</span>  tapi dari cara kita nge-handle pikiran, perasaan, dan tindakan kita sendiri. Nah, ini nih beberapa tips biar kamu bisa nemuin kebahagiaan ala stoikisme.</p>
+
+  <br>
+  <h2>Terima Kenyataan <span>Apa Adanya</span></h2>
+  <p>Hidup nggak selalu sesuai ekspektasi, dan itu wajar. Daripada stres mikirin hal yang nggak bisa kamu ubah, lebih baik terima dan adaptasi. Kayak kata Marcus Aurelius, <span> “Hidup kita ditentukan oleh cara kita meresponsnya.”</span> Jadi, kalau ada hal buruk terjadi, anggap aja sebagai latihan mental buat jadi lebih kuat.</p>
+  <h2>Fokus sama <span>Diri Sendiri</span></h2>
+  <p>Banyak orang sibuk nyari validasi dari luar, padahal yang paling penting itu gimana kamu melihat diri sendiri. Kamu nggak bisa kontrol pendapat orang lain, tapi kamu bisa kontrol cara kamu bereaksi. Jadi, daripada pusing mikirin omongan orang, mending upgrade diri sendiri!</p>
+  <h2>Jangan Ketergantungan sama <span>hal Eksternal</span></h2>
+  <p>Duit, jabatan, atau pujian itu emang bikin seneng, tapi kalau kamu menggantungkan kebahagiaan di sana, siap-siap kecewa. Stoikisme ngajarin buat bersyukur sama apa yang kamu punya sekarang dan nggak tergila-gila sama hal yang sifatnya sementara. Semuanya memang sementara <span>kecuali perasaanku padamu. eyaaak...</span></p>
+  <h2>Latihan Mental <span>Tiap Hari</span></h2>
+  <p>Filosofi ini bukan cuma buat dibaca doang, tapi dipraktikin. Kamu bisa mulai dengan refleksi diri setiap malam, nanya ke diri sendiri: <span>“Hari ini gue udah ngelakuin yang terbaik belum?”</span> atau <span>“Apakah gue terlalu emosional menghadapi sesuatu?”</span> Dengan latihan terus-menerus, kamu bakal makin jago ngontrol emosi dan mengelola pikiran serta hati.</p>
+  <h2>Ingat, Semua <span>Bisa Berubah</span></h2>
+  <p>Nggak ada yang abadi di dunia ini, termasuk masalah yang kamu hadapi sekarang. Kalau lagi susah, inget aja ini bakal lewat. Kalau lagi senang, nikmati aja, tapi jangan kelewat. Segalanya bisa berubah kapan aja. Hidup ini dinamis, bro! Jadi pikiran dan hati yang tenang bakal bikin kamu lebih siap menghadapi perubahan.</p>
+  <h2>Kelola Pikiran dan Emosi <span>dengan Bijak</span></h2>
+  <p>Pikiran dan hati kita sering kali jadi sumber kebahagiaan atau penderitaan. Tapi kalau kamu bisa mengontrol respon terhadap sesuatu, maka kamu bisa menjaga ketenangan batin. Jangan biarkan emosi negatif menguasaimu, tapi juga jangan menekan perasaan. Sadari, rasakan, lalu lepaskan tanpa berlarut-larut.</p>
+  
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>kalau kamu pengen hidup lebih santai dan bahagia, coba deh terapin prinsip-prinsip stoikisme ini. Nggak usah gampang baper, nggak perlu terlalu ngoyo buat nyenengin orang lain, dan yang paling penting kontrol apa yang bisa kamu kontrol. Dengan begitu, kamu bisa jadi pribadi yang lebih tenang dan nggak gampang keguncang sama drama kehidupan.</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
