@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Konsistensi Lebih Penting dari pada Motivasi</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Konsistensi Lebih Penting <span>dari pada Motivasi</span>
+  <br>Rahasia <span>Kebahagiaan Sejati</span></h1>
+  <p class="detail-tanggal">Saturday, 01 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Belajar hal baru atau ngerjain sesuatu biasanya sangat bersemangat apalagi kalau di awal, tapi pas di pertengahan jalan kadang semangat itu mulai menurun, atau tiba-tiba ilang gitu aja seiring berjalannya waktu. Kadang tuh kaya ngerasa tantangannya semakin susah, terus mulai ngrasa bosen, udah gitu kesulitan juga makin kompleks.</p>
+  <br>
+  <p>Misalnya, kamu pengen rajin belajar bahasa asing, musik, bisnis baru, olahraga, atau apapun itu terus minggu pertama rajin banget, tapi minggu kedua mulai bolos, dan minggu ketiga udah lupa sama niat awal? Nah, itu dia masalahnya kalau kita cuma ngandelin motivasi doang.</p>
+  
+  <br>
+  <h2>Motivasi Itu Kayak <span>Kembang Api</span></h2>
+  <p>Kembang api kan seru yak, motivasipun sama kayak kembang api. Meledak di awal, warna-warni, bikin semangat, tapi... cepet banget redupnya. Makanya banyak orang yang semangat di awal tapi gak bisa bertahan lama. Karena motivasi itu sifatnya sementara yang abadi tuh cuma perasaanku padamu, <span>eiiitz...</span> Mungkin hari ini kamu bisa semangat banget setelah nonton video motivasi atau dengerin podcast inspiratif, tapi besoknya? Bisa aja udah kembali ke mode manual. <span>"males lagi"</span></p>
+  <br>
+  <h2>Konsistensi Itu Kayak <span>Air Netes</span></h2>
+  <p>Beda cerita kalau kamu punya konsistensi. Ini nih yang lebih penting dari motivasi. Konsistensi itu kayak air yang netes terus-terusan, keliatannya kecil, tapi lama-lama bisa bikin batu berlubang. Nggak peduli lagi kamu semangat atau enggak, yang penting kamu tetep jalanin apa yang udah kamu mulai.</p>
+  <br>
+  <p>Misalnya, kamu pengen jago main gitar kaya alipbata tapi kamu nunggu motivasi dateng dulu, itu artinya lamu bakal latihan main gitar kalau lagi mood aja. Tapi kalau kamu itu konsisten, walaupun itu cuma 15 menit tapi rutin tiap hari, lama-lama skill kamu bermain gitar pasti bakalan naik level.</p>
+  <br>
+  <h1>Gimana Caranya Biar <span>Punya Konsisten?</span></h1>
+  <br>
+  <h2>Bikin Kebiasaan <span>Kecil</span></h2>
+  <p>Jangan langsung gaspol mulai dari yang kecil dulu, tapi dilakuin tiap hari. Misal aja kalau kamu mau baca buku, jangan langsung targetin satu buku sehari. Mulai dari 5 sampai 10 halaman dulu.</p>
+  <h2>Jangan Bergantung Sama  <span>Mood</span></h2>
+  <p>Ini penting banget. Kalau kamu cuma ngandelin mood atau ngerjain sesuatu pas lagi mood aja, ya susah berkembang sih. Harus ada komitmen buat tetap jalan, meskipun lagi gak semangat.</p>
+  <h2>Pasang Reminder dan <span>Atur Jadwal</span></h2>
+  <p>Biar gak lupa atau males-malesan, coba pasang alarm atau reminder buat ngingetin. Karena konsistensi butuh disiplin. Jadwal membantu mengatur waktu, sementara reminder jadi "alarm" yang mendorong untuk tetap on track.</p>
+  <h2>Rayain Progress <span>Kecil</span></h2>
+  <p>Jangan cuma fokus ke hasil akhir, tapi apresiasi tiap langkah kecil yang udah kamu capai. Bangga sama pencapaian diri sendiri itu perlu. <span>"bangga yak, bukan sombong"</span> Biar kamu makin semangat buat lanjut.</p>
+  <br>
+  <h1>Motivasi dan Konsistensi Lebih <span>penting Mana?</span></h1>
+  <p>Keduanya sebenernya penting, tapi kalo dipikir-pikir, konsistensi itu lebih nentuin kesuksesan dalam jangka panjang. Motivasi itu kayak suntikan semangat awal buat ngejalanin sesuatu. Konsistensi itu kunci buat terus jalan meski semangat lagi nggak on fire.</p>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Jadi, kalau kamu mau sukses dalam hal apapun, jangan cuma ngandelin motivasi. Motivasi boleh tapi jadiin itu sebagai pemantik awal, karena yang bikin kamu sampe ke tujuan adalah konsistensi. Ingat, kamu nggak harus selalu semangat, yang penting kamu tetap jalan!</p>
+<br>
+<p>So, mulai sekarang, jangan tunggu mood bagus buat ngelakuin sesuatu. Mulai aja dulu, pelan-pelan, yang penting rutin. Gas terus, biarpun tipis-tipis!</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
