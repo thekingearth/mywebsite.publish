@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Upgrade diri, Perjalanan Menuju Kedewasaan</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Upgrade diri, Perjalanan <span>Menuju Kedewasaan</span></h1>
+  <p class="detail-tanggal">Sunday, 02 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Hidup itu susah untuk ditebak, kadang happy banget, terus tiba-tiba baper, marah, atau malah nggak jelas maunya apa. Pernah kan kamu ngerasain itu? Nah, itu tandanya kamu lagi ada di perjalanan panjang menuju kedewasaan. Salah satu skill penting yang harus dikuasai di sini adalah mengelola emosi. Bukan berarti kamu harus jadi robot tanpa perasaan, tapi lebih ke cara kamu bisa ngerti, nerima, dan ngontrol segala sesuatu yang udah terjadi lalu menanggapinya dengan bijak. Karena kalau nggak, nanti emosi yang ngelola kamu, dan ujung-ujungnya kamu malah jadi admin grup overthinking! <span>eiiiitz...</span></p>
+  <br>
+  <p>Umur hanyalah angka, tetapi kedewasaan tergantung pada cara kita berpikir, bertindak, dan mengambil keputusan dalam hidup. Siapa sih yang nggak pengen jadi orang yang lebih dewasa? Bukan cuma soal umur, tapi juga cara mikir, cara ngadepin masalah, dan gimana berinteraksi sama orang lain.</p>
+  <br>
+  <p>Ada orang yang masih muda tapi sudah bijaksana, dan ada juga yang sudah berumur tetapi belum tentu dewasa dalam menyikapi kehidupan. Kedewasaan adalah tentang tanggung jawab, empati, dan kebijaksanaan dalam menghadapi berbagai situasi. Berikut ada beberapa cara buat mendewasakan diri antara lain:</p>
+  
+  <br>
+  <h2>Belajar Ngontrol Emosi <span>dan Kesabaran</span></h2>
+  <p>Dewasa itu bukan berarti nggak boleh marah atau sedih, tapi gimana kamu bisa ngontrol perasaan biar nggak meledak-ledak kayak petasan. Kalau ada masalah, coba duduk dulu tarik napas, pikirin baik-baik, baru kasih respon yang masuk akal. Jangan langsung ngegas atau baper berlebihan. Coba lebih sabar dan lihat masalah dari berbagai sudut pandang. Dengan begitu, kamu nggak gampang tersulut emosi dan bisa lebih bijak dalam bersikap.</p>
+  <br>
+  <h2>Jangan Takut Minta Bantuan dan <span>Drama Berlebihan</span></h2>
+  <p>Jujur aja, hidup emang kadang keras, tapi kalau tiap hal kecil selalu didramain, yang ada bikin capek sendiri. Coba deh mulai belajar buat nggak overthinking dan fokus ke solusi, bukan cuma ngeluh doang. Tapi kalau emosi kamu udah berantakan banget dan susah dikontrol, nggak ada salahnya curhat ke orang yang lebih berpengalaman atau bahkan profesional seperti psikolog. Itu bukan tanda kelemahan, justru itu bukti kalau kamu berani buat jadi lebih baik. Karena nggak semua hal bisa dihadapi sendirian.</p>
+  <br>
+  <h2>Tanggung Jawab dan <span>Jangan Egois</span></h2>
+  <p>Udah gede, masa masih nyalahin keadaan atau orang lain terus? Mau sukses atau gagal, itu tanggung jawabmu. Jadi, mulai biasain buat nggak cari kambing hitam setiap ada masalah. Kalau salah, yak akuin dan perbaiki. Belajar menerima kritik dan masukan tanpa defensif, berusahalah untuk tidak selalu egois dan nggak semua hal harus berjalan sesuai keinginanmu. <span>"Kalau hidupmu masih penuh drama nyalahin keadaan, jangan kaget kalau ending-nya bukan sukses, tapi sinetron".</span></p>
+  <br>
+  <h2>Belajar Menerima dan Dengerin <span>Orang Lain</span></h2>
+  <p>Banyak orang yang lebih suka ngomong daripada dengerin. Padahal, jadi pendengar yang baik itu tanda kedewasaan. Kamu nggak harus selalu menang debat atau bener sendiri, tapi coba pahamin dulu sudut pandang orang lain sebelum nyela. Dengan ngedengerin orang lain <span>speak up</span> disitulah cara belajar ikhlas dan menerima bahwa hidup nggak semuanya sesuai ekspektasi, bisa juga bantu lebih tenang dalam menghadapi masalah, dan nerima sama keadaan.</p>
+  <br>
+  <h2>Keluar dari Zona Nyaman Jaga <span>Komitmen dan Konsistensi</span></h2>
+  <p>Kalau terus-terusan ada di tempat yang nyaman, kapan mau berkembang? Coba tantang diri sendiri buat coba hal baru, ambil risiko yang masuk akal, dan jangan takut gagal. Justru dari kegagalan itu kamu bakal makin dewasa. Dan dewasa itu juga soal bisa diandalkan. Kalau buat janji jangan diingkari, kalau punya tujuan usahain sampai selesai. Jangan gampang nyerah atau berubah-ubah kayak angin.</p>
+  <br>
+  <h2>Nggak Semua Hal Perlu <span>dibawa Perasaan</span></h2>
+  <p>Banyak orang jadi nggak enjoy hidup karena dikit-dikit baper. Coba belajar buat ngebedain mana kritik yang membangun dan mana yang cuma omongan kosong. Fokus sama yang bermanfaat, dan buang aja yang nggak perlu. <span>"Kalau semua omongan dimasukin ke hati, kapan otak dipake mikir?"</span></p>
+  <br>
+  <h2>Pilih Circle <span>yang Sehat</span></h2>
+  <p>Pertemenan bisa ngaruh banget ke caramu buat berpikir dan bertindak. Jadi pilih lingkungan yang bisa bikin berkembang, bukan yang cuma ngajak hedon atau ngegalau mulu. Makin dewasa makin kamu sadar kalau kualitas pertemanan lebih penting dari kuantitas.</p>
+
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Mendewasakan diri itu perjalanan panjang, bukan sesuatu yang bisa kuasai dalam semalam, nggak ada yang instan. Yang penting, terus belajar dan berkembang. So, yuk mulai dari sekarang biar nggak dibilang "bocil" lagi!</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
