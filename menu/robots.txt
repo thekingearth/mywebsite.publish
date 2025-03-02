@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kinbasari.my.id/menu/sitemap.xml
