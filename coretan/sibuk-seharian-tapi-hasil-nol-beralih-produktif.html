@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Sibuk Seharian Tapi Hasil Nol? Saatnya Beralih ke Produktif</tittle>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>         Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Sibuk Seharian <span>Tapi Hasil Nol?</span>
+  <br>Saatnya Beralih ke <span>Produktif</span></h1>
+  <p class="detail-tanggal">Tuesday, 04 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Terjebak dalam rutinitas tanpa jeda, rasanya kayak sesulit nyari harta karun di dalam samudra, fisik udah ngrasa lelah tapi terus melangkah. Capek dan penat udah nggak bisa di tuliskan, waktu terasa sempit, malahan diri sendiri juga sering terlupakan. Kamu pernah kan ngerasain itu semua?</p>
+  <br>
+  <p>Padahal jadwal udah sibuk banget dari pagi sampe malem, kerja banting tulang, berangkat pagi buat kerjaan utama, di sisa waktu luang disambung ngerjain kerjaan sampingan, tapi pas dicek hasilnya nggak seberapa? Tenang, kamu nggak sendirian! Banyak orang ngalamin hal yang sama, dan penyebabnya sering kali bukan kurang kerja, tapi salah strategi. Nah, biar waktumu nggak kebuang sia-sia, yuk mulai jadi lebih produktif!</p>
+  
+  <br>
+  <h2>Prioritasin yang  <span>Penting Dulu</span></h2>
+  <p>Banyak orang ngabisin waktu buat hal-hal yang keliatan sibuk, tapi nggak berdampak besar. Coba deh pake metode Eisenhower Matrix atau teknik To-Do List yang bener. Fokus ke tugas yang penting dan mendesak dulu, baru yang lain nyusul.</p>
+  <br>
+  <h2>Jangan Multitasking <span>Berlebihan</span></h2>
+  <p>Katanya multitasking bikin kerjaan cepet kelar, tapi nyatanya malah bikin otak makin capek karena digunakan terlalu maksimal buat  ngelakuin beberapa hal dalam waktu bersamaan, dan hasilnya nggak maksimal. Mending pake metode Pomodoro: kerja fokus 25 menit, istirahat 5 menit. Dijamin lebih efektif! <span>"Multitasking itu kayak buka banyak tab di browser, ujung-ujungnya yang nge-crash otaknya sendiri"</span></p>
+  <br>
+  <h2>Stop Jadi Budak <span>Notifikasi</span></h2>
+  <p>Sering kali beberapa orang setiap HP nya bunyi, fokus kerja langsung buyar. Buat yang ngerasa gitu Coba matiin notifikasi yang nggak penting atau pake mode Do Not Disturb biar kerjaanmu nggak terganggu.</p>
+  <br>
+  <h2>Jangan Lupa <span>Istirahat</span></h2>
+  <p>Kerja keras itu penting, tapi kalau kecapekan, performa malah turun. Luangin waktu buat stretching, jalan-jalan sebentar, atau sekadar ngopi biar otak tetap fresh. <span>"Kerja keras boleh, tapi jangan lupa ngasih jeda biar otak encer, bukan encer di ubun-ubun!"</span></p>
+  <br>
+  <h2>Evaluasi dan <span>Perbaiki</span></h2>
+  <p>Di akhir hari, coba cek lagi apa aja yang udah di kerjain. Kalau ada yang kurang efektif, cari cara buat ningkatinnya besok. Jangan cuma kerja keras, tapi juga kerja cerdas!</p>
+  
+  <br>
+  <h1>Sibuk dan Produktif. <span>Apa bedanya?</span></h1>
+  <p>Perbedaan paling mencolok antara jadi orang sibuk dan orang produktif itu ada di cara mereka nge-handle waktu, tenaga, dan apa yang mereka hasilin. Orang sibuk kelihatan heboh ke sana-sini, tapi belum tentu kerjaannya beres. Sementara orang produktif, dia lebih pinter atur strategi biar effort yang dikeluarin bener-bener ngasih hasil yang maksimal. <span>"kalau sibuk tapi hasilnya gitu-gitu aja berarti itu lagi sibuk yang kelihatannya sibuk, bukan sibuk yang jadi produktif"</span></p>
+  <h2>Manajemen Waktu Fokus Aktivitas vs  <span>Fokus Hasil</span></h2>
+  <p>Orang yang sibuk kadang selalu merasa tidak punya waktu, sering multitasking tanpa prioritas. Sering juga menghabiskan banyak waktu untuk berbagai tugas tanpa hasil yang jelas. Lain hal dengan orang produktif yang memiliki jadwal terstruktur, tahu mana yang harus diprioritaskan, dan ngerjain tugas dengan tujuan yang jelas dan hasil yang nyata.</p>
+  <h2>Kepuasan Kerja dan Efisiensi vs <span>Kesibukan</span></h2>
+  <p>Banyaknya kerjaan memang bisa ngelelahin badan dan pikiran, apalagi kalau nggak ada cukup waktu buat istirahat. Luangin waktu sedikit, dari pada kerja lama tapi nggak selalu efektif lebih baik kerja dengan cara yang lebih cerdas, menyelesaikan lebih banyak dalam waktu lebih sedikit. Jadi ngerasa puas karena tugas selesai dengan baik dan ada banyak waktu buat istirahat.</p>
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Orang sibuk terlihat bekerja keras, tapi belum tentu maju. Orang produktif bekerja dengan strategi, sehingga hasilnya lebih maksimal. Jadi, udah siapkah ningkatin produktivitas hari ini? Jangan sampai sibuk seharian tapi hasilnya nol lagi, ya! Gaspol produktif!</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
