@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'bahaya-rip-current-arus-laut.html', tittle: 'Bahaya Rip Current Arus Laut 2 Meter Perdetik' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
+    { file: 'diam-bukan-berarti-lemah-stop-oversharing.html', tittle: 'Diam Bukan Berarti Lemah, Stop Oversharing!' },
     { file: 'jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', tittle: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic' },
     { file: 'kenapa-kerja-di-luar-negeri.html', tittle: 'Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?' },
     { file: 'ketahui-bakat-terpendammu.html', title: 'Ketahui Bakat Terpendammu' },
