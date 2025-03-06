@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Diam Bukan Berarti Lemah, Stop Oversharing</tittle>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>         Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Diam Bukan Berarti Lemah, <span>Stop Oversharing</span></h1>
+  <p class="detail-tanggal">Thursday, 06 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Capek dan lelah karena rutinitas itu hal yang lumrah dan wajar, tapi gimna kalo ngerasa capek atau lelah karena setelah bercerita? Jangan terlalu sibuk memberitahu dunia tentang rencana-rencana besar sampai lupa bahwa yang benar-benar penting bukan apa yang diucapkan tapi apa yang dilakukan.</p>
+  <br>
+  <p>Di era media sosial jaman sekarang, banyak orang yang ngerasa harus selalu update tentang segala hal di kehidupan mereka. Ada yang curhat masalah kerjaan, hubungan percintaan, dan masih bantak lagi, pokoknya banyak banget lah, ada juga sampai hal-hal yang harusnya cukup jadi konsumsi pribadi. Tapi, pernah kepikiran gak sih kalau terlalu banyak sharing alias over sharing justru bisa jadi bumerang buat diri sendiri? <span>"Jadi kalau hidupmu udah kayak reality show, jangan kaget kalau dramanya datang tanpa skrip!"</span></p>
+  
+  <br>
+  <h2>Kenapa Sih Orang Suka <span>Over Sharing?</span></h2>
+  <p>Banyak alasan kenapa orang suka berbagi cerita mereka di media sosial. Bisa karena butuh validasi, pengen dapet simpati, atau sekadar pengen eksis. Nggak salah sih, tapi kalau setiap momen dan perasaan selalu diumbar, lama-lama bisa bikin kehilangan privasi dan bahkan bisa dimanfaatkan sama orang yang gak bertanggung jawab.</p>
+  <br>
+  <h2>Diam Bukan Berarti <span>Lemah</span></h2>
+  <p>Banyak yang salah paham, dikira kalau nggak banyak bicara atau jarang curhat ke publik, itu artinya nggak punya pendapat atau lemah. Padahal, justru diam bisa jadi tanda kalau dia memang punya kendali penuh atas diri sendiri. Orang yang bijak tahu kapan harus ngomong dan kapan harus nyimpen sesuatu untuk dirinya sendiri.</p>
+  <p>Orang-orang yang terlalu sering curhat ke publik, terutama soal masalah pribadi, sering kali malah bikin dirinya makin rentan. Karena nggak semua orang tuh punya niat baik, dan nggak semua orang peduli juga sama cerita kita. Beberapa cuma pengen kepo aja atau bahkan manfaatin buat kepentingan pribadi.</p>
+  <br>
+  <h1>Gimana Biar Gak <span>Over Sharing?</span></h1>
+  <p>Kalau kamu ngerasa sering kebablasan dalam berbagi cerita, coba deh mulai kontrol diri biar nati nggak sampai melebar kemana-mana waktu cerita dengan beberapa cara ini:</p>
+  <h3>Pikirkan Dulu Sebelum <span>Bercerita</span></h3>
+  <p>Sebelum posting, atau curhat ke publik, atau ke teman pikirin dulu <span>"apakah ini perlu dibagikan?"</span> Kalau misal nggak ada manfaatnya, mungkin lebih baik disimpan aja. Karena nggak semua hal pribadi harus diceritain, emang bener sih ada yang bisa dishare buat deketin orang, cari support, atau sekadar curhat, tapi ada juga yang mending disimpen sendiri aja.</p>
+  <h3>Pilih orang yang Tepat <span>Buat Curhat</span></h3>
+  <p>Memilih orang yang tepat untuk curhat itu penting karena bisa memberikan dukungan yang tulus, bukan sekadar mendengar tanpa peduli, bisa ngelihat dari sudut pandang lain, bisa merasa lebih lega tanpa takut dihakimi atau diremehin. Jangan sampai curhat sama orang yang salah karena nggak semua orang bisa jaga rahasia. <span>"kan bahaya yak kalau cerita sama orang yang suka gosip nyebarin cerita ke mana-mana"</span></p>
+  <h3>Jangan Terlalu Emosional  <span>Pas Cerita</span></h3>
+  <p>Karena kalau terlalu emosional pas cerita, orang lain bisa jadi nggak nangkep maksudnya dengan jelas. Kadang karena emosi bisa bikin waktu ngejelasin sesuatu jadi muter-muter atau terlalu dramatis, jadi pesannya malah nggak sampai. Bisa aja malah jadi ngomong sesuatu yang nanti di sesalin, kayak malah nyinggung orang lain tanpa sadar.</p>
+  <h3>Pentingnya Menjaga <span>Privasi</span></h3>
+  <p>Jaga privasi itu penting banget biar hidup tetap aman dan nggak jadi drama gratisan. Nggak semua orang di luar sana punya niat baik, ada aja yang suka kepo berlebihan atau malah manfaatin info orang lain buat hal yang nggak bener. Bayangin aja kalau kamu spill semua cerita tanpa filter, tiba-tiba ada orang yang nyebarin atau muter-muterin ceritanya dengan versi mereka sendiri.</p>
+  <h3>Belajar Nyaman Dengan <span>Kesendirian</span></h3>
+  <p>Belajar nyaman sama kesendirian itu bukan berarti kesepian, tapi lebih ke bisa enjoy sama diri sendiri tanpa harus cari validasi dari orang lain. Nggak perlu selalu update kehidupan di medsos atau curhat ke semua orang. Ada hal-hal yang lebih asik dinikmatin sendiri, biar hati dan pikiran lebih tenang.</p>
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Tidak ada yang salah dalam berbagi, namun tetap diperlukan batasan yang jelas. Diam bukan berarti takut atau lemah, melainkan dapat menjadi bukti bahwa memiliki kendali dan kedewasaan dalam menghadapi kehidupan. Oleh karena itu, berhentilah membagikan terlalu banyak hal, mulailah menjaga privasi, dan biarkan hidup tetap memiliki ruang pribadi yang tidak perlu diketahui oleh semua orang.</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
