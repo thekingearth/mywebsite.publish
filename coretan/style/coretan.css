@@ -74,3 +74,6 @@
   color: var(--bash);
 }
 
+#disqus_thread .disqus-footer {
+  color: red;
+}
