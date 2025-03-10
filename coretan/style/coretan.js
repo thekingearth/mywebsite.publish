@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'self-discovery-perjalanan-menemukan-makna-hidup.html', tittle: 'Self Discovery Perjalanan Menemukan Tujuan Hidup' },
     { file: 'seni-mengendalikan-diri-stoikisme-rahasia-kebahagiaan.html', tittle: 'Seni Mengendalikan Diri Stoikisme Rahasia Kebahagiaan' },
     { file: 'sibuk-seharian-tapi-hasil-nol-beralih-produktif.html', tittle: 'Sibuk Seharian Tapi Hasil Nol? Saatnya Beralih ke Produktif' },
+    { file: 'stop-comparing-yourself-fokus-pada-pertumbuhan.html', tittle: 'Stop Comparing Yourself, Berhenti Membandingkan Diri' },
     { file: 'stop-minder-langkah-simpel-buat-up.html', title: 'Stop Minder! Langkah simpel buat Upgrade Diri' },
     { file: 'upgrade-diri-perjalanan-menuju-kedewasaan.html', tittle: 'Upgrade diri, Perjalanan Menuju Kedewasaan' }
     ];
