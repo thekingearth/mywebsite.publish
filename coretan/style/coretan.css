@@ -70,3 +70,6 @@
   color: var(--bash);
 }
 
+#disqus_thread .disqus-footer {
+    display: none !important;
+}
