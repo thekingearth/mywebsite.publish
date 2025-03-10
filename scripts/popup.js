@@ -76,7 +76,7 @@ function loadFooter() {
             <div class="links">
                 <a href="https://www.kinbasari.my.id">Home</a>
                 <a href="../menu/about.html">About</a>
-                <a href="../menu/disclaimer.html">Disclaimer</a>
+                <a href="../menu/disclaim.html">Disclaimer</a>
                 <a href="../menu/contact.html">Contact</a>
             </div>
             <div class="credit">
