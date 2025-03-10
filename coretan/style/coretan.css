@@ -70,6 +70,14 @@
   color: var(--bash);
 }
 
+#disqus_thread a {
+  color: var(--bash);
+}
+
 #disqus_thread .disqus-footer {
-    display: none !important;
+  display: none !important;
+}
+
+#disqus_thread iframe {
+  display: none !important;
 }
