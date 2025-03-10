@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Stop Comparing Yourself, Fokus pada Pertumbuhan Bukan Perbandingan</tittle>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>         Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Stop Comparing Yourself,
+  <br>Fokus pada Pertumbuhan <span>Bukan Perbandingan</span></h1>
+  <p class="detail-tanggal">Monday, 10 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Hai semua, udah berapa kali nih ngunjungin blog aku? Sekarang aku mau nanya deh sama kalian pembaca setia blog ini. Berapa sih umur kalian apa udah menjelang 30 tahunan? Kalau iya berarti kita sebaya hehehe...</p>
+  <br>
+  <p>Jadi gimana nih sekarang? Di usia yang menjelang 30 an ini mungkin ada banyak kekhawatiran yang tanpa sengaja bersarang di pikiran kan? Yang paling umum itu pasti belum menikah, belum mencapai target finansial tertentu, belum ada pekerjaan yang udah tetap, atau sekedar belum cukup bahagia atas keputusan-keputusan yang sudah di ambil, rasanya matahari terbit dan terbenam nggak tepat pada waktunya, kayak semacem dunia cepat banget berputar yak.</p>
+  <br>
+  <p>Terus pernah nggak ngerasa insecure gara-gara liat orang lain kayaknya hidupnya lebih oke? Entah itu temen yang kariernya lebih moncer, yang punya barang branded, atau yang kayaknya selalu happy di media sosial. Kalau pernah (atau malah sering), tenang aja, lo nggak sendirian. Memang sih sebenarnya semua itu diluar kontrol kita tapi apa kita harus terus-menerus membandingkan diri sama orang lain karena perkara itu?</p>
+  <br>
+  <p>No... Jelas enggak dong, yang harus dilakuin adalah yakin bahwa setiap manusia itu punya jalan hidupnya sendiri-sendiri, percaya akan takdir serta fokus akan tujuan, buang rasa malas saat ini juga, dan yakin sama tujuan akhir kita. Minimal jadikan pencapaian orang lain sebagai inspirasi dan motivasi bukan iri hati dan ngebandingin diri <span>"Ingat, bunga kan mekar meskipun kemarau melanda".</span></p>
+  <br>
+  <p>Tapi, coba deh stop sejenak dan pikirin ini: hidup bukan kompetisi siapa yang lebih sukses, lebih kaya, atau lebih bahagia. Hidup itu perjalanan, dan setiap orang punya jalannya masing-masing. Jadi, daripada sibuk banding-bandingin diri sama orang lain, mending fokus ke diri sendiri dan gimana bisa bertumbuh. Kalau terus ngebanding-bandingin diri nanti kamu kayak Tegar <span>"wong koyo ngene kok dibanding-bandingke".</span></p>
+  
+  <br>
+  <h2>Kenapa Sih Kita Suka <span>Membandingkan Diri?</span></h2>
+  <p>Jujur aja, di era media sosial kayak sekarang, susah banget buat nggak ngebandingin diri. Tiap hari dicekokin konten tentang pencapaian orang lain, yang kadang bikin ngerasa ketinggalan. Tapi yang sering kita lupa, apa yang kita liat itu cuma highlight, bukan keseluruhan cerita hidup mereka. Otak kita emang udah terprogram buat membandingkan, tapi kalau keterusan, dampaknya bisa nggak sehat. Bisa jadi kehilangan rasa percaya diri, ngerasa nggak cukup, terus malah stuck di perasaan negatif</p>
+  <br>
+  <h2>Saatnya Fokus pada <span>Pertumbuhan Diri</span></h2>
+  <p>Dibanding terus-terusan mikirin pencapaian orang lain, coba deh mulai perhatiin perkembangan diri sendiri. Ini semacem waktu yang tepat buat memperbaiki berbagai aspek dalam hidup, mulai dari hal pengetahuan, keterampilan, atau kebiasaan. Apakah ada area tertentu dalam hidup yang ingin difokusin buat berkembang? Waktunya upgrade diri, mentemen nggak usah banyak drama, fokus aja buat jadi versi terbaik dari diri sendiri. Mau belajar skill baru, ngubah mindset, atau ningkatin kebiasaan, yang penting jalan terus. Gaskeun! Gimana caranya? Nih, beberapa tipsnya:</p>
+  <h3>Kenali <span>Diri Sendiri</span></h3>
+  <p>Ngenali diri sendiri bisa ngebantu banget buat mahamin nilai, tujuan, dan potensi yang dimiliki. Terus bisa ngebuat keputusan yang lebih tepat, ngembangin kepercayaan diri, serta menghadapi tantangan dengan lebih baik. Nggak cuma itu, kita juga jadi lebih fokus sama pertumbuhan pribadi dan nggak gampang terpengaruh sama ekspektasi orang lain karena paham apa yang bener-bener di pengenin dalam hidup, bukan karena ikut-ikutan tren atau biar dianggap keren. <span>"Makin kenal diri sendiri, makin kecil kemungkinan hidup cuma jadi fotokopian ekspektasi orang lain!"</span></p>
+  <h3>Buat Target yang <span>Realistis</span></h3>
+  <p>Netapin target yang realistis itu penting biar kita tetap termotivasi dan tidak mudah menyerah. Karena kalau targetnya terlalu tinggi yang ada nanti malahan ngerasa kewalahan terus frustrasi waktu gagal ngencapainya. Sebaliknya, kalau targetnya terlalu mudah nanti nggak bakal mendorong buat berkembang. Target realistis memungkinkan buat bertumbuh secara bertahap, ngukur progres lebih jelas, dan menyesuaikan strategi yang diperluin. Dengan begitu, jadi lebih konsisten dan percaya diri buat ngecapai tujuan. Fokus ke tujuanmu sendiri, nggak perlu sama kayak orang lain. Yang penting mah berkembang dan makin baik dari sebelumnya.</p>
+  <h3>Kurangi Konsumsi Konten yang <span>Bikin Insecure</span></h3>
+  <p>Terlalu banyak konsumsi konten yang bikin insecure itu sama aja kayak racun buat mindset kita. Bukannya termotivasi yang ada malah jadi ngerasa nggak cukup terus. Padahal, yang kita lihat di medsos itu seringnya cuma highlight terbaik orang lain, bukan realita penuh mereka. Jadi, dari pada sibuk bandingin diri sama standar yang nggak nyata, mending fokus ke progress diri sendiri. Kurangin konsumsi konten yang bikin overthinking, dan mulai isi pikiran dengan hal-hal yang beneran ngebantu buat berkembang! <span>"Ingat, yang bikin kamu berkembang itu usaha sendiri, bukan scroll tanpa henti!"</span></p>
+  <h3>Syukuri Setiap <span>Perjalananmu</span></h3>
+  <p>Setiap orang punya timeline-nya masing-masing, jangan sibuk ngeliat hidup orang lain karena bisa ngelupain kalau kita juga udah jalan jauh. Mungkin belum sampai tujuan, tapi lihat deh sejauh mana udah melangkah, nggak apa-apa kalau prosesnya nggak secepat orang lain. Yang penting tetep terus maju, belajar, dan tumbuh. Nikmatin aja tiap langkahnya sekecil apa pun. Karena tanpa sadar, hal-hal kecil itu yang nanti bikin bangga sama diri sendiri. Intinya jangan cuma nunggu sampai <span>“sukses”</span> dulu buat bersyukur. Syukuri aja dari sekarang karena setiap perjalananmu itu berharga!</p>
+  <h3>Kelilingi Diri dengan Orang <span>yang Supportif</span></h3>
+  <p>Lingkungan itu ngaruh banget ke cara kita mikir dan berkembang, kalau dikelilingi orang yang supportif mereka bakal nyemangatin, kasih perspektif positif, dan bantu buat naik level. tapi kalau sering bareng orang yang toxic, bisa-bisa energi habis buat hal nggak penting. Jadi cari circle yang sehat, yang bikin lebih termotivasi dan fokus ke hal-hal yang benar-benar berarti!</p>
+
+  <br>
+  <h2>Hidup Itu Maraton, <span>Bukan Sprint</span></h2>
+  <p>Dari pada sibuk ngebandingin diri sama orang lain, mendingan fokusin aja buat diri sendiri biar bisa jadi versi terbaik. Hidup itu kayak maraton, bukan sprint. Nggak perlu buru-buru, yang penting terus jalan. Kadang pelan, kadang capek, tapi selama nggak berhenti pasti nyampe juga, yang penting bukan siapa yang lebih cepat, tapi gimana bisa sampai ke tujuan dengan versi terbaik dari dirimu sendiri. <span>"Memang baik jadi yang tercepat, tapi lebih penting tetap kuat sampai garis finish"</span></p>
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Setiap orang memiliki perjalanan dan waktunya masing-masing. Alihkan energi dari perbandingan menuju perkembangan diri. Jadilah versi terbaik dari dirimu sendiri. Berhenti membandingkan diri dan mulai fokus ke pertumbuhan. Karena satu-satunya orang yang perlu kamu kalahin adalah dirimu di hari kemarin!</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
