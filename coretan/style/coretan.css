@@ -74,10 +74,3 @@
   color: var(--bash);
 }
 
-#disqus_thread .disqus-footer {
-  display: none !important;
-}
-
-#disqus_thread iframe {
-  display: none !important;
-}
