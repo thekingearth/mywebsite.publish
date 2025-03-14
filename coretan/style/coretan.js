@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const folderPath = '../coretan/';
   const articles = [
     { file: '98-wanita-akan-berbohong-setelah-lebih-dari.html', tittle: '98% Wanita Akan Berbohong Setelah 10 Percakapan' },
+    { file: 'adaptasi-ketenangan-pikiran-hidup-didunia-yang-kacau.html', tittle: 'Adaptasi Mencari Ketenangan Pikiran dari Dunia yang Kacau' },
     { file: 'bahaya-rip-current-arus-laut.html', tittle: 'Bahaya Rip Current Arus Laut 2 Meter Perdetik' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'konsistensi-lebih-penting-dari-motivasi.html', tittle: 'Konsistensi Lebih Penting dari pada Motivasi' },
     { file: 'kisah-inspiratif-untuk-semangat.hidup.html', title: 'Kisah Inspiratif yang Bikin Hidup Lebih Bersemangat' },
     { file: 'menulis-itu-healing-tumpahin-pikiran-legain-hati.html', title: 'Menulis Itu Healing! Tumpahin Pikiran, Legain Hati' },
+    { file: 'rahasia-cepat-paham-saat-belajar.html', tittle: 'Rahasia Cepat Paham Saat Belajar' },
     { file: 'sangat-rugi-nonton-video-alur-film.html', tittle: 'Sangat Rugi Nonton Video Alur Film' },
     { file: 'self-discovery-perjalanan-menemukan-makna-hidup.html', tittle: 'Self Discovery Perjalanan Menemukan Tujuan Hidup' },
     { file: 'seni-mengendalikan-diri-stoikisme-rahasia-kebahagiaan.html', tittle: 'Seni Mengendalikan Diri Stoikisme Rahasia Kebahagiaan' },
