@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Adaptasi Mencari Ketenangan Pikiran Hidup di Dunia yang Kacau</tittle>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Adaptasi Mencari Ketenangan Pikiran
+  <br>Hidup di Dunia <span>yang Kacau</span></h1>
+  <p class="detail-tanggal">Friday, 14 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Dunia makin hari makin nggak jelas, berita isinya drama, medsos penuh debat nggak ada ujungnya, dan hidup rasanya kayak naik roller coaster yang nggak bisa berhenti udah gitu tanpa sabuk pengaman. Berita buruk di mana-mana, deadline numpuk, sosial media bikin overthinking, dan orang-orang makin gampang tersinggung. Jadi, gimana caranya tetap hidup tenang di tengah kekacauan ini? Coba ikuti beberapa cara berikut!</p>
+  
+  <br>
+  <h2>Jangan Kebanyakan Konsumsi <span>Berita</span></h2>
+  <p>Serius deh, berita itu kayak makanan junk food, dikit boleh tapi kalau kebanyakan malah bikin stres. Ambil jeda dari berita-berita yang bikin kepala panas, pilih sumber yang kredibel dan cukup cek sehari sekali aja biar tetap update tapi nggak kebawa stres.</p>
+
+  <br>
+  <h2>Kurangin Drama di <span>Medsos</span></h2>
+  <p>Medsos memang tempat yang bisa bikin orang tersenyum tapi juga bisa bikin kepala meledak. Unfollow akun-akun yang bikin kamu kesel, mute grup WA yang isinya debat nggak jelas, dan fokus sama konten yang bikin happy. <span>Kesehatan mental lebih penting daripada update status orang lain!"</span></p>
+  <br>
+  <h2>Nikmati Hal-hal Kecil dan <span>Kurangi Overthinking</span></h2>
+  <p>Kadang kita terlalu sibuk mikirin hal besar sampai lupa nikmatin yang kecil-kecil. Coba deh sesekali nikmati secangkir kopi tanpa distraksi, dengerin lagu favorit, atau sekadar jalan sore sambil lihat langit senja. Hal-hal kecil ini bisa bikin hati lebih adem. Dan jangan lupa kurangi overthingking, karena overthinking itu ibarat lari di treadmill, capek tapi nggak kemana-mana. Kalau ada masalah, cari solusi sebisanya, kalau nggak ada solusi ya udah ikhlasin dulu. Kadang hal-hal yang kita takutin nggak seburuk yang kita bayangin kok. <span>"Mending capek overthinking apa capek ketawa"</span></p>
+  <br>
+  <h2>Luangin Waktu buat <span>Diri Sendiri</span></h2>
+  <p>Dunia boleh kacau, tapi jangan sampai kita lupa buat istirahat. Luangin waktu buat diri sendiri, entah itu rebahan, baca buku, atau ngelakuin hobi yang bikin seneng. Recharge energi biar nggak gampang kelelahan mental. <span>"Kalau kamu tumbang siapa coba yang mau jadi pahlawan di cerita hidupmu?"</span></p>
+
+  <br>
+  <h2>Pilih Lingkungan yang <span>Positif</span></h2>
+  <p>Orang-orang di sekitar dan lingkungan itu berpengaruh banget buat ketenangan hidup. Jaga jarak dari mereka yang suka nyebarin vibes negatif dan deketin orang-orang yang bikin kamu nyaman dan bisa saling support.</p>
+
+  <br>
+  <h2>Jangan Terlalu <span>Perfeksionis</span></h2>
+  <p>Perfeksionisme itu melelahkan. Kalau kita selalu nuntut segala sesuatu harus sempurna, ujung-ujungnya malah stres sendiri. Yang penting adalah melakukan yang terbaik semampu kita, bukan harus selalu sempurna. Terkadang, <span>"cukup baik"</span> itu sudah lebih dari cukup. <span>"Ngejar kesempurnaan nggak ada cukupnya jadi cukup aja udah sempurna dengan cara sendiri"</span></p>
+
+  <br>
+  <h2>Cuek Aja Kadang <span>Penting</span></h2>
+  <p>Nggak semua hal harus dimasukin ke hati, jangan terlalu peduli sama omongan orang atau hal-hal kecil yang sebenarnya nggak terlalu penting. Belajar buat cuek dan nggak gampang tersulut itu salah satu kunci hidup tenang. Pilih mana yang benar-benar layak buat dipikirin, sisanya? Anggap aja angin lalu! <span>"Kalo semua kamu masukin ke hati terus apa masih ada ruang buat aku disana"</span></p>
+
+  <br>
+  <h2>Jangan Lupa Untuk Selalu <span>Bersyukur</span></h2>
+  <p>Terakhir biasakan bersyukur, fokus ke apa yang udah dimiliki jangan terlalu fokus sama apa yang masih kurang. Dengan bersyukur, hati jadi lebih ringan dan hidup terasa lebih tenang.</p>
+
+  <br>
+  <p>Hidup memang nggak selalu mudah, tapi kita bisa kok tetap tenang di tengah segala kekacauan. Yang penting jangan terlalu keras sama diri sendiri dan tetap cari cara buat menikmati hidup. Semangat!</p>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Hidup tenang bukan berarti nggak ada masalah, tapi gimana cara ngejalanin hidup tanpa terus-terusan kebawa stres. Santai aja, jalani dengan lebih ringan, dan nikmati prosesnya!</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<div id="disqus_thread"></div>
+
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+<script>
+    var disqus_config = function () {
+    this.page.url = 'https://www.kinbasari.my.id/coretan/adaptasi-ketenangan-pikiran-hidup-didunia-yang-kacau.html';
+    this.page.identifier = '/coretan/adaptasi-ketenangan-pikiran-hidup-didunia-yang-kacau.html';
+    };
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://coretan-kin-basari.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+</html>
