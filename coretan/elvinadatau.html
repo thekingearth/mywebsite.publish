@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Miltonian+Tattoo&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>https://www.slidesnow.net/elvinadatau/sulawesitengah/palu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0s;
+            animation: zmEffect 3s infinite alternate;
+            z-index: -2;
+        }
+        
+        .background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        @keyframes zoomEffect {
+            100% {
+                transform: scale(2.1);
+            }
+        }
+        
+        h1 {
+            position: absolute;
+            font-family: "Miltonian Tattoo", serif;
+            top: 90px;
+            margin: 0;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            z-index: 2;
+            color: #f08;
+        }
+
+        .expresion {
+            font-size: 1.5rem;
+            margin: 20px 10%;
+            text-shadow: 1px 1px 5px #000;
+            font-family: "Happy Monkey", system-ui;
+            color: #ff0;
+        }
+        .text-container {
+            position: absolute;
+            bottom: 20px;
+            padding: 60px 50px;
+            color: rgba(255,255,255,0.4);
+        }
+        #social {
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+        
+        .snowflake {
+            position: fixed;
+            top: -100px;
+            font-size: 5em;
+            opacity: 0.8;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) translateX(-100px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(110vh) translateX(50px) rotate(970deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background"></div>
+
+    <h1>Elvina Datau</h1>
+    <p class="expresion" id="quote"></p>
+    <audio id="background-audio" autoplay loop>
+        <source src="https://github.com/kinbasari222/myaudiosomewhereonly.github.io/raw/refs/heads/main/Somewhere%20only%20we%20know.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="snow-container"></div>
+    <div class="text-container">
+      <span style="font-family: 'Roboto', serif;"><b>application by :</b></span><br>
+        <span> <i id="social" class="fab fa-instagram" style="font-size: 30px;"></i> </span><br>
+        <span id="social" style="font-family: 'Roboto', serif;"><b>@kin_basari</b></span>
+        
+    </div>
+
+    <script>
+        const images = [
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-lyT7fkhJGZrYJ9XIPe5cG0EL6drnP43RfBLqe7oTfp6U5bZK4JJnygdl&s=10',
+            'https://images.pexels.com/photos/548376/pexels-photo-548376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2hCRFWau6IT-sGjP-IkB6bMTtp23JmUl9xmk50rRY1NhMasEpYdAb5rC&s=10',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnCkQGqyOxYAscwlY6ONSI7plXs0WOU2Q-vg&usqp=CAU',
+            'https://images.pexels.com/photos/87815/almond-blossom-cherry-blossom-japanese-cherry-trees-blossom-87815.jpeg?auto=compress&cs=tinysrgb&w=400',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT53MBHCiE3NRgOcR_7daNRBdL0WMvSxJnfrpBNrnBpKBXSuYg8UzwjRks&s=10'
+        ];
+
+        const quotes = [
+            'Bukan cuma matamu yang indah, tapi caramu memandang dan berkedipmu di situlah kecantikanmu terlukis.',
+            'Senyum dan tawamu itu seperti lagu favoritku, nggak pernah bosan ku dengar dan selalu membuat hariku ceria',
+            'Kalau surga itu destinasi tempat penuh keindahan, maka sebagian dari itu ada didalam senyummu.',
+            'Wajahmu adalah hal pertama yang ingin aku lihat saat membuka mata, karena itulah yang selalu membuat hariku bahagia.',
+            'Senyummu bukan hanya sekedar manis, tapi juga memiliki kekuatan untuk membuat segalanya terasa lebih baik.',
+            'Saat kamu tersenyum, seluruh dunia terasa lebih damai dan penuh kebahagiaan.'
+        ];
+
+        let currentIndex = 0;
+        const background = document.getElementById('background');
+        const quoteElement = document.getElementById('quote');
+
+        function typeText(text, element, callback) {
+            let index = 0;
+            element.textContent = '';
+            const interval = setInterval(() => {
+                element.textContent += text[index];
+                index++;
+                if (index === text.length) {
+                    clearInterval(interval);
+                    if (callback) callback();
+                }
+            }, 50);
+        }
+
+        function updateBackgroundAndQuote() {
+            background.style.backgroundImage = `url('${images[currentIndex]}')`;
+            typeText(quotes[currentIndex], quoteElement);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateBackgroundAndQuote();
+        }
+
+        setInterval(nextSlide, 9000);
+
+        const correctPassword = "elvinadataupalingcantik"; 
+
+        function validatePassword() {
+            let password = "";
+            do {
+                password = prompt("Masukkan Password untuk mengakses aplikasi ini:");
+                if (password !== correctPassword) {
+                    alert("Password salah! Silakan coba lagi.");
+                }
+            } while (password !== correctPassword);
+            alert("Password benar!\nKlik {OK} yaah elvina ku yang cantik.");
+        }
+
+        validatePassword();
+        updateBackgroundAndQuote();
+
+        const audio = document.getElementById('background-audio');
+        document.addEventListener('click', () => {
+            audio.play();
+        }, { once: true });
+
+        
+        const snowContainer = document.getElementById('snow-container');
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '🌸';
+            snowflake.style.left = Math.random() * window.innerWidth  + 'px';
+            snowflake.style.animationDuration = Math.random() * 5 + 2 + 's';
+            snowflake.style.fontSize = Math.random() * 30 + 10 + 'px';
+            snowContainer.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        setInterval(createSnowflake, 210);
+    </script>
+</body>
+</html>
