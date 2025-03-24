@@ -84,3 +84,13 @@ const rupiah = (number) => {
     gtag('config', 'G-6RC05CL34F');
   };
 })();
+
+
+//Ansense
+document.addEventListener("DOMContentLoaded", function() {
+    let script = document.createElement("script");
+    script.async = true;
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5259367956152112";
+    script.crossOrigin = "anonymous";
+    document.head.appendChild(script);
+});
