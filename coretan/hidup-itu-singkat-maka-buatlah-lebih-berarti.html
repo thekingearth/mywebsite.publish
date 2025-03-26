@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Hidup Ini Memang Terlalu Singkat Maka Buatlah Jadi Lebih Berarti</tittle>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Hidup Ini Memang Terlalu Singkat,
+  <br>Maka Buatlah Jadi <span>Lebih Berarti</span></h1>
+  <p class="detail-tanggal">Wednesday, 26 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Pernah nggak sih tiba-tiba kepikiran, "Duh, waktu kok berjalan terasa cepat banget, rasanya baru kemarin tahun baru, tiba-tiba udah mau masuk tahun baru lagi, umur makin nambah, tapi kayak belum ngelakuin apa-apa yang berarti?"</p>
+  <br>
+  <p>Singkat dan Berarti dua kata ini sangat berkaitan erat banget sama Umur dan Waktu, singkat untuk umur dan berarti tidak lain berkaitan sama waktu, berbicara tentang umur. Umur itu sesuatu yang nggak bisa di kontrol, nggak bisa milih mau lahir kapan atau sampai umur berapa. Tapi yang bisa di kontrol itu cuma bagaimana kita njalanin hidup. Mau diisi sama hal-hal bermakna atau cuma sekadar euforia <span>"ngalir aja"</span> tanpa arah. Sedangkang waktu, Waktu, di sisi lain, adalah sumber daya yang terus berjalan, nggak bisa dihentiin atau diulang. Setiap detik yang lewat, nggak akan bisa di ambil lagi. Makanya, waktu itu lebih berharga dari uang, karena kalau uang hilang, masih bisa dicari lagi, tapi kalau waktu hilang, ya udah, nggak bisa balik. <span>"Kecuali kamu punya pintu kemana saja"</span></p>
+  <br>
+  <p>Terus gimana sama <b>"Waktu adalah uang"</b> ini sering dipakai buat ngejelasin pentingnya waktu dalam hidup. Maksudnya, waktu itu berharga banget, kayak uang yang kalau cuma dibuang-buang bakalan habis sia-sia. Tapi bukan berarti harus kerja terus-terusan kayak mesin. Justru, waktu yang dipakai buat hal-hal bermakna, kayak menikmati momen, membangun hubungan baik, atau sekadar istirahat, itu juga investasi buat kebahagiaan kita. Hidup ini memang singkat jadi buatlah lebih berarti. Makanya daripada cuma ngelewatin hari-hari gitu aja, kenapa nggak kita bikin lebih berarti?</p>
+
+  <br>
+  <h2>Nikmati Proses, Jangan Cuma <span>Fokus di Hasil</span></h2>
+  <p>Kadang kita terlalu sibuk ngejar sesuatu sampai lupa nikmatin perjalanannya. Padahal, yang bikin hidup lebih seru itu justru prosesnya. Jangan kebanyakan mikirin <span>"kapan suksesnya"</span> tapi coba nikmatin setiap langkah yang kamu ambil. Misalnya, kalau kamu lagi belajar sesuatu yang baru, jangan langsung pengen jago. Nikmati aja trial and error-nya, karena dari situ kamu bisa belajar banyak hal.</p>
+
+  <br>
+  <h2>Luangin Waktu Buat Orang-Orang <span>yang Berarti</span></h2>
+  <p>Jangan terlalu menyibukan diri banget sama kerjaan, sosial media, atau urusan sendiri, sampai lupa ada orang-orang di sekitar yang sayang sama kita. Coba deh, sekali-kali matiin HP, ngobrol langsung sama keluarga, sahabat, atau pasangan. Ada yang bilang waktu itu nggak bisa diulang, jadi jangan sampai nyesel karena nggak ngabisin waktu bareng mereka.</p>
+
+  <br>
+  <h2>Jangan Takut Keluar dari <span>Zona Nyaman</span></h2>
+  <p>Hidup bakal terasa lebih berarti kalau kita berani mencoba hal baru. Jangan kebanyakan mikir <span>"takut gagal"</span> karena gagal itu bagian dari perjalanan. Mau coba bisnis kecil-kecilan? Gas aja! Mau belajar skill baru? Langsung eksekusi! Hidup yang penuh tantangan itu lebih seru daripada cuma diem di tempat.</p>
+
+  <br>
+  <h2>Bantu Orang Lain, Sekecil <span>Apapun itu</span></h2>
+  <p>Berbuat baik itu nggak harus nunggu jadi kaya <span>"karena kayamu masih lama"</span>. Padahal berbuat baik itu nggak harus pake materi, hal kecil juga bisa berarti besar buat orang lain. Senyum ke orang asing, nolongin teman yang kesusahan, atau sekadar dengerin curhatan seseorang, itu semua udah bikin hidup kamu lebih bermakna.</p>
+
+  <br>
+  <h2>Lakukan Hal yang <span>Kamu Sukai</span></h2>
+  <p>Jangan sampai hidup ini cuma buat ngejar ekspektasi orang lain. Lakuin apa yang bikin kamu happy! Suka ngegambar? Gambar aja. Suka musik? Mainin alat musikmu. Jangan ragu buat meluangkan waktu buat diri sendiri, karena hidup nggak cuma soal kerja dan tanggung jawab.</p>
+
+  <br>
+  <h2>Bersyukur dan Hidup <span>di Saat Ini</span></h2>
+  <p>Sering kali kita terlalu sibuk mikirin masa depan atau nyeselin masa lalu sampai lupa buat hidup di momen sekarang. Padahal, hal paling sederhana kayak ngopi sambil liatin hujan, ngobrol santai sama teman, atau sekadar jalan-jalan sore juga bisa bikin hidup lebih berarti kalau kita benar-benar menikmatinya.</p>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Hidup ini singkat, tapi kita punya pilihan buat bikin setiap momennya lebih bermakna. Nggak harus sesuatu yang besar, yang penting kamu menjalaninya dengan penuh kesadaran dan kebahagiaan. Jadi, yuk mulai sekarang, bikin hidup ini lebih berarti!</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<div id="disqus_thread"></div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+<script>
+    var disqus_config = function () {
+    this.page.url = 'https://www.kinbasari.my.id/coretan/urlpage';
+    this.page.identifier = '/coretan/linkpage';
+    };
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://coretan-kin-basari.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+</html>
