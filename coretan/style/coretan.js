@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const articles = [
     { file: '98-wanita-akan-berbohong-setelah-lebih-dari.html', tittle: '98% Wanita Akan Berbohong Setelah 10 Percakapan' },
     { file: 'adaptasi-ketenangan-pikiran-hidup-didunia-yang-kacau.html', tittle: 'Adaptasi Mencari Ketenangan Pikiran dari Dunia yang Kacau' },
+    { file: 'bahagia-tidak-perlu-dicari-tetapi-diciptakan.html', tittle: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan' },
     { file: 'bahaya-rip-current-arus-laut.html', tittle: 'Bahaya Rip Current Arus Laut 2 Meter Perdetik' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
