@@ -43,6 +43,12 @@
   color: var(--bash);
 }
 
+.page-artikels .qute {
+  text-align: center;
+  font-weight: bold;
+  color: var(--alpa);
+  }
+
 .page-artikel .baca-juga {
   margin-top: 20px;
   padding: 5px;
