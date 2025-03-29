@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Bahagia Tidak Perlu Dicari Tetapi Diciptakan</tittle>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Bahagia Tidak Perlu Dicari <span>Tetapi Diciptakan</span></h1>
+  <p class="detail-tanggal">Saturday, 29 March 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p class="qute">"Aku berjalan menggunakan sepeda motor, lalu di depan ada persimpangan, hatiku ku tinggalkan di sana"</p>
+  <br>
+  <p>Apa kamu bisa mengartikan kalimat di atas coba tebak dulu deeh sebelum ku kasih tahu, Apa kamu sudah menebaknya, Oke sekarang aku kasih tahu. Kalimat di atas menunjukkan bahwa seseorang merasa bimbang atau kehilangan arah dalam perjalanannya, baik secara fisik maupun emosional. Persimpangan melambangkan pilihan atau perubahan dalam hidup. Meninggalkan hati di sana diartikan seseorang harus membuat keputusan sulit dan meninggalkan perasaan atau kenangan tertentu di masa lalu.</p>
+
+  <br>
+  <h2>Bahagia Dicari Atau <span>Diciptakan</span></h2>
+  <p>Setelan ninggalin hati dipersimpangan, tiba-tiba timbul pikiran "Aku pengen cari kebahagiaan?" atau "Gimana ya cara nemuin bahagia?" Padahal, kalau dipikir-pikir, bahagia itu bukan harta karun yang harus dicari. Bahagia itu bukan tujuan akhir layaknya happy ending di sebuah film, tapi sesuatu yang bisa di ciptakan sendiri.</p>
+
+  <br>
+  <h2>Bahagia Itu Bukan di <span>Ujung Jalan</span></h2>
+  <p>Banyak orang yang berpikir kalau kebahagiaan itu ada di suatu tempat yang jauh. Misalnya, nanti kalau udah kaya, baru bisa bahagia. Atau kalau udah punya pasangan yang cocok, baru bisa senyum tiap hari. Padahal, kalau nunggu semua itu terjadi dulu, yang ada malah bakal buang-buang waktu buat sesuatu yang nggak pasti.</p>
+  <p>Bayangin saja kalau setiap hari itu terus-terusan nunggu sesuatu yang belum tentu datang. Bisa-bisa malah lupa buat menikmati hal-hal kecil yang sebenarnya bisa bikin bahagia sekarang juga. Kebahagiaan nggak harus selalu datang dari hal besar. Terkadang, secangkir kopi di pagi hari, ngobrol bareng temen, atau sekadar dengerin lagu favorit juga bisa bikin hati senang.</p>
+
+  <br>
+  <h2>Bahagia Itu Diciptakan, <span>Bukan Ditunggu</span></h2>
+  <p>Bahagia itu kayak sesuatu yang harus ditunggu, karena kalau cuma ditunggu, bisa-bisa kebahagiaan itu nggak datang-datang. Bahagia itu sebenarnya bukan sesuatu yang jatuh dari langit. Tapi kita sendiri yang harus pun bisa mudah buat nyiptainnya dengan cara seperti:</p>
+  
+  <h3>Stop Bandingin Diri Sama <span>Orang Lain</span></h3>
+  <p>Selain bikin makin sulit bahagia kebiasaan ini juga bikin capek dan sering kali nggak adil buat diri sendiri. Setiap orang punya perjalanan, tantangan, dan waktunya masing-masing. Fokus aja sama progres diri sendiri, sekecil apa pun itu tetap berarti. Yang penting, terus berkembang dan jadi versi terbaik dari diri sendiri!</p>
+  
+  <h3>Bersyukur dengan Apa <span>yang Ada</span></h3>
+  <p>Terlalu sibuk ngejar sesuatu sering banget bikin lupa buat nikmatin apa yang sudah dimiliki. Coba deh, setiap hari luangin waktu sebentar untuk bersyukur dari beberapa hal-hal kecil seperti bisa makan enak, tidur nyenyak, atau punya teman ngobrol itu juga bagian dari kebahagiaan.</p>
+  
+  <h3>Lakukan Sesuatu yang <span>Menyenangkan</span></h3>
+  <p>Bahagia itu nggak semuanya harus mahal, bahagia bisa datang dari hal-hal sederhana seperti Senyum tulus, ngobrol sama orang tersayang, menikmati udara pagi, atau sekadar dengerin lagu favorit, semua itu gratis tapi bisa bikin hati tenang. Kadang, yang bikin kita bahagia bukan seberapa mahal sesuatu, tapi seberapa kita bisa bersyukur dan menikmati momen yang ada.</p>
+  
+  <h3>Kurangi Drama dan <span>Overthinking</span></h3>
+  <p>Drama dan overthinking cuma buang-buang energi, jangan terlalu mikirin hal-hal yang sebenarnya nggak seburuk itu. Lebih baik fokus sama solusi daripada terus-terusan kepikiran hal yang belum tentu kejadian. Hidup jadi lebih ringan kalau kita belajar buat santai, ikhlas, dan nggak terlalu baper sama omongan orang bisa bikin hidup lebih tenang.</p>
+
+  <br>
+  <h2>Standar Bahagia Orang <span>Berbeda-beda</span></h2>
+  <p>Bahagia itu nggak ada ukuran pastinya karena tiap orang punya standar dan cara sendiri buat ngerasainnya. Ada yang bahagia kalau bisa bersepeda, ada yang cukup dengan secangkir kopi di pagi hari. Ada juga yang ngerasa bahagia kalau lihat orang lain tersenyum karena bantuannya. Setiap orang punya bisa bahagia menikmati hidup dengan caranya sendiri.</p>
+
+  <br>
+  <h2>Bahagia Itu <span>Pilihan</span></h2>
+  <p>Intinya, bahagia itu bukan soal mencari atau nunggu sesuatu terjadi. Bahagia itu pilihan yang kita buat setiap hari. Kita bisa pilih buat menikmati momen kecil, bersyukur atas apa yang kita punya, dan nggak terus-terusan membandingkan diri sama orang lain.</p>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Bahagia itu perasaan senang, puas, dan damai yang datang dari dalam diri. Bukan cuma soal tawa atau kesenangan sesaat, tapi juga tentang merasa cukup, berarti, dan bisa menerima hidup apa adanya.</p>
+<br>
+<p class="qute">"Selamat menciptakan kebahagiaanmu sendiri. Jangan lupa senyum hari ini yaah"</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<div id="disqus_thread"></div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+<script>
+    var disqus_config = function () {
+    this.page.url = 'https://www.kinbasari.my.id/coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html';
+    this.page.identifier = '/coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html';
+    };
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://coretan-kin-basari.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+</html>
