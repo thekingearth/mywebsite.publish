@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap);
 
 @font-face {
-      font-family: 'LPMQ';
+      font-family: 'Bash';
       src: url('../fonts/misbah.ttf') format('truetype');
     }
 
@@ -14,11 +14,11 @@ body {
   padding: 2px 5px 0;
 }
 .qs-name {
-  text-align: right;
-  font-family: 'LPMQ', serif;
+  text-align: justify;
+  font-family: 'Bash', serif;
   direction: rtl;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 40px;
   color: #fff;
 }
 .qs-name span {
