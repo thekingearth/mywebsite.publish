@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap);
+
+body {
+  background: #000;
+  font-family: "Nunito", serif;
+  }
+.qs-full {
+  padding: 2px 5px 0;
+}
+.qs-name {
+  text-align: justify;
+  font-family: "Scheherazade New", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+}
+.qs-name span {
+  color: #fd0;
+}
+.btn-prevnext {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.prev, .next {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fc0;
+  width: 130px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  margin: 5px;
+  font-size: 10px;
+}
+.prev:hover, .next:hover {
+  background-color: #fd0;
+}
