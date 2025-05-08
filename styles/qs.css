@@ -9,7 +9,6 @@
 body {
   background: #000;
   font-family: "Nunito", serif;
-  cursor: pointer;
   }
 .qs-full {
   padding: 2px 5px 0;
@@ -24,6 +23,7 @@ body {
 }
 .qs-name p .klik {
   color: #fd0;
+  cursor: pointer;
 }
 .qs-name p .hidden {
   display: none;
