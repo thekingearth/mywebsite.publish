@@ -21,8 +21,11 @@ body {
   line-height: 40px;
   color: #fff;
 }
-.qs-name span {
+.qs-name p .klik {
   color: #fd0;
+}
+.qs-name p .hidden {
+  display: none;
 }
 .btn-prevnext {
   display: flex;
