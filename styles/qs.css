@@ -34,6 +34,9 @@ body {
   align-items: center;
   padding: 10px;
 }
+.btn-prevnext a {
+  text-decoration: none;
+}
 .prev, .next {
   display: inline-block;
   padding: 10px 20px;
