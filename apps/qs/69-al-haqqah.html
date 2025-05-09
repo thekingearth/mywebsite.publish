@@ -10,6 +10,12 @@
 </head>
 
 <body>
+<div class="controls">
+  <button id="mins" onclick="decreaseSpeed()">&minus;</button>
+  <span id="speedDisplay">1</span>
+  <button id="plus" onclick="increaseSpeed()">&plus;</button>
+  <button id="play" onclick="toggleScroll()"><span id="scrollBtnText">▶︎</span></button>
+</div>
 <div class="qs-full">
   <div class="qs-name">
     <p>
@@ -125,5 +131,6 @@
 </p>
 
 <!-- <script src="../scripts/qstext.js"></script> -->
+<script src="../scripts/qs.js"></script>
 </body>
 </html>
