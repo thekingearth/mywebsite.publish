@@ -109,3 +109,40 @@ body {
 .prev:hover, .next:hover {
   background-color: #fd0;
 }
+
+.controls {
+  position: fixed;
+  top: 65vh;
+  left: 15px;
+  z-index: 999;
+  background: #fd0;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  }
+.controls button {
+  font-size: 18px;
+  margin: 0 1px;
+  padding: 1px 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  }
+.controls #mins, .controls #plus  {
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+    }
+.controls #speedDisplay {
+  margin: 0;
+  font-size: 10px;
+  }
