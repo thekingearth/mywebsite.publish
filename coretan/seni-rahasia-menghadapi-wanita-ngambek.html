@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Rahasia Seni Menghadapi Wanita Yang Lagi Ngambek</tittle>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Rahasia Seni Menghadapi Wanita Yang <span>Lagi Ngambek</span></h1>
+  <p class="detail-tanggal">Sunday, 11 May 2025
+  <br>By Irmawati</p>
+  <br>
+  <p><span style="text-align: center;">"Setinggi apapun jabatanmu dan sehebat apapun profesimu, inget bang suatu saat kamu akan membawakan tas wanita."</span></p>
+  <br>
+  <p>Kedengeran lucu, tapi dalem kan bang. Ini Bukan soal tasnya, tapi tentang seberapa jauh kamu bisa turun ego buat orang yang kamu sayangin. Kalau ada yang bilang perempuan tuh emang misterius jawabannya bener banget, kadang ngambek cuma gara-gara hal kecil, tapi dari situ kamu bisa belajar. Cinta itu soal usaha, bukan gengsi. Dan percaya deh, cowok yang rela ngebawain tas cewek tanpa ngerasa harga dirinya jatuh, biasanya hatinya udah naik kelas. Mudah kan?</p>
+  <br>
+  <p>Meski tampak lembut dari luar, wanita bisa dikatakan perpaduan antara perasaan dan logika, antara kelembutan dan keteguhan. Malah ada beberapa jenis wanita yang memang memiliki bentuk fisiknya yang sangat kewanitaan secara utuh, tapi di dalamnya tertanam 10 jiwa tukang pukul yang sadis. Tapi balik lagi terkadang, perempuan itu suka ngambek. Itu bukan perkara logika, tapi perkara hati.</p>
+  
+  <br>
+  <p>Hmm... Jadi kamu pernah nggak bang ngalamin yang satu ini: pasanganmu lagi ngambek, diem seribu bahasa, ngeluarin jurus silent treatment, terus kamu bengong tapi sambil mikir layaknya detektif lagi nyari tahu, "Ane salah apa ya?" kadang alasannya sepele, tapi dampaknya bisa bikin cowok mikir semalaman. Ya gitulah, kadang wanita agak susah ditebak. Dibutuhkan kesabaran, empati, dan komunikasi yang tepat. Tenang bang. Cewek ngambek itu bukan akhir segalanya dari dunia ini. Tapi kamu harus ngerti, ada seni tersendiri buat ngadepin makhluk lembut yang kadang berubah jadi misterius ini. Yuk simak nih aku bakalan bocorin rahasianya.</p>
+  
+  <br>
+  <h2>Dengerin Dulu Sampai <span>Habis</span></h2>
+  <p>Jadilah pendengar setia dari keluh kesahnya, bukan langsung kasih solusi, intinya butuh kepekaan saja dan siapin juga telinga lebarmu untuk memahaminya. Kadang perempuan cerita panjang lebar, terus endingnya cuma bilang, <span>“Gak papa kok” (yang artinya 100% ada apa apa).</span> Di situ kamu jangan langsung potong. Dengerin sampai akhir, walau agak muter-muter. Perempuan itu kadang pengen didengar saja apa lagi pas lagi bad mood, bukan langsung dikasih solusi, jadi cukup di dengarkan dan validasi perasaannya tanpa buru-buru beri solusi.</p>
+  <br>
+  <h2>Beri Kenyamanan Meski Kadang <span>Diusir</span></h2>
+  <p>Lagi ngambek terus kamu malah ikutan ngegas? Wah, bisa makin meledak tuh suasana. Kuncinya: tenang dulu. Tarik napas, tahan emosi. Dia lagi pengen didengar, bukan diajak debat meskipun kadang kalau dia ngambek suka ngusir. Disinilah kepekaan para pria diuji. Pahamilah, cewek tuh butuh kehadiranmu didekatnya sebagai bentuk dukungan. Bila perlu tempel terus layaknya stiker.</p>
+  <br>
+  <h2>Minta Maaf Meskipun Ngerasa <span>Nggak Salah</span></h2>
+  <p>Eits,,,, ini bukan berarti kamu ngalah terus. Tapi kadang, "Maaf ya kalau aku bikin kamu ngerasa gak nyaman" itu ampuh banget buat ngeredain suasana. Dia ngerasa dihargai, dimengerti. Jadi banyak sabar dan ngalah itu termasuk kuncinya, bukan malah di balas dengan ngambek juga. Tetap tenang supaya situasi nggak makin runyam. Beri ruang aman, bukan penghakiman Buatlah dia merasa kalau apa pun yang dia sampaikan nggak akan dihakimi. Kalau diperlukan kamu juga bisa bilang, "Apa pun yang kamu rasain, aku nggak akan marah. Aku cuma pengen ngertiin kamu lebih baik".</p>
+  <br>
+  <h2>Kejutan Kecil = <span>Efek Besar</span></h2>
+  <p>Luluhkan hatinya lewat hal-hal kecil yang manis. Ngambek kecilnya perempuan kadang bisa ilang cuma karena kamu ngirimin chat manis, meme lucu, atau tiba-tiba beliin makanan favoritnya, ajak jalan jalan ke tempat favoritnya, Ini bukan karena materialis, tapi karena dia ngerasa kamu usaha buat bikin dia senyum lagi. Cewek tuh hatinya mudah luluh kok. Terkadang hal-hal kecil dan manis bisa meluluhkan template ngambeknya.</p>
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Perempuan ngambek itu bagian dari dinamika hubungan. Kalau kamu bisa liat itu sebagai kesempatan buat lebih ngerti dia, kamu bakalan naik level jadi pria idaman. Bukan soal gimana cara "menaklukkan" perempuan, tapi gimana kamu bisa jadi partner yang peka dan bisa dipercaya. <span>Jadi sekarang udah siap yah jadi pendekar anti ngambek, dan jangan lupa juga besok - besok bawain tasku kalo mau ngajak jalan - jalan yah.</span></p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<div id="disqus_thread"></div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+
+</body>
+</html>
