@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'sangat-rugi-nonton-video-alur-film.html', tittle: 'Sangat Rugi Nonton Video Alur Film' },
     { file: 'self-discovery-perjalanan-menemukan-makna-hidup.html', tittle: 'Self Discovery Perjalanan Menemukan Tujuan Hidup' },
     { file: 'seni-mengendalikan-diri-stoikisme-rahasia-kebahagiaan.html', tittle: 'Seni Mengendalikan Diri Stoikisme Rahasia Kebahagiaan' },
-    { file: 'seni-rahasia-menghadapi-wanita-ngambek.html', tittle: 'Rahasia Menghadapi Wanita Suka Ngambek'},
+    { file: 'seni-rahasia-menghadapi-wanita-ngambek.html', tittle: 'Rahasia Menghadapi Wanita Suka Ngambek' },
     { file: 'sibuk-seharian-tapi-hasil-nol-beralih-produktif.html', tittle: 'Sibuk Seharian Tapi Hasil Nol? Saatnya Beralih ke Produktif' },
     { file: 'stop-comparing-yourself-fokus-pada-pertumbuhan.html', tittle: 'Stop Comparing Yourself, Berhenti Membandingkan Diri' },
     { file: 'stop-minder-langkah-simpel-buat-up.html', title: 'Stop Minder! Langkah simpel buat Upgrade Diri' },
