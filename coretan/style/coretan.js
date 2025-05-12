@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'konsistensi-lebih-penting-dari-motivasi.html', title: 'Konsistensi Lebih Penting dari pada Motivasi' },
     { file: 'kisah-inspiratif-untuk-semangat.hidup.html', title: 'Kisah Inspiratif yang Bikin Hidup Lebih Bersemangat' },
     { file: 'menulis-itu-healing-tumpahin-pikiran-legain-hati.html', title: 'Menulis Itu Healing! Tumpahin Pikiran, Legain Hati' },
+    { file: 'negativity-bias-mengapa-hal-kecil-sering-membekas.html', title: 'Mengapa Sekecil Apapun Hal Buruk Selalu Membekas di Pikiran?' },
     { file: 'rahasia-cepat-paham-saat-belajar.html', title: 'Rahasia Cepat Paham Saat Belajar' },
     { file: 'sangat-rugi-nonton-video-alur-film.html', title: 'Sangat Rugi Nonton Video Alur Film' },
     { file: 'self-discovery-perjalanan-menemukan-makna-hidup.html', title: 'Self Discovery Perjalanan Menemukan Tujuan Hidup' },
