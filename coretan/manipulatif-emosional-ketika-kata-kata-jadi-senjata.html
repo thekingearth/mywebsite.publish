@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Manipulatif Emosional, Ketika Kata-Kata Jadi Senjata</title>
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Manipulatif <span>Emosional,</span>
+  <br>Ketika Kata-Kata Jadi <span>Senjata</span></h1>
+  <p class="detail-tanggal">Tuesday, 13 May 2025
+  <br>By Kin Basari</p>
+  <br>
+  <span class="petik">"Kata-Kata Bisa Jadi Pelukan
+  <br>Tapi Juga Bisa Jadi Pisau"</span>
+  <br>
+  <p>Nomer 31, simbol GA, dengan nilai massa 69,72. Jadi keingat dulu semasa SMA, waktu itu aku masuk ke kelas kimia dan mempelajari tentang galium. Jadi galium ini semacem cairan yang bisa banget ngerubah sifat logam yang tadinya kokoh dan kuat menjadi rapuh tak berdaya. Tapi kalo jaman sekarang ada aja orang yang kehadirannya tuh kayak galium, dia tuh reaktif banget. Yang tadi kamu awalnya ngerasa kuat, tahan banting, penuh semangat. Tapi begitu deket sama dia, pelan-pelan kamu ngerasa luntur. Kata-katanya tajam, sikapnya manipulatif, atau mungkin dia selalu ngecilin usahamu. Dan tanpa sadar, kamu mulai ngerasa rapuh, nggak percaya diri, bahkan ngeragukan diri sendiri.</p>
+  <br>
+  <p>Pernah nggak sih kamu ketemu orang yang modelannya gitu, entah itu cowok maupun cewek yang kelihatannya sweet banget, perhatian, selalu tahu harus ngomong apa di waktu yang pas, tapi lama-lama kamu ngerasa kayak lagi dijebak dalam hubungan yang bikin capek banget? Nah, bisa jadi kamu lagi berurusan sama orang manipulatif. <span>Awalnya kayak pelindung, tapi ternyata peluntur mental.</span></p>
+  
+  <br>
+  <h2>Bukan Sekadar Manis, <span>Tapi Licik</span></h2>
+  <p>Orang manipulatif tuh bukan cuma dia yang sekadar pintar ngomong, tapi dia mahir banget pakai kata-kata buat nge-twist keadaan. Misalnya, pas dia salah, dia bisa muter balik situasi jadi kamu yang ngerasa bersalah. Contohnya kayak, <span>“Aku gitu karena aku sayang kamu, tapi kamu malah nyakitin aku.”</span> Padahal, jelas-jelas dia yang toxic. Dia nggak nyakitin dengan tangan, tapi dengan kalimat yang dirancang rapi dan tersusun bikin luluh, tapi sikapnya bikin lelah.</p>
+  <br>
+  <h2>Gaslighting Level <span>Dewa</span></h2>
+  <p>Salah satu senjata utamanya ya gaslighting. Mudah banget dia bikin kamu ragu sama perasaan sendiri. Kamu ngerasa marah? Dia bilang kamu drama. Kamu sedih? Dia bilang kamu terlalu sensitif. Lama-lama kamu mulai mikir, <span>“Apa aku ini yang salah ya?”</span> Padahal kamu cuma lagi kena manipulasi yang rapi banget.</p>
+  <br>
+  <h2>Jago Bikin Kamu <span>Gantung</span></h2>
+  <p>Mereka juga jago banget bikin kamu <span>“gantung”.</span> Kadang mereka perhatian banget, manis banget, bikin kamu ngerasa jadi satu-satunya. Tapi di lain waktu, mereka bisa cuek setengah mati dan bikin kamu mikir keras, <span>“Dia kenapa ya?”</span> Ini trik biar kamu terus-terusan mikirin dia dan ngerasa butuh validasi darinya.</p>
+  <br>
+  <h2>Kata-Katanya Bisa Jadi <span>Racun Halus</span></h2>
+  <p>Yang bikin serem, kata-kata mereka tuh nggak selalu kasar. Justru seringnya terdengar lembut dan seolah-olah peduli. Tapi kalau kamu perhatiin, di balik kalimat-kalimat itu ada maksud tersembunyi buat ngekontrol kamu. Misal: <span>“Aku suka kamu yang kayak dulu, yang nggak terlalu banyak nuntut.”</span> Artinya Dia pengen kamu diem dan nurut aja.</p>
+  <br>
+  <h2>Waspada, Jangan <span>Terjebak</span></h2>
+  <p>Kalau kamu ngerasa hubunganmu mulai bikin kamu ngeraguin diri sendiri, ngerasa selalu salah, atau sering banget minta maaf padahal nggak tahu salah apa itu tanda-tanda kamu lagi dimanipulasi. Jangan ragu buat ngambil jarak, atau kalau perlu keluar dari hubungan kayak gitu. Karena cowok manipulatif cuma bikin kamu capek hati dan kehilangan diri sendiri. <span>"Hubungan yang bener bikin tenang, bukan bikin kamu terus-menerus minta maaf buat hal yang bahkan kamu nggak ngerti."</span></p>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Ingat ya, kata-kata itu kuat. Bisa bikin jatuh cinta, tapi juga bisa bikin kamu jatuh ke jurang yang nggak kelihatan. Jadi, jangan cuma dengerin kata-katanya, tapi lihat juga tindakannya. Orang yang beneran sayang normalnya nggak bakalan bikin kamu ngerasa kecil atau salah terus.</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<div id="disqus_thread"></div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
