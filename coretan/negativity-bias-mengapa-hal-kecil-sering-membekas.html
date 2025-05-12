@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Fenomena Negativity Bias: Mengapa Hal Kecil Sering Membekas di Pikiran?</title>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Fenomena <span>Negativity Bias</span>
+  <br>Mengapa Hal Kecil Sering <span>Membekas di Pikiran?</span></h1>
+  <p class="detail-tanggal">Thursday, 12 May 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Sedikit cerita, jadi waktu itu aku udah ngelewatin hari yang sebenernya oke-oke aja, tapi gara-gara satu kejadian kecil yaitu ketemu sama orang yang super nyebelin dan suka ngerepotin banget mood ku langsung hancur seharian. Yang aku heran itu kok bisa ya sempat-sempatnya sampai ada orang di muka bumi ini yang benar-benar super nyebelin kayak dia. Padahal, sebelumnya aku dapet pujian tulus dari seseorang, kopi favorit secara gratis, dan cuaca pokoknya lagi enak banget deh. Tapi tetap aja, yang nyangkut di kepala cuma satu hal yang negatif itu.</p>
+  <br>
+  <p>Kalo kamu pernah ngalamin juga. Nah,,, itu namanya negativity bias. Istilah psikologi yang bisa di jelasin seperti kenapa otak kita tuh cenderung lebih fokus dan nempel sama hal-hal negatif dibanding yang positif. Gak peduli seberapa kecil masalahnya, seringkali yang buruk-buruk malah jadi highlight di otak kita.</p>
+  
+  <br>
+  <h2>Looh Kok Bisa <span>Gitu Sih?</span></h2>
+  <p>Ternyata, ini semua ada kaitannya sama cara otak kita berevolusi. Di zaman purba dulu, manusia harus lebih waspada sama bahaya buat bisa bertahan hidup. Jadi, otak manusia dikondisikan buat nge-zoom in ke potensi ancaman. Misalnya, pagi hari lagi jalan-jalan tiba-tiba denger suara ranting patah bisa berarti ada hewan buas. Kalau nggak peka, bisa-bisa jadi santapan menu sarapan hewan buas itu.</p>
+  <p>Nah, meskipun sekarang kita udah nggak harus lari dari harimau setiap hari, sistem alarm di otak itu masih ada. Jadi, ketika kita ngalamin sesuatu yang bikin malu, kecewa, atau sakit hati, otak langsung ngasih perhatian lebih. <span>Seolah-olah itu ancaman serius,</span> padahal mungkin cuma hal sepele kayak typo di chat grup kerja.</p>
+  <br>
+  <h2>Efeknya Gimana Ke <span>Kita Sehari-Hari?</span></h2>
+  <p>Karena negativity bias ini, kita jadi <span>gampang overthinking.</span> Hal baik yang udah terjadi seharian bisa ketutupan cuma gara-gara satu momen canggung. Bahkan kadang kita jadi susah tidur karena mikirin sesuatu yang orang lain mungkin udah lupa.</p>
+  <p>Selain itu, ini juga bisa bikin kita lebih gampang self-critic. Misalnya, kamu dapet feedback positif dari 9 orang, tapi satu orang kasih komentar negatif, yang nyangkut ya komentar negatif itu. Padahal, yang lain tuh juga penting banget.</p>
+  <br>
+  <h2>Terus Bisa <span>Diatasi Nggak?</span></h2>
+  <p>Tenang saja, sesusah apapun itu tetep bisa kok. Salah satu caranya adalah <span>mindfulness</span> alias sadar dan hadir di momen sekarang. Coba latih diri buat lebih fokus sama hal-hal positif juga. Gak harus yang gede, sekadar bersyukur karena bisa bangun pagi tanpa telat juga udah cukup.</p>
+  <p>Kamu juga bisa coba journaling. Tulis tiga hal baik yang terjadi di hari itu sebelum tidur. Mungkin awalnya terasa maksa, tapi lama-lama otak kamu mulai terbiasa nyimpen yang positif juga.</p>
+  <br>
+  <p>Jadi, kalau kamu kepikiran hal kecil yang bikin malu atau nyesel. Ingat yah, kamu nggak sendirian, dan itu bukan berarti kamu lemah atau lebay itu cuma otak kamu yang lagi <span>"on guard".</span> Pelan-pelan yuk, sekarang mulailah belajar berdamai sama si negativity bias ini.
+</p>
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Negativity bias itu wajar banget, dan semua orang pasti ngalamin. Tapi bukan berarti kita harus terus-terusan kejebak di situ. Dengan latihan dan kesadaran, kita bisa bantu otak buat lebih seimbang, nggak cuma fokus ke yang buruk, tapi juga ngasih ruang buat yang baik.</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<div id="disqus_thread"></div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
