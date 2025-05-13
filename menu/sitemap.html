@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <tittle>Sitemaps Personal Website</tittle>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- feather icons-->
+<script src="https://unpkg.com/feather-icons"></script>
+<!-- Alpine style -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- my aplikasi -->
+<script src="scripts/bookitems.js"></script>
+  
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="produk.html">Produk<span>Me</span></a>
+    <a href="books.html">Books<span>Me</span></a>
+    <a href="about.html">About<span>Me</span></a>
+    <a href="minigame.html">Mini<span>game</span></a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+
+<!-- Sitemap Section start -->
+<section class="sitemap" id="sitemap">
+<h2>Site<span>maps</span></h2>
+ <div class="row">
+  <div class="container">
+   <div class="catalog">Coretan</div>
+    <div class="item"><a href="../coretan/98-wanita-akan-berbohong-setelah-lebih-dari.html">98% Wanita Akan Berbohong Setelah Lebih Dari 10 Percakapan</a></div>
+
+    <div class="item"><a href="../coretan/adaptasi-ketenangan-pikiran-hidup-didunia-yang-kacau.html">Adaptasi Mencari Ketenangan Pikiran dari Dunia yang Kacau</a></div>
+    <div class="item"><a href="../coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html">Bahagia Tidak Perlu Dicari Tetapi Diciptakan</a></div>
+    <div class="item"><a href="../coretan/bahaya-rip-current-arus-laut.html">Bahaya Rip Current Arus Laut 2 Meter Perdetik</a></div>
+    <div class="item"><a href="../coretan/cara-santai-bikin-tulisan-yang-asik-dibaca.html">Cara Santai Bikin Tulisan yang Asik Untuk Dibaca</a></div>
+    <div class="item"><a href="../coretan/dari-kata-jadi-karya-serunya-nulis.html">Dari Kata Jadi Karya, Serunya Menulis</a></div>
+    <div class="item"><a href="../coretan/diam-bukan-berarti-lemah-stop-oversharing.html">Diam Bukan Berarti Lemah, Stop Oversharing!</a></div>
+    <div class="item"><a href="../coretan/hidup-itu-singkat-maka-buatlah-lebih-berarti.html">Hidup Ini Terlalu Singkat, Buatlah Lebih Berarti</a></div>
+    <div class="item"><a href="../coretan/jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html">Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic</a></div>
+    <div class="item"><a href="../coretan/kenapa-kerja-di-luar-negeri.html">Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?</a></div>
+    <div class="item"><a href="../coretan/ketahui-bakat-terpendammu.html">Gali Potensi dan Ketahui Bakat Terpendammu</a></div>
+    <div class="item"><a href="../coretan/khodam-warisan-leluhur-dan-bisa-diturunin.html">Khodam Warisan Leluhur dan Bisa Diturunin</a></div>
+    <div class="item"><a href="../coretan/konsistensi-lebih-penting-dari-motivasi.html">Konsistensi Lebih Penting dari pada Motivasi</a></div>
+    <div class="item"><a href="../coretan/kisah-inspiratif-untuk-semangat.hidup.html">Kisah Inspiratif yang Bikin Hidup Lebih Bersemangat</a></div>
+    <div class="item"><a href="../coretan/manipulasi-emosional-ketika-kata-kata-jadi-senjata.html">Ketika Kata-Kata Jadi Senjata Orang Manipulatif</a></div>
+    <div class="item"><a href="../coretan/menulis-itu-healing-tumpahin-pikiran-legain-hati.html">Menulis Itu Healing! Tumpahin Pikiran, Legain Hati</a></div>
+    <div class="item"><a href="../coretan/negativity-bias-mengapa-hal-kecil-sering-membekas.html">Mengapa Sekecil Apapun Hal Buruk Selalu Membekas di Pikiran?</a></div>
+    <div class="item"><a href="../coretan/rahasia-cepat-paham-saat-belajar.html">Rahasia Cepat Paham Saat Belajar</a></div>
+    <div class="item"><a href="../coretan/sangat-rugi-nonton-video-alur-film.html">Sangat Rugi Nonton Video Alur Film</a></div>
+    <div class="item"><a href="../coretan/self-discovery-perjalanan-menemukan-makna-hidup.html">Self Discovery Perjalanan Cara Menemukan Tujuan Hidup</a></div>
+    <div class="item"><a href="../coretan/seni-mengendalikan-diri-stoikisme-rahasia-kebahagiaan.html">Seni Mengendalikan Diri, Stoikisme Rahasia Kebahagiaan</a></div>
+    <div class="item"><a href="../coretan/seni-rahasia-menghadapi-wanita-ngambek.html">Rahasia Menghadapi Wanita Yang Suka Ngambek</a></div>
+    <div class="item"><a href="../coretan/sibuk-seharian-tapi-hasil-nol-beralih-produktif.html">Sibuk Seharian Tapi Hasil Nol? Saatnya Beralih ke Produktif</a></div>
+    <div class="item"><a href="../coretan/stop-comparing-yourself-fokus-pada-pertumbuhan.html">Stop Comparing Yourself, Berhenti Membandingkan Diri</a></div>
+    <div class="item"><a href="../coretan/stop-minder-langkah-simpel-buat-up.html">Stop Minder! Langkah Simpel Buat Upgrade Diri</a></div>
+    <div class="item"><a href="../coretan/upgrade-diri-perjalanan-menuju-kedewasaan.html">Upgrade diri, Perjalanan Menuju Kedewasaan</a></div>
+   <!-- <div class="item"><a href="../coretan/judulhtml">judul</a></div> -->
+  </div>
+ </div>
+</section>
+<!-- Sitemap Section end -->
+
+
+<!--feather icons-->
+<script>
+  feather.replace()
+</script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+    <script>
+        loadFooter();
+    </script>
+
+</body>
+</html>
