@@ -794,6 +794,10 @@ box-shadow: 1px 1px 3px #133;
 }
 
 /* Sitemap Section */
+.sitemap .row {
+  justify-items: center;
+}
+
 .sitemap .container {
   padding: 10px;
   border: 1px solid orange;
