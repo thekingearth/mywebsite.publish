@@ -1,4 +1,3 @@
-
 function renderArtikels() {
   const artikelData = [
     {
@@ -180,9 +179,9 @@ function renderArtikels() {
     return artikel;
   }
 
-  const container = document.querySelector('#artikelsgrub'); // Ganti sesuai lokasi kamu mau masukkan
+  const container = document.querySelector('#artikelsgrub');
 
-  for (let i = 0; i < artikelData.length; i += 10) {
+  for (let i = 0; i < artikelData.length; i += 8) {
     const artikelsHidd = document.createElement('div');
     artikelsHidd.className = 'artikels-hidd';
 
@@ -192,7 +191,7 @@ function renderArtikels() {
     const artikels = document.createElement('div');
     artikels.className = 'artikels';
 
-    for (let j = i; j < i + 10 && j < artikelData.length; j++) {
+    for (let j = i; j < i + 8 && j < artikelData.length; j++) {
       const artikel = createArtikel(artikelData[j]);
       artikels.appendChild(artikel);
     }
