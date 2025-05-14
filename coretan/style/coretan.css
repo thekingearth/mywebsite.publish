@@ -27,6 +27,17 @@
   font-style: italic;
 }
 
+.page-artikel .box-pages {
+  background: var(--alpa);
+  border: 2px solid var(--pita);
+  padding: 10px 10px 15px;
+  border-radius: 5px;
+}
+.page-artikel .box-text {
+  color: var(--bg);
+  font-weight: bold;
+}
+
 .page-artikel p {
   text-align: justify;
 }
