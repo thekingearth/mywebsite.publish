@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Kamu Harus Lebih Dihargai daripada Kekayaan Materi</title>
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Kamu Harus Lebih <span>Dihargai </span>
+  <br>dari pada <span>Kekayaan Materi</span></h1>
+  <p class="detail-tanggal">Wednesday, 14 May 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Sssttt.... Jangan bilang siapa-siapa, ini suatu rahasia hanya kita saja yang tahu, cukup aku dan kamu saja. Sekarang ambil selembar kertas dan sebuah pena, sekarang aku duduk bareng kamu "secara batin yaah" dengan selembar kertas kosong dan satu pena sederhana di tangan. Sekarang yuk mulai tulis.</p>
+  <br>
+  <div class="box-pages">
+  <p class="box-text"> - Pernah bangkit dari keterpurukan meski nyaris nyerah.
+  <br> - Pernah bantu orang lain tanpa pamrih, walau dirimu sendiri lagi butuh.
+  <br> - Punya pekerjaan atau pernah punya yang bikin kamu belajar banyak hal.
+  <br> - Punya sahabat yang bisa diajak tertawa dan nangis bareng.
+  <br> - Pernah beli sesuatu dari hasil jerih payah sendiri meskipun kecil, tapi itu hasilmu.
+  <br> - Bisa tetap berdiri sampai hari ini, walau hidup ini kadang nggak ramah.
+  <br> - Dan yang paling keren kamu masih punya harapan, dan kamu nggak nyerah.
+  </p>
+  </div>
+  <br>
+  <p>Lihat deh, itu semua bukan hal sepele. Itu bukti kamu hebat. Kadang kita lupa, pencapaian itu bukan cuma tentang yang bisa dipamerin di media sosial. Tapi tentang hal-hal kecil yang membuktikan kamu tetap berjalan, tetap tumbuh, tetap hidup dengan hati yang kuat. Jadi... ssttt... simpan kertas ini baik-baik yaah. Ini bukan sekadar daftar. Ini pengingat bahwa kamu luar biasa. Dan cuma aku sama kamu yang tahu rahasia kecil indah ini.</p>
+  <br>
+  <h2>Harga Dirimu Tak <span>Ternilai, </span>
+  <br>Jangan Bandingkan <span>dengan Harta</span></h2>
+  <p>Kadang kita terlalu sibuk ngejar hal-hal yang bisa diukur, seperti uang, jabatan, rumah mewah, atau emas segunung. Padahal, tanpa sadar, kita malah lupa sama satu hal yang paling berharga di dunia ini yaitu diri kita sendiri.</p>
+  <br>
+  <p>Coba deh pikirin, berapa banyak orang yang rela ngelembur habis-habisan demi gaji, tapi ngorbanin waktu sama keluarga atau bahkan kesehatannya sendiri? Berapa banyak yang rela menurunkan harga dirinya cuma biar bisa dapet pengakuan atau status sosial? Padahal ya kamu itu lebih mahal dari semua itu.</p>
+  <br>
+  <h2>Ingat, Kamu Sudah <span>Istimewa </span>
+  <br>Tanpa Harus <span>Punya Segalanya</span></h2>
+  <p>Dalam pandangan agama, manusia itu diciptaan sebagai makhluk yang paling mulia. Dalam kitab suci tuhan mengatakan, <span>“Dan sungguh Kami telah memuliakan anak cucu Adam.”</span> Artinya nilai kita itu bukan diukur dari saldo rekening atau merk tas yang kita pakai. Nilai kita ada di hati, amal, dan ketakwaan kita. <span>Tampang keren, pakai tas mewah, eh ternyata KW. Intinya tas boleh KW asal hati tetap ORI di hadapan Illahi.</span></p>
+  <br>
+  <p>Masalahnya sekarang, banyak orang malah menilai dirinya dari kacamata dunia. Kalau punya mobil keren, berarti sukses. Kalau belum punya rumah, berarti gagal. Padahal, kesuksesan yang sejati itu ya saat kita bisa tenang, bersyukur. Bukan dari seberapa banyak yang kita punya, tapi seberapa berkah yang kita rasakan.</p>
+  <br>
+  <h2>Kamu Lebih <span>Berharga</span>
+  <br>dari Segala <span>Kekayaan Materi</span></h2>
+  <p>Terus, kenapa kita harus lebih dihargai daripada kekayaan materi? Karena uang bisa dicari, harta bisa hilang, tapi harga diri dan jiwa yang baik itu nggak bisa dibeli. Kamu harus inget, dirimu itu berharga bukan karena apa yang kamu punya, tapi karena siapa kamu sebenarnya di hadapan sang pencipta dan sesama manusia. <span>"Ingat, harga diri nggak diskon di e-commerce mana pun, meskipun lagi Harbolnas!"</span></p>
+  <br>
+  <p>Jadi, mulai sekarang, jangan mau diremehkan, apalagi kalau itu soal harga dirimu. Jangan bandingin kamu sama orang lain yang hidupnya kelihatan lebih <span>"wah".</span> Kamu punya jalanmu sendiri, dan itu sah-sah ajah. Yang penting tetap jaga hati, tetap jadi baik, dan tetap inget bahwa kamu itu istimewa. Kamu lebih mahal dari emas, lebih mulia dari semua harta di dunia. Jangan biarkan siapa pun atau bahkan dirimu sendiri meragukan itu.</p>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Kalau misal suatu hari kamu ngerasa lelah, ngerasa nggak cukup, atau dunia kayaknya lagi berat banget buka lagi kertas itu. Baca pelan-pelan. Ingat semua yang sudah kamu lalui dan semua yang sudah kamu capai itu bukan suatu kebetulan. Itu bukti kalo kamu itu kuat, kamu mampu, dan kamu pantas. Jangan tunggu orang lain mengakui nilai dirimu. Karena kamu sejak awal sudah luar biasa, dan itu memang keren.</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
