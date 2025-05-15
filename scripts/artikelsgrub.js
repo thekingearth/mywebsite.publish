@@ -183,24 +183,32 @@ function renderArtikels() {
   const container = document.querySelector('#artikelsgrub'); // Ganti sesuai lokasi kamu mau masukkan
 
   for (let i = 0; i < artikelData.length; i += 8) {
-    const artikelsHidd = document.createElement('div');
-    artikelsHidd.className = 'artikels-hidd';
+  const artikelsHidd = document.createElement('div');
+  artikelsHidd.className = 'artikels-hidd';
 
-    const group = document.createElement('div');
-    group.className = 'hidden group';
+  const group = document.createElement('div');
+  group.className = 'hidden group';
 
+  // 4x loop karena kita ingin 4 artikels per group
+  for (let k = 0; k < 4; k++) {
     const artikels = document.createElement('div');
     artikels.className = 'artikels';
 
-    for (let j = i; j < i + 8 && j < artikelData.length; j++) {
-      const artikel = createArtikel(artikelData[j]);
-      artikels.appendChild(artikel);
+    // 2 artikel per artikels
+    for (let j = 0; j < 2; j++) {
+      const index = i + (k * 2) + j;
+      if (index < artikelData.length) {
+        const artikel = createArtikel(artikelData[index]);
+        artikels.appendChild(artikel);
+      }
     }
 
     group.appendChild(artikels);
-    artikelsHidd.appendChild(group);
-    container.appendChild(artikelsHidd);
   }
+
+  artikelsHidd.appendChild(group);
+  container.appendChild(artikelsHidd);
+}
 }
 
 renderArtikels();
