@@ -1,3 +1,4 @@
+
 function renderArtikels() {
   const artikelData = [
     {
@@ -129,13 +130,13 @@ function renderArtikels() {
       alt: "Coretan Kin Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?",
       description: "Banyak orang Indonesia memilih bekerja di luar negeri karena beberapa alasan utama. Tapi bekerja di luar negeri juga memiliki tantangan seperti perbedaan budaya, bahasa, serta risiko eksploitasi tenaga kerja..."
     },
-    {
+  /*  {
       title: "Sangat Rugi Nonton Video Alur Film!",
       link: "../coretan/sangat-rugi-nonton-video-alur-film.html",
       img: "../img/thumb/thumb08.jpg",
       alt: "Coretan Kin Sangat Rugi Nonton Video Alur Film!",
       description: "Alur film biasanya cuma rangkuman cerita, jadi banyak detail kecil yang dilewatin, seperti dialog penting, simbolisme, atau adegan yang membangun karakter. Padahal, detail-detail ini bisa bikin film lebih bermakna dan keren..."
-    },
+    }, */
     {
       title: "Khodam Warisan Leluhur dan Bisa Diturunin",
       link: "../coretan/khodam-warisan-leluhur-dan-bisa-diturunin.html",
@@ -144,9 +145,6 @@ function renderArtikels() {
       description: "Beberapa pandangan menyebutkan bahwa khodam bisa diwariskan dari leluhur ke keturunan, terutama jika diperoleh melalui amalan tertentu atau benda pusaka. Namun, ada juga yang berpendapat bahwa khodam hanya mengikuti individu yang..."
     }
   ];
-
-  function renderArtikels() {
-  const artikelData = [/*... data kamu di sini seperti yang sudah ditulis ...*/];
 
   function createArtikel({ title, link, img, alt, description }) {
     const artikel = document.createElement('div');
@@ -182,28 +180,24 @@ function renderArtikels() {
     return artikel;
   }
 
-  const container = document.querySelector('#artikelsgrub');
+  const container = document.querySelector('#artikelsgrub'); // Ganti sesuai lokasi kamu mau masukkan
 
-  for (let i = 0; i < artikelData.length; i += 10) {
+  for (let i = 0; i < artikelData.length; i += 8) {
     const artikelsHidd = document.createElement('div');
     artikelsHidd.className = 'artikels-hidd';
 
     const group = document.createElement('div');
     group.className = 'hidden group';
 
-    // Bagi setiap 10 data, buat per 2 artikel dalam 1 div.artikels
-    for (let j = i; j < i + 10 && j < artikelData.length; j += 2) {
-      const artikels = document.createElement('div');
-      artikels.className = 'artikels';
+    const artikels = document.createElement('div');
+    artikels.className = 'artikel';
 
-      for (let k = j; k < j + 2 && k < artikelData.length; k++) {
-        const artikel = createArtikel(artikelData[k]);
-        artikels.appendChild(artikel);
-      }
-
-      group.appendChild(artikels);
+    for (let j = i; j < i + 8 && j < artikelData.length; j++) {
+      const artikel = createArtikel(artikelData[j]);
+      artikels.appendChild(artikel);
     }
 
+    group.appendChild(artikels);
     artikelsHidd.appendChild(group);
     container.appendChild(artikelsHidd);
   }
