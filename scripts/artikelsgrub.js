@@ -182,7 +182,7 @@ function renderArtikels() {
 
   const container = document.querySelector('#artikelsgrub'); // Ganti sesuai lokasi kamu mau masukkan
 
-  for (let i = 0; i < artikelData.length; i += 8) {
+  for (let i = 0; i < artikelData.length; i += 2) {
     const artikelsHidd = document.createElement('div');
     artikelsHidd.className = 'artikels-hidd';
 
@@ -190,9 +190,9 @@ function renderArtikels() {
     group.className = 'hidden group';
 
     const artikels = document.createElement('div');
-    artikels.className = 'artikel';
+    artikels.className = 'artikels';
 
-    for (let j = i; j < i + 8 && j < artikelData.length; j++) {
+    for (let j = i; j < i + 2 && j < artikelData.length; j++) {
       const artikel = createArtikel(artikelData[j]);
       artikels.appendChild(artikel);
     }
