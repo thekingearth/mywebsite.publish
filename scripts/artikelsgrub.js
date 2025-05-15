@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Internet Itu Pelayan atau Tuan? Mari Tentukan",
+      link: "../coretan/internet-itu-seorang-pelayan-atau-tuan.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Internet Itu Seorang Pelayan atau Tuan? Mari Tentukan",
+      description:"Internet hadir sebagai alat bantu yang luar biasa dalam kehidupan sehari-hari. Namun, di tengah kemudahan yang ditawarkan, muncul pertanyaan penting, apakah kita masih mengendalikan internet, atau justru dikendalikan olehnya? internet yang seharusnya sebagai pelayan setia..."
+    },
+    {
       title: "Kamu Harus Lebih Dihargai daripada Kekayaan Materi",
       link: "../coretan/kamu-harus-lebih-dihargai-daripada-kekayaan-materi.html",
       img: "../img/thumb/thumb08.jpg",
