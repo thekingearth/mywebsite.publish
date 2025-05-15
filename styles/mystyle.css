@@ -335,6 +335,13 @@ box-shadow: 1px 1px 3px #133;
   color: var(--bash);
 }
 
+.artikels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
 .artikel .thumbnail img {
   width: 15vw;
   height: auto;
