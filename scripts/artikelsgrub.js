@@ -145,6 +145,9 @@ function renderArtikels() {
     }
   ];
 
+  function renderArtikels() {
+  const artikelData = [/*... data kamu di sini seperti yang sudah ditulis ...*/];
+
   function createArtikel({ title, link, img, alt, description }) {
     const artikel = document.createElement('div');
     artikel.className = 'artikel';
@@ -181,22 +184,26 @@ function renderArtikels() {
 
   const container = document.querySelector('#artikelsgrub');
 
-  for (let i = 0; i < artikelData.length; i += 8) {
+  for (let i = 0; i < artikelData.length; i += 10) {
     const artikelsHidd = document.createElement('div');
     artikelsHidd.className = 'artikels-hidd';
 
     const group = document.createElement('div');
     group.className = 'hidden group';
 
-    const artikels = document.createElement('div');
-    artikels.className = 'artikels';
+    // Bagi setiap 10 data, buat per 2 artikel dalam 1 div.artikels
+    for (let j = i; j < i + 10 && j < artikelData.length; j += 2) {
+      const artikels = document.createElement('div');
+      artikels.className = 'artikels';
 
-    for (let j = i; j < i + 8 && j < artikelData.length; j++) {
-      const artikel = createArtikel(artikelData[j]);
-      artikels.appendChild(artikel);
+      for (let k = j; k < j + 2 && k < artikelData.length; k++) {
+        const artikel = createArtikel(artikelData[k]);
+        artikels.appendChild(artikel);
+      }
+
+      group.appendChild(artikels);
     }
 
-    group.appendChild(artikels);
     artikelsHidd.appendChild(group);
     container.appendChild(artikelsHidd);
   }
