@@ -335,12 +335,6 @@ box-shadow: 1px 1px 3px #133;
   color: var(--bash);
 }
 
-.artikels-hidd .artikels {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  margin-bottom: 1px;
-}
 
 .artikel .thumbnail img {
   width: 15vw;
@@ -363,7 +357,21 @@ box-shadow: 1px 1px 3px #133;
 .artikels-hidd .hidden {
   display: none
   }
-  
+
+.artikels-hidd .artikels {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.artikels-hidd .artikel {
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .btn-more {
   display: flex;
   margin-top: 50px;
