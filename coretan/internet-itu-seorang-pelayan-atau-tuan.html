@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Internet Itu Seorang Pelayan atau Tuan? Mari Tentukan</title>
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Internet Itu Seorang <span>Pelayan atau Tuan?</span>
+  <br>Mari Tentukan</h1>
+  <p class="detail-tanggal">Thursday, 15 May 2025
+  <br>By Kin Basari</p>
+  <br><span class="petik">Internet just a tool.
+  <br>"And the fact shows
+  <br>It's not about the gun,
+  <br>But the man behind the gun"</span>
+  <br>
+  <p>Coba deh jujur kamu termasuk orang yang setiap pagi-pagi baru melek mata, yang pertama kamu cari itu handphone. Lanjut buka Instagram, scroll TikTok, cek notifikasi WhatsApp, terus tanpa sadar udah lewat satu jam ajah gitu. Konten-konten pendek yang berseliweran di konsumsi setiap hari bahkan setiap jam dan seringnya kita lupa nge-screening mana yang pas, mana yang logis, mana yang sekedar nyari FYP semata tapi nggak berbasis data, mana yang opini dan mana yang hoax, semuanya menyatu dalam satu ruang virtual yang kita sebut sebagai sosial media.</p>
+  <br>
+  <p>Endingnya kita semua yang mengkonsumsi berita-berita tadi mengalami satu fenomena sosial yaitu brain root. Nah, di titik ini kita mesti nanya ke diri sendiri sebenernya siapa yang ngatur siapa sih? Kita yang pegang kendali atas internet, atau internet yang udah ngatur hidup kita?</p>
+  <br>
+
+  <h2>Internet itu memang si Pelayan 
+  <br><span>yang Super Gokil</span></h2>
+  <p>Nggak bisa dipungkiri internet tuh gila banget manfaatnya misal ajah mau nyari resep ayam geprek tinggal ketik ajah, atau udah laper banget dan males buat masak ayam geprek tinggal cari ajah terus pesan. Selain itu banyak juga tutorial gratis. Mau cari kerja ada juga ratusan platform online. Semua jadi lebih gampang, lebih cepet, dan kadang lebih murah juga.</p>
+  <br>
+  <p>Kalo dimanfaatin dengan bijak, internet itu pelayan yang loyal banget. Dia bantu kita kerja, belajar, ngasih hiburan, bahkan nyambungin sama orang-orang yang jauh. Pelayan terbaik lah, pokoknya.</p>
+  <br>
+  <h2>Tapi Jangan Lupa Dia Bisa Menjadi 
+  <br><span>Tuan yang Menakutkan </span></h2>
+  <p>Masalahnya nggak sedikit juga yang kebalik, bukannya kita yang manfaatin internet, eg malah kita yang dikendaliin sama interner. Scroll terus sampe subuh, overthinking karena liat kehidupan orang lain yang <span>"lebih sempurna"</span> di medsos, nggak bisa fokus kerja karena notifikasi gak berhenti-berhenti.</p>
+  <br>
+  <p>Belum lagi algoritma yang pinter banget bikin kita betah di satu aplikasi doang. Yang awalnya cuma mau cek satu hal, ujung-ujungnya nonton video kucing dan anjing sampe berjam jam. Kalo udah kayak gini, siapa yang jadi tuannya?</p>
+  <br>
+  <h2>Sekarang Harus Menentukan 
+  <br><span>Siapa Perannya</span></h2>
+  <p>Internet itu cuma sebuah alat, dan faktanya menunjukkan bahwa ini bukan tentang senjatanya, tapi orang di balik senjata itu. Sama kayak pisau dapur, selain bisa buat masak, bisa juga buat nyakitin seseorang. Tinggal gimana ajah kita bisa ngontrol dan gunain. Jadi, penting banget buat sadar diri jangan sampe kita dijajah sama sebuah aplikasi, padahal kita punya otak dan hati buat milih apa yang penting. Ngomong-ngomong tentang pisau, ada yang lebih berbahaya dari pisau yaitu mantan, <span>"dia bisa menyakiti tanpa menyentuh."</span></p>
+  <br>
+  <h2>Gimana Caranya Supaya Nggak 
+  <br><span>Diperbudak Internet</span></h2>
+  <p><span class="heder3">Pasang batas waktu buat main medsos: </span>Gunakan fitur pengingat waktu (screen time atau digital wellbeing). Tentuin jam "puasa medsos", misalnya habis magrib sampai tidur.</p>
+  <p><span class="heder3">Cari konten yang nambah ilmu: </span>Bukan cuma hiburan doang follow akun edukatif seperti sains, sejarah, literasi keuangan, dan lain-lain, dan ganti waktu scrollmu dengan nonton video belajar, podcast, atau baca artikel.</p>
+  <p><span class="heder3">Jangan bandingin hidup sama highlight orang lain: </span>Ingat, yang ditampilkan di medsos itu highlight, bukan realita. Fokus ajah ke progress diri sendiri, bukan pencitraan orang lain.</p>
+  <br>
+  <h2>Jadi Sekarang Gimana, Interner Itu 
+  <br><span>Pelayan atau Tuan? </span></h2>
+  <p>Pilihannya cuma ada di tangan kita sendiri. Internet bisa jadi pelayan yang super ngebantu, asal kita tahu kapan harus bilang <span>"cukup."</span> Tapi kalau kita terus-terusan nurutin apa kata algoritma dan notifikasi, ya siap-siap aja jadi budaknya teknologi. Jadilah pengguna yang melek, bukan korban yang kelelahan. Karena internet harusnya kerja buat kita, bukan sebaliknya.</p>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Internet hanya sebuah alat, pertanyaannya siapa yang berada di belakang alat tersebut. Internet ini dipakai untuk hal-hal positif dan produktif atau justru sebaliknya. Dipakai untuk merugikan atau membantu bisa mempercepat kita menuju target atau memperlambat karena distraksi dan banjirnya informasi yang nyaris setiap hari bahkan setiap jam terjadi dalam genggaman kita.</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
