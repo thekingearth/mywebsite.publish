@@ -1027,7 +1027,7 @@ footer .credit a {
   }
 
   #hamburger-menu {
-    display: inline-block;
+    display: inline-block !important;
   }
   .navbar .navbar-nav {
     position: absolute;
