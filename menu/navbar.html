@@ -1,7 +1,7 @@
 <!-- navbar start -->
-<nav class="navbar" x-data>
+<nav class="navbar" x-data="{ open: false }">
   <div class="navbar-menu">
-      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+      <a href="#" @click.prevent="open = !open" id="hamburger-menu"><i data-feather="menu"></i></a>
   </div>
   <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
   
@@ -13,10 +13,12 @@
     <a href="contact.html">Contact</a>
   </div>
   <div class="navbar-extra">
-    <a href="#" id="shopping-cart-button">
+    <div x-data="{ cartOpen: false }">
+    <a href="#" id="shopping-cart-button" @click.prevent="cartOpen = !cartOpen">
       <i data-feather="shopping-cart"></i>
     <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
     </a>
+   </div>
   </div>
   
   
