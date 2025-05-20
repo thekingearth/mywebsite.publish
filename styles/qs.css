@@ -115,7 +115,7 @@ body {
   background-color: #fd0;
 }
 
-.controls {
+.scrollspeed .controls {
   position: fixed;
   top: 65vh;
   left: 15px;
@@ -131,7 +131,7 @@ body {
   align-items: center;
   gap: 7px;
   }
-.controls button {
+.scrollspeed .controls button {
   font-size: 18px;
   margin: 0 1px;
   padding: 1px 5px;
@@ -139,7 +139,7 @@ body {
   border: none;
   cursor: pointer;
   }
-.controls #mins, .controls #plus  {
+.scrollspeed .controls #mins, .controls #plus  {
   display: inline-block;
   border-radius: 5px;
   border: 1px solid #000;
@@ -147,7 +147,7 @@ body {
   font-weight: bold;
   font-size: 12px;
     }
-.controls #speedDisplay {
+.scrollspeed .controls #speedDisplay {
   margin: 0;
   font-size: 10px;
   }
