@@ -79,8 +79,13 @@ body {
   cursor: pointer;
 }
 .qs-name p .hidden {
+  display: inline;
+}
+
+.qs-name p .hidden.hidden-toggle {
   display: none;
 }
+
 .btn-prevnext {
   display: flex;
   justify-content: space-between;
