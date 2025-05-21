@@ -16,13 +16,13 @@ let scrollSpeed = 1;
       window.scrollBy(0, scrollSpeed);
     }, 50);
     isScrolling = true;
-    document.getElementById("scrollBtnText").textContent = "❚❚";
+    document.getElementById("scrollBtnText").textContent = '<i data-feather="pause"></i>';
   }
 
   function stopScroll() {
     clearInterval(interval);
     isScrolling = false;
-    document.getElementById("scrollBtnText").textContent = "▶";
+    document.getElementById("scrollBtnText").textContent = '<i data-feather="play"></i>';
   }
 function increaseSpeed() {
     if (scrollSpeed < 20) scrollSpeed += 1;
@@ -37,3 +37,5 @@ function increaseSpeed() {
   function updateSpeedDisplay() {
     document.getElementById("speedDisplay").textContent = "" + scrollSpeed;
   }
+
+feather.replace();
