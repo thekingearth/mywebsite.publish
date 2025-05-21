@@ -16,14 +16,14 @@ let scrollSpeed = 1;
       window.scrollBy(0, scrollSpeed);
     }, 50);
     isScrolling = true;
-    document.getElementById("scrollBtnText").textContent = '<i data-feather="pause"></i>';
+    document.getElementById("scrollBtnText").innerHTML = '<i data-feather="pause"></i>';
     feather.replace();
   }
 
   function stopScroll() {
     clearInterval(interval);
     isScrolling = false;
-    document.getElementById("scrollBtnText").textContent = '<i data-feather="play"></i>';
+    document.getElementById("scrollBtnText").innerHTML = '<i data-feather="play"></i>';
    feather.replace(); 
   }
 function increaseSpeed() {
