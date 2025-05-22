@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'kisah-inspiratif-untuk-semangat.hidup.html', title: 'Kisah Inspiratif yang Bikin Hidup Lebih Bersemangat' },
     { file: 'manipulasi-emosional-ketika-kata-kata-jadi-senjata.html', title: 'Ketika Kata-Kata Jadi Senjata Orang Manipulatif' },
     { file: 'mengapa-brain-root-semakin-umum-dikalangan-anak-muda.html', title: 'Mengapa Kemerosotan Mental Sering Terjadi Pada Remaja?' },
+    { file: 'mengapa-canva-menjadi-alat-desain-favorit-belakangan-ini.html', title: 'Mengapa Canva Menjadi Alat Desain Favorit Belakangan Ini' },
     { file: 'menulis-itu-healing-tumpahin-pikiran-legain-hati.html', title: 'Menulis Itu Healing! Tumpahin Pikiran, Legain Hati' },
     { file: 'negativity-bias-mengapa-hal-kecil-sering-membekas.html', title: 'Mengapa Sekecil Apapun Hal Buruk Selalu Membekas di Pikiran?' },
     { file: 'rahasia-cepat-paham-saat-belajar.html', title: 'Rahasia Cepat Paham Saat Belajar' },
