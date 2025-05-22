@@ -7,7 +7,7 @@ klikElements.forEach((klik) => {
     });
   });
 
-// Script Audio
+// Script untuk audio
 const audio = document.getElementById("audio");
 const playPauseBtn = document.getElementById("playPause");
 const progress = document.getElementById("progress");
@@ -175,6 +175,33 @@ audio.ontimeupdate = () => {
   currentTime.textContent = formatTime(audio.currentTime);
   const percent = (audio.currentTime / audio.duration) * 100;
   progress.style.setProperty('--progress', percent + '%');
+};
+
+// list song
+const showPlaylistBtn = document.getElementById("showPlaylist");
+const playlistList = document.getElementById("playlistList");
+
+showPlaylistBtn.onclick = () => {
+  if (playlistList.style.display === "none") {
+    playlistList.innerHTML = ""; 
+    titles.forEach((title, i) => {
+      const li = document.createElement("li");
+      li.textContent = title;
+      li.style.cursor = "pointer";
+      li.onclick = () => {
+        index = i;
+        loadSong();
+      };
+      playlistList.appendChild(li);
+    });
+    playlistList.style.display = "block";
+    showPlaylistBtn.innerHTML = '<i data-feather="disc"></i>';
+    feather.replace();
+  } else {
+    playlistList.style.display = "none";
+    showPlaylistBtn.innerHTML = '<i data-feather="disc"></i>';
+    feather.replace();
+  }
 };
 
 // choose one Master feather replace
