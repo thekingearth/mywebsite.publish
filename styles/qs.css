@@ -190,14 +190,14 @@ body {
 .player .controls {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 5px;
   margin-top: 20px;
   color: fd0;
   }
 .player button {
   background: none;
   border: none;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
   }
 .player audio {
