@@ -197,7 +197,7 @@ body {
 .player button {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   }
 .player audio {
