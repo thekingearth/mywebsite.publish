@@ -107,14 +107,16 @@
     </div>
     <div class="controls">
       <button id="shuffle"><i data-feather="shuffle"></i></button>
-      <button id="rewind"><i data-feather="rewind"></i></button>
       <button id="prev"><i data-feather="skip-back"></i></button>
       <button id="playPause"><i data-feather="play"></i></button>
       <button id="next"><i data-feather="skip-forward"></i></button>
+      <button id="rewind"><i data-feather="rewind"></i></button>
+      <button id="showPlaylist"><i data-feather="disc"></i></button>
       <button id="forward"><i data-feather="fast-forward"></i></button>
       <button id="repeat"><i data-feather="repeat"></i></button>
     </div>
     <audio id="audio" src="https://airinerra.github.io/bayyati/qs/bayyati/page01.mp3"></audio>
+  <ul id="playlistList" style="color: #fd0; display: none; list-style: none; padding: 0;"></ul>
   </div>
 <br><p></p>
 <br><p></p>
@@ -260,6 +262,32 @@ audio.ontimeupdate = () => {
   progress.style.setProperty('--progress', percent + '%');
 };
 
+// list song
+const showPlaylistBtn = document.getElementById("showPlaylist");
+const playlistList = document.getElementById("playlistList");
+
+showPlaylistBtn.onclick = () => {
+  if (playlistList.style.display === "none") {
+    playlistList.innerHTML = ""; 
+    titles.forEach((title, i) => {
+      const li = document.createElement("li");
+      li.textContent = title;
+      li.style.cursor = "pointer";
+      li.onclick = () => {
+        index = i;
+        loadSong();
+      };
+      playlistList.appendChild(li);
+    });
+    playlistList.style.display = "block";
+    showPlaylistBtn.innerHTML = '<i data-feather="disc"></i>';
+    feather.replace();
+  } else {
+    playlistList.style.display = "none";
+    showPlaylistBtn.innerHTML = '<i data-feather="disc"></i>';
+    feather.replace();
+  }
+};
   </script>
 <script src="../scripts/qs.js"></script>
 <script>
