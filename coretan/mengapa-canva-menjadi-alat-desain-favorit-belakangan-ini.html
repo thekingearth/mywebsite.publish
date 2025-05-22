@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Mengapa Canva Menjadi Alat Desain Favorit Belakangan Ini</title>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Mengapa Canva Menjadi Alat <span>Desain Favorit </span>
+  <br>Belakangan Ini</h1>
+  <p class="detail-tanggal">Thursday, 22 May 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Kenapa harus canva? Jawabannya adalah Karena hidup udah ribet, jadi bikin desain jangan ikut ribet juga. Tapi ngomongin soal branding buat UMKM, pasti banyak yang mikir <span>“Duh, mahal ya harus sewa desainer”</span> atau <span>“Nggak ngerti cara bikin desain yang keren”</span> Nah, di sinilah Canva datang kayak pahlawan tanpa jubah.</p>
+  <br>
+  <p>Buat kamu yang punya usaha kecil, baru mulai jualan online, atau sekadar pengen bikin tampilan bisnis kamu lebih kece, Canva tuh bener-bener penyelamat, platform desain grafis online yang super mudah banget buat digunain, meskipun buat orang yang sama sekali nggak punya latar belakang desain. Nggak percaya? Yuk bahas bareng-bereng kenapa Canva bisa jadi favorit banget buat semua orang belakangan ini.</p>
+  
+  <br>
+  <h2>Gak Perlu <span>Jago Desain</span></h2>
+  <p>Banyak yang bilang canva itu user-friendly banget. Antarmukanya simpel dan enak dipakai. Kamu nggak perlu ngerti tentang Photoshop atau Illustrator yang bikin pusing tujuh keliling. Tinggal pilih template, ganti teks, masukin foto produk atau brand, dan boom! Sekarang desainmu udah jadi. Buat kamu yang punya bisnis UMKM yang super sibuk buat ngurusin produksi, jualan, sampe packing sendiri, Canva jadi solusi cepat dan praktis.</p>
+  <br>
+  <h2>Ribuan Template <span>Siap Pakai</span></h2>
+  <p>Mau bikin logo, flyer, poster, katalog, konten Instagram, canva punya semuanya. Atau kamu udah punya semuanya tapi kamu kesulitan untuk buat invoice, jawabannya ada di canva. Cukup mudah untuk membuat semua itu di canva kamu tinggal pilih saja desain yang cocok sama vibes usahamu, edit dikit, save, dan langsung bisa dipakai. Nggak perlu mulai dari nol. Semua udah disusun rapi dan estetik banget. Jadi branding kamu tetap konsisten dan profesional.</p>
+  <br>
+  <h2>Bisa Kolaborasi <span>Sama Tim</span></h2>
+  <p>Canva punya fitur kolaborasi yang cukup lengkap. Kamu bisa membuat tim sendiri, berbagi desain, dan kolaborasi real time. Jadi memungkinkan banget beberapa orang bisa ngedit desain, berkomentar, dan diskusi secara bareng-bareng. Apa kamu mungkin udah punya tim kecil? Kalau iya kamu bisa kerja bareng di Canva. Jadi desain bisa dibuka sama temen atau partner, terus diedit bareng. Cocok banget buat kerja tim yang fleksibel dan serba cepat.</p>
+  <br>
+  <h2>Hasil Desain Bisa Langsung Dipakai <span>Diman aAja</span></h2>
+  <p>Udah selesai desain? Tinggal download. Mau dipakai buat cetak banner, kirim via WhatsApp, atau posting ke Instagram? Bisa banget. Canva bahkan punya fitur langsung share ke medsos, jadi udah nggak perlu ribet lagi.</p>
+  <br>
+  <h2>Gratis Tapi <span>Nggak Murahan</span></h2>
+  <p>Yang paling penting dari semuanya itu Canva bisa dipakai secara gratis! Versi free-nya aja udah cukup buat bikin desain yang kece-kece. Kalau butuh fitur lebih lengkap kayak background remover atau stok foto premium, bisa upgrade ke Canva Pro. Tapi percaya deh, versi gratisnya ajah udah oke banget. Ini sangat rekomen banget buat kamu yang lagi mulai belajar ngedesain atau sekedar lagi nyari referensi baru buat bahan konter maupun brand.</p>
+
+  
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Branding nggak harus ribet dan itu memang penting, apalagi buat UMKM yang pengen tampil beda. Tapi branding juga gak harus mahal dan ribet. Dengan Canva, kamu bisa punya tampilan bisnis yang profesional, modern, dan menarik. Semuanya bisa diciptakan cuma dari ujung jari kamu sendiri. Jadi, kalau kamu masih ragu mulai branding karena takut ribet atau mahal, coba deh main-main dulu ke canva.com. Siapa tahu, dari desain simpel itu, desainmu makin dilirik oleh banyak orang.</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
