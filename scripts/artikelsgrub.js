@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Mengapa Canva Menjadi Alat Desain Favorit Belakangan Ini",
+      link: "../coretan/mengapa-canva-menjadi-alat-desain-favorit-belakangan-ini.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Mengapa Canva Menjadi Alat Desain Favorit Belakangan Ini",
+      description: "Canva menawarkan kemudahan dan fleksibilitas dalam satu platform. Dengan antarmuka yang intuitif, ribuan template siap pakai, serta fitur drag-and-drop, siapa pun bisa membuat desain menarik tanpa perlu keahlian khusus. Selain itu, Canva juga mendukung..."
+    },
+    {
       title: "Mengapa Brain Root Semakin Umum di Kalangan Anak Muda?",
       link: "../coretan/mengapa-brain-root-semakin-umum-dikalangan-anak-muda.html",
       img: "../img/thumb/thumb08.jpg",
