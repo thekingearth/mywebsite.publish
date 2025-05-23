@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Logika Formal dan Informal: Membentuk Cara Berpikir dan Bertindak</title>
+<!-- mystyle -->
+<style>
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1><span>Logika Formal dan Informal </span>
+  <br>Membentuk Cara <span>Berpikir & Bertindak</span>
+  <br>Memahami <span>Argumen Bernilai </span>Tanpa Rumus</h1>
+  <p class="detail-tanggal">Friday, 23 May 2025
+  <br>By Siska Munirah</p>
+  <br>
+  <p>Pernah nggak sih kamu kepikiran ada orang yang bisa banget ngerti orang lain, atau mungkin saja kamu punya teman yang bisa ngerti apa yang lagi kamu pikirin, pertanyaannya kenapa dia bisa ngerti orang lain, bahkan saat mereka ngomong ngalor-ngidul? Atau kenapa kadang kita bisa ngerasa satu argumen itu <span>“masuk akal”,</span> walaupun nggak ada rumus matematikanya sama sekali? Nah, di sinilah logika formal dan informal diam-diam kerja di balik layar.
+</p>
+
+  <br>
+  <h2>Logika Formal: <span>Si Perfeksionis dari Dunia Filsafat</span></h2>
+  <p>Logika formal itu ibarat teman kita yang super rapi, teliti, dan anti salah langkah. Dalam filsafat, terutama tradisi analitik, logika formal dipakai buat bikin argumen yang valid secara struktur. Misalnya:</p>
+  <br>
+  <div class="box-pages">
+    <p class="box-text">Premis 1: Semua manusia akan mati.
+    <br>Premis 2: Profesor adalah manusia.
+    <br>Kesimpulan: Profesor akan mati.
+    </p>
+  </div>
+  <br>
+    <p>Logika jenis ini keren banget buat ngulik argumen yang kompleks, apalagi di bidang matematika, hukum, atau filsafat rasional, tap dia kaku. Kakunya itu kayak teman yang butuh semuanya sesuai rencana, dan agak bingung pas harus improvisasi.</p>
+  <br>
+  <h2>Logika Informal: <span>Si Luwes yang Bisa Diajak Ngobrol</span></h2>
+  <p>Berbeda dengan si formal, logika informal itu fleksibel, meskipun kadang agak liar, tapi disitulah justru bikin kita lebih hidup. Dia dipakai saat kita debat santai, nulis opini, atau bahkan pas nonton film dan nyimpulin pesan moralnya. Kita nggak pakai rumus, tapi tetap bisa nangkep maksud dan ngebantah kalau ada yang nggak nyambung.</p>
+  <br>
+  <p>Contoh: <span>“Dia itu pasti pintar, soalnya bisa ngejelasin topik berat dengan cara yang gampang.”</span></p>
+  <br>
+  <p>Kalau secara struktur itu memang bukan sebuah argumen formal yang ketat, tapi tetap saja bisa dinilai secara kritis. Apakah benar semua yang bisa jelasin topik berat itu pasti pintar? Nah, ini yang dibahas di logika informal.</p>
+  <br>
+  <h2>Kreativitas: <span>Lahan Subur Logika Informal</span></h2>
+  <p>Kalau kamu itu orang kreatif entah itu penulis, desainer, musisi, atau bahkan filsuf jalanan, maka logika informal tuh sahabat sejatimu. Dia bisa bantu kamu buat ngebentuk narasi, nyusun ide, bahkan mengajak orang mikir ulang lewat metafora atau humor.</p>
+  <br>
+  <p>Kalau kamu itu orang kreatif entah itu penulis, desainer, musisi, atau bahkan filsuf jalanan, maka logika informal tuh sahabat sejatimu. Dia bisa bantu kamu buat ngebentuk narasi, nyusun ide, bahkan mengajak orang mikir ulang lewat metafora atau humor.</p>
+  <br>
+  <p>Dalam filsafat, tokoh seperti Nietzsche atau Kierkegaard lebih banyak main di wilayah ini. Mereka nggak cuma pakai logika baku, tapi juga gaya bahasa yang meledak-ledak, puitis, bahkan sarkastik. Mereka tahu, kadang untuk nyentuh orang lain dari pikiran maupun hati itu nggak selalu cukup kalau cuma pakai silogisme.</p>
+  <br>
+  <h2>Logika & Tindakan:  <span>Lebih dari Sekadar Pikiran</span></h2>
+  <p>Logika baik yang formal atau informal, itu nggak cuma ngaruh ke cara kita mikir, tapi juga ke cara kita bertindak. Jadi disaat kita sadar gimana cara kita nyusun argumen, dan disitulah kita bakal lebih hati-hati waktu berdebat, lebih terbuka pada pendapat orang lain, dan lebih kritis saat menelan informasi mentah-mentah. Bahkan dalam kehidupan sehari-hari, misalnya waktu kita memilih percaya atau nggaknya pada berita viral, kita sebenarnya lagi pakai logika informal: <span>“Ah, ini kayaknya hoaks deh, gaya bahasa dan cara ngomongnya sangat berlebihan dan meledak-ledak banget.”</span></p>
+  <br>
+  <p>Jadi di tengah banjirnya informasi saat ini mulai dari hoaks, opini, dan debat medsos yang makin hari makin riuh, kita butuh lebih dari sekadar hafalan rumus logika. Kita butuh juga kepekaan untuk mengenali pola pikir, ketajaman membaca maksud di balik setiap kata-katanya, dan kecerdasan untuk nyaring mana argumen yang layak buat didengar.</p>
+  <br>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Logika formal ngajarin kita berpikir jernih, konsisten, dan sistematis. Sementara logika informal ngajarin kita peka, adaptif, dan manusiawi. Keduanya bukan musuh, tapi pasangan serasi yang bantu kita jadi pemikir yang utuh, rasional sekaligus relevan.</p>
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
