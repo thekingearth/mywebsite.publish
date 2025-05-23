@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'khodam-warisan-leluhur-dan-bisa-diturunin.html', title: 'Khodam Warisan Leluhur dan Bisa Diturunin' },
     { file: 'konsistensi-lebih-penting-dari-motivasi.html', title: 'Konsistensi Lebih Penting dari pada Motivasi' },
     { file: 'kisah-inspiratif-untuk-semangat.hidup.html', title: 'Kisah Inspiratif yang Bikin Hidup Lebih Bersemangat' },
+    { file: 'logika-formal-dan-informal-membentuk-cara-berpikir-dan-bertindak.html', title: 'Logika Formal dan Informal: Membentuk Cara Berpikir dan Bertindak' },
     { file: 'manipulasi-emosional-ketika-kata-kata-jadi-senjata.html', title: 'Ketika Kata-Kata Jadi Senjata Orang Manipulatif' },
     { file: 'mengapa-brain-root-semakin-umum-dikalangan-anak-muda.html', title: 'Mengapa Kemerosotan Mental Sering Terjadi Pada Remaja?' },
     { file: 'mengapa-canva-menjadi-alat-desain-favorit-belakangan-ini.html', title: 'Mengapa Canva Menjadi Alat Desain Favorit Belakangan Ini' },
