@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Logika Formal dan Informal: Membentuk Cara Berpikir dan Bertindak",
+      link: "../coretan/logika-formal-dan-informal-membentuk-cara-berpikir-dan-bertindak.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Logika Formal dan Informal: Membentuk Cara Berpikir dan Bertindak",
+      description: "Logika formal dan informal bukan cuma urusan akademik, keduanya membentuk cara kita berpikir dan bertindak setiap hari. Logika formal mengajarkan kita berpikir runtut dan konsisten, cocok untuk analisis sistematis dan debat yang terstruktur. Sementara logika informal membantu..."
+    },
+    {
       title: "Mengapa Canva Menjadi Alat Desain Favorit Belakangan Ini",
       link: "../coretan/mengapa-canva-menjadi-alat-desain-favorit-belakangan-ini.html",
       img: "../img/thumb/thumb08.jpg",
