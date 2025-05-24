@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Kesendirian yang Menguatkan: Merangkul Diri Sebelum Mencintai Orang Lain",
+      link: "../coretan/kesendirian-yang-menguatkan-merangkul-diri-sebelum-mencintai-orang-lain.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Kesendirian yang Menguatkan: Merangkul Diri Sebelum Mencintai Orang Lain",
+      description: "Kadang, sendiri bukan berarti sepi, tapi ruang untuk tumbuh. Di momen sunyi itulah kita belajar mengenal diri sendiri, menyembuhkan luka, dan membangun kekuatan dari dalam. Sebelum mencintai orang lain, penting untuk merangkul diri sendiri dulu. Karena cinta yang paling tulus datang dari..."
+    },
+    {
       title: "Logika Formal dan Informal: Membentuk Cara Berpikir dan Bertindak",
       link: "../coretan/logika-formal-dan-informal-membentuk-cara-berpikir-dan-bertindak.html",
       img: "../img/thumb/thumb08.jpg",
