@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic' },
     { file: 'kamu-harus-lebih-dihargai-daripada-kekayaan-materi.html', title: 'Kamu Lebih Berharga daripada Emas' },
     { file: 'kenapa-kerja-di-luar-negeri.html', title: 'Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?' },
+    { file: 'kesendirian-yang-menguatkan-merangkul-diri-sebelum-mencintai-orang-lain.html', title: 'Cara Merangkul Diri Sebelum Mencintai Orang Lain' },
     { file: 'ketahui-bakat-terpendammu.html', title: 'Ketahui Bakat Terpendammu' },
     { file: 'khodam-warisan-leluhur-dan-bisa-diturunin.html', title: 'Khodam Warisan Leluhur dan Bisa Diturunin' },
     { file: 'konsistensi-lebih-penting-dari-motivasi.html', title: 'Konsistensi Lebih Penting dari pada Motivasi' },
