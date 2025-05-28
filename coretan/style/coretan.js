@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'menulis-itu-healing-tumpahin-pikiran-legain-hati.html', title: 'Menulis Itu Healing! Tumpahin Pikiran, Legain Hati' },
     { file: 'negativity-bias-mengapa-hal-kecil-sering-membekas.html', title: 'Mengapa Sekecil Apapun Hal Buruk Selalu Membekas di Pikiran?' },
     { file: 'rahasia-cepat-paham-saat-belajar.html', title: 'Rahasia Cepat Paham Saat Belajar' },
+    { file: 'saat-hidup-dikuasai-pandangan-orang-lain.html', title: 'Saat Hidup Dikuasai Pandangan Orang Lain' },
     { file: 'sangat-rugi-nonton-video-alur-film.html', title: 'Sangat Rugi Nonton Video Alur Film' },
     { file: 'self-discovery-perjalanan-menemukan-makna-hidup.html', title: 'Self Discovery Perjalanan Menemukan Tujuan Hidup' },
     { file: 'seni-mengendalikan-diri-stoikisme-rahasia-kebahagiaan.html', title: 'Seni Mengendalikan Diri Stoikisme Rahasia Kebahagiaan' },
