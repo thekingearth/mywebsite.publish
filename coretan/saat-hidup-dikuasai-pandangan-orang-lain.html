@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Terpenjara Ekspektasi: Saat Hidup Dikuasai Pandangan Orang Lain</title>
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Terpenjara Ekspektasi:
+  <br>Saat Hidup Dikuasai <span>Pandangan Orang Lain </span></h1>
+  <p class="detail-tanggal">Wednesday, 28 May 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p><span class="petik">"Kamu dibilang baik ataupun jahat tergantung siapa yang nge-spill, dibilang smart or dumb tergantung siapa yang menilai, dibilang cakep ataupun burik ya gitu deh totally perspektif yang ngeliat"</span></p>
+  <br>
+  <p>Terkadang terasa seolah hidup yang dijalani bukanlah cerminan diri yang sebenarnya, rasanya setiap keputusan yang dibuat mulai dari cara berpakaian sampai pilihan karier itu diambil lebih untuk memenuhi harapan atau nyenengin orang lain daripada mengejar kebahagiaan pribadi. Bisa jadi situasi ini adalah tanda sedang terjebak dalam belenggu ekspektasi yang dibentuk oleh lingkungan.</p>
+  <br>
+  <p>Yuk kita ngobrolin soal ini bareng-bareng. Karena siapa tahu, kamu butuh kunci buat ngelepasin diri dari jeratnya.</p>
+  <br>
+  <h2>Pengertian Tentang <span>Ekspektasi Sosial</span></h2>
+  <p>Ekspektasi sosial itu semacam harapan atau standar yang orang lain atau masyarakat taruh ke diri kita. Kayak, <span>“anak pertama harus sukses, perempuan harus kalem, cowok jangan nangis, umur segini harus udah nikah”,</span> dan sejuta template hidup lainnya.</p>
+  <br>
+  <p>Masalahnya, kadang ekspektasi ini bukan cuman saran, tapi udah jadi semacam tekanan. Kita jadi ngerasa harus banget ngejalanin hidup sesuai script yang orang lain tulis.</p>
+  <h2>Tanda Hidup dalam Bayang <span>Pandangan Orang</span></h2>
+  <p>Gimana tahu kalau kita ini hidup didalam bayang-bayang orang lain? Coba cek, kamu sering mikir <span>“kalau aku lakuin ini, nanti orang-orang mikir apa ya?”</span> Terus kamu batal ngelakuin hal yang sebenarnya kamu suka, cuma gara-gara takut dinilai aneh, gagal, atau nggak sesuai ekspektasi.</p>
+  <br>
+  <p>Kamu juga jadi sering ragu ambil keputusan sendiri dan lebih milih aman, walaupun itu bikin kamu nggak bahagia. Padahal hidup bukan tentang memenuhi ekspektasi orang lain, melainkan tentang berkembang sesuai potensi dan keinginan diri sendiri.</p>
+  <br>
+  <p>Padahal jujur aja, sebagian besar orang juga sibuk mikirin hidupnya sendiri. Tapi kenapa ya, penilaian mereka tetap jadi beban buat kita?</p>
+  <h2>Dampak Negatif Terlalu Fokus pada <span>Penilaian Orang</span></h2>
+  <p>Kalau terus-terusan mikirin pendapat orang lain, hidup bisa kerasa kayak beban. Capek, bingung, dan ujung-ujungnya jadi nggak tahu siapa diri kamu yang sebenarnya. Kamu bisa jadi overthinking, gampang cemas, dan merasa selalu kurang.</p>
+  <br>
+  <p>Parahnya lagi, kamu jadi kehilangan koneksi sama keinginan dan kebahagiaan kamu sendiri. Hidup jadi kayak panggung sirkus, dan kamu cuma aktor yang mainin peran buat nyenengin penonton.</p>
+  <h2>Sumber Ekspektasi <span>yang Menekan</span></h2>
+  <p>Tekanan ekspektasi itu bisa datang dari mana aja. Dari keluarga yang punya standar tinggi, teman-teman yang suka bandingin hidup, sampai media sosial yang penuh pencitraan. Semua orang pamer pencapaian, bikin kamu ngerasa harus ikut-ikutan biar nggak ketinggalan, biar dianggap layak, biar bisa diterima, dan didipuji.</p>
+  <br>
+  <p>Padahal kan, hidup tiap orang beda-beda. Tapi tetep aja, kita kadang ngerasa harus sama kayak mereka biar dianggap berhasil. Perasaan itu bisa bikin kita lupa tujuan pribadi dan malah ngejar hal-hal yang sebenarnya bukan buat kita.</p>
+  <h2>Kenapa Kita Susah <span>Lepas dari Ekspektasi</span></h2>
+  <p>Lepas dari ekspektasi itu susah karena kita udah terbiasa nyari validasi dari luar. Kita pengin diterima, dihargai, bahkan dicintai. Kadang juga takut dibilang egois kalau nggak nurutin harapan orang.</p>
+  <br>
+  <p>Belum lagi kalau dari kecil kita diajarin buat selalu jadi <span>anak baik</span> yang nurut dan nggak ngecewain siapa-siapa. Jadi wajar aja kalau pas gede, kita masih kebawa mindset itu. Mindset yang bikin kita sering lupa nanya ke diri sendiri <span>“Sebenernya aku maunya apa?”</span></p>
+  <h2>Apa Ada Cara Untuk <span>Membebaskan Diri</span></h2>
+  <p>Tenang, kabar baiknya kamu bisa keluar dari penjara ekspektasi ini. Mulailah dengan sadar dulu <span>“aku lagi hidup buat siapa sih?”</span> Terus belajar bedain mana keinginan sendiri, mana yang karena tekanan orang lain. Berani bilang “nggak” itu penting, dan kamu nggak harus jelasin pilihan hidupmu ke semua orang.</p>
+  <br>
+  <p>Cari orang-orang yang bisa dukung kamu jadi diri sendiri, dan yang paling penting kasih izin ke diri sendiri buat bahagia dengan cara kamu sendiri. Karena hidup yang benar-benar kamu pilih sendiri, jauh lebih berarti daripada hidup yang cuma untuk memenuhi harapan orang lain.</p>
+
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Hidup dalam bayang-bayang pandangan orang itu kayak lari maraton sambil bawa karung beras berat, bikin lelah, dan nggak ada ujungnya. Tapi kabar baiknya, kamu bisa berhenti kapan aja. Kamu bisa pilih buat jalan sesuai arah kamu sendiri. Dan percaya deh, jadi diri sendiri itu emang nggak selalu muda tapi itu jauh lebih lega.</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
