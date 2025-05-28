@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Terpenjara Ekspektasi: Saat Hidup Dikuasai Pandangan Orang Lain",
+      link: "../coretan/saat-hidup-dikuasai-pandangan-orang-lain.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Terpenjara Ekspektasi: Saat Hidup Dikuasai Pandangan Orang Lain",
+      description: "Sering kali tanpa sadar, kita menjalani hidup bukan atas dasar keinginan sendiri, tapi demi memenuhi harapan orang lain. Takut dinilai, takut gagal, hingga akhirnya kehilangan arah dan jati diri. Ekspektasi dari keluarga, teman, hingga media sosial bisa membentuk tekanan yang..."
+    },
+    {
       title: "Kesendirian yang Menguatkan: Merangkul Diri Sebelum Mencintai Orang Lain",
       link: "../coretan/kesendirian-yang-menguatkan-merangkul-diri-sebelum-mencintai-orang-lain.html",
       img: "../img/thumb/thumb08.jpg",
