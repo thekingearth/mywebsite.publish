@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Belajar Itu Mudah Namun Menjadi Master Itu Tantangan Seumur Hidup",
+      link: "../coretan/belajar-itu-mudah-menjadi-master-itu-tantangan-seumur-hidup.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Belajar Itu Mudah Namun Menjadi Master Itu Tantangan Seumur Hidup",
+      description: "Belajar itu mudah karena siapa pun bisa memulainya, tinggal buka buku, nonton video, atau ikut kelas. Tapi untuk menjadi master butuh lebih dari sekadar tahu, tapi dibutuhkan ketekunan, latihan tanpa henti, kegagalan yang terus dihadapi, dan komitmen jangka panjang. Menjadi ahli bukan soal cepat atau lambat, tapi soal seberapa..."
+    },
+    {
       title: "Terpenjara Ekspektasi: Saat Hidup Dikuasai Pandangan Orang Lain",
       link: "../coretan/saat-hidup-dikuasai-pandangan-orang-lain.html",
       img: "../img/thumb/thumb08.jpg",
