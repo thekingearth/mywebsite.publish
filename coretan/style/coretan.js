@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'adaptasi-ketenangan-pikiran-hidup-didunia-yang-kacau.html', title: 'Adaptasi Mencari Ketenangan Pikiran dari Dunia yang Kacau' },
     { file: 'bahagia-tidak-perlu-dicari-tetapi-diciptakan.html', title: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan' },
     { file: 'bahaya-rip-current-arus-laut.html', title: 'Bahaya Rip Current Arus Laut 2 Meter Perdetik' },
+    { file: 'belajar-itu-mudah-menjadi-master-itu-tantangan-seumur-hidup.html', title: 'Belajar Itu Mudah Menjadi Master Itu Tantangan Seumur Hidup' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
     { file: 'diam-bukan-berarti-lemah-stop-oversharing.html', title: 'Diam Bukan Berarti Lemah, Stop Oversharing!' },
