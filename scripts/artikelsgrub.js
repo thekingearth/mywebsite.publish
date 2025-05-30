@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Mengapa Uang Susah Didapatkan Tapi Mudah Untuk Dihabiskan?",
+      link: "../coretan/mengapa-uang-susah-didapatkan-tapi-mudah-dihabiskan.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Mengapa Uang Susah Didapatkan Tapi Mudah Untuk Dihabiskan?",
+      description: "Uang mudah dihabiskan karena dorongan emosional, gaya hidup konsumtif, dan godaan iklan yang terus-menerus. Banyak orang lebih terdorong untuk memenuhi keinginan sesaat dibanding kebutuhan jangka panjang, sehingga tanpa perencanaan keuangan yang baik, uang cepat lenyap tanpa terasa. Kurangnya literasi..."
+    },
+    {
       title: "Belajar Itu Mudah Namun Menjadi Master Itu Tantangan Seumur Hidup",
       link: "../coretan/belajar-itu-mudah-menjadi-master-itu-tantangan-seumur-hidup.html",
       img: "../img/thumb/thumb08.jpg",
