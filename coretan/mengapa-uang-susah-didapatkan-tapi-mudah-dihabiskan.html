@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Mengapa Uang Susah Didapatkan Tapi Mudah Dihabiskan?</title>
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Mengapa Uang Susah <span>Didapatkan</span>
+  <br>Tapi Mudah <span>Dihabiskan?</span></h1>
+  <p class="detail-tanggal">Friday, 30 May 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Coba deh pikirin udah kerja begitu keras, start dari pagi sampe sore, kadang lembur juga, nahan ngantuk, stres, capek mental dan fisik, semua itu udah dilakuin demi dapetin beberapa lembar kertas merah. Tapi anehnya, begitu mereka udah didapetin kok cepet banget abisnya.</p>
+  <br>
+  <p>Layaknya artis yang sangat kita kagumi udah dinanti-nanti kedatangannya, eh setelah dia tiba ternyata cuma singgah beberapa saat saja, udah kayak hantu cepet banget hilangnya. Baru juga dipegang, baru beberapa hari lebaran-lebaran itu singgah di dompet, eh udah tinggal recehan. Kenapa sih bisa kayak gitu?</p>
+  <br>
+  <p>Atau kamu yang profesinya sebagai karyawan apapun itu bidangnya, pernah nggak sih, kamu baru aja gajian dompet rasanya penuh, saldo rekening senyum lebar tapi belum seminggu, uangnya udah entah ke mana. Tanggal muda masih panjang, tapi isi dompet udah mulai menjerit. Tenang, kamu nggak sendiri. Fenomena ini umum banget dan bisa dialami siapa aja, dan ini bisa terjadi tanpa disadari  maupun di luar kendali karena beberapa faktor seperti:</p>
+  <br>
+
+  <h2>Langsung Balas Dendam <span>Belanja</span></h2>
+  <p>Dapetin uang tuh nggak instan. Butuh waktu, tenaga, dan skill. Mau kerja kantoran, jualan online, freelance, semua butuh effort. Bahkan yang katanya <span>passive income</span> aja butuh kerja keras dulu di awal. Tapi banyak orang mikir setelah satu bulan kerja keras, banyak orang merasa <span>"pantas"</span> untuk memanjakan diri.</p>
+  <br>
+  <p>Beli kopi mahal, makan di restoran, checkout keranjang belanjaan yang udah nganggur seminggu. Padahal, kalau ditotal, itu semua bisa nyedot hampir separuh gaji dalam hitungan detik tinggal klik <span>"beli sekarang".</span></p>
+  <br>
+
+  <h2>Nggak Punya Rencana <span>Keuangan</span></h2>
+  <p>Setiap buka HP, iklan makanan, baju, gadget baru, semua menggoda. Bahkan kalau nggak butuh, bisa aja kita beli cuma karena FOMO <span>(takut ketinggalan).</span> Di era serba digital ini, ngabisin uang jadi semudah scroll TikTok.</p>
+  <br>
+  <p>Gaji masuk, tapi nggak tahu mau dialokasikan ke mana. Ujung-ujungnya semua dikeluarin sesuka hati. Kalau nggak bikin anggaran, ya wajar aja uang cepet banget hilang. Budgeting itu penting biar tahu berapa yang boleh dipakai dan berapa yang harus disimpan.</p>
+  <br>
+
+  <h2>Pengeluaran Kecil yang <span>Sering Diremehkan</span></h2>
+  <p>Mgopi 20 ribu sehari keliatannya kecil. Tapi kalau dihitung tiap hari sebulan udah 600 ribu lebih. Belum jajan cemilan, parkir, ongkir, dan lain-lain. Pengeluaran kecil tapi rutin ini sering banget jadi si <span>pencuri uang</span> tanpa kita sadari.</p>
+  <br>
+  <p>Belum lagi pengeluaran yang sering banget datang tanpa undangan seperti listrik nunggak, motor minta servis, tagihan air jebol, bayar wifi telat, itu juga bisa langsung nyedot isi dompet.</p>
+  <br>
+  <br>
+
+  <h2>Bayar Cicilan atau Utang Langsung <span> Habisin Gaji</span></h2>
+  <p>Kalau setengah dari gaji langsung lari buat bayar cicilan, nggak heran kalau sisa uangnya terasa mepet banget. Rasanya baru gajian, tapi saldo udah hampir habis. Memang benar, utang itu tanggung jawab yang harus diselesaikan, tapi kalau porsinya terlalu besar, kehidupan sehari-hari bisa terganggu.</p>
+  <br>
+  <p>Makanya penting banget untuk mengatur porsi cicilan dengan bijak. Idealnya, total cicilan bulanan sebaiknya nggak lebih dari 30% dari penghasilan. Sisanya bisa dialokasikan untuk kebutuhan pokok, tabungan, dan pengeluaran lain yang lebih mendesak. Kalau cicilan udah terlalu menekan, mungkin saatnya meninjau kembali gaya hidup dan mulai merapikan rencana keuangan.</p>
+  <br>
+  <br>
+
+  <h2>Gaya Hidup Lebih Tinggi <span>dari Pendapatan</span></h2>
+  <p>Ini yang bahaya gaji naik, gaya hidup ikut naik. Beli HP baru, upgrade kendaraan, nongkrong di tempat hits. Kalau gaya hidup terus menyesuaikan keinginan, gaji berapa pun bakal terasa kurang.</p>
+  <br>
+  <p>Kalau gaya hidup terus menyesuaikan keinginan bukan untuk kebutuhan, bukannya hidup makin tenang, yang ada justru makin tertekan karena pengeluaran terus naik. Ingat, kunci keuangan sehat bukan di seberapa besar pendapatanmu, tapi seberapa bijak kamu mengelolanya.</p>
+  <br>
+
+  <h2>Lupa Nabung dan <span>Investasi</span></h2>
+  <p>Salah satu kesalahan umum dalam mengelola keuangan adalah menunda menabung atau berinvestasi sampai akhir bulan, setelah semua kebutuhan dan keinginan terpenuhi. Padahal, uang yang nggak <span>diselamatkan</span> di awal biasanya akan cepat habis tanpa sadar. Kalau mindset-nya masih <span>nabung dari sisa,</span> bisa jadi nggak ada yang tersisa sama sekali.</p>
+  <br>
+  <p>Karena itu, menabung dan investasi sebaiknya dijadikan prioritas utama setiap kali gajian. Langsung sisihkan sebagian penghasilan untuk ditabung atau diinvestasikan sebelum mulai membelanjakan sisanya. Prinsip ini dikenal dengan istilah <span>bayar diri sendiri dulu,</span> yaitu memastikan masa depan keuangan aman sebelum memenuhi kebutuhan konsumtif.</p>
+  <br>
+
+  <h1>Jadi, Gimana Dong <span>Solusinya?</span></h1>
+  <p>Biar uang nggak cepet ludes, hal pertama yang bisa kamu lakuin adalah bikin anggaran bulanan. Catat dulu berapa pemasukanmu, terus bagi-bagi deh buat kebutuhan utama, nabung, dan sedikit buat senang-senang. Yang paling penting, langsung pisahin uang buat tabungan atau investasi pas gajian turun jangan nunggu sisa di akhir bulan, karena biasanya… ya nggak ada sisanya.</p>
+  <br>
+  <p>Terus, coba deh biasain nyatet semua pengeluaran, sekecil apapun. Biar kamu bisa lihat uangmu kabur ke mana ajah. Penting juga buat mulai ngebedain mana yang emang kebutuhan, dan mana yang cuma karena ngiler liat diskon. Kalau lagi pengen beli sesuatu yang nggak terlalu penting, coba tahan dulu sebentar. Kasih waktu buat mikir, ini beneran butuh atau cuma laper mata doang?</p>
+  <br>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Bukan soal berapa besar gajimu, tapi gimana kamu ngelola uang itu. Banyak orang bergaji besar tapi tetap merasa kekurangan karena nggak punya kontrol atas pengeluarannya. Sebaliknya, ada juga yang bergaji pas-pasan tapi tetap bisa nabung dan hidup tenang karena pintar mengatur keuangan.</p>
+<br>
+<p>Kalau bisa bijak dari sekarang, kamu nggak perlu lagi merasa miskin di tanggal muda. Mulai dari hal kecil seperti bikin anggaran bulanan, mencatat pengeluaran, atau menahan diri dari belanja impulsif. Semangat terus dalam belajar dan mengatur keuangan, karena kebiasaan baik hari ini bisa jadi tabungan besar di masa depan!</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
