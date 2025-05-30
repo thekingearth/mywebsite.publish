@@ -42,10 +42,6 @@
   text-align: justify;
 }
 
-.page-artikel .note-artikel {
-  font-family: var(--body1-font);
-}
-
 .page-artikel p span {
   font-style: italic;
   color: var(--alpa);
@@ -66,6 +62,19 @@
   font-weight: bold;
   color: var(--alpa);
   }
+
+.page-artikel a {
+  color: var(--harga);
+  font-weight: bold;
+  font-style: italic;
+}
+.page-artikel a:hover {
+  color: var(--pita);
+}
+
+.page-artikel .note-artikel {
+  font-family: var(--body1-font);
+}
 
 .page-artikel .baca-juga {
   margin-top: 20px;
