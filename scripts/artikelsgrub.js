@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Ketika Bertanya Lebih Bermakna daripada Menjawab",
+      link: "../coretan/ketika-bertanya-lebih-bermakna-daripada-menjawab.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Ketika Bertanya Lebih Bermakna daripada Menjawab",
+      description: "Dalam kehidupan sehari-hari, kita sering terfokus untuk mencari jawaban secepat dan seakurat mungkin. Namun, ada kekuatan yang sering terlupakan dalam proses bertanya. Bertanya bukan hanya soal mencari informasi, melainkan membuka ruang untuk refleksi, dialog, dan pertumbuhan. Sebuah pertanyaan yang tepat dapat menantang asumsi, menggugah..."
+    },
+    {
       title: "Mengapa Uang Susah Didapatkan Tapi Mudah Untuk Dihabiskan?",
       link: "../coretan/mengapa-uang-susah-didapatkan-tapi-mudah-dihabiskan.html",
       img: "../img/thumb/thumb08.jpg",
