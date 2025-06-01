@@ -3,12 +3,12 @@
   padding: 9rem 2% 1rem;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .page-artikels .page-artikel {
   width: 65%;
   max-width: 90rem;
-  margin: 1;
 }
 .page-artikel h1, .page-artikel h2, .page-artikel h3 {
   font-family: var(--harga-font);
