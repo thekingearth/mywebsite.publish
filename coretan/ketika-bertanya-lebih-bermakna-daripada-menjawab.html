@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Ketika Bertanya Lebih Bermakna dari pada Menjawab</title>
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Ketika Bertanya <span>Lebih Bermakna</span>
+  <br>dari pada <span>Menjawab</span></h1>
+  <p class="detail-tanggal">Saturday, 31 May 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Di dunia ini pasti ada orang yang jawabannya selalu cepat dan yakin banget. Entah itu temanmu, atau jangan-jangan malah kamu sendiri, <span>hayooo!</span> Tapi menariknya, ketika dicek ulang, ternyata jawabannya bisa saja salah. Yakin itu penting, tapi bukan berarti itu akan selalu benar.</p>
+  <br>
+  <p>Di sisi lain, ada juga orang yang lebih banyak nanya daripada ngasih jawaban. Mungkin awalnya mereka terlihat seperti nggak tahu apa-apa atau malah dianggap <span>“banyak nanya”.</span> Tapi sebenarnya, mereka sedang membuka ruang berpikir, menggali informasi, dan memancing diskusi jadi lebih dalam.</p>
+  <br>
+
+  <p>Justru di situlah letak peran penting mereka baik dalam proses pembelajaran, diskusi, maupun dalam kehidupan sosial dan intelektual. Orang-orang yang suka nanya ini membantu kita ngeliat dari angle pandang lain, menantang asumsi yang sudah ada, dan mendorong kita untuk berpikir lebih kritis.</p>
+  <br>
+  <p>Nah, di sinilah menariknya ternyata, dalam banyak hal bertanya itu bisa lebih bermakna daripada sekadar menjawab.</p>
+  <br>
+  <h2>Bertanya Itu Tanda <span>Peduli dan Penasaran</span></h2>
+  <p>Pas kita nanya sama seseorang, sebenarnya itu bukan cuma soal pengen tahu jawabannya. Di balik sebuah pertanyaan, sebenarnya ada dua hal yang kita tunjukkan yaitu kita peduli atau kita penasaran. Kalau kita nggak peduli ataupun penasaran, ya buat apa nanya kan?</p>
+  <br>
+  <p>Misalnya pas ada teman yang cerita masalahnya lalu kita nanya, <span>“Kamu kenapa bisa sampai ngerasa kayak gitu?"</span> itu tandanya kita benar-benar mau ngerti, bukan cuma basa-basi. Di sisi lain, rasa penasaran juga bikin kita bertanya hal-hal baru yang mungkin belum kita pahami. Intinya, bertanya itu bukan sekadar mencari jawaban, tapi juga nunjukkin perhatian dan ketertarikan kita pada orang atau topik yang sedang dibahas. Kadang juga dari beberapa pertanyaan itu bisa membuat lawan bicara lebih dihargai, lebih didengar, bukan dihakimi atau buru-buru dikasih solusi.</p>
+  <br>
+  <h2>Pertanyaan Bisa <span>Membuka Wawasan</span></h2>
+  <p>Coba deh inget-inget waktu kamu belajar sesuatu yang baru. Apa yang benar-benar bikin kamu ngerti lebih dalam? Apakah penjelasan panjang lebar dari guru, atau justru pertanyaan-pertanyaan yang bikin kamu mikir keras? Biasanya, justru pertanyaan yang membuat otak kita bekerja lebih aktif. Kita jadi mikir, nyari tahu, dan menghubungkan banyak hal. Pertanyaan memicu rasa ingin tahu, dan dari situlah proses belajar yang sebenarnya dimulai.</p>
+  <br>
+  <p>Pertanyaan juga membantu kita melihat suatu hal dari berbagai sudut pandang. Ketika kita bertanya <span>“Kenapa sih bumi bentuknya bulat?”, “Gimana jadinya kalau nggak ada gravitasi?”,</span> kita sedang memperluas cakrawala berpikir. Kita jadi nggak cuma nerima informasi, tapi juga mengolahnya, menantangnya, dan kadang menemukan makna baru yang sebelumnya nggak kita sadari. Makanya, pertanyaan itu bukan sekadar alat belajar tapi juga kunci untuk membuka wawasan yang lebih luas.</p>
+  <br>
+  <p>Dan ingat, pertanyaan-pertanyaan yang tidak dapat kamu jawab seringkali lebih baik daripada jawaban-jawaban yang tidak dapat kamu pertanyakan. Karena setidaknya, saat kita bertanya, kita membuka pintu untuk berpikir dan berkembang. Tapi kalau kita nerima jawaban yang bahkan nggak bisa kita pertanyakan... ya, bisa-bisa kita berhenti mikir dan asal percaya aja.</p>
+  <br>
+
+  <h2>Nggak Semua Jawaban Harus <span>Segera Ditemukan</span></h2>
+  <p>Dalam hidup, nggak semua pertanyaan harus buru-buru dijawab. Kadang, justru hal-hal penting datang dari pertanyaan yang kita biarkan menggantung sebentar. Kita butuh waktu untuk merenung, mikir dalam, dan benar-benar merasakan apa yang sedang kita hadapi. Pertanyaan seperti <span>“Aku sebenarnya mau jadi apa?”, “Apa yang bikin aku bahagia?”,</span> atau <span>“Apa yang benar-benar penting dalam hidupku?”</span> nggak bisa dijawab dalam satu malam. Butuh proses dan itu nggak apa-apa.</p>
+  <br>
+  <p>Berani bertanya dan diam sejenak untuk merenung adalah bagian dari perjalanan memahami diri sendiri. Kita sering terlalu sibuk mencari jawaban dari luar, padahal jawaban terbaik kadang justru muncul dari dalam, ketika kita benar-benar jujur sama diri sendiri. Jadi, daripada terburu-buru menemukan jawaban yang belum tentu tepat, lebih baik kita beri ruang untuk bertanya, berpikir, dan membiarkan waktu membantu menemukan maknanya.</p>
+  <br>
+  <p>Pertanyaan kayak gitu nggak bisa dijawab pakai <a href="https://www.google.com">Google,</a> butuh waktu. Tapi justru di situ letak kekuatannya dan itu bisa bantu kita mengenal diri sendiri lebih dalam.</p>
+  <br>
+
+  <h2>Jadi, Mulailah <span>Bertanya</span></h2>
+  <p>Bertanya itu bukan tanda kelemahan. Justru sebaliknya, itu tanda kamu punya rasa ingin tahu dan nggak merasa <span>“paling tahu segalanya”.</span> Di dunia yang serba cepat dan penuh pendapat ini, orang yang bisa bertanya dengan tepat justru punya nilai lebih.</p>
+  <br>
+  <p>Jadi, daripada buru-buru pengen jadi si paling tahu, yuk jadi si paling penasaran. Karena kadang, pertanyaan yang tepat bisa mengubah cara kita melihat dunia. Kalau kamu punya pertanyaan yang menggelitik hari ini, jangan buru-buru cari jawabannya. Nikmati proses mikirnya. Siapa tahu, dari situ kamu bisa nemuin makna baru yang nggak kamu duga sebelumnya.</p>
+  <br>
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Aku cuma mau nanya ke kamu. Jika otak kamu ditransplantasikan ke tubuh orang lain, apakah kamu tetap "kamu"?</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
