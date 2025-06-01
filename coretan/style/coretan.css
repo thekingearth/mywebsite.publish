@@ -1,9 +1,12 @@
 
 .page-artikels {
   padding: 9rem 2% 1rem;
+  display: flex;
+  gap: 20px;
 }
 
 .page-artikels .page-artikel {
+  width: 65%;
   max-width: 90rem;
   margin: 1;
 }
@@ -109,4 +112,10 @@
 
 #disqus_thread .disqus-footer {
   color: red;
+}
+
+/* Sidebar */
+page-artikels .page-sidebar {
+  width: 35%;
+  margin-top: 70px;
 }
