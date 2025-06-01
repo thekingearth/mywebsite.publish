@@ -56,3 +56,55 @@ document.addEventListener("DOMContentLoaded", function() {
     listContainer.appendChild(listItem);
    });
   });
+
+
+
+// Widget Jam Digital
+function updateClock() {
+  const now = new Date();
+
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const dayName = days[now.getDay()];
+  
+  document.getElementById('day-name').innerText = dayName;
+
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  const second = now.getSeconds();
+
+  const hourDeg = (hour % 12) * 30 + (minute / 2);
+  const minuteDeg = minute * 6;
+  const secondDeg = second * 6;
+
+  document.getElementById('hour').style.transform = `translateX(-50%) translateY(0) rotate(${hourDeg}deg)`;
+  document.getElementById('minute').style.transform = `translateX(-50%) translateY(0) rotate(${minuteDeg}deg)`;
+  document.getElementById('second').style.transform = `translateX(-50%) translateY(0) rotate(${secondDeg}deg)`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+
+
+
+// Widget Quotes Text
+const quotes = [
+    '"Hidup itu 10% apa yang terjadi padamu dan 90% bagaimana kamu menyikapinya."',
+    '"Jangan biarkan kegagalan menghalangi langkahmu, itu adalah pelajaran berharga."',
+    '"Kebahagiaan bukan sesuatu yang siap pakai. Itu datang dari tindakan kita sendiri."',
+    '"Keberanian bukan berarti tidak merasa takut, tetapi tetap maju meskipun merasa takut."',
+    '"Kesuksesan bukanlah kunci kebahagiaan. Kebahagiaan adalah kunci kesuksesan."',
+    '"Jangan menunggu momen sempurna, ambil setiap momen dan jadikan itu sempurna."'
+];
+
+function getRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
+}
+
+document.getElementById('new-quote').addEventListener('click', function() {
+    const quoteText = document.getElementById('quote-text');
+    quoteText.textContent = getRandomQuote();
+});
+
+// Display an initial random quote
+document.getElementById('quote-text').textContent = getRandomQuote();
