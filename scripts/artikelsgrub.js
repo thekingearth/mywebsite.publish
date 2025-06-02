@@ -2,6 +2,13 @@
 function renderArtikels() {
   const artikelData = [
     {
+      title: "Teknik Mewing Bisa Memperbaiki Struktur Wajah atau Hanya Gimik?",
+      link: "../coretan/teknik-mewing-bisa-memperbaiki-struktur-wajah-atau-hanya-gimik.html",
+      img: "../img/thumb/thumb08.jpg",
+      alt: "Coretan Kin Basari Teknik Mewing Bisa Memperbaiki Struktur Wajah atau Hanya Gimik?",
+      description: "Teknik mewing yang diklaim dapat memperbaiki struktur wajah dengan menempatkan lidah di langit-langit mulut secara konsisten. Praktik ini dipercaya bisa meningkatkan garis rahang dan postur wajah secara alami, terutama jika dilakukan..."
+    },
+    {
       title: "Ketika Bertanya Lebih Bermakna daripada Menjawab",
       link: "../coretan/ketika-bertanya-lebih-bermakna-daripada-menjawab.html",
       img: "../img/thumb/thumb08.jpg",
