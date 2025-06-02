@@ -192,12 +192,12 @@ forward.onclick = () => {
 
 repeatBtn.onclick = () => {
   isRepeat = !isRepeat;
-  repeatBtn.style.color = isRepeat ? "#d574de" :"#fd0";
+  repeatBtn.style.color = isRepeat ? "#d12" :"#080";
   };
 
 shuffleBtn.onclick = () => {
   isShuffle = !isShuffle;
-  shuffleBtn.style.color = isShuffle ? "#d574de" : "#fd0";
+  shuffleBtn.style.color = isShuffle ? "#d12" : "#080";
   };
 
 prevBtn.onclick = () => {
