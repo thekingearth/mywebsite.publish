@@ -252,11 +252,11 @@ popularPost.className = 'popular-post';
 
 // Data post bisa dimasukkan dalam array untuk efisiensi
 const posts = [
-  { title: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan', href: '../coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html', desc: 'Artikel ini menginspirasi untuk menciptakan kebahagiaan melalui cara pandang dan kebiasaan hidup yang sederhana namun bermakna.' },
-  { title: 'Konsistensi Lebih Penting dari pada Motivasi', href: '../coretan/konsistensi-lebih-penting-dari-motivasi.html', desc: 'Motivasi bersifat fluktuatif dan sering kali bergantung pada suasana hati atau situasi, sementara konsistensi membentuk kebiasaan yang berkelanjutan.' },
-  { title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic', href: '../coretan/jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', desc: 'Membahas pentingnya menjaga kesehatan mental pada pengaruh negatif dari orang-orang toxic, serta beberapa dampaknya terhadap kesejahteraan emosional.' },
-  { title: 'Mengapa Hal Kecil Sering Membekas di Pikiran?', href: '../coretan/negativity-bias-mengapa-hal-kecil-sering-membekas.html', desc: 'Mengulas alasan psikologis mendalam mengapa hal-hal kecil, seperti komentar sepele atau kejadian sederhana, bisa begitu membekas kuat di pikiran.' },
-  { title: 'Ketika Bertanya Lebih Bermakna daripada Menjawab', href: '../coretan/ketika-bertanya-lebih-bermakna-daripada-menjawab.html', desc: 'Dibandingkan sekadar memberikan jawaban, kemampuan bertanya menunjukkan rasa ingin tahu yang mendalam dan peran aktif dalam proses belajar serta komunikasi yang bermakna.' },
+  { title: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan', href: '../coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html', desc: 'Artikel ini menginspirasi untuk menciptakan kebahagiaan melalui cara pandang dan kebiasaan hidup yang sederhana namun lebih bermakna, membentuk ketenangan batin dan hubungan yang harmonis.' },
+  { title: 'Konsistensi Lebih Penting dari pada Motivasi', href: '../coretan/konsistensi-lebih-penting-dari-motivasi.html', desc: 'Motivasi bersifat fluktuatif dan sering kali bergantung pada suasana hati atau situasi, sementara konsistensi membentuk kebiasaan yang berkelanjutan dan menghasilkan perubahan positif jangka panjang.' },
+  { title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic', href: '../coretan/jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', desc: 'Membahas pentingnya menjaga kesehatan mental pada pengaruh negatif dari orang-orang toxic, serta beberapa dampaknya terhadap kesejahteraan emosional dan kualitas hidup secara keseluruhan.' },
+  { title: 'Mengapa Hal Kecil Sering Membekas di Pikiran?', href: '../coretan/negativity-bias-mengapa-hal-kecil-sering-membekas.html', desc: 'Mengulas alasan psikologis mendalam mengapa hal-hal kecil, seperti komentar sepele atau kejadian sederhana, bisa begitu membekas kuat di pikiran dan memengaruhi respons emosional seseorang.' },
+  { title: 'Ketika Bertanya Lebih Bermakna daripada Menjawab', href: '../coretan/ketika-bertanya-lebih-bermakna-daripada-menjawab.html', desc: 'Dibandingkan sekadar memberikan jawaban, kemampuan bertanya menunjukkan rasa ingin tahu yang mendalam dan peran aktif dalam proses belajar serta komunikasi yang bermakna dan berkelanjutan.' },
 ];
 
 // Tambahkan masing-masing post ke dalam container
