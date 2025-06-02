@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Teknik Mewing Bisa Memperbaiki Struktur Wajah atau Hanya Gimik?</title>
+<!-- mystyle -->
+ <style>
+ </style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+  
+  <div class="navbar-nav">
+    <a href="../menu/produk.html">Produk<span>Me</span></a>
+    <a href="../menu/books.html">Books<span>Me</span></a>
+    <a href="../menu/minigame.html">Mini<span>game</span></a>
+    <a href="../menu/about.html">About<span>Me</span></a>
+    <a href="../menu/contact.html">Contact</a>
+  </div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">−</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">+</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p>           Tetap fokus pada tujuanmu,  jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Teknik Mewing Bisa <span>Memperbaiki</span>
+  <br>Struktur Wajah atau <span>Hanya Gimik?</span></h1>
+  <p class="detail-tanggal">Thursday, 03 June 2025
+  <br>By Kin Basari</p>
+  <br>
+  <p>Belakangan ini, ada satu kata yang sering seliweran di TikTok dan YouTube yaitu <span>mewing.</span> Yap, teknik yang katanya bisa bikin rahang makin tegas, dagu jadi lebih kece, dan bahkan memperbaiki postur wajah. Banyak banget yang ngakuin wajah mereka berubah cuma gara-gara nempatin lidah di posisi tertentu. Kedengarannya simpel banget, ya?</p>
+  <br>
+  <p>Tapi yang bikin penasaran, mewing ini beneran manjur atau cuma efek viral aja? Soalnya makin banyak yang ikut-ikutan tanpa tahu jelas gimana caranya. Ada yang sampai tiap hari latihan sambil ngaca, berharap rahangnya makin <span>“snatched”</span> kayak model. Hmmm... agak ambisius, ya?</p>
+  <br>
+  <p>Nah, di sinilah muncul pertanyaan besarnya: mewing ini bener-bener ngefek atau cuma tren internet yang dibumbui harapan tinggi? Soalnya sekarang apa aja bisa viral, tapi belum tentu semuanya masuk akal apalagi kalau nggak ada bukti medisnya. Yuk coba kita bahas ini dengan santai, tapi tetep pakai logika dan sumber yang masuk akal.</p>
+  <br>
+
+  <h2><span>Apa Itu Mewing Sebenarnya?</span></h2>
+  <p>Mewing itu sebenarnya teknik sederhana, yaitu menempatkan lidah di langit-langit mulut dengan posisi yang dianggap <span>"ideal".</span> Caranya, rahang tetap tertutup, gigi atas dan bawah menyentuh ringan <span>(jangan digigit ya),</span> dan lidah menempel penuh di langit-langit mulut. Teknik ini dipopulerkan oleh <a href="https://en.m.wikipedia.org/wiki/John_Mew">Dr. John Mew,</a> seorang ortodontis dari Inggris, yang percaya kalau postur lidah bisa memengaruhi bentuk wajah apalagi kalau mulai dipraktikkan sejak kecil.</p>
+  <br>
+  <p>Kalau dijelasin santai, mewing itu semacam <span>“olahraga ringan”</span> di dalam mulut buat bantu membentuk rahang jadi lebih rapi dan simetris. Bayangin aja kayak yoga, tapi bukan buat badan... buat lidah! Simpel sih, tapi banyak yang penasaran karena katanya bisa bikin wajah kelihatan lebih proporsional tanpa operasi.</p>
+  <br>
+
+  <h2><span>Klaim Manfaat Mewing</span></h2>
+  <p>Para pendukung mewing, terutama yang aktif di internet, percaya banget kalau teknik ini bisa kasih banyak manfaat. Mulai dari bikin rahang kelihatan lebih tajam dan simetris, memperbaiki postur wajah, sampai bantu pernapasan jadi lebih lancar lewat hidung. Bahkan, ada yang bilang mewing bisa mengurangi risiko sleep apnea dan bikin wajah jadi <span>glow up</span> alami tanpa perlu operasi atau filler <span>(katanya).</span> Wah, kalau cuma dengan posisi lidah bisa kayak gitu, siapa yang nggak tertarik coba?</p>
+  <br>
+  <p>Tapi... tunggu dulu. Klaimnya sih keren, tapi apa semua itu benar-benar terbukti? Banyak orang jadi semangat nyobain mewing gara-gara testimoni di medsos, tapi nggak semua dibarengi sama penjelasan ilmiah atau pendapat dokter. Jadi, sebelum langsung percaya, ada baiknya kita lihat dulu faktanya, jangan-jangan cuma efek viral semata.</p>
+  <br>
+
+  <h2><span>Kata Dokter dan Tenaga Ahli</span></h2>
+  <p>Banyak yang Bilang “Eits, nggak semudah itu". Di sinilah mulai muncul kontroversi. Menurut banyak dokter gigi dan ortodontis profesional, efek mewing tidak akan signifikan pada orang dewasa. Struktur tulang wajah kita itu relatif sudah <span>“matang”,</span> jadi susah berubah hanya karena posisi lidah.</p>
+  <br>
+  <p>"Kalau dilakukan sejak kecil, saat tulang wajah masih berkembang, mewing mungkin bisa sedikit membantu. Tapi untuk orang dewasa? Jangan terlalu berharap,” kata <a href="">Dr. Mike Mew</a> <span>(iya, anaknya John Mew sendiri),</span> dalam salah satu wawancara.</p>
+  <br>
+  <p>Sementara itu, sebagian besar dokter gigi arus utama bahkan skeptis banget terhadap mewing. Banyak yang menganggap ini cuma mitos yang viral tanpa bukti ilmiah kuat.</p>
+  <br>
+
+  <h2><span>Ada yang Dapat Hasil Positif</span></h2>
+  <p>Sudah ada banyak orang di media sosial yang mulai papa speak up kalau wajah mereka berubah setelah rutin mewing. Tapi, perubahan itu belum tentu murni karena mewing aja. Bisa jadi itu efek gabungan dari hal lain, kayak berat badan yang turun, postur tubuh yang membaik, atau sekadar efek <span>placebo</span> atau sugesti positif karena ngerasa lagi usaha. Belum lagi, sudut foto dan pencahayaan yang kece bisa banget bikin wajah kelihatan lebih tajam dan simetris.</p>
+  <br>
+  <p>Masalahnya, sampai sekarang belum ada penelitian jangka panjang yang benar-benar membuktikan kalau mewing bisa mengubah struktur wajah secara drastis, apalagi kalau kamu udah dewasa. Jadi, walaupun hasilnya terlihat di beberapa orang, belum tentu itu efek dari mewing doang. Bisa aja cuma trik kamera, atau ya, karena mereka juga lagi menjalani gaya hidup sehat lainnya.</p>
+  <br>
+
+  <h2><span>Lalu Mewing Berisiko atau Malah Bahaya?</span></h2>
+  <p>Sekilas sih, mewing kelihatan aman-aman aja, ya. Soalnya cuma posisiin lidah doang di langit-langit mulut. Tapi jangan salah, kalau tekniknya keliru atau kamu jadi terlalu obsesif ngejalaninnya, efek sampingnya bisa muncul. Mulai dari otot rahang dan leher yang tegang, sendi rahang (TMJ) yang nyeri, sampai gigitan yang jadi nggak pas.</p>
+  <br>
+  <p>Belum lagi kalau kamu neken lidah terlalu keras, bisa bikin gigi jadi cepat aus. Duh, bukannya makin kece, malah jadi ke dokter gigi. Jadi intinya, mewing boleh aja dicoba, tapi tetap harus pakai logika dan jangan asal ngikutin tren. Cek dulu caranya yang bener, dan kalau perlu, konsultasi sama ahlinya biar nggak asal-asalan.</p>
+  <br>
+
+  <h2><span>Kesimpulan: Realita vs Gimik</span></h2>
+  <p>Mewing itu bukan sihir. Kalau kamu pengin rahang tegas atau wajah proporsional, mewing bukan solusi ajaib. Meskipun dilakuin dengan cara yang benar dan masuk akal. Tapi jangan berharap dapat hasil instan, apalagi tanpa kombinasi gaya hidup sehat lainnya.</p>
+  <br>
+  <p>Lebih penting lagi: jangan sampai terjebak standar kecantikan semu dari media sosial. Karena pada akhirnya, yang paling menarik itu bukan rahang lancip atau dagu runcing, tapi rasa percaya diri dan kesehatanmu secara keseluruhan.</p>
+  <br>
+
+
+<br>
+<h3 class="note-artikel">Catatan:</h3>
+<p>Mewing mungkin terlihat seperti solusi mudah untuk memperbaiki tampilan wajah, tapi penting untuk tetap realistis dan kritis dalam menyikapinya. Jangan sampai tergoda janji-janji viral tanpa memahami dasar ilmiahnya. Kalau kamu penasaran dan ingin mencoba, sah-sah saja asalkan tahu batasannya, tidak berlebihan, dan tetap mengutamakan kesehatan.</p>
+
+<br>
+<div class="baca-juga">
+<h2>Baca Juga:</h2>
+<h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+
+ <div class="page-sidebar">
+  <div class="sidebar-artikel">
+   <div class="jamdigital">
+    <div class="clockwidget">
+    <div class="clock">
+      <div class="day" id="day-name"></div>
+      <div class="hour" id="hour"></div>
+      <div class="minute" id="minute"></div>
+      <div class="second" id="second"></div>
+      <div class="center"></div>
+    </div>
+   </div>
+  </div>
+   <br>
+   <div class="label-sidebar">
+     <a href="../menu/minigame.html">
+     <span class="label-name">Mini Game</span></a>
+      <a href="../menu/sitemap.html">
+      <span class="label-name">Daftar Isi</span></a>
+    </div>
+   <div class="post">
+    <br><h1>Popular Post</h1><br>
+    <div id="popular-content"></div>
+   </div>
+   <br><br>
+   <div class="player">
+    <h2 id="songTitle">Balelot</h2>
+    <p>Playlist | 10</p>
+    <input type="range" id="progress" value="0" style="width: 100%;">
+    <div class="time">
+      <span id="current">0:00</span> / <span id="duration">0:00</span>
+    </div>
+   <div class="controls">
+      <button id="shuffle"><i data-feather="shuffle"></i></button>
+      <button id="rewind"><i data-feather="rewind"></i></button>
+      <button id="prev"><i data-feather="skip-back"></i></button>
+      <button id="playPause"><i data-feather="play"></i></button>
+      <button id="next"><i data-feather="skip-forward"></i></button>
+      <button id="forward"><i data-feather="fast-forward"></i></button>
+      <button id="repeat"><i data-feather="repeat"></i></button>
+    </div>
+    <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+  <ul id="playlistList" style="color: #fd0; display: none; list-style: none; padding: 0;"></ul>
+  </div>
+   <br><br><br>
+  </div>
+
+   <br><br><br>
+
+    <div class="sidebar-quotes">
+     <div id="quote-widget">
+     <button id="new-quote">Next Quote</button>
+     <br><br>
+     <p id="quote-text">Loading...</p>
+     </div>
+    </div>
+    <br><br><br>
+ </div>
+
+</div>
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+
+
+<!-- Footer -->
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>
