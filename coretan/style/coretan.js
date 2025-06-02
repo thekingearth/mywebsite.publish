@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'sibuk-seharian-tapi-hasil-nol-beralih-produktif.html', title: 'Sibuk Seharian Tapi Hasil Nol? Saatnya Beralih ke Produktif' },
     { file: 'stop-comparing-yourself-fokus-pada-pertumbuhan.html', title: 'Stop Comparing Yourself, Berhenti Membandingkan Diri' },
     { file: 'stop-minder-langkah-simpel-buat-up.html', title: 'Stop Minder! Langkah simpel buat Upgrade Diri' },
+    { file: 'teknik-mewing-bisa-memperbaiki-struktur-wajah-atau-hanya-gimik.html', title: 'Teknik Mewing Bisa Memperbaiki Struktur Wajah atau Hanya Gimik?' },
     { file: 'upgrade-diri-perjalanan-menuju-kedewasaan.html', title: 'Upgrade diri, Perjalanan Menuju Kedewasaan' }
     ];
 
