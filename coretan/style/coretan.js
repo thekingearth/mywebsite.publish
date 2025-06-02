@@ -243,3 +243,37 @@ audio.ontimeupdate = () => {
   const percent = (audio.currentTime / audio.duration) * 100;
   progress.style.setProperty('--progress', percent + '%');
 };
+
+
+
+// Lima Postingan Popular
+const popularPost = document.createElement('div');
+popularPost.className = 'popular-post';
+
+// Data post bisa dimasukkan dalam array untuk efisiensi
+const posts = [
+  { title: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan', href: '../coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html', desc: 'Artikel ini menginspirasi untuk menciptakan kebahagiaan melalui cara pandang dan kebiasaan hidup yang sederhana namun bermakna.' },
+  { title: 'Konsistensi Lebih Penting dari pada Motivasi', href: '../coretan/konsistensi-lebih-penting-dari-motivasi.html', desc: 'Motivasi bersifat fluktuatif dan sering kali bergantung pada suasana hati atau situasi, sementara konsistensi membentuk kebiasaan yang berkelanjutan.' },
+  { title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic', href: '../coretan/jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', desc: 'Membahas pentingnya menjaga kesehatan mental pada pengaruh negatif dari orang-orang toxic, serta beberapa dampaknya terhadap kesejahteraan emosional.' },
+  { title: 'Mengapa Hal Kecil Sering Membekas di Pikiran?', href: '../coretan/negativity-bias-mengapa-hal-kecil-sering-membekas.html', desc: 'Mengulas alasan psikologis mendalam mengapa hal-hal kecil, seperti komentar sepele atau kejadian sederhana, bisa begitu membekas kuat di pikiran.' },
+  { title: 'Ketika Bertanya Lebih Bermakna daripada Menjawab', href: '../coretan/ketika-bertanya-lebih-bermakna-daripada-menjawab.html', desc: 'Dibandingkan sekadar memberikan jawaban, kemampuan bertanya menunjukkan rasa ingin tahu yang mendalam dan peran aktif dalam proses belajar serta komunikasi yang bermakna.' },
+];
+
+// Tambahkan masing-masing post ke dalam container
+posts.forEach(post => {
+  const link = document.createElement('a');
+  link.href = post.href;
+
+  const title = document.createElement('h2');
+  title.textContent = post.title;
+
+  const para = document.createElement('p');
+  para.textContent = post.desc;
+
+  link.appendChild(title);
+  popularPost.appendChild(link);
+  popularPost.appendChild(para);
+});
+
+// Sisipkan ke dalam elemen tertentu di HTML, misalnya <div id="content">
+document.getElementById('popular-content').appendChild(popularPost);
