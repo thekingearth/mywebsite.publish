@@ -141,8 +141,8 @@ const playlist = [
 const titles = [
   "Balelot",
   "Dolls",
-  "Gorachaya Gremuchaya",
-  "Hello Kitty",
+  "Goryachaya Gremuchaya",
+  "Hello Kitti",
   "Jerusalem",
   "Living Hell",
   "Ma Ashiv Lecha",
