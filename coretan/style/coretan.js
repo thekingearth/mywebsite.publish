@@ -108,3 +108,138 @@ document.getElementById('new-quote').addEventListener('click', function() {
 
 // Display an initial random quote
 document.getElementById('quote-text').textContent = getRandomQuote();
+
+
+// Script untuk audio
+const audio = document.getElementById("audio");
+const playPauseBtn = document.getElementById("playPause");
+const progress = document.getElementById("progress");
+const currentTime = document.getElementById("current");
+const durationTime = document.getElementById("duration");
+const rewind = document.getElementById("rewind");
+const forward = document.getElementById("forward");
+const repeatBtn = document.getElementById("repeat");
+const shuffleBtn = document.getElementById("shuffle");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+const playlist = [
+  "https://airinerra.github.io/helloword/playlist/baleylot.mp3",
+  "https://airinerra.github.io/helloword/playlist/dolls.mp3",
+  "https://airinerra.github.io/helloword/playlist/goryachaya.mp3",
+  "https://airinerra.github.io/helloword/playlist/hellokitty.mp3",
+  "https://airinerra.github.io/helloword/playlist/im.mp3",
+  "https://airinerra.github.io/helloword/playlist/living.mp3",
+  "https://airinerra.github.io/helloword/playlist/mahasiv.mp3",
+  "https://airinerra.github.io/helloword/playlist/muhur.mp3",
+  "https://airinerra.github.io/helloword/playlist/slishkim.mp3",
+  "https://airinerra.github.io/helloword/playlist/siahbo.mp3",
+  "https://airinerra.github.io/helloword/playlist/igrushka.mp3",
+  "https://airinerra.github.io/helloword/playlist/sentyabra.mp3"
+  ];
+
+const titles = [
+  "Balelot",
+  "Dolls",
+  "Gorachaya Gremuchaya",
+  "Hello Kitty",
+  "Jerusalem",
+  "Living Hell",
+  "Ma Ashiv Lecha",
+  "Muhur",
+  "My Slishkim Raznyye",
+  "Sheyohavu Oti Kacha",
+  "Ya Ne Igrushka",
+  "Ze Sentyabraya"
+  ];
+
+let index = 0;
+let isShuffle = false;
+let isRepeat = false;
+
+audio.onloadedmetadata = () => {
+  durationTime.textContent = formatTime(audio.duration);
+  progress.max = audio.duration;
+  };
+
+audio.ontimeupdate = () => {
+  progress.value = audio.currentTime;
+  currentTime.textContent = formatTime(audio.currentTime);
+  };
+
+progress.oninput = () => {
+  audio.currentTime = progress.value;
+  };
+
+playPauseBtn.onclick = () => {
+  if (audio.paused) {
+    audio.play();
+    playPauseBtn.innerHTML = '<i data-feather="pause"></i>';
+  } else {
+    audio.pause();
+    playPauseBtn.innerHTML = '<i data-feather="play"></i>';
+  }
+  feather.replace();
+};
+
+rewind.onclick = () => {
+  audio.currentTime = Math.max(0, audio.currentTime - 10);
+  };
+
+forward.onclick = () => {
+  audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+  };
+
+repeatBtn.onclick = () => {
+  isRepeat = !isRepeat;
+  repeatBtn.style.color = isRepeat ? "#d574de" :"#fd0";
+  };
+
+shuffleBtn.onclick = () => {
+  isShuffle = !isShuffle;
+  shuffleBtn.style.color = isShuffle ? "#d574de" : "#fd0";
+  };
+
+prevBtn.onclick = () => {
+  index = (index - 1 + playlist.length) % playlist.length;
+  loadSong();
+  };
+
+nextBtn.onclick = () => {
+  index = isShuffle ? Math.floor(Math.random() * playlist.length) : (index + 1) % playlist.length;
+  loadSong();
+  };
+
+audio.onended = () => {
+  if (isRepeat) {
+    audio.currentTime = 0;
+    audio.play();
+    } else {
+      nextBtn.click();
+      }
+  };
+
+function loadSong() {
+  audio.src = playlist[index];
+  document.getElementById("songTitle").textContent = titles[index];
+  audio.play();
+  playPauseBtn.innerHTML = '<i data-feather="pause"></i>';
+  feather.replace();
+}
+
+
+function formatTime(seconds) {
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${secs.toString().padStart(2, '0')}`;
+  }
+progress.addEventListener('input', () => {
+  const percent = (progress.value / progress.max) * 100;
+  progress.style.setProperty('--progress', percent + '%');
+});
+audio.ontimeupdate = () => {
+  progress.value = audio.currentTime;
+  currentTime.textContent = formatTime(audio.currentTime);
+  const percent = (audio.currentTime / audio.duration) * 100;
+  progress.style.setProperty('--progress', percent + '%');
+};
