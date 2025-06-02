@@ -118,3 +118,22 @@
   width: 35%;
   margin-top: 70px;
 }
+
+
+
+
+
+@media (max-width: 450px) {
+  html {
+.page-artikels {
+  flex-direction: column;
+}
+.page-artikels .page-artikel {
+  width: 100%;
+}
+.page-artikels .page-sidebar {
+  width: 100%;
+  margin-top: 70px;
+}
+  }
+}
