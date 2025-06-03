@@ -258,6 +258,15 @@
   text-shadow: 1px 1px 1px 00;
 }
 
+/*Extra Sidebar*/
+.page-artikels .sidebarsatu,
+.page-artikels .sidebardua,
+.page-artikels .sidebartiga,
+.page-artikels .sidebarempat,
+.page-artikels .sidebarlima {
+  display: none;
+}
+
 .page-artikels .page-sidebar .popular-post p {
   font-family: var(--sdbar-font);
   }
