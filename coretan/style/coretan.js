@@ -86,6 +86,32 @@ function updateClock() {
   updateClock();
 
 
+// Sidebar Menu Label
+function createMenuLinks() {
+  const menuContainer = document.getElementById("labels");
+
+  const links = [
+    { href: "../menu/minigame.html", label: "Mini Game" },
+    { href: "../menu/sitemap.html", label: "Daftar Isi" },
+  ];
+
+  links.forEach(link => {
+    const a = document.createElement("a");
+    a.href = link.href;
+
+    const span = document.createElement("span");
+    span.className = "label-name";
+    span.textContent = link.label;
+
+    a.appendChild(span);
+    menuContainer.appendChild(a);
+  });
+}
+
+// Panggil saat DOM sudah dimuat
+document.addEventListener("DOMContentLoaded", createMenuLinks);
+
+
 
 // Widget Quotes Text
 const quotes = [
@@ -127,31 +153,41 @@ const nextBtn = document.getElementById("next");
 const playlist = [
   "https://airinerra.github.io/helloword/playlist/baleylot.mp3",
   "https://airinerra.github.io/helloword/playlist/dolls.mp3",
+  "https://airinerra.github.io/helloword/playlist/ambahky.mp3",
+  "https://airinerra.github.io/helloword/playlist/entatani.mp3",
   "https://airinerra.github.io/helloword/playlist/goryachaya.mp3",
+  "https://airinerra.github.io/helloword/playlist/hafdal.mp3",
   "https://airinerra.github.io/helloword/playlist/hellokitty.mp3",
   "https://airinerra.github.io/helloword/playlist/im.mp3",
   "https://airinerra.github.io/helloword/playlist/living.mp3",
   "https://airinerra.github.io/helloword/playlist/mahasiv.mp3",
   "https://airinerra.github.io/helloword/playlist/muhur.mp3",
   "https://airinerra.github.io/helloword/playlist/slishkim.mp3",
+  "https://airinerra.github.io/helloword/playlist/nifsi.mp3",
   "https://airinerra.github.io/helloword/playlist/siahbo.mp3",
+  "https://airinerra.github.io/helloword/playlist/touta.mp3",
   "https://airinerra.github.io/helloword/playlist/igrushka.mp3",
   "https://airinerra.github.io/helloword/playlist/sentyabra.mp3"
   ];
 
 const titles = [
-  "Balelot",
+  "Bolelut",
   "Dolls",
+  "Eam Behky Me Halle",
+  "Enta Teni",
   "Goryachaya Gremuchaya",
+  "Hafdel",
   "Hello Kitti",
   "Jerusalem",
   "Living Hell",
   "Ma Ashiv Lecha",
   "Muhur",
   "My Slishkim Raznyye",
-  "Sheyohavu Oti Kacha",
-  "Ya Ne Igrushka",
-  "Ze Sentyabraya"
+  "Nefsi Aoulhalek",
+  "Sheyohavu Oti Kecha",
+  "Teuta",
+  "Ya Ne Igreshka",
+  "Ze Sentyabreya"
   ];
 
 let index = 0;
