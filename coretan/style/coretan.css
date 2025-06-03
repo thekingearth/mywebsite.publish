@@ -312,12 +312,30 @@
   height: 5px;
   border-radius: 5px;
 }
+
 .page-artikels .page-sidebar .player #songTitle,
-.page-artikels .page-sidebar .player p,
-.page-artikels .page-sidebar .player .time {
+.page-artikels .page-sidebar .time {
+  background: linear-gradient(to right, #ff0000 10%, #ffa000 20%, #ffd400 30%, #78ff00 40%, #00ffc0 50%, #0069ff 60%, #6d03ff 70%, #ff00ba 80%, #ff6ee0 90%, #f00 100%);
+  background-size: 200% auto;
+  font-family: var(--sdbar-font);
+  color: #fd0;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  to {
+    background-position: 200% center;
+    }
+}
+
+.page-artikels .page-sidebar .player p {
   font-family: var(--sdbar-font);
   color: #d12;
 }
+
 .page-artikels .page-sidebar .player button,
 .page-artikels .page-sidebar .player #current, .player #duration {
   color: #d12;
