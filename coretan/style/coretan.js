@@ -281,6 +281,12 @@ audio.ontimeupdate = () => {
   progress.style.setProperty('--progress', percent + '%');
 };
 
+// Elemen Artist 
+const artist = document.createElement("p");
+artist.textContent = "Playlist | 10";
+document.getElementById("artist-song").appendChild(artist);
+
+
 
 
 // Lima Postingan Popular
