@@ -64,10 +64,8 @@
   }
       
 </style>
-<!-- feather icons-->
-<script src="https://unpkg.com/feather-icons"></script>
-<!-- Alpine style -->
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Champ -->
+<script src="../scripts/champ.js"></script>
 <!-- my aplikasi -->
 <script src="../scripts/bookitems.js"></script>
 <!-- Email js -->
@@ -81,13 +79,7 @@
   </div>
   <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
   
-  <div class="navbar-nav">
-    <a href="produk.html">Produk<span>Me</span></a>
-    <a href="books.html">Books<span>Me</span></a>
-    <a href="about.html">About<span>Me</span></a>
-    <a href="minigame.html">Mini<span>game</span></a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <div id="nevbarss"></div>
   <div class="navbar-extra">
     <a href="#" id="shopping-cart-button">
       <i data-feather="shopping-cart"></i>
@@ -208,7 +200,8 @@
 <script src="../scripts/myscript.js"></script>
 <script src="../scripts/popup.js"></script>
     <script>
-        loadFooter();
+      loadNavbar();
+      loadFooter();
     </script>
 <script>
 (function() {
