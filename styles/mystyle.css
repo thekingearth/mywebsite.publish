@@ -87,11 +87,6 @@ body {
   animation: typing 0.8s infinite alternate;
   }
 
-@keyframes typing {
-  0% { top: -20px;}
-  100% { top: 5px;}
-  }
-
 .navbar .navbar-logo h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -429,14 +424,6 @@ box-shadow: 1px 1px 3px #133;
 .right { transform: rotateY(90deg) translateZ(100px); background: radial-gradient(circle, #0af, #00f, #04f); }
 .top { transform: rotateX(90deg) translateZ(100px); background: radial-gradient(circle, #ff0, #f90, #f80); }
 .bottom { transform: rotateX(-90deg) translateZ(100px); background: radial-gradient(circle, #c7e, #82b, #81b); }
-
-/* Animasi Rotasi */
-@keyframes rotate {
-  from { transform: rotateX(0deg) rotateY(0deg); }
-  to   { transform: rotateX(360deg) rotateY(360deg); }
-  }
-
-
 
 /* Hero Section */
 .hero {
@@ -1118,4 +1105,34 @@ footer .credit a {
   html {
     font-size: 55%;
   }
+}
+
+
+
+
+
+/* Animasi All CSS */
+@keyframes typing {
+  0% { top: -20px;}
+  100% { top: 5px;}
+  }
+
+@keyframes rotate {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+@keyframes blinkdays {
+  0%, 100% {
+    opacity: 1;
+    }
+  50% {
+    opacity: 0;
+    }
+}
+
+@keyframes pelangi {
+  to {
+    background-position: 200% center;
+    }
 }
