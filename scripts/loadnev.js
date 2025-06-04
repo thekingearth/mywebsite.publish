@@ -11,13 +11,6 @@ function loadNavbar() {
     </div>
   `;
 
-  // Opsional: Tambahkan event listener jika ingin fungsi pada hamburger menu
-  const hamburgerMenu = document.getElementById("hamburger-menu");
-  hamburgerMenu.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(".navbar-nav").classList.toggle("active");
-  });
-
   // Render ulang feather icons (jika pakai feather icons)
   if (typeof feather !== "undefined") {
     feather.replace();
