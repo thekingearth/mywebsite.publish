@@ -11,8 +11,5 @@ function loadNavbar() {
     </div>
   `;
 
-  // Render ulang feather icons (jika pakai feather icons)
-  if (typeof feather !== "undefined") {
-    feather.replace();
-  }
+  
 }
