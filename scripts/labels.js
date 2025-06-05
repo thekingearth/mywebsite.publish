@@ -1,4 +1,4 @@
-script>
+
   
   const artikelData = [
     {
@@ -400,4 +400,4 @@ loadMoreBtn.addEventListener('click', () => {
   if (filteredArtikel.length <= 3) {
     loadMoreBtn.style.display = 'none';
   }
-</script>
+
