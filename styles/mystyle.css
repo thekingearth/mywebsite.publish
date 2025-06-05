@@ -996,7 +996,34 @@ footer .credit a {
  cursor: pointer;
  font-family: var(--body1-font);
  }
- 
+
+
+/* Animasi All CSS */
+@keyframes typing {
+  0% { top: -20px;}
+  100% { top: 5px;}
+  }
+
+@keyframes rotate {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+@keyframes blinkdays {
+  0%, 100% {
+    opacity: 1;
+    }
+  50% {
+    opacity: 0;
+    }
+}
+
+@keyframes pelangi {
+  to {
+    background-position: 200% center;
+    }
+}
+
  
  
 
@@ -1111,28 +1138,3 @@ footer .credit a {
 
 
 
-/* Animasi All CSS */
-@keyframes typing {
-  0% { top: -20px;}
-  100% { top: 5px;}
-  }
-
-@keyframes rotate {
-  from { transform: rotateX(0deg) rotateY(0deg); }
-  to   { transform: rotateX(360deg) rotateY(360deg); }
-  }
-
-@keyframes blinkdays {
-  0%, 100% {
-    opacity: 1;
-    }
-  50% {
-    opacity: 0;
-    }
-}
-
-@keyframes pelangi {
-  to {
-    background-position: 200% center;
-    }
-}
