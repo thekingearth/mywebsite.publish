@@ -83,7 +83,7 @@
   flex-direction: column;
   }
 .kategori .artikels {
-  width: 98%;
+  width: 100%;
 }
 .artikel-row {
     flex-direction: column;
