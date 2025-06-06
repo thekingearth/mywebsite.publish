@@ -1,5 +1,5 @@
 
-import artikelData from '../artdata.js';
+import artikelData from './artdata.js';
 
   // Fungsi createArtikel seperti yang kamu berikan
   function createArtikel({ title, link, img, alt, description }) {
