@@ -241,6 +241,62 @@ const artikelData = [
       alt: "Coretan Kin Basari Khodam Warisan Leluhur dan Bisa Diturunin",
       description: "Beberapa pandangan menyebutkan bahwa khodam bisa diwariskan dari leluhur ke keturunan, terutama jika diperoleh melalui amalan tertentu atau benda pusaka. Namun, ada juga yang berpendapat bahwa khodam hanya mengikuti individu yang...",
       labels: ["Pena dan Kuas", "Perspektif"]
+    },
+    {
+      title: "Menulis Itu Healing! Tumpahin Pikiran, Legain Hati",
+      link: "../coretan/menulis-itu-healing-tumpahin-pikiran-legain-hati.html",
+      img: "../img/thumb/thumb02.jpg",
+      alt: "Coretan Kin Basari Menulis Itu Healing! Tumpahin Pikiran, Legain Hati",
+      description: "Kadang ada hal-hal yang susah diungkapin lewat omongan, tapi kalau ditulis, semuanya mengalir gitu aja. Lagi galau? Lagi seneng banget? Lagi sedih? Lagi kangen seseorang? Tumpahin aja dalam kata-kata! Menulis itu ibarat nyawa kedua...",
+      labels: ["Pena dan Kuas", "Wawasan Tekno"]
+    },
+{
+      title: "Cara Santai Bikin Tulisan yang Asik Dibaca",
+      link: "../coretan/cara-santai-bikin-tulisan-yang-asik-dibaca.html",
+      img: "../img/thumb/thumb01.jpg",
+      alt: "Coretan Kin Basari Cara Santai Bikin Tulisan yang Asik Dibaca",
+      description: "Pengen nulis tapi bingung mulai dari mana? Takut tulisanmu jelek dan nggak bagus? Atau tulisanmu kerasa kaku dan ngebosenin? Tenang aja bro! Nulis itu sebenernya gampang kok dan seru asal kamu tau triknya...",
+      labels: ["Pena dan Kuas", "Wawasan Tekno"]
+    },
+{
+      title: "Dari Kata Jadi Karya, Serunya Nulis",
+      link: "../coretan/dari-kata-jadi-karya-serunya-nulis.html",
+      img: "../img/thumb/thumb03.jpg",
+      alt: "Coretan Kin Basari Dari Kata Jadi Karya, Serunya Nulis",
+      description: "Begitu asyiknya nuangin ide jadi tulisan. Dari mikirin konsep, nyusun kata-kata, sampai akhirnya punya karya sendiri, semua itu seru banget! Selain bikin makin kreatif, nulis juga jadi cara buat curhat, berbagi cerita, atau bahkan ngasih inspirasi ke orang lain...",
+      labels: ["Pena dan Kuas", "Wawasan Tekno"]
+    },
+{
+      title: "Ketahui Bakat Terpendammu",
+      link: "../coretan/ketahui-bakat-terpendammu.html",
+      img: "../img/thumb/thumb04.png",
+      alt: "Coretan Kin Basari Ketahui Bakat Terpendammu",
+      description: "Setiap individu memiliki bakat unik yang mungkin belum disadari sepenuhnya. Menemukan bakat terpendam bisa menjadi langkah awal untuk pengembangan diri dan pencapaian tujuan hidup, dan dapat mengidentifikasi potensi yang tersembunyi...",
+      labels: ["Pena dan Kuas", "Perspektif"]
+    },
+{
+      title: "Kisah Inspiratif Untuk Semangat Hidup",
+      link: "../coretan/kisah-inspiratif-untuk-semangat.hidup.html",
+      img: "../img/thumb/thumb05.jpg",
+      alt: "Coretan Kin Basari Kisah Inspiratif Untuk Semangat Hidup",
+      description: "Hidup ini bukan tentang seberapa sering kamu mengeluh, tapi seberapa kuat kamu bangkit. Setiap masalah adalah ujian, setiap keluhan hanya menghabiskan energi. Ganti keluhan dengan tindakan, ubah rintangan jadi tantangan. Semangat! Hidupmu terlalu berharga untuk dihabiskan dengan mengeluh...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Wawasan Tekno"]
+    },
+{
+      title: "98% Wanita Akan Berbohong Setelah Lebih dari 10 Percakapan",
+      link: "../coretan/98-wanita-akan-berbohong-setelah-lebih-dari.html",
+      img: "../img/thumb/thumb07.png",
+      alt: "Coretan Kin Basari 98% Wanita Akan Berbohong Setelah Lebih dari 10 Percakapan",
+      description: "Membahas hasil penelitian atau survei yang menunjukkan bahwa sebagian besar wanita cenderung berbohong setelah berbicara dengan seseorang, entah karena alasan tertentu atau alasan psikologis di balik kebohongan tersebut...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+{
+      title: "Stop Minder! Langkah simpel buat Upgrade Diri",
+      link: "../coretan/stop-minder-langkah-simpel-buat-up.html",
+      img: "../img/thumb/thumb06.jpg",
+      alt: "Coretan Kin Basari Stop Minder! Langkah simpel buat Upgrade Diri",
+      description: "Sudah saatnya nggak perlu minder dengan fisik atau kondisi tertentu. setiap orang punya kelebihan, hidup bukan kompetisi, dan kepercayaan diri itu penting. Sekarap stop minder karena dengan berhenti minder bisa lebih menghargai diri sendiri dan mengambil kesempatan yang ada...",
+      labels: ["Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
     }
   ];
 
