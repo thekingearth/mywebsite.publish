@@ -2,9 +2,7 @@
 .kategori {
   padding: 1% 2% 5px;
   margin-top: 170px;
-  .kategori {
   overflow-x: hidden;
-}
 }
 .kategori .cattitle {
   font-family: var(--judul-font);
