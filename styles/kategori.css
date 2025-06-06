@@ -1,60 +1,71 @@
-
 .kategori {
-  padding: 1% 2% 5px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1% 0% 5px;
   margin-top: 170px;
 }
+
+.kategori .artikels {
+  width: 100%;
+  max-width: 1200px; /* Atur maksimal lebar agar tidak terlalu besar di layar besar */
+  margin: 0 auto; /* Tengah */
+  box-sizing: border-box;
+}
+
 .kategori .cattitle {
   font-family: var(--judul-font);
-  margin-left: 50px;
   font-size: 3rem;
   font-weight: italic;
+  text-align: center;
   animation: titlecatXY 3s ease-in-out infinite alternate;
+  margin: 0 auto 20px auto;
 }
+
 .kategori #artikelsgrub .grupartikel {
   padding: 2%;
-  margin-top: ;
   border: 0.5px solid #fff;
-  }
+  box-sizing: border-box;
+}
 
 .kategori .grupartikel h2 {
-  background: linear-gradient(to right, #fd1 0%, #fd0 35%,  #1f5 70%, #fd0 100%);
+  background: linear-gradient(to right, #fd1 0%, #fd0 35%, #1f5 70%, #fd0 100%);
   background-size: 200% auto;
   font-family: var(--harga-font);
-  font-size: ;
+  font-size: 1.5rem; /* Default ukuran jika sebelumnya kosong */
   color: #000;
   border-radius: 12px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: pelangi 1s linear infinite;
 }
+
 .kategori .grupartikel .thumbnail {
   display: inline-block;
   float: left;
   margin-right: 2px;
-  padding: 1px; /* Ketebalan border */
+  padding: 1px;
   margin-top: 2px;
   text-align: center;
   background: linear-gradient(to right, #d12 10%, #ad0 40%, #22e 60%, #d6f 90%, #d12 100%);
   background-size: 200% auto;
   border-radius: 5px;
   animation: pelangi 2s linear infinite;
-  text-align: center;
-  }
+}
+
 .kategori .grupartikel .thumbnail img {
   width: auto;
   height: 10vh;
-  margin-right: 2px;
-  margin-top: 2px;
-  margin-left: 2px;
-  margin-bottom: 2px;
+  margin: 2px;
   border-radius: 5px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-  }
+}
+
 .kategori .grupartikel p {
   text-align: justify;
 }
+
 .kategori .grupartikel p a {
   background: linear-gradient(to right, #fd1 0%, #1f5 50%, #fd0 100%);
   background-size: 200% auto;
@@ -69,22 +80,34 @@
 .kategori .artikel-row,
 .kategori .artikels-hidden .artikels {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .artikel-row .grupartikel,
 .kategori .artikels-hidden .artikels .grupartikel {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 300px; /* Untuk menghindari terlalu sempit di layar besar */
+  box-sizing: border-box;
 }
-
 
 @media (max-width: 768px) {
-.kategori .grupartikel {
-  flex-direction: column;
+  .kategori .artikels {
+    width: 100%;
   }
-.kategori .artikels {
-  width: 98%;
-}
-.artikel-row {
+
+  .artikel-row {
     flex-direction: column;
-}
+  }
+
+  .kategori .grupartikel {
+    width: 100%;
+    padding: 4%;
+  }
+
+  .kategori .cattitle {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
 }
