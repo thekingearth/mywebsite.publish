@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
-
 // Widget Jam Digital
 function updateClock() {
   const now = new Date();
@@ -91,8 +90,11 @@ function createMenuLinks() {
   const menuContainer = document.getElementById("labels");
 
   const links = [
-    { href: "../menu/minigame.html", label: "Mini Game" },
-    { href: "../menu/sitemap.html", label: "Daftar Isi" },
+    { href: "../../labels/bangkit-dan-bergerak.html", label: "Bangkit & Bergerak" },
+    { href: "../../labels/pena-dan-kuas.html", label: "Pena & Kuas" },
+    { href: "../../labels/perspektif.html", label: "Perspektif" },
+    { href: "../../labels/wawasan-tekno.html", label: "MiniGame" },
+    { href: "../../menu/sitemap.html", label: "Daftar Isi" },
   ];
 
   links.forEach(link => {
@@ -112,29 +114,58 @@ function createMenuLinks() {
 document.addEventListener("DOMContentLoaded", createMenuLinks);
 
 
+// Lima Postingan Popular
+const popularPost = document.createElement('div');
+popularPost.className = 'popular-post';
 
-// Widget Quotes Text
-const quotes = [
-    '"Hidup itu 10% apa yang terjadi padamu dan 90% bagaimana kamu menyikapinya."',
-    '"Jangan biarkan kegagalan menghalangi langkahmu, itu adalah pelajaran berharga."',
-    '"Kebahagiaan bukan sesuatu yang siap pakai. Itu datang dari tindakan kita sendiri."',
-    '"Keberanian bukan berarti tidak merasa takut, tetapi tetap maju meskipun merasa takut."',
-    '"Kesuksesan bukanlah kunci kebahagiaan. Kebahagiaan adalah kunci kesuksesan."',
-    '"Jangan menunggu momen sempurna, ambil setiap momen dan jadikan itu sempurna."'
+// Data post bisa dimasukkan dalam array untuk efisiensi
+const posts = [
+  {
+   title: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan',
+   href: '../coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html',
+   desc: 'Artikel ini menginspirasi untuk menciptakan kebahagiaan melalui cara pandang dan kebiasaan hidup yang sederhana namun lebih bermakna, membentuk ketenangan batin dan hubungan yang harmonis.'
+  },
+  {
+   title: 'Konsistensi Lebih Penting dari pada Motivasi',
+   href: '../coretan/konsistensi-lebih-penting-dari-motivasi.html',
+   desc: 'Motivasi bersifat fluktuatif dan sering kali bergantung pada suasana hati atau situasi, sementara konsistensi membentuk kebiasaan yang berkelanjutan dan menghasilkan perubahan positif jangka panjang.'
+  },
+  {
+   title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic',
+   href: '../coretan/jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html',
+   desc: 'Membahas pentingnya menjaga kesehatan mental pada pengaruh negatif dari orang-orang toxic, serta beberapa dampaknya terhadap kesejahteraan emosional dan kualitas hidup secara keseluruhan.'
+  },
+  {
+   title: 'Mengapa Hal Kecil Sering Membekas di Pikiran?',
+   href: '../coretan/negativity-bias-mengapa-hal-kecil-sering-membekas.html',
+   desc: 'Mengulas alasan psikologis mendalam mengapa hal-hal kecil, seperti komentar sepele atau kejadian sederhana, bisa begitu membekas kuat di pikiran dan memengaruhi respons emosional seseorang.'
+  },
+  {
+   title: 'Ketika Bertanya Lebih Bermakna daripada Menjawab',
+   href: '../coretan/ketika-bertanya-lebih-bermakna-daripada-menjawab.html',
+   desc: 'Dibandingkan sekadar memberikan jawaban, kemampuan bertanya menunjukkan rasa ingin tahu yang mendalam dan peran aktif dalam proses belajar serta komunikasi yang bermakna dan berkelanjutan.'
+  },
 ];
 
-function getRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
-}
+// Tambahkan masing-masing post ke dalam container
+posts.forEach(post => {
+  const link = document.createElement('a');
+  link.href = post.href;
 
-document.getElementById('new-quote').addEventListener('click', function() {
-    const quoteText = document.getElementById('quote-text');
-    quoteText.textContent = getRandomQuote();
+  const title = document.createElement('h2');
+  title.textContent = post.title;
+
+  const para = document.createElement('p');
+  para.textContent = post.desc;
+
+  link.appendChild(title);
+  popularPost.appendChild(link);
+  popularPost.appendChild(para);
 });
 
-// Display an initial random quote
-document.getElementById('quote-text').textContent = getRandomQuote();
+// Sisipkan ke dalam elemen tertentu di HTML, misalnya <div id="content">
+document.getElementById('popular-content').appendChild(popularPost);
+
 
 
 // Script untuk audio
@@ -175,19 +206,19 @@ const titles = [
   "Dolls",
   "Eam Behky Me Halle",
   "Enta Teni",
-  "Goryachaya Gremuchaya",
+  "Goryacheya Gremucheya",
   "Hafdel",
   "Hello Kitti",
   "Jerusalem",
   "Living Hell",
   "Ma Ashiv Lecha",
-  "Muhur",
-  "My Slishkim Raznyye",
+  "Mehur",
+  "My Sleshkim Raznyye",
   "Nefsi Aoulhalek",
-  "Sheyohavu Oti Kecha",
+  "Sheyohavu Ote Kecha",
   "Teuta",
   "Ya Ne Igreshka",
-  "Ze Sentyabreya"
+  "Ze Sentyebreya"
   ];
 
 let index = 0;
@@ -286,37 +317,28 @@ const artist = document.createElement("p");
 artist.textContent = "Playlist | 10";
 document.getElementById("artist-song").appendChild(artist);
 
-
-
-
-// Lima Postingan Popular
-const popularPost = document.createElement('div');
-popularPost.className = 'popular-post';
-
-// Data post bisa dimasukkan dalam array untuk efisiensi
-const posts = [
-  { title: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan', href: '../coretan/bahagia-tidak-perlu-dicari-tetapi-diciptakan.html', desc: 'Artikel ini menginspirasi untuk menciptakan kebahagiaan melalui cara pandang dan kebiasaan hidup yang sederhana namun lebih bermakna, membentuk ketenangan batin dan hubungan yang harmonis.' },
-  { title: 'Konsistensi Lebih Penting dari pada Motivasi', href: '../coretan/konsistensi-lebih-penting-dari-motivasi.html', desc: 'Motivasi bersifat fluktuatif dan sering kali bergantung pada suasana hati atau situasi, sementara konsistensi membentuk kebiasaan yang berkelanjutan dan menghasilkan perubahan positif jangka panjang.' },
-  { title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic', href: '../coretan/jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', desc: 'Membahas pentingnya menjaga kesehatan mental pada pengaruh negatif dari orang-orang toxic, serta beberapa dampaknya terhadap kesejahteraan emosional dan kualitas hidup secara keseluruhan.' },
-  { title: 'Mengapa Hal Kecil Sering Membekas di Pikiran?', href: '../coretan/negativity-bias-mengapa-hal-kecil-sering-membekas.html', desc: 'Mengulas alasan psikologis mendalam mengapa hal-hal kecil, seperti komentar sepele atau kejadian sederhana, bisa begitu membekas kuat di pikiran dan memengaruhi respons emosional seseorang.' },
-  { title: 'Ketika Bertanya Lebih Bermakna daripada Menjawab', href: '../coretan/ketika-bertanya-lebih-bermakna-daripada-menjawab.html', desc: 'Dibandingkan sekadar memberikan jawaban, kemampuan bertanya menunjukkan rasa ingin tahu yang mendalam dan peran aktif dalam proses belajar serta komunikasi yang bermakna dan berkelanjutan.' },
+// Widget Quotes Text
+const quotes = [
+    '"Hidup itu 10% apa yang terjadi padamu dan 90% bagaimana kamu menyikapinya."',
+    '"Jangan biarkan kegagalan menghalangi langkahmu, itu adalah pelajaran berharga."',
+    '"Kebahagiaan bukan sesuatu yang siap pakai. Itu datang dari tindakan kita sendiri."',
+    '"Keberanian bukan berarti tidak merasa takut, tetapi tetap maju meskipun merasa takut."',
+    '"Kesuksesan bukanlah kunci kebahagiaan. Kebahagiaan adalah kunci kesuksesan."',
+    '"Jangan menunggu momen sempurna, ambil setiap momen dan jadikan itu sempurna."'
 ];
 
-// Tambahkan masing-masing post ke dalam container
-posts.forEach(post => {
-  const link = document.createElement('a');
-  link.href = post.href;
+function getRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
+}
 
-  const title = document.createElement('h2');
-  title.textContent = post.title;
-
-  const para = document.createElement('p');
-  para.textContent = post.desc;
-
-  link.appendChild(title);
-  popularPost.appendChild(link);
-  popularPost.appendChild(para);
+document.getElementById('new-quote').addEventListener('click', function() {
+    const quoteText = document.getElementById('quote-text');
+    quoteText.textContent = getRandomQuote();
 });
 
-// Sisipkan ke dalam elemen tertentu di HTML, misalnya <div id="content">
-document.getElementById('popular-content').appendChild(popularPost);
+// Display an initial random quote
+document.getElementById('quote-text').textContent = getRandomQuote();
+
+
+
