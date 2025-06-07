@@ -12,100 +12,109 @@
   width: 65%;
   max-width: 90rem;
 }
-.page-artikel h1, .page-artikel h2, .page-artikel h3 {
+
+.page-artikels .page-artikel h1, .page-artikels .page-artikel h2, .page-artikels .page-artikel h3 {
   font-family: var(--harga-font);
   padding: 1rem 0 0;
 }
 
-.page-artikel h1 span, .page-artikel h2 span, .page-artikel h3 span {
+.page-artikels .page-artikel h1 span, .page-artikels .page-artikel h2 span, .page-artikels .page-artikel h3 span {
   color: var(--bash);
 }
 
-.page-artikel .detail-tanggal {
+.page-artikels .page-artikel .detail-tanggal {
   font-size: 8px;
 }
 
-.page-artikel .petik {
+.page-artikels .page-artikel .petik {
   font-size: 20px;
   display: block;
   text-align: center;
   font-style: italic;
 }
 
-.page-artikel .box-pages {
+.page-artikels .page-artikel .box-pages {
   background: var(--alpa);
   border: 2px solid var(--pita);
   padding: 10px 10px 15px;
   border-radius: 5px;
 }
-.page-artikel .box-text {
+
+.page-artikels .page-artikel .box-text {
   color: var(--bg);
   font-weight: bold;
 }
 
-.page-artikel p {
+.page-artikels .page-artikel p {
   text-align: justify;
 }
 
-.page-artikel p span {
+.page-artikels .page-artikel p a {
+  color: var(--harga);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.page-artikels .page-artikel p a:hover {
+  color: var(--pita);
+}
+
+.page-artikels .page-artikel p span {
   font-style: italic;
   color: var(--alpa);
 }
-.page-artikel p .heder3 {
+
+.page-artikels .page-artikel p .heder3 {
   font-family: var(--harga-font);
   font-style: normal;
   font-size: 1.8rem;
   color: #fff;
 }
-.page-artikel p .heder3 span {
+
+.page-artikels .page-artikel p .heder3 span {
   font-style: normal;
   color: var(--bash);
 }
 
-.page-artikels .qute {
+.page-artikels .page-artikel .qute {
   text-align: center;
   font-weight: bold;
   color: var(--alpa);
   }
 
-.page-artikel a {
-  color: var(--harga);
-  font-weight: bold;
-  font-style: italic;
-}
-.page-artikel a:hover {
-  color: var(--pita);
-}
-
-.page-artikel .note-artikel {
+.page-artikels .page-artikel .note-artikel {
   font-family: var(--body1-font);
 }
 
-.page-artikel .baca-juga {
+.page-artikels .page-artikel .baca-juga {
   margin-top: 20px;
   padding: 5px;
   border-radius: 3px;
   border: 1px solid var(--alpa);
 }
 
-.page-artikel .baca-juga h2 {
+.page-artikels .page-artikel .baca-juga h2 {
   margin-bottom: 5px;
 }
 
-.page-artikel .baca-juga h3 {
+.page-artikels .page-artikel .baca-juga h3 {
   font-family: var(--harga-font);
 }
 
-.page-artikel .baca-juga ul {
+.page-artikels .page-artikel .baca-juga ul {
   list-style: none;
   padding: 0;
 }
-.page-artikel .baca-juga li {
+.page-artikels .page-artikel .baca-juga li {
   margin-bottom: 5px;
 }
 
-.page-artikel .baca-juga a {
+.page-artikels .page-artikel .baca-juga a {
   color: var(--bash);
+}
+
+.page-artikels .page-artikel .baca-juga a:hover {
+ color: var(--pita);
 }
 
 #disqus_thread a {
