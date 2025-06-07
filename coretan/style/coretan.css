@@ -38,11 +38,14 @@
   border: 2px solid var(--pita);
   padding: 10px 10px 15px;
   border-radius: 5px;
-}
-
-.page-artikels .page-artikel .box-text {
   color: var(--bg);
   font-weight: bold;
+}
+
+.page-artikels .page-artikel .qute {
+  text-align: center;
+  font-weight: bold;
+  color: var(--alpa);
 }
 
 .page-artikels .page-artikel p {
@@ -76,11 +79,6 @@
   color: var(--bash);
 }
 
-.page-artikels .page-artikel .qute {
-  text-align: center;
-  font-weight: bold;
-  color: var(--alpa);
-  }
 
 .page-artikels .page-artikel .note-artikel {
   font-family: var(--body1-font);
