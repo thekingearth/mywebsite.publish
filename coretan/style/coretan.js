@@ -93,7 +93,7 @@ function createMenuLinks() {
     { href: "../../labels/bangkit-dan-bergerak.html", label: "Bangkit & Bergerak" },
     { href: "../../labels/pena-dan-kuas.html", label: "Pena & Kuas" },
     { href: "../../labels/perspektif.html", label: "Perspektif" },
-    { href: "../../labels/wawasan-tekno.html", label: "MiniGame" },
+    { href: "../../labels/wawasan-tekno.html", label: "Wawasan Tekno" },
     { href: "../../menu/sitemap.html", label: "Daftar Isi" },
   ];
 
