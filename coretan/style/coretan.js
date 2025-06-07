@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
     { file: 'diam-bukan-berarti-lemah-stop-oversharing.html', title: 'Diam Bukan Berarti Lemah, Stop Oversharing!' },
+    { file: 'era-ai-dan-data-pribadi-siapa-yang-mengawasi-pengawas.html', title: 'Era AI dan Data Pribadi: Siapa yang Mengawasi Pengawas?' },
     { file: 'hidup-itu-singkat-maka-buatlah-lebih-berarti.html', title: 'Hidup Ini Terlalu Singkat, Buatlah Lebih Berarti' },
     { file: 'internet-itu-seorang-pelayan-atau-tuan.html', title: 'Internet Itu Tuan Atau Pelayan? Mari Tentukan' },
     { file: 'jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic' },
