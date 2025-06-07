@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Era AI dan Data Pribadi: Siapa yang Mengawasi Pengawas?",
+      link: "../coretan/era-ai-dan-data-pribadi-siapa-yang-mengawasi-pengawas.html",
+      img: "https://cdn.pixabay.com/photo/2021/03/21/10/02/selfie-6111716_1280.jpg",
+      alt: "Coretan Kin Basari Era AI dan Data Pribadi: Siapa yang Mengawasi Pengawas?",
+      description: "Di tengah pesatnya perkembangan kecerdasan buatan, data pribadi menjadi bahan bakar utama yang menggerakkan sistem-sistem pintar. Dari rekomendasi belanja hingga prediksi perilaku, AI menyaring dan mengolah jejak digital pengguna secara masif. Namun, siapa yang memastikan bahwa data...",
+      labels: ["Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Teknik Mewing Bisa Memperbaiki Struktur Wajah atau Hanya Gimik?",
       link: "../coretan/teknik-mewing-bisa-memperbaiki-struktur-wajah-atau-hanya-gimik.html",
       img: "https://cdn.pixabay.com/photo/2022/07/11/18/01/woman-7315671_1280.jpg",
