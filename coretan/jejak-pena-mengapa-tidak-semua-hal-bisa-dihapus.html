@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Jejak Pena: Mengapa Tidak Semua Hal Bisa Dihapus</title>
+
+<!-- mystyle -->
+<style>
+
+</style>
+<!-- scrip champ -->
+<script src="../scripts/champ.js"></script>
+<!-- my aplikasi -->
+<script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+<!-- navbar start -->
+<nav class="navbar" x-data>
+  <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+  </div>
+  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
+
+  <div id="nevbarss"></div>
+  <div class="navbar-extra">
+    <a href="#" id="shopping-cart-button">
+      <i data-feather="shopping-cart"></i>
+    <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+    </a>
+  </div>
+  
+  
+<!-- shopping cart start -->
+<div class="shopping-cart">
+  <template x-for="(item, index) in $store.cart.items" x-key="index">
+  <div class="cart-item">
+    <img :src="`../books/${item.img}`" :alt="item.name">
+    <div class="item-detail">
+      <h3 x-text="item.name"></h3>
+      <div class="item-price">
+        <span x-text="rupiah(item.price)"></span> 
+        <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+        <span x-text="item.quantity"></span>
+        <button id="add" @click="$store.cart.add(item)">&plus;</button> 
+        <span x-text="rupiah(item.total)"></span>
+      </div>
+    </div>
+  </div>
+  </template>
+  <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+  <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+  
+  <div class="form-container">
+    <form x-show="$store.cart.items.length" id="checkoutForm">
+      <h5>Costomer Detail</h5>
+      
+      <label for="name">
+        <span>Name</span>
+        <input type="text" name="Name" id="name">
+      </label>
+      <label for="email">
+        <span>Email</span>
+        <input type="text" name="Email" id="email">
+      </label>
+      <label for="nohp">
+        <span>No. Hp</span>
+        <input type="number" name="phone" id="phone" autocomplete="off">
+      </label>
+      <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+    </form>
+  </div>
+</div>
+<!-- shopping cart end -->
+</nav>
+<!-- navbar end -->
+
+<!-- Hero Section start -->
+<section class="hero">
+  <main class="content">
+    <br>
+    <h1>Semoga harimu selalu <span>menyenangkan</span> setiap saat.</h1>
+    <p> &nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu,&nbsp; jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.</p><br><p></p>
+  </main>
+</section>
+<!-- Hero Section end -->
+
+<!-- Artikel Section -->
+<div class="page-artikels">
+<div class="page-artikel">
+  <h1>Jejak Pena: Mengapa Tidak Semua Hal <span>Bisa Dihapus?</span></h1>
+  <p class="detail-tanggal">Tuesday, 10 June 2025
+  <br>By Kin Basari</p>
+  <br>
+  <br>
+  <p>Coba inget-inget sebentar yak! Kapan tuh terakhir kalinya kamu make pensil buat nulis? Bukan sekadar corat-coret iseng, tapi bener-bener nulis sesuatu yang penting. Kayak semacem ujian mungkin, atau waktu ngisi teka-teki silang di majalah mingguan? Pensil sering banget dianggap remeh, padahal alat tulis sekecil itu punya peran penting di masa-masa awal kita waktu baru belajar menulis.</p>
+  <br>
+  <p>Nah, sekarang bandingin sama pena, dari dua opsi alat tulis tadi kamu lebih sering pakai yang mana? Kalian ngerasa nggak sih begitu kita tumbuh dan mulai menjalani aktivitas yang lebih serius, disitulah pena mulai jadi alat tulis andalan. Tinta yang permanen terasa lebih <span>“dewasa”.</span> Tapi menariknya, perjalanan kita menulis justru dimulai dengan pensil atau sebuah alat yang bisa dihapus.</p>
+  <br>
+  <p>Kita tumbuh besar dengan pensil di tangan. Ingat pertama kali waktu baru masuk TK, ajaran pertama kali yang kita dapat dari seorang guru adalah huruf dan angka yang tentunya semua itu kita tulis pakai pensil. Pertanyaannya kenapa harus pensil, nggak pena ajah sejak awal? Kenapa harus pensil dulu? Mungkin karena pensil memberi ruang untuk salah dan memperbaiki. Ia mengajarkan bahwa belajar itu tentang mencoba, dan nggak apa-apa kalau harus menghapus dulu.</p>
+
+  <br>
+  <br>
+  <br>
+  <h2>Karena Pensil <span>Bisa Dihapus</span></h2>
+  <p>Tapi, pernah nggak sih kamu mikir lebih dalam tentang itu? Itu seolah-olah pensil semacem ngasih kita ruang buat salah. Jadi kalau misal keliru tinggal gosok sedikit ajah pake penghapus dan kita bisa mulai lagi. Seolah-olah kesalahan itu nggak pernah ada. Pensil itu ramah, sabar, dan penuh toleransi terhadap kegagalan.</p>
+  <br>
+  <p>Pensil seperti masa kecil kita, yaitu penuh percobaan, jatuh bangun, dan kesempatan untuk memperbaiki. Di tahap itu, kita masih belajar banyak hal, dari menulis nama sendiri sampai memahami dunia yang kadang membingungkan. Kesalahan dianggap wajar, dan perbaikan selalu dimungkinkan tanpa beban terlalu berat. Segalanya terasa bisa diulang.</p>
+  <br>
+  <p>Tapi Seiring berjalannya waktu kita mulai sadar bahwa hidup sayangnya tidak terus-terusan pakai pensil. Semakin bertumbuh dan memasuki dunia yang lebih serius seperti sekolah lanjutan, dunia kerja, hubungan yang makin kompleks, kita mulai menulis dengan pena. Dan pena, seperti yang kamu tahu dia sebuah alat yang nggak mudah buat dihapus. Bahkan kalaupun ada semacam alat yang bisa menghapusnya tetap saja selalu ada jejak. Jadi semakin kita dewasa semakin besar pula tanggung jawab untuk setiap kata dan tindakan yang kita perbuat.</p>
+
+  <br>
+  <br>
+  <br>
+  <h2>Kenapa Hidup Mengganti <span>Pensil Dengan Pena?</span></h2>
+  <p>Terdengar sederhana, tapi menyimpan makna yang dalam. Peralihan itu bukan sekadar soal alat tulis, tapi simbol dari perubahan dalam cara kita menjalani hidup. Saat kecil, kita diberi ruang untuk mencoba, menghapus, dan memperbaiki. Tapi ketika dewasa, kita diminta untuk mulai menulis dengan tinta yang lebih permanen dengan kata lain penuh tanggung jawab.</p>
+  <br>
+  <p>Karena tidak semua hal bisa diulang, tidak semua kata bisa ditarik, dan tidak semua tindakan bisa dihapus begitu saja. Mungkin kamu pernah tanpa sadar nyakitin seseorang lewat ucapan, setelah itu kamu ngerasa nyesel sudah tega ngelakuin itu, endingnya kamu minta maaf, dan berusaha memperbaikinya, tapi tetap saja ada luka yang tertinggal. Bekasnya tidak selalu terlihat jelas, tapi terasa. Seperti noda tinta di kertas putih, dia samar tapi nyata. Dan terkadang, bekas itu mengubah cara seseorang melihat kita.</p>
+  <br>
+  <p>Itulah <span>“jejak pena”</span> dalam hidup. Kita tidak lagi hidup di dunia yang bisa dihapus semudah gosokan penghapus pensil. Setiap pilihan, kata, dan keputusan punya dampak yang bisa bertahan lama. Tapi justru di situlah kita belajar berhati-hati, belajar bertanggung jawab, dan pada akhirnya belajar tumbuh. Dari jejak itu, meskipun tak sempurna, itu adalah bagian dari cerita kita.</p>
+
+  <br>
+  <br>
+  <br>
+  <h2>Tapi Jangan <span>Sedih Dulu</span></h2>
+  <p>Walaupun pena nggak bisa dihapus, ia juga punya kelebihan yang nggak dimiliki pensil. Tinta nunjukin keberanian tanda bahwa kamu berani menulis sesuatu yang akan tetap ada. Berani nyatat keputusan, berani nyampein pendapat, dan yang terpenting berani bertanggung jawab atas apa yang kamu torehin di dunia ini, nggak ada tempat buat sembunyi dibalik penghapus.</p>
+  <br>
+  <p>Nulis make pena itu tentang kejujuran dan ketegasan. Sekali kamu nulis kamu ngikatin diri pada makna dari kata-kata itu. Kamu nggak hanya sekadar menggambar huruf, tapi nyatain niat, nyampein rasa, bahkan nyimpan kenangan. Di dunia yang serba cepat berubah, tulisan tinta jadi pengingat yang nggak mudah dilupain. Ia menetap saat yang lain memudar.</p>
+  <br>
+  <p>Dan yang perlu kamu tahu lagi jejak pena juga bisa menjadi warisan. Tulisan yang kamu buat hari ini entah itu catatan kecil, surat panjang, puisi sederhana, atau pesan pendek untuk seseorang, bisa dikenang, bahkan setelah kamu pergi. Ia tak hilang seperti debu penghapus pensil, melainkan tertinggal sebagai bukti bahwa kamu pernah ada, pernah berpikir, pernah merasa.</p>
+
+  <br>
+  <br>
+  <br>
+  <h2>Jadi Hati-hati Tapi <span>Jangan Takut</span></h2>
+  <p>Nulis pake pena itu bukan soal takut salah. Tapi soal sadar bahwa apa yang kita tulis punya makna. Setiap coretan tinta membawa konsekuensi. Setiap tindakan, ucapan, dan keputusan bisa berdampak pada diri sendiri maupun orang lain di hari esok ataupun lusa. Pena ngajarin kita buat berpikir sebelum bertindak supaya nggak sembarangan meletakkan kata-kata, karena nggak semua bisa ditarik kembali.</p>
+  <br>
+  <p>Dan kalau kamu memang sudah salah nggak perlu kamu pura-pura lupa, belajarlah saja dari bekasnya. Karena bekas itu adalah guru yang diam-diam paling setia. Ia nggak menghakimimu tapi ngingatin kamu. Kita tumbuh bukan karena nggak pernah salah, tapi karena kita tahu gimana memperbaiki dan ngelanjutin. Seperti kertas yang penuh coretan dia tetap bisa jadi halaman yang paling berarti.</p>
+
+  <br>
+  <br>
+  <h3 class="note-artikel">Catatan:</h3>
+  <p>Waktu kecil kita menulis menggunakan pensil dan setelah besar kita menggunakan pena, dari situ kita mau faham bahwa ada sesuatu yang tidak mudah untuk dihapus. Intinya kalau dalam hidup kita itu semakin dewasa maka semakin besar pula konsekuensi dari apa yang kita tulis, ketik, katakan, dan lakukan.</p>
+
+
+
+
+  <br>
+  <br>
+  <div class="baca-juga">
+  <h2>Baca Juga:</h2>
+  <h3><ul id="related-artikel"></ul></h3>
+  </div>
+ </div>
+<br>
+
+<div class="page-sidebar">
+  <div class="sidebar-artikel">
+   <div class="jamdigital">
+    <div class="clockwidget">
+    <div class="clock">
+      <div class="day" id="day-name"></div>
+      <div class="hour" id="hour"></div>
+      <div class="minute" id="minute"></div>
+      <div class="second" id="second"></div>
+      <div class="center"></div>
+    </div>
+   </div>
+  </div>
+   <br>
+
+   <div class="label-sidebar">
+     <div id="labels"></div>
+    <br>
+    </div>
+
+   <div class="post">
+    <br><h1>Popular Post</h1><br>
+    <div id="popular-content"></div>
+   <br><br>
+   </div>
+
+   <div class="sidebarsatu">
+     <h1></h1>
+    <div id="extrasdbsatu"></div>
+   <br><br>
+   </div>
+
+   <div class="sidebardua">
+    <div id="extrasdbdua"></div>
+   <br><br>
+   </div>
+
+   <div class="sidebartiga">
+    <div id="extrasdbtiga"></div>
+   <br><br>
+   </div>
+
+   <div class="sidebarempat">
+    <div id="extrasdbempat"></div>
+   <br><br>
+   </div>
+
+   <div class="sidebarlima">
+    <div id="extrasdbempat"></div>
+   <br><br>
+   </div>
+   
+   <div class="player">
+    <h2 id="songTitle">Bolelut</h2>
+    <p id="artist-song"></p><br><br><br>
+    <input type="range" id="progress" value="0" style="width: 100%;">
+    <div class="time">
+      <span id="current">0:00</span> / <span id="duration">0:00</span>
+    </div>
+   <div class="controls">
+      <button id="shuffle"><i data-feather="shuffle"></i></button>
+      <button id="rewind"><i data-feather="rewind"></i></button>
+      <button id="prev"><i data-feather="skip-back"></i></button>
+      <button id="playPause"><i data-feather="play"></i></button>
+      <button id="next"><i data-feather="skip-forward"></i></button>
+      <button id="forward"><i data-feather="fast-forward"></i></button>
+      <button id="repeat"><i data-feather="repeat"></i></button>
+    </div>
+    <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+  <ul id="playlistList" style="color: #fd0; display: none; list-style: none; padding: 0;"></ul>
+  </div>
+   <br><br><br>
+  </div>
+   <br><br><br>
+
+    <div class="sidebar-quotes">
+     <div id="quote-widget">
+     <button id="new-quote">Next Quote</button>
+     <br><br>
+     <p id="quote-text">Loading...</p>
+     </div>
+    </div>
+    <br><br><br>
+ </div>
+</div>
+
+
+<script src="style/coretan.js"></script>
+<script src="../scripts/myscript.js"></script>
+<script src="../scripts/popup.js"></script>
+<!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
