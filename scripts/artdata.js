@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Kebaikan Berdua: Aksi Sosial Teman Halal",
+      link: "../coretan/kebaikan-berdua-aksi-sosial-teman-halal.html",
+      img: "https://cdn.pixabay.com/photo/2015/10/13/14/12/friend-986159_1280.jpg",
+      alt: "Coretan Kin Basari Kebaikan Berdua: Aksi Sosial Teman Halal",
+      description: "deskripsi...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas","Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Era AI dan Data Pribadi: Siapa yang Mengawasi Pengawas?",
       link: "../coretan/era-ai-dan-data-pribadi-siapa-yang-mengawasi-pengawas.html",
       img: "https://cdn.pixabay.com/photo/2021/03/21/10/02/selfie-6111716_1280.jpg",
