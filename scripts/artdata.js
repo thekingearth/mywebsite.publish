@@ -5,7 +5,7 @@ const artikelData = [
       link: "../coretan/kebaikan-berdua-aksi-sosial-teman-halal.html",
       img: "https://cdn.pixabay.com/photo/2015/10/13/14/12/friend-986159_1280.jpg",
       alt: "Coretan Kin Basari Kebaikan Berdua: Aksi Sosial Teman Halal",
-      description: "Apa yang pertama kali terlintas di imajenasimu ketika mendengar kata \“Teman Halal,\” Apakah partner hidup, biro jodoh, ta'aruf, kelas pranikah, atau bahkan pernikahan? Kalau iya, berarti kita satu server. Tapi dunggu dulu, jangan buru-buru mengira ini soal jodoh atau kisah dari teman...",
+      description: "Apa yang pertama kali terlintas di imajenasimu ketika mendengar kata \“Teman Halal\”, Apakah partner hidup, biro jodoh, ta'aruf, kelas pranikah, atau bahkan pernikahan? Kalau iya, berarti kita satu server. Tapi dunggu dulu, jangan buru-buru mengira ini soal jodoh atau kisah dari teman...",
       labels: ["Bangkit dan Bergerak","Perspektif", "Wawasan Tekno"]
     },
     {
