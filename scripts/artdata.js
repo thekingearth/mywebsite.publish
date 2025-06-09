@@ -5,8 +5,8 @@ const artikelData = [
       link: "../coretan/kebaikan-berdua-aksi-sosial-teman-halal.html",
       img: "https://cdn.pixabay.com/photo/2015/10/13/14/12/friend-986159_1280.jpg",
       alt: "Coretan Kin Basari Kebaikan Berdua: Aksi Sosial Teman Halal",
-      description: "deskripsi...",
-      labels: ["Bangkit dan Bergerak", "Pena dan Kuas","Perspektif", "Wawasan Tekno"]
+      description: "Lewat kolaborasi ini, Teman Halal nggak cuma jadi penyampai informasi, tapi juga partner yang siap turun tangan bareng masyarakat. Karena dengan gotong royong, nilai-nilai baik akan lebih mudah menyebar dan diterima. Ini bukan sekadar aksi sosial, tapi gerakan bersama yang memperkuat semangat saling peduli dan bertumbuh...",
+      labels: ["Bangkit dan Bergerak","Perspektif", "Wawasan Tekno"]
     },
     {
       title: "Era AI dan Data Pribadi: Siapa yang Mengawasi Pengawas?",
@@ -22,7 +22,7 @@ const artikelData = [
       img: "https://cdn.pixabay.com/photo/2022/07/11/18/01/woman-7315671_1280.jpg",
       alt: "Coretan Kin Basari Teknik Mewing Bisa Memperbaiki Struktur Wajah atau Hanya Gimik?",
       description: "Teknik mewing yang diklaim dapat memperbaiki struktur wajah dengan menempatkan lidah di langit-langit mulut secara konsisten. Praktik ini dipercaya bisa meningkatkan garis rahang dan postur wajah secara alami, terutama jika dilakukan...",
-      labels: ["Wawasan Tekno", "Perspektif"]
+      labels: ["Perspektif", "Wawasan Tekno"]
     },
     {
       title: "Ketika Bertanya Lebih Bermakna daripada Menjawab",
