@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'internet-itu-seorang-pelayan-atau-tuan.html', title: 'Internet Itu Tuan Atau Pelayan? Mari Tentukan' },
     { file: 'jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic' },
     { file: 'kamu-harus-lebih-dihargai-daripada-kekayaan-materi.html', title: 'Kamu Lebih Berharga daripada Emas' },
+    { file: 'kebaikan-berdua-aksi-sosial-teman-halal.html', title: 'Kebaikan Berdua: Aksi Sosial Teman Halal' },
     { file: 'kenapa-kerja-di-luar-negeri.html', title: 'Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?' },
     { file: 'kesendirian-yang-menguatkan-merangkul-diri-sebelum-mencintai-orang-lain.html', title: 'Cara Merangkul Diri Sebelum Mencintai Orang Lain' },
     { file: 'ketahui-bakat-terpendammu.html', title: 'Ketahui Bakat Terpendammu' },
