@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Jejak Pena: Mengapa Tidak Semua Hal Bisa Dihapus",
+      link: "../coretan/jejak-pena-mengapa-tidak-semua-hal-bisa-dihapus.html",
+      img: "https://cdn.pixabay.com/photo/2017/12/27/18/07/book-3043273_1280.jpg",
+      alt: "Coretan Kin Basari Jejak Pena: Mengapa Tidak Semua Hal Bisa Dihapus",
+      description: "Dalam hidup, kita perlahan meninggalkan pensil yang bisa dihapus dan mulai menulis dengan pena alat yang meninggalkan jejak permanen. Kata-kata yang terucap, tindakan yang kita pilih, dan keputusan yang kita buat seringkali meninggalkan bekas, baik di hati sendiri maupun orang lain. Tidak semua bisa...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas"]
+    },
+    {
       title: "Kebaikan Berdua: Aksi Sosial Teman Halal",
       link: "../coretan/kebaikan-berdua-aksi-sosial-teman-halal.html",
       img: "https://cdn.pixabay.com/photo/2015/10/13/14/12/friend-986159_1280.jpg",
