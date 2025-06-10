@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'hidup-itu-singkat-maka-buatlah-lebih-berarti.html', title: 'Hidup Ini Terlalu Singkat, Buatlah Lebih Berarti' },
     { file: 'internet-itu-seorang-pelayan-atau-tuan.html', title: 'Internet Itu Tuan Atau Pelayan? Mari Tentukan' },
     { file: 'jaga-kesehatan-mental-dari-pengaruh-orang-toxic.html', title: 'Jaga Kesehatan Mental dari Pengaruh Orang-Orang Toxic' },
+    { file: 'jejak-pena-mengapa-tidak-semua-hal-bisa-dihapus.html', title: 'Jejak Pena: Mengapa Tidak Semua Hal Bisa Dihapus?' },
     { file: 'kamu-harus-lebih-dihargai-daripada-kekayaan-materi.html', title: 'Kamu Lebih Berharga daripada Emas' },
     { file: 'kebaikan-berdua-aksi-sosial-teman-halal.html', title: 'Kebaikan Berdua: Aksi Sosial Teman Halal' },
     { file: 'kenapa-kerja-di-luar-negeri.html', title: 'Orang Indonesia Kerja di Luar Negeri, Kenapa Sih?' },
