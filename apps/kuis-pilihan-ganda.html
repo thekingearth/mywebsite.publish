@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+  <title>Kuis Pilihan Ganda</title>
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap);
+
+:root {
+  --bash: #f4d430;
+  --alpa: #f7e378;
+  --bg: #010101;
+  --kin: #133;
+  --pita: #e00;
+  --blok: #000;
+  --text: #fff;
+  --btn: #182d62;
+  --harga: #008000;
+  --linear: linear-gradient(45deg, #f4d430, #000);
+  --judul-font: "Kavoon", serif;
+  --body1-font: "Nunito", serif;
+  --sdbar-font: "Caveat", cursive;
+  --harga-font: "Rum Raisin", serif;
+  --bonus: "Miltonian Tattoo", serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+  background-color: #000;
+  font-family: 'Coming Soon', csive;
+  color: #fff;
+}
+
+.herotext {
+  font-family: var(--body1-font);
+  font-weight: ;
+  font-size: 12px;
+  color: #000;
+  background-color: var(--alpa);
+  border: 1px solid #d12;
+  border-radius: 5px;
+  padding: 12px;
+  text-align: justify;
+  line-height: 20px;
+}
+
+.coution p {
+  font-size: 20px;
+  font-family: var(--judul-font);
+  }
+
+.question p {
+  margin-bottom: 20px;
+  font-family: var(--harga-font);
+  }
+
+.question p .question-math {
+  text-align: left;
+}
+
+.option {
+  display: block;
+  padding: 1px 12px;
+  margin: 2px 0;
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fd0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 1s;
+  font-size: 12px;
+  font-weight: bold;
+  background-size: 30px 20px;
+  }
+
+.option:hover {
+  background-color: #e2e6ea;
+  }
+
+.option.selected {
+  background-color: #f14899;
+  color: white;
+  border: 1px solid #fd0;
+  }
+
+button {
+  font-family: var(--harga-font);
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #136;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+
+button:hover {
+  background-color: #569e0f;
+  }
+
+button:active {
+  transform: translateY(7px);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Coming Soon', cursive;
+  color: #fd1;
+  }
+
+</style>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+<div class="herotext">
+  <p>Indah budi pekertinya mampu memikat setiap hati, sementara sifat teguhannya dalam menghadapi ujian tidak pernah menghapus senyuman dari wajahnya. Akhlaknya mencerminkan kepribadian yang luhur, dan wibawa pun terpancar dari setiap geraknya. Ia anggun dalam tutur, bijak dalam laku, memukau dengan kecerdasan serta kelembutannya. Rupa jelita yang dimilikinya seiring sejalan dengan akhlak yang mulia, menjadikannya inspirasi sejati bagi dunia di sekitarnya.</p>
+</div>
+<div class="coution">
+  <p>Pilihlah jawaban yang tepat pada setiap soal yang ada dibawah ini!</p>
+</div>
+ <form id="quizForm">
+  <div class="question" data-correct="2">
+      <p>\(\left(6^5 \div 3^4 - 95\right)^{471} =\)</p>
+      <span class="option" onclick="select(this)" jwb="0">234</span>
+      <span class="option" onclick="select(this)" jwb="0">5</span>
+      <span class="option" onclick="select(this)" jwb="1">1</span>
+      <span class="option" onclick="select(this)" jwb="0">75</span>
+    </div>
+
+  <br>
+  <div class="question" data-correct="2">
+      <p>\(-7 = 3 - x\)</p>
+      <span class="option" onclick="select(this)" jwb="0">9</span>
+      <span class="option" onclick="select(this)" jwb="1">10</span>
+      <span class="option" onclick="select(this)" jwb="0">11</span>
+      <span class="option" onclick="select(this)" jwb="0">12</span>
+    </div>
+
+  <br>
+  <div class="question" data-correct="2">
+      <p>\(3x + 2 = 2x + 22\)</p>
+      <span class="option" onclick="select(this)" jwb="0">18</span>
+      <span class="option" onclick="select(this)" jwb="0">16</span>
+      <span class="option" onclick="select(this)" jwb="1">20</span>
+      <span class="option" onclick="select(this)" jwb="0">22</span>
+    </div>
+
+  <br>
+  <div class="question" data-correct="2">
+      <p><b>\(2, 5, 10, 17,..., 37, 50\)</b></p>
+      <span class="option" onclick="select(this)" jwb="1">26</span>
+      <span class="option" onclick="select(this)" jwb="0">27</span>
+      <span class="option" onclick="select(this)" jwb="0">24</span>
+      <span class="option" onclick="select(this)" jwb="0">23</span>
+    </div>
+
+  <br>13+25
+  <div class="question" data-correct="2">
+      <p>\(\left( \frac{6^2 + 4^2}{2^2} \right) +
+         \left( \frac{4^4 - 8^2}{6} \right) - 12 \)</p>
+      <span class="option" onclick="select(this)" jwb="0">23</span>
+      <span class="option" onclick="select(this)" jwb="0">42</span>
+      <span class="option" onclick="select(this)" jwb="1">33</span>
+      <span class="option" onclick="select(this)" jwb="0">15</span>
+    </div>
+
+  <br>
+  <div class="question" data-correct="2">
+      <p>\(\left( \frac{6!}{4! + 3!} \right) + 15\)</p>
+      <span class="option" onclick="select(this)" jwb="0">65</span>
+      <span class="option" onclick="select(this)" jwb="0">73</span>
+      <span class="option" onclick="select(this)" jwb="0">59</span>
+      <span class="option" onclick="select(this)" jwb="1">39</span>
+    </div>
+
+  <br>
+  <div class="question" data-correct="2">
+      <p>\( \frac{22^3 + 152}{6!} + 29 \)</p>
+      <span class="option" onclick="select(this)" jwb="0">18</span>
+      <span class="option" onclick="select(this)" jwb="1">44</span>
+      <span class="option" onclick="select(this)" jwb="0">20</span>
+      <span class="option" onclick="select(this)" jwb="0">22</span>
+    </div>
+
+  <br>
+  <div class="question" data-correct="2">
+    <p>\( a=c^2:3, \quad b=x:3=6, \quad c=b:2 \)</p>
+    <p>\( \frac {c! + (b^3•2) + 567}{a^3} + a + c \)</p>
+      <span class="option" onclick="select(this)" jwb="1">55</span>
+      <span class="option" onclick="select(this)" jwb="0">27</span>
+      <span class="option" onclick="select(this)" jwb="0">24</span>
+      <span class="option" onclick="select(this)" jwb="0">23</span>
+    </div>
+  <div id="result"></div>
+   <button type="button" onclick="calculateScore()">Lihat Hasilnya</button>
+  </form>
+
+<script>
+function select(option) {
+  const allOptions = option.parentElement.querySelectorAll('.option');
+  allOptions.forEach(opt => opt.classList.remove('selected'));
+  option.classList.add('selected');
+  }
+function calculateScore() {
+ const questions = document.querySelectorAll('.question');
+ let score = 0.
+ questions.forEach(question => {
+  const selected = question.querySelector('.option.selected');
+  if (selected && selected.getAttribute('jwb') === '1') {
+          score += 1;
+     }
+  });
+    var namauser = prompt("Masukan Nama Kamu");
+    if (!namauser) {
+    alert("Nama tidak boleh kosong. Hasil tidak akan ditampilkan.");
+    return;
+  }
+  const resultDiv = document.getElementById('result');
+  resultDiv.textContent = `Selamat "${namauser}" kamu telah berhasil menjawab ${score} pertanyaan dengan benar dari ${questions.length} soal `;
+    }
+            
+</script>
+</body>
+</html>
