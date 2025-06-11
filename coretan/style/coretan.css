@@ -2,6 +2,58 @@
   display: ;
 }
 
+/* Hero artikels */
+.hero-art {
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/images00.png');
+ /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 60px;
+  
+}
+
+.hero-art::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1,1,3,1) 4%, rgba(255,255,255,0) 55%);
+}
+
+.hero-art .content {
+  padding: 1.4rem;
+  max-width: 60rem;
+}
+
+.hero-art .content h1 {
+  font-size: 3rem;
+  color: var(--text);
+  text-shadow: 0 0 4px #000;
+  line-height: 1.2;
+  font-family: var(--judul-font);
+}
+
+.hero-art .content h1 span {
+  color: var(--bash);
+}
+
+.hero-art .content p {
+  margin-top: 1rem;
+  line-height: 1.3;
+  font-weight: 200;
+  font-style: italic;
+  text-shadow: 1px 1px 2px var(--bg);
+  mix-blend-mode: differenc;
+  color: var(--text);
+  background: linear-gradient(110deg, rgba(1,1,3,0.3), rgba(255,255,255,0));
+}
+
 .page-artikels {
   padding: 9rem 2% 1rem;
   display: flex;
