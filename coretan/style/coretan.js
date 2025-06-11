@@ -62,6 +62,31 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
+// Hero Section
+    const section = document.createElement('section');
+    section.className = 'hero-art';
+
+    const main = document.createElement('main');
+    main.className = 'content';
+
+    main.appendChild(document.createElement('br'));
+
+    const h1 = document.createElement('h1');
+    h1.innerHTML = 'Semoga harimu selalu <span>menyenangkan</span> setiap saat.';
+    main.appendChild(h1);
+
+    const p1 = document.createElement('p');
+    p1.innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu, jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.';
+    main.appendChild(p1);
+
+    main.appendChild(document.createElement('br'));
+    main.appendChild(document.createElement('p'));
+
+    section.appendChild(main);
+
+    document.getElementById('hero-art').appendChild(section);
+
+
 // Widget Jam Digital
 function updateClock() {
   const now = new Date();
