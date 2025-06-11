@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'bahagia-tidak-perlu-dicari-tetapi-diciptakan.html', title: 'Bahagia Tidak Perlu Dicari Tetapi Diciptakan' },
     { file: 'bahaya-rip-current-arus-laut.html', title: 'Bahaya Rip Current Arus Laut 2 Meter Perdetik' },
     { file: 'belajar-itu-mudah-menjadi-master-itu-tantangan-seumur-hidup.html', title: 'Belajar Itu Mudah Menjadi Master Itu Tantangan Seumur Hidup' },
+    { file: 'benang-dan-jarum-menyatukan-antara-simpul-dan-robekan.html', title: 'Benang dan Jarum: Menyatukan Antara Simpul dan Robekan' },
     { file: 'cara-santai-bikin-tulisan-yang-asik-dibaca.html', title: 'Cara Santai Bikin Tulisan yang Asik Dibaca' },
     { file: 'dari-kata-jadi-karya-serunya-nulis.html', title: 'Dari Kata Jadi Karya, Serunya Nulis' },
     { file: 'diam-bukan-berarti-lemah-stop-oversharing.html', title: 'Diam Bukan Berarti Lemah, Stop Oversharing!' },
@@ -72,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
     main.appendChild(document.createElement('br'));
 
     const h1 = document.createElement('h1');
-    h1.innerHTML = 'Semoga harimu selalu <span>menyenangkan</span> setiap saat.';
+    h1.innerHTML = 'Mimpi besar <span>dimulai</span> dari langkah kecil.';
     main.appendChild(h1);
 
     const p1 = document.createElement('p');
-    p1.innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; Tetap fokus pada tujuanmu, jangan biarkan rintangan menghalangimu. Ingat, langit cerah selalu datang setelah hujan deras.';
+    p1.innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; Tantangan yang kamu hadapi dimasa sekarang akan <br> membentuk kekuatan, ketangguhan, dan keberanian yang <br> kamu butuhkan untuk masa nanti.';
     main.appendChild(p1);
 
     main.appendChild(document.createElement('br'));
