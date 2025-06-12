@@ -311,7 +311,8 @@
   font-family: var(--sdbar-font);
   color: #080;
   font-weight: bold;
-  text-shadow: 1px 1px 1px 00;
+  text-align: justify;
+  border-bottom: 1px dashed #080;
 }
 
 .page-artikels .page-sidebar .popular-post h2:hover {
