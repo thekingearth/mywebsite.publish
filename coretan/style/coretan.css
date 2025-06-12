@@ -419,6 +419,10 @@
 /* Quotes */
 .page-artikels .page-sidebar .sidebar-quotes {
   margin-top: 60px;
+  position: sticky;
+  top: 80px;
+  padding: 0;
+  height: fit-content;
   font-family: var(--sdbar-font);
 }
 
