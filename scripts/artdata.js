@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Benang dan Jarum: Menyatukan Antara Simpul dan Robekan",
+      link: "../coretan/benang-dan-jarum-menyatukan-antara-simpul-dan-robekan.html",
+      img: "../img/thumb/thumb09.jpg",
+      alt: "Coretan Kin Basari Benang dan Jarum: Menyatukan Antara Simpul dan Robekan",
+      description: "Dalam hidup, kita sering dihadapkan pada robekan, entah itu luka, perpecahan, atau kehilangan. Seperti kain yang koyak, hidup pun kadang tampak tak utuh. Namun, di balik setiap robekan, ada kemungkinan untuk menjahit kembali, mempertemukan yang...",
+      labels: ["Pena dan Kuas", "Perspektif"]
+    },
+    {
       title: "Jejak Pena: Mengapa Tidak Semua Hal Bisa Dihapus",
       link: "../coretan/jejak-pena-mengapa-tidak-semua-hal-bisa-dihapus.html",
       img: "https://cdn.pixabay.com/photo/2017/12/27/18/07/book-3043273_1280.jpg",
