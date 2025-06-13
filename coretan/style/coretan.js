@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { file: 'seni-mengendalikan-diri-stoikisme-rahasia-kebahagiaan.html', title: 'Seni Mengendalikan Diri Stoikisme Rahasia Kebahagiaan' },
     { file: 'seni-rahasia-menghadapi-wanita-ngambek.html', title: 'Rahasia Menghadapi Wanita Suka Ngambek' },
     { file: 'sibuk-seharian-tapi-hasil-nol-beralih-produktif.html', title: 'Sibuk Seharian Tapi Hasil Nol? Saatnya Beralih ke Produktif' },
+    { file: 'simbol-luka-dan-harapan-makna-bunga-berduri.html', title: 'Simbol Luka dan Harapan: Makna Bunga Berduri' },
     { file: 'stop-comparing-yourself-fokus-pada-pertumbuhan.html', title: 'Stop Comparing Yourself, Berhenti Membandingkan Diri' },
     { file: 'stop-minder-langkah-simpel-buat-up.html', title: 'Stop Minder! Langkah simpel buat Upgrade Diri' },
     { file: 'teknik-mewing-bisa-memperbaiki-struktur-wajah-atau-hanya-gimik.html', title: 'Teknik Mewing Bisa Memperbaiki Struktur Wajah atau Hanya Gimik?' },
