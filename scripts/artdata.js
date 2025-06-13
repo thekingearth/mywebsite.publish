@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Simbol Luka dan Harapan: Makna Bunga Berduri",
+      link: "../coretan/simbol-luka-dan-harapan-makna-bunga-berduri.html",
+      img: "https://cdn.pixabay.com/photo/2024/07/24/22/18/ai-generated-8919687_1280.jpg",
+      alt: "Coretan Kin Basari Simbol Luka dan Harapan: Makna Bunga Berduri",
+      description: "Bunga berduri mengajarkan kita bahwa keindahan sejati tak selalu hadir tanpa perlindungan, di balik kelopak yang memesona, ada duri yang menjaga. Ia adalah simbol paradoks kehidupan lembut tapi kuat, rapuh namun tak mudah...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas"]
+    },
+    {
       title: "Benang dan Jarum: Menyatukan Antara Simpul dan Robekan",
       link: "../coretan/benang-dan-jarum-menyatukan-antara-simpul-dan-robekan.html",
       img: "../img/thumb/thumb09.jpg",
