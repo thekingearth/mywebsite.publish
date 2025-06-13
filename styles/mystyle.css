@@ -790,6 +790,7 @@ box-shadow: 1px 1px 3px #133;
 
 .sitemap .container {
   padding: 10px;
+  margin-top: 35px;
   border: 1px solid orange;
   border-radius: 10px;
   width: 95%;
@@ -810,7 +811,7 @@ box-shadow: 1px 1px 3px #133;
   border: 1px solid var(--bash);
   margin-bottom: 5px;
   font-size: 12px;
-  text-align: left;
+  text-align: justify;
   font-weight: bold;
   }
 .sitemap .item:hover {
