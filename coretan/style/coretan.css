@@ -325,11 +325,11 @@
 }
 
 /*Extra Sidebar*/
-.page-artikels .sidebarsatu,
-.page-artikels .sidebardua,
-.page-artikels .sidebartiga,
-.page-artikels .sidebarempat,
-.page-artikels .sidebarlima {
+.page-artikels .page-sidebar .sidebarsatu,
+.page-artikels .page-sidebar .sidebardua,
+.page-artikels .page-sidebar .sidebartiga,
+.page-artikels .page-sidebar .sidebarempat,
+.page-artikels .page-sidebar .sidebarlima {
   display: none;
 }
 
@@ -414,6 +414,12 @@
 .page-artikels .page-sidebar .player .time {
   margin-top: 10px;
   }
+
+.page-artikels .page-sidebar .sidebar-quotes .sidebarenam,
+.page-artikels .page-sidebar .sidebar-quotes .sidebartujuh,
+.page-artikels .page-sidebar .sidebar-quotes .sidebardelapan {
+display: none;
+}
 
 /* Quotes */
 .page-artikels .page-sidebar .sidebar-quotes {
