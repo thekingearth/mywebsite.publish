@@ -422,8 +422,9 @@ display: none;
 }
 
 /* Quotes */
+.page-artikels .page-sidebar .sidebar-sticky,
 .page-artikels .page-sidebar .sidebar-quotes {
-  margin-top: 60px;
+  margin-top: 70px;
   position: sticky;
   top: 80px;
   padding: 0;
