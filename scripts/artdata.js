@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Ilusi Kemewahan: Barang-Barang Mahal Yang Seharusnya Nggak Mahal",
+      link: "../coretan/ilusi-kemewahan-barang-mahal-yang-cuma-menjual-nama.html",
+      img: "https://cdn.pixabay.com/photo/2024/02/28/14/23/ai-generated-8602150_1280.jpg",
+      alt: "Coretan Kin Basari Ilusi Kemewahan: Barang-Barang Mahal Yang Seharusnya Nggak Mahal",
+      description: "Di balik kilau kemewahan dan harga selangit, sering kali tersembunyi kenyataan sederhana: barang-barang itu cuma menjual nama, bukan nilai sejatinya. Kaos biasa bisa jadi jutaan, air putih berubah jadi simbol status, dan tas sintetis mendadak sakral karena logo. Inilah ilusi...",
+      labels: ["Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Simbol Luka dan Harapan: Makna Bunga Berduri",
       link: "../coretan/simbol-luka-dan-harapan-makna-bunga-berduri.html",
       img: "https://cdn.pixabay.com/photo/2024/07/24/22/18/ai-generated-8919687_1280.jpg",
