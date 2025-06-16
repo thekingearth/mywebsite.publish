@@ -23,8 +23,7 @@
   <div class="navbar-menu">
       <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
   </div>
-  <a href="https://www.kinbasari.my.id" class="navbar-logo"><h3>coretan</h3><h1><span>Kin</span>Basari</h1></a>
-  
+  <div class="logo"></div>
   <div id="nevbarss"></div>
   <div class="navbar-extra">
     <a href="#" id="shopping-cart-button">
@@ -140,18 +139,7 @@
 
     <div class="page-sidebar">
       <div class="sidebar-artikel">
-        <div class="jamdigital">
-          <div class="clockwidget">
-            <div class="clock">
-              <div class="day" id="day-name"></div>
-              <div class="hour" id="hour"></div>
-              <div class="minute" id="minute"></div>
-              <div class="second" id="second"></div>
-              <div class="center"></div>
-            </div>
-          </div>
-        </div>
-
+        <div id="clocksdb"></div>
         <div class="label-sidebar">
           <div id="labels"></div>
         </div>
@@ -183,7 +171,7 @@
         </div>
 
         <div class="player">
-          <h2 id="songTitle">Bolelut</h2>
+          <h2 id="songTitle">Opening Track</h2>
           <p id="artist-song"></p>
           <br><br><br>
           <input type="range" id="progress" value="0" style="width: 100%;">
@@ -200,7 +188,6 @@
             <button id="repeat"><i data-feather="repeat"></i></button>
           </div>
           <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
-          <ul id="playlistList" style="color: #fd0; display: none; list-style: none; padding: 0;"></ul>
         </div>
       </div>
 
