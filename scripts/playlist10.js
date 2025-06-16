@@ -1,5 +1,6 @@
 export const playlist = [
   "https://airinerra.github.io/helloword/playlist/baleylot.mp3",
+  "https://airinerra.github.io/helloword/playlist/bole.mp3",
   "https://airinerra.github.io/helloword/playlist/dolls.mp3",
   "https://airinerra.github.io/helloword/playlist/ambahky.mp3",
   "https://airinerra.github.io/helloword/playlist/entatani.mp3",
@@ -19,6 +20,7 @@ export const playlist = [
   ];
 
 export const titles = [
+  "Opening Track",
   "Bolelut",
   "Dolls",
   "Eam Behky Me Halle",
