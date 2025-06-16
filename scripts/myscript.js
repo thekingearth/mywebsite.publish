@@ -1,4 +1,26 @@
 
+// Logo title blog
+const a = document.createElement("a");
+a.href = "https://www.kinbasari.my.id";
+a.className = "navbar-logo";
+
+const h3 = document.createElement("h3");
+h3.textContent = "coretan";
+
+const h1 = document.createElement("h1");
+const span = document.createElement("span");
+span.textContent = "Kin";
+h1.appendChild(span);
+h1.appendChild(document.createTextNode("Basari"));
+
+a.appendChild(h3);
+a.appendChild(h1);
+
+// Menambahkan ke elemen navbar
+document.querySelector(".logo").appendChild(a);
+
+
+
 function loadNavbar() {
   const navbarContainer = document.getElementById("nevbarss");
 
