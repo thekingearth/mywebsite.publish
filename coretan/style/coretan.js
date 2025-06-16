@@ -48,6 +48,48 @@ import { playlist, titles } from '../../scripts/playlist10.js'; // path playlist
 
 
 // Widget Jam Digital
+const jamdigital = document.createElement("div");
+jamdigital.className = "jamdigital";
+
+const clockwidget = document.createElement("div");
+clockwidget.className = "clockwidget";
+
+const clock = document.createElement("div");
+clock.className = "clock";
+
+const day = document.createElement("div");
+day.className = "day";
+day.id = "day-name";
+
+const hour = document.createElement("div");
+hour.className = "hour";
+hour.id = "hour";
+
+const minute = document.createElement("div");
+minute.className = "minute";
+minute.id = "minute";
+
+const second = document.createElement("div");
+second.className = "second";
+second.id = "second";
+
+const center = document.createElement("div");
+center.className = "center";
+
+// Susun struktur elemen
+clock.appendChild(day);
+clock.appendChild(hour);
+clock.appendChild(minute);
+clock.appendChild(second);
+clock.appendChild(center);
+
+clockwidget.appendChild(clock);
+jamdigital.appendChild(clockwidget);
+
+document.body.appendChild(jamdigital);
+document.querySelector("#clocksdb").appendChild(jamdigital);
+
+
 function updateClock() {
   const now = new Date();
 
