@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Kisah Restoran Palsu yang Menipu Dunia</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Ketika Ilusi Jadi <span>Nomor Satu:</span> 
+<br>Kisah Restoran Palsu yang <span>Menipu Dunia</span></h1>
+      <p class="detail-tanggal">
+        Tuesday, 17 June 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <br>
+      <p>
+        Bayangin ada restoran yang jadi nomor satu di TripAdvisor London, padahal... restorannya bahkan <span>nggak ada.</span> Yap, kamu nggak salah baca. Nama tempatnya <span>The Shed at Dulwich,</span> dan bukan restoran beneran, tapi cuma gudang kecil di belakang rumah seorang jurnalis. Ini bukan prank biasa, ini adalah eksperimen sosial yang secara ironis membongkar absurditas sistem ulasan digital. Sebuah paradoks estetika di mana simulasi menang atas realita.
+      </p>
+      <br>
+      <p>
+        Semua bermula dari seorang jurnalis bernama <b>Oobah Butler,</b> yang dulunya pernah dibayar buat bikin review-review komentar palsu di restoran yang padahal kebanyakan restorannya belum pernah dia datengin. Jadi disetiap dia nulis review bagus dia dibayar sekitar 200 ribuan. Mungkin kamu semua udah pada tahu yak kalau review-review tulisan bagus sekarang itu bisa dibayar, nah itulah kerjaan dia dulu.
+      </p>
+      <br>
+      <p>
+        Dari situ dia kepikiran pengin buat sosial eksperimen, gimana kalau bikin restoran fiktif, lengkap dengan foto makanan bohongan dan ulasan buatan? Maka lahirlah <span>"The Shed"</span> tempat makan yang eksistensinya hanya terletak dalam imajinasi kolektif internet. Sebuah fenomena hiperrealitas di mana narasi lebih dipercaya daripada keberadaan fisik.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Terciptanya Gudang Kecil di <span>Aplikasi Restoran Terkenal</span></h2>
+      <p>
+        The shed ini kalau diartiin ke bahasa Indonesia itu artinya <span>"sebuah gudang",</span> orang-orang barat biasanya menggunakan tempat ini buat nyimpan alat-alat perkebunan, Kenapa namanya ini karena dia bikin restorannya itu di kontrakannya yang kecil dan berantakan kaya gudang gitulah.
+      </p>
+      <br>
+      <p>
+        Intinya restoran yang dia bikin itu dengan tujuan jadi restoran peringkat satu di aplikasi <a href="https://www.tripadvisor.com/">Trip Advisor,</a> itu adalah aplikasi hotel, tempat wisata, dan restoran paling terkenal di Eropa. Aplikasi ini sering jadi acuan buat orang lokal ataupun turis untuk mencari tempat bagus.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Pendaftaran Restoran Palsu <span>Appointment Only</span></h2>
+      <p>
+        Disana dia daftarin resto palsunya ini dengan hati-hati ya. Jadi restorannya itu dia bikin <span>appointment only.</span> Nanti kalau orang yang mau makan atau mau datang itu harus dengan reservasi dulu.
+      </p>
+      <br>
+      <p>
+        Itu tentunya dia lakuin karena restorannya cuma di kontrakannya yang kecil. Kalau dia daftarin restonya sebagai resto biasa, nanti orang datang ke restorannya terus nanti semua pada tahu kalau itu resto bohongan.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Munculnya Ide Foto-foto <span>Menu Makanan Palsu</span></h2>
+      <p>
+        Setelah dia udah daftarin restorannya ke Trip Advisor, akhirnya verified tour restoran. Kemudian dia mulai upload-upload foto makanannya yang dibikin sebagus mungkin. Foto-fotonya emang estetik banget, padahal makanan di situ cuma hasil modifikasi instan dari spons mandi dicat mirip foie gras, kaki ayam dihias ala-ala fine dining, dia bahkan menggunakan busa cukur.
+      </p>
+      <br>
+      <p>
+        Semua dipoles biar kelihatan mewah. Habis itu dia minta tolong sama teman-temannya buat bikin review palsu, bikin tulisan semacem kalau wah ini makanannya enak banget. Kalau kamu suka restoran mewah, pasti kamu suka restoran ini. Ya gitulah cuma sekedar pakai bahasa yang meyakinkan dan Booooms akhirnya jadi top rangkin satu di Trip Advisor.
+      </p>
+      <br>
+      <p>
+        Lucunya, banyak orang langsung percaya dan ingin makan di The Shed, nggak cuma orang-orang biasa tapi banyak juga selebriti lokal yang ingin ketempatnya buat reservasi. Lebih lucunya lagi pas restonya makin populer kan banyak yang nelpon tuh buat reservasi eh sama dia ditolakin semua dengan santainya dia menjawab <span>“Maaf, kami full booking sampai dua bulan ke depan”.</span>
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Penipuan, Dramatologi Sosial, dan <span>Narasi Fiktif</span></h2>
+      <p>
+        Akhirnya, setelah berbulan-bulan viral tanpa tamu satu pun, Oobah "membuka" restorannya untuk satu malam. Dia nyajiin makanan murah dari supermarket, dan supaya ilusi makin meyakinkan, Oobah juga mengajak teman-temannya buat pura-pura jadi pelanggannya.
+      </p>
+      <br>
+      <p>
+        Biar kesannya makin otentik, Oobah bahkan sampai nyewa DJ buat muter audio semacem asmr dapur, kayak suara panci, sendok, dan bunyi tumisan biar kedenger seolah-olah dapurnya itu sibuk banget. Ini bukan sekadar penipuan lucu, tapi juga <span>dramatologi sosial</span> tingkat lanjut, di mana realitas diciptakan lewat suara latar dan narasi fiktif.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Sugesti Reputasi Menjadi <span>Persepsi Kenyataan</span></h2>
+      <p>
+        Tapi karena orang udah kena sugesti reputasi, semua bilang makanannya enak banget. Di sinilah kita melihat efek <span>validasi kolektif terhadap konstruksi semu,</span> di mana persepsi jadi raja, dan kenyataan cuma pelengkap narasi.
+      </p>
+      <br>
+      <p>
+        Sebuah contoh ekstrim dari <span>rekayasa citra dalam ruang hipermodern</span> yang berhasil membuat orang percaya pada sesuatu yang tak ada. Dunia seolah tersihir oleh <span>kemasan visual dan retorika keunggulan,</span> meski substansinya nihil.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Kisah The Shed at Dulwich bukan cuma cerita lucu soal review palsu. Ini tamparan halus untuk budaya digital kita yang gampang banget terkecoh oleh tampilan luar. Ketika angka rating lebih penting dari pengalaman nyata, kita masuk ke dalam dunia yang penuh ilusi, di mana yang palsu bisa jadi paling dipercaya. Dunia maya adalah panggung teatrikal, dan kita semua tanpa sadar jadi penonton sekaligus aktor dalam skenario yang kita sendiri nggak sepenuhnya pahami.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
