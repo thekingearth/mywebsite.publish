@@ -1,7 +1,7 @@
 export const playlist = [
   "https://airinerra.github.io/helloword/playlist/baleylot.mp3",
   "https://airinerra.github.io/helloword/zaynep/ara.mp3",
-  "https://airinerra.github.io/helloword/zaynep/build.mp3",
+  "https://airinerra.github.io/helloword/zaynep/buildabt.mp3",
   "https://airinerra.github.io/helloword/zaynep/calm.mp3",
   "https://airinerra.github.io/helloword/zaynep/come.mp3",
   "https://airinerra.github.io/helloword/zaynep/egmady.mp3",
@@ -18,17 +18,17 @@ export const playlist = [
 export const titles = [
   "Opening Track",
   "Ara",
-  "Bulid a bitch",
-  "Calm down",
-  "Come get it",
+  "Build A Bitch",
+  "Calm Down",
+  "Come Get It",
   "Egmady",
-  "Eih yalli byohsal",
-  "Ezzay ansak",
-  "Hozer al atzmu",
+  "Eih Yalli Byohsal",
+  "Ezzay Ansek",
+  "Hozer Al Atzmu",
   "Intelecto'ars",
-  "Khvora na lyubov",
-  "Ne dushi",
-  "Posered nochi",
+  "Khvora Na Lyubov",
+  "Ne Dushi",
+  "Posered Nochi",
   "Zamelo"
   ];
 
