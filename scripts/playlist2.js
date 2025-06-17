@@ -1,7 +1,7 @@
 export const playlist = [
   "https://airinerra.github.io/helloword/playlist/baleylot.mp3",
   "https://airinerra.github.io/helloword/zaynep/ara.mp3",
-  "https://airinerra.github.io/helloword/zaynep/bulid.mp3",
+  "https://airinerra.github.io/helloword/zaynep/build.mp3",
   "https://airinerra.github.io/helloword/zaynep/calm.mp3",
   "https://airinerra.github.io/helloword/zaynep/come.mp3",
   "https://airinerra.github.io/helloword/zaynep/egmady.mp3",
