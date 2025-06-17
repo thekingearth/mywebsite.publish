@@ -1,6 +1,6 @@
 export const playlist = [
   "https://airinerra.github.io/helloword/playlist/baleylot.mp3",
-  "https://airinerra.github.io/helloword/askem/askım.mp3",
+  "https://airinerra.github.io/helloword/askem/askim.mp3",
   "https://airinerra.github.io/helloword/askem/bokra.mp3",
   "https://airinerra.github.io/helloword/askem/dyelaesht.mp3",
   "https://airinerra.github.io/helloword/askem/tsrichk.mp3",
