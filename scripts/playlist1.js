@@ -1,29 +1,36 @@
 export const playlist = [
   "https://airinerra.github.io/helloword/playlist/baleylot.mp3",
-  "https://airinerra.github.io/helloword/playlist/hellokitty.mp3",
-  "https://airinerra.github.io/helloword/playlist/im.mp3",
-  "https://airinerra.github.io/helloword/playlist/living.mp3",
-  "https://airinerra.github.io/helloword/playlist/mahasiv.mp3",
-  "https://airinerra.github.io/helloword/playlist/muhur.mp3",
-  "https://airinerra.github.io/helloword/playlist/slishkim.mp3",
-  "https://airinerra.github.io/helloword/playlist/nifsi.mp3",
-  "https://airinerra.github.io/helloword/playlist/siahbo.mp3",
-  "https://airinerra.github.io/helloword/playlist/touta.mp3",
-  "https://airinerra.github.io/helloword/playlist/igrushka.mp3",
-  "https://airinerra.github.io/helloword/playlist/sentyabra.mp3"
+  "https://airinerra.github.io/helloword/askem/askim.mp3",
+  "https://airinerra.github.io/helloword/askem/bokra.mp3",
+  "https://airinerra.github.io/helloword/askem/dyelaesht.mp3",
+  "https://airinerra.github.io/helloword/askem/tsrichk.mp3",
+  "https://airinerra.github.io/helloword/askem/anaalbi.mp3",
+  "https://airinerra.github.io/helloword/askem/habithob.mp3",
+  "https://airinerra.github.io/helloword/askem/achrich.mp3",
+  "https://airinerra.github.io/helloword/askem/natsnatsim.mp3",
+  "https://airinerra.github.io/helloword/askem/mansland.mp3",
+  "https://airinerra.github.io/helloword/askem/or.mp3",
+  "https://airinerra.github.io/helloword/askem/pijama.mp3",
+  "https://airinerra.github.io/helloword/askem/vlyubilasy.mp3",
+  "https://airinerra.github.io/helloword/askem/anymore.mp3",
+  "https://airinerra.github.io/helloword/askem/dodomu.mp3"
   ];
 
 export const titles = [
   "Opening Track",
-  "Hello Kitti",
-  "Jerusalem",
-  "Living Hell",
-  "Ma Ashiv Lecha",
-  "Mehur",
-  "My Sleshkim Raznyye",
-  "Nefsi Aoulhalek",
-  "Sheyohavu Ote Kecha",
-  "Teuta",
-  "Ya Ne Igreshka",
-  "Ze Sentyebreya"
+  "Askem Benim",
+  "Bokra bfarjek",
+  "Chto ty delayesh'",
+  "Eam heyeti tzriha",
+  "Ene elbi lek",
+  "Habet hob",
+  "Hache'im shli acharech",
+  "Nitzentzim",
+  "No mans land",
+  "Or",
+  "Sen pijema",
+  "Vlyubit'sya v druga",
+  "We don't talk enymore",
+  "Ya Precto dedomu"
   ];
+
