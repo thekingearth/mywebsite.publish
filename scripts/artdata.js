@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Ketika Ilusi Jadi Nomor Satu: Kisah Restoran Palsu yang Menipu Dunia",
+      link: "../coretan/ketika-ilusi-jadi-nomor-satu-kisah-restoran-palsu.html",
+      img: "https://cdn.pixabay.com/photo/2024/08/17/07/15/ai-generated-8975272_1280.jpg",
+      alt: "Coretan Kin Basari Ketika Ilusi Jadi Nomor Satu: Kisah Restoran Palsu yang Menipu Dunia",
+      description: "Sebuah gudang kecil di belakang rumah berubah jadi restoran nomor satu di TripAdvisor, tanpa satu pun tamu sungguhan. Inilah kisah The Shed at Dulwich, restoran fiktif buatan seorang jurnalis yang memanipulasi ulasan, foto makanan palsu, hingga menyewa DJ untuk...",
+      labels: ["Pena dan Kuas", "Wawasan Tekno"]
+    },
+    {
       title: "Ilusi Kemewahan: Barang-Barang Mahal Yang Seharusnya Nggak Mahal",
       link: "../coretan/ilusi-kemewahan-barang-mahal-yang-cuma-menjual-nama.html",
       img: "https://cdn.pixabay.com/photo/2024/02/28/14/23/ai-generated-8602150_1280.jpg",
