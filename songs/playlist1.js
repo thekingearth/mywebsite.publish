@@ -18,19 +18,19 @@ export const playlist = [
 
 export const titles = [
   "Opening Track",
-  "Askem Benim",
-  "Bokra bfarjek",
+  "Askem Binem",
+  "Bukre Bfarjek",
   "Chto ty delayesh'",
   "Eam heyeti tzriha",
-  "Ene elbi lek",
-  "Habet hob",
-  "Hache'im shli acharech",
+  "Ene Albi Lek",
+  "Hobet hub",
+  "Hache'im Shli Acharech",
   "Nitzentzim",
-  "No mans land",
+  "No Mans Land",
   "Or",
-  "Sen pijema",
-  "Vlyubit'sya v druga",
-  "We don't talk enymore",
-  "Ya Precto dedomu"
+  "Sen Pijema",
+  "Vlyubet'sya V Droge",
+  "We Don't Talk Anymore",
+  "Ya Precto Dedomu"
   ];
 
