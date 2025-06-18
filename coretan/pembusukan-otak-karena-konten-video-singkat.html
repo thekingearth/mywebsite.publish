@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Fenomena Pembusukan Otak Karena Konten Video Singkat di Medsos</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Fenomena Pembusukan Otak Karena Konten <span>Video Singkat</span> di Medsos</h1>
+      <p class="detail-tanggal">
+        Thursday, 19 June 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <br>
+      <p>
+        Kita hidup di era di mana perhatian bisa pecah kayak kaca jatuh. Sekali pecah, susah dikumpulin lagi. Gen Z dan Gen Alfa sekarang doyan banget nonton video pendek, entah itu dari TikTok, Reels, Shorts, atau platform lain yang serba cepat dan padat. Isinya? Joget-joget nggak jelas, prank yang kadang lebih mirip ngerjain diri sendiri, sampai cuplikan drama Korea yang cuma setengah detik sebelum adegan klimaks. Sekilas seru, tapi lama-lama bikin candu.
+      </p>
+      <br>
+      <p>
+        Ini bukan cuma soal hiburan semata, tapi sudah masuk tahap yang lebih dalam dan agak mengkhawatirkan. Banyak ahli menyebutnya sebagai <span>digital attention erosion</span> satu kondisi di mana otak manusia makin sulit mempertahankan fokus karena terlalu terbiasa dengan informasi instan dan visual yang menuntut perhatian terus-menerus. Dalam kondisi ini, kemampuan untuk merenung, memahami secara menyeluruh, atau bahkan menikmati sesuatu secara utuh mulai mengalami degenerasi halus. Kapasitas kognitif jangka panjang perlahan tergerus oleh kecepatan konsumsi yang tidak disertai kedalaman.
+      </p>
+      <br>
+      <p>
+        Yang lebih miris, tren ini bikin banyak anak muda jadi kesulitan menikmati proses belajar atau diskusi yang butuh waktu dan logika bertingkat. Mereka jadi lebih mudah jenuh dan gampang beralih ke hal lain dalam hitungan detik. Akibatnya, muncul generasi yang tahu banyak hal secara sekilas, tapi jarang paham sesuatu secara menyeluruh. Semua jadi serba <span>“ngerti di permukaan”,</span> tapi dangkal ketika ditelusuri. Inilah dilema dunia digital: kita punya akses ke segalanya, tapi kehilangan waktu untuk benar-benar menyerap maknanya.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Dampak Video Pendek ke <span>Cara Berpikir</span></h2>
+      <p>
+        Coba deh ingat, kapan terakhir kali kamu nonton video lebih dari 5 menit tanpa nyentuh layar buat scroll ke bawah? Susah, kan? Sekarang otak kita itu lebih senang diberi potongan visual yang cepat, nyentil, lucu, atau kadang absurd banget. Video yang cuma 10 sampai 30 detik sudah cukup buat menghibur, bikin ketawa, bahkan bikin kita merasa seolah-olah <span>"dapat sesuatu".</span> Tapi sayangnya, sensasi itu cuma sebentar, seperti camilan gurih yang nggak pernah bikin kenyang.
+      </p>
+      <br>
+      <p>
+        Efek jangka panjangnya pelan tapi nyata. Kita jadi gampang bosan, mudah terdistraksi, dan makin sulit mikir panjang atau mencerna informasi yang kompleks. Inilah yang secara diam-diam disebut sebagai <span>atrofi kognitif mikro</span> penyusutan halus pada kemampuan berpikir mendalam karena terlalu sering menerima stimulasi singkat dan padat. Kapasitas otak untuk memproses informasi jadi stagnan, kayak sinyal lemot pas hujan deras. Semakin sering kita konsumsi konten seperti ini, semakin besar kemungkinan otak kita kehilangan daya tahan untuk fokus dan menyerap hal-hal bermakna dalam jangka panjang.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Saat Otak Jadi Korban <span>Scroll Tanpa Henti</span></h2>
+      <p>
+        Bahkan sekarang muncul istilah yang agak serem tapi juga sedikit menggelitik brain rot alias <span>"pembusukan otak".</span> Tenang, ini bukan karena virus atau hal mistis, tapi karena isi kepala kita terus dijejali oleh konten nggak penting yang dikemas dengan sangat menggoda dan adiktif. Video singkat yang niatnya buat hiburan justru jadi jebakan manis yang bikin otak males mikir. Ironisnya, fenomena ini mirip kayak makan junk food setiap hari rasanya enak, bikin nagih, tapi pelan-pelan ngerusak dari dalam tanpa kita sadar.
+      </p>
+      <br>
+      <p>
+        Di titik ini, kita mulai kehilangan kemampuan untuk berpikir reflektif dan kontemplatif, dua kemampuan yang dulu jadi ciri khas manusia yang bisa merenung dan memahami sesuatu secara dalam. Sekarang, banyak orang lebih nyaman dengan jawaban instan daripada proses bertanya yang panjang. Ruang untuk diam dan berpikir mulai tergeser oleh suara notifikasi. Otak jadi tempat singgah, bukan lagi tempat tinggal ide-ide besar. Perlahan, kualitas isi kepala tergantikan oleh kuantitas hal remeh yang terus diputar ulang.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Video Pendek Pikiran Pendek <span>Ironinya Zaman Sekarang</span></h2>
+      <p>
+        Video pendek memang bikin hidup terasa cepat dan praktis, tapi di balik kenyamanan itu, ada efek samping yang nggak bisa diabaikan <span>kemalasan berpikir.</span> Banyak orang sekarang jadi enggan diajak diskusi mendalam, karena sudah terbiasa dengan informasi instan yang langsung <span>“klik”</span> tanpa perlu mikir panjang. Mereka lebih suka nonton video yang durasinya cuma beberapa detik, lalu merasa sudah cukup tahu hanya dari judul atau potongan awalnya. Padahal, memahami sesuatu secara utuh butuh waktu dan proses, bukan sekadar <span>“scroll dan like”.</span> Informasi jadi seperti fast food yang cepat tersaji, cepat dikonsumsi, tapi minim gizi untuk pikiran.
+      </p>
+      <br>
+      <p>
+        Akhirnya, percakapan jadi dangkal, dan diskusi berubah jadi suara samar yang tenggelam di tengah gelombang notifikasi dan distraksi visual. Orang jadi cepat ambil kesimpulan, malas mendengar argumen lengkap, dan merasa paling paham padahal belum masuk ke inti persoalan. <span>Kemampuan untuk sabar dalam berpikir perlahan mulai terkikis,</span> tergantikan oleh rasa ingin tahu yang instan tapi cepat jenuh. Tanpa disadari, kita sedang membangun budaya obrolan kilat yang kehilangan makna, dan membiarkan refleksi pribadi ditelan algoritma hiburan.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Infodemi dan Otak Ketika <span>Algoritma Mengatur Pikiran</span></h2>
+      <p>
+        Tapi bukan berarti semua video pendek itu jahat, ya. Banyak juga kok konten singkat yang edukatif, inspiratif, atau ngasih insight baru yang bisa memantik pikiran. Ada video satu menit yang bisa bikin kita mikir seharian, dan itu luar biasa. Masalahnya, algoritma media sosial nggak dirancang untuk menyajikan apa yang kita butuh, tapi lebih ke apa yang sering kita tonton. Dan sering kali, yang kita tonton itu justru hal-hal receh yang menghibur sesaat, tapi minim makna. Semakin sering kita klik hal serupa, semakin dalam kita terseret ke arus konten serupa tanpa sadar.
+      </p>
+      <br>
+      <p>
+        Lama-lama, kita pun masuk dalam loop <span>infodemi</span> banjir informasi pendek yang dangkal tapi intens dan sangat cepat berubah. Otak dipaksa menyerap banyak hal sekaligus tanpa sempat mencerna. Ini bukan lagi sekadar soal hiburan ringan, tapi sudah menyentuh ranah <span>evolusi cara kerja otak manusia modern.</span> Kita pelan-pelan beralih dari pembelajar yang mendalam menjadi pemindai cepat yang mudah bosan. Akibatnya, meskipun informasi berlimpah, pemahaman bisa jadi malah menipis.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Fenomena ini bukan cuma tren, tapi pergeseran besar dalam cara kita berpikir, belajar, dan merespon dunia. Gen Z dan Gen Alfa hidup dalam kecepatan cahaya informasi, tapi kadang lupa berhenti buat benar-benar mencerna. Jadi mungkin sekarang saatnya kita bertanya: <span>"Apakah kita masih mengendalikan layar, atau layar yang sudah mengendalikan kita?"</span>
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
+
+
+
