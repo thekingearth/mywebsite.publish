@@ -5,7 +5,7 @@ export const playlist = [
   "https://airinerra.github.io/helloword/dilema/mehitch.mp3",
   "https://airinerra.github.io/helloword/dilema/dilemma.mp3",
   "https://airinerra.github.io/helloword/dilema/nadiny.mp3",
-  "https://airinerra.github.io/helloword/dilema/navzayemno.mp3",
+  "https://airinerra.github.io/helloword/dilema/nevzayemno.mp3",
   "https://airinerra.github.io/helloword/dilema/psikhushka.mp3",
   "https://airinerra.github.io/helloword/dilema/shawn.mp3",
   "https://airinerra.github.io/helloword/dilema/elbanat.mp3",
