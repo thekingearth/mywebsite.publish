@@ -11,25 +11,25 @@ export const playlist = [
   "https://airinerra.github.io/helloword/dilema/elbanat.mp3",
   "https://airinerra.github.io/helloword/dilema/unuturum.mp3",
   "https://airinerra.github.io/helloword/dilema/vilain.mp3",
-  "https://airinerra.github.io/helloword/dilema/toboyu.mp3",
-  "https://airinerra.github.io/helloword/dilema/yarabb.mp3"
+  "https://airinerra.github.io/helloword/dilema/yarabb.mp3",
+  "https://airinerra.github.io/helloword/dilema/toboyu.mp3"
   ];
 
 export const titles = [
   "Opening Track",
   "Cha'aram",
-  "Ha'ahava shlanu",
-  "Meh itch aba",
-  "My dilemma",
-  "Nadini",
+  "Ha'ahava Shlanu",
+  "Meh Etch Eba",
+  "My Dilemma",
+  "Nadeny",
   "Nevzayemno",
-  "Psikhushka",
-  "Shawn mendes",
-  "Set el banat",
-  "Unuturum",
+  "Psekhoshke",
+  "Shawn Mendes",
+  "Set El Banet",
+  "Unuterum",
   "Villain",
-  "Z toboyu",
-  "Ya rabb"
+  "Ya Rabb",
+  "Z Teboyu"
   ];
 
 
