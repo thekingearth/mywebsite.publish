@@ -17,18 +17,18 @@ export const playlist = [
 
 export const titles = [
   "Opening Track",
-  "Ara",
+  "Are",
   "Build A Bitch",
   "Calm Down",
   "Come Get It",
   "Egmady",
-  "Eih Yalli Byohsal",
-  "Ezzay Ansek",
-  "Hozer Al Atzmu",
+  "Eih Yealli Byohsel",
+  "Ezzey Ansek",
+  "Hozer El Atzmu",
   "Intelecto'ars",
   "Khvora Na Lyubov",
   "Ne Dushi",
-  "Posered Nochi",
-  "Zamelo"
+  "Pusired Noche",
+  "Zamilyu"
   ];
 
