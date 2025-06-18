@@ -299,13 +299,13 @@
 }
 
 .page-artikels .page-sidebar .label-name:hover,
-.page-artikels .page-sidebar .sidebar-quotes button:hover,
-.page-artikels .page-sidebar .player p .nextplay:hover {
+.page-artikels .page-sidebar .player p .nextplay:hover,
+.page-artikels .page-sidebar #quote-widget button:hover {
   background-color: #590;
 }
 .page-artikels .page-sidebar .label-sidebar .label-name:active,
-.page-artikels .page-sidebar .sidebar-quotes button:active,
-.page-artikels .page-sidebar .player p .nextplay:active {
+.page-artikels .page-sidebar .player p .nextplay:active,
+.page-artikels .page-sidebar #quote-widget button:active {
   transform: translateY(5px);
 }
 
