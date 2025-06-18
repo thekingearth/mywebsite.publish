@@ -11,11 +11,11 @@ export const playlist = [
 export const titles = [
   "Opening Track",
   "Addinu Lana",
-  "Alamate anak soleh",
-  "Cokot boyo",
-  "Itaneng tenri bolo",
-  "Sluku sluku batok",
-  "Wali songo"
+  "Alamate Anak Soleh",
+  "Cokot Boyo",
+  "Itaneng Tenri Bolo",
+  "Sluku Sluku Batok",
+  "Wali Songo"
   ];
 
 
