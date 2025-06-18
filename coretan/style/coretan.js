@@ -1,4 +1,3 @@
-import { playlist, titles } from '../../scripts/playlist10.js'; // path playlist audio
 
   import artikelData from '../../scripts/artdata.js'; // path data artikel
 
@@ -210,92 +209,30 @@ const repeatBtn = document.getElementById("repeat");
 const shuffleBtn = document.getElementById("shuffle");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
+const songTitle = document.getElementById("songTitle");
+const artistSong = document.getElementById("artist-song");
 
-
+let playlist = [];
+let titles = [];
 let index = 0;
 let isShuffle = false;
 let isRepeat = false;
+let isPlaying = false;
+let currentPlaylistNumber = 1;
 
-audio.onloadedmetadata = () => {
-  durationTime.textContent = formatTime(audio.duration);
-  progress.max = audio.duration;
-  };
-
-audio.ontimeupdate = () => {
-  progress.value = audio.currentTime;
-  currentTime.textContent = formatTime(audio.currentTime);
-  };
-
-progress.oninput = () => {
-  audio.currentTime = progress.value;
-  };
-
-playPauseBtn.onclick = () => {
-  if (audio.paused) {
-    audio.play();
-    playPauseBtn.innerHTML = '<i data-feather="pause"></i>';
-  } else {
-    audio.pause();
-    playPauseBtn.innerHTML = '<i data-feather="play"></i>';
-  }
-  feather.replace();
-};
-
-rewind.onclick = () => {
-  audio.currentTime = Math.max(0, audio.currentTime - 10);
-  };
-
-forward.onclick = () => {
-  audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
-  };
-
-repeatBtn.onclick = () => {
-  isRepeat = !isRepeat;
-  repeatBtn.style.color = isRepeat ? "#080" :"#d12";
-  };
-
-shuffleBtn.onclick = () => {
-  isShuffle = !isShuffle;
-  shuffleBtn.style.color = isShuffle ? "#080" : "#d12";
-  };
-
-prevBtn.onclick = () => {
-  index = (index - 1 + playlist.length) % playlist.length;
-  loadSong();
-  };
-
-nextBtn.onclick = () => {
-  index = isShuffle ? Math.floor(Math.random() * playlist.length) : (index + 1) % playlist.length;
-  loadSong();
-  };
-
-audio.onended = () => {
-  if (isRepeat) {
-    audio.currentTime = 0;
-    audio.play();
-    } else {
-      nextBtn.click();
-      }
-  };
-
-function loadSong() {
-  audio.src = playlist[index];
-  document.getElementById("songTitle").textContent = titles[index];
-  audio.play();
-  playPauseBtn.innerHTML = '<i data-feather="pause"></i>';
-  feather.replace();
-}
-
-
+// Fungsi waktu
 function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${mins}:${secs.toString().padStart(2, '0')}`;
-  }
-progress.addEventListener('input', () => {
-  const percent = (progress.value / progress.max) * 100;
-  progress.style.setProperty('--progress', percent + '%');
-});
+}
+
+// Update durasi dan progress
+audio.onloadedmetadata = () => {
+  durationTime.textContent = formatTime(audio.duration);
+  progress.max = audio.duration;
+};
+
 audio.ontimeupdate = () => {
   progress.value = audio.currentTime;
   currentTime.textContent = formatTime(audio.currentTime);
@@ -303,10 +240,106 @@ audio.ontimeupdate = () => {
   progress.style.setProperty('--progress', percent + '%');
 };
 
-// Elemen Artist 
-const artist = document.createElement("p");
-artist.textContent = "Playlist | 10";
-document.getElementById("artist-song").appendChild(artist);
+// Geser progress bar
+progress.oninput = () => {
+  audio.currentTime = progress.value;
+};
+
+// Play/Pause
+playPauseBtn.onclick = () => {
+  if (audio.paused) {
+    audio.play();
+    isPlaying = true;
+    playPauseBtn.innerHTML = '<i data-feather="pause"></i>';
+  } else {
+    audio.pause();
+    isPlaying = false;
+    playPauseBtn.innerHTML = '<i data-feather="play"></i>';
+  }
+  feather.replace();
+};
+
+// Rewind dan Forward
+rewind.onclick = () => {
+  audio.currentTime = Math.max(0, audio.currentTime - 10);
+};
+forward.onclick = () => {
+  audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+};
+
+// Repeat dan Shuffle
+repeatBtn.onclick = () => {
+  isRepeat = !isRepeat;
+  repeatBtn.style.color = isRepeat ? "#080" : "#d12";
+};
+shuffleBtn.onclick = () => {
+  isShuffle = !isShuffle;
+  shuffleBtn.style.color = isShuffle ? "#080" : "#d12";
+};
+
+// Prev dan Next
+prevBtn.onclick = () => {
+  index = (index - 1 + playlist.length) % playlist.length;
+  loadSong();
+};
+nextBtn.onclick = () => {
+  index = isShuffle
+    ? Math.floor(Math.random() * playlist.length)
+    : (index + 1) % playlist.length;
+  loadSong();
+};
+
+// Saat lagu selesai
+audio.onended = () => {
+  if (isRepeat) {
+    audio.currentTime = 0;
+    audio.play();
+  } else {
+    nextBtn.click();
+  }
+};
+
+// Fungsi Load Lagu
+function loadSong() {
+  audio.src = playlist[index];
+  songTitle.textContent = titles[index];
+  if (isPlaying) {
+    audio.play();
+    playPauseBtn.innerHTML = '<i data-feather="pause"></i>';
+  } else {
+    playPauseBtn.innerHTML = '<i data-feather="play"></i>';
+  }
+  feather.replace();
+}
+
+// Fungsi Ganti Playlist
+async function loadPlaylist(number) {
+  try {
+    const module = await import(`../../songs/playlist${number}.js`);
+    playlist = module.playlist;
+    titles = module.titles;
+    index = 0;
+    currentPlaylistNumber = number;
+    loadSong();
+    
+    // Tambahkan nol di depan jika perlu
+    const formattedNumber = number.toString().padStart(2, '0');
+    artistSong.innerHTML = `Playlist | ${formattedNumber} <br> <button class="nextplay">Next Playlist</button>`;
+  } catch (err) {
+    console.error("Gagal memuat playlist", err);
+  }
+}
+
+
+// Klik ganti playlist
+artistSong.onclick = () => {
+  const nextNumber = currentPlaylistNumber === 6 ? 1 : currentPlaylistNumber + 1;
+  loadPlaylist(nextNumber);
+};
+
+// Pertama kali: muat playlist1
+loadPlaylist(1);
+
 
 // Widget Quotes Text
 const quotes = [
