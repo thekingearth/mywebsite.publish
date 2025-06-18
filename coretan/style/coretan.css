@@ -298,11 +298,14 @@
   transition: all 0.2s ease 0s;
 }
 
-.page-artikels .page-sidebar .label-name:hover {
+.page-artikels .page-sidebar .label-name:hover,
+.page-artikels .page-sidebar .sidebar-quotes button:hover,
+.page-artikels .page-sidebar .player p .nextplay:hover {
   background-color: #590;
 }
 .page-artikels .page-sidebar .label-sidebar .label-name:active,
-.page-artikels .page-sidebar .sidebar-quotes button:active {
+.page-artikels .page-sidebar .sidebar-quotes button:active,
+.page-artikels .page-sidebar .player p .nextplay:active {
   transform: translateY(5px);
 }
 
@@ -389,6 +392,17 @@
   color: #d12;
 }
 
+.page-artikels .page-sidebar .player p .nextplay {
+  background-color: var(--btn);
+  border-radius: 3px;
+  padding: 4px 10px;
+  margin: 15px 1px;
+  transition: all 0.2s ease 0s;
+  font-family: var(--sdbar-font);
+  font-size: 10px;
+  color: #fff;
+}
+
 .page-artikels .page-sidebar .player button,
 .page-artikels .page-sidebar .player #current, .player #duration {
   color: #d12;
@@ -463,10 +477,6 @@ display: none;
   font-family: var(--sdbar-font);
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
-
-.page-artikels .page-sidebar #new-quote:hover {
-  background-color: #590;
 }
 
 
