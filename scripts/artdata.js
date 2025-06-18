@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Fenomena Pembusukan Otak Karena Konten Video Singkat di Medsos",
+      link: "../coretan/pembusukan-otak-karena-konten-video-singkat.html",
+      img: "https://cdn.pixabay.com/photo/2024/12/16/06/42/camera-9270111_1280.png",
+      alt: "Coretan Kin Basari Fenomena Pembusukan Otak Karena Konten Video Singkat di Medsos",
+      description: "banyak anak muda jadi kesulitan menikmati proses belajar atau diskusi yang butuh waktu dan logika bertingkat. Mereka jadi lebih mudah jenuh dan gampang beralih ke hal lain dalam hitungan...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Ketika Ilusi Jadi Nomor Satu: Kisah Restoran Palsu yang Menipu Dunia",
       link: "../coretan/ketika-ilusi-jadi-nomor-satu-kisah-restoran-palsu.html",
       img: "https://cdn.pixabay.com/photo/2024/08/17/07/15/ai-generated-8975272_1280.jpg",
