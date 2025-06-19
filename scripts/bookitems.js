@@ -86,7 +86,7 @@ const rupiah = (number) => {
 })();
 
 
-//Ansense
+//Adsense
 document.addEventListener("DOMContentLoaded", function() {
     let script = document.createElement("script");
     script.async = true;
@@ -94,3 +94,5 @@ document.addEventListener("DOMContentLoaded", function() {
     script.crossOrigin = "anonymous";
     document.head.appendChild(script);
 });
+
+
