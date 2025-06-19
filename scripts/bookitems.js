@@ -73,7 +73,7 @@ const rupiah = (number) => {
 (function() {
   // Script Google Analytics
   var script = document.createElement('script');
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-1DDWHHYS51';
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZFGZ9VSYZW';
   script.async = true;
   document.head.appendChild(script);
 // ID Google Analytics
@@ -81,7 +81,7 @@ const rupiah = (number) => {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-1DDWHHYS51');
+    gtag('config', 'G-ZFGZ9VSYZW');
   };
 })();
 
