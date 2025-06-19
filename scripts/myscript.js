@@ -1,7 +1,7 @@
 
 // Logo title blog
 const a = document.createElement("a");
-a.href = "https://www.kinbasari.my.id";
+a.href = "https://www.tintapenaku.com";
 a.className = "navbar-logo";
 
 const h3 = document.createElement("h3");
