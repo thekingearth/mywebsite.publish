@@ -484,7 +484,7 @@ display: none;
 
 /* Media Queri Phone */
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   html {
 .page-artikels {
   flex-direction: column;
