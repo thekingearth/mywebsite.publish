@@ -321,7 +321,7 @@ box-shadow: 1px 1px 3px #133;
   text-align: center;
   }
   
-.utama .thumbnail img{
+.utama .thumbnail img {
   width: 25vw;
   height: auto;
   margin-right: 5px;
@@ -332,6 +332,9 @@ box-shadow: 1px 1px 3px #133;
   color: var(--bash);
 }
 
+.utama a:hover, .artikels .artikel a:hover {
+  color: var(--pita);
+}
 
 .artikel .thumbnail img {
   width: 15vw;
