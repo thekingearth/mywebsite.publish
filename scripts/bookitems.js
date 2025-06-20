@@ -72,19 +72,21 @@ const rupiah = (number) => {
 
 (function() {
   // Script Google Analytics
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Inisialisasi waktu
+  gtag('js', new Date());
+
+// ID Google Analytics
+  gtag('config', 'G-ZFGZ9VSYZW');
+
+  // Buat tag script untuk gtag.js
   var script = document.createElement('script');
   script.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZFGZ9VSYZW';
   script.async = true;
   document.head.appendChild(script);
-// ID Google Analytics
-  script.onload = function() {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZFGZ9VSYZW');
-  };
 })();
-
 
 //Adsense
 document.addEventListener("DOMContentLoaded", function() {
