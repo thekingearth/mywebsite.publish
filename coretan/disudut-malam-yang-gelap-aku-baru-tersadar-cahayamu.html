@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Disudut Malam yang Gelap Aku Baru Tersadar Cahayamu</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Disudut Malam yang <span>Gelap</span>
+      <br>Aku Baru Tersadar <span>Cahayamu</span></h1>
+      <p class="detail-tanggal">
+        Friday, 20 June 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <br>
+      <p>
+        Kadang kita baru sadar sesuatu itu berharga justru saat semuanya terasa sepi dan gelap. Seperti malam tanpa bintang, yang bikin kita akhirnya merindukan satu cahaya kecil saja untuk menenangkan. Sepi itu memekakkan, dan gelapnya menusuk perasaan yang selama ini kita abaikan. Di saat-saat seperti itulah, kehadiran yang dulu dianggap biasa tiba-tiba menjadi sangat dirindukan, seolah menjadi satu-satunya jawaban dari kekosongan yang mencengkeram.
+      </p>
+      <br>
+      <p>
+        Dulu, aku pikir kehadiranmu biasa saja, kayak lampu kamar yang nyala terus tapi nggak pernah dipikirin. Kita terlalu terbiasa dengan terang, sampai lupa kalau terang itu bisa padam. <span>Kehadiranmu konstan, lembut, tidak mencolok, dan mungkin itulah yang membuatku lengah.</span> Kita seringkali lebih peka pada hal yang tiba-tiba datang, daripada yang setia tinggal. Padahal, yang tinggal itulah yang diam-diam menopang, menjaga agar kita tetap hangat.
+      </p>
+      <br>
+      <p>
+        Ironisnya, kehadiran yang konstan sering kali jadi kasat oleh persepsi yang terlalu nyaman. Kenyamanan kadang membuat kita buta, bukan karena tidak bisa melihat, tapi karena tidak mau memperhatikan. Kini, setelah gelap menyergap dan sunyi berbicara lebih lantang, aku baru mengerti bahwa yang paling berharga bukan yang datang dengan gemuruh, tapi yang bertahan dalam diam. Dan kamu, selama ini diam-diam jadi cahaya yang tak pernah padam.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Fragmen Rindu di <span>Ruang yang Retak</span></h2>
+      <p>
+        Waktu semua orang pergi dan suasana jadi dingin, aku mulai mengingat hal-hal kecil. Caramu menyapa, senyum tipis itu, atau bahkan tatapan yang diam tapi hangat. Aneh ya, hal-hal kecil ternyata bisa jadi besar saat semuanya hilang. Dulu mungkin terasa biasa, tapi sekarang tiap detail itu muncul kembali seperti <span>potongan puzzle</span> yang pelan-pelan menyusun keutuhan yang sempat hilang.
+      </p>
+      <br>
+      <p>
+        Dalam fragmen waktu yang retak, gema makna justru tumbuh di ruang yang tak bernama. Rindu tumbuh tanpa aba-aba, menyusup lewat kenangan yang tak pernah benar-benar pergi. Saat dunia terasa kosong, justru yang paling sederhana bisa menjadi pelipur yang tak tergantikan. Dan di tengah sunyi, aku sadar bahwa yang paling mengisi hati bukan yang ramai, tapi yang pernah hadir dengan tulus dan diam.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Peta yang Selalu Ada Tetapi <span>Tak Pernah Dibaca</span></h2>
+      <p>
+        Aku mulai bertanya-tanya, kenapa nggak dari dulu aku sadar? Kenapa harus nunggu sampai semua gelap dulu baru bisa lihat terangmu? Tapi begitulah manusia, kadang harus <span>kejeblos</span> dulu baru ngerti di mana tanah yang stabil. Kita lebih sering belajar dari luka daripada dari nasihat. Momen jatuh justru sering jadi guru yang paling jujur, walau datangnya menyakitkan.
+      </p>
+      <br>
+      <p>
+        Kesadaran kerap datang bukan sebagai cahaya, tapi sebagai bayangan yang menyudutkan logika. Ia muncul diam-diam, menampar pelan, lalu tinggal menetap. Kadang, kita harus kehilangan arah dulu sebelum benar-benar mengenali peta yang selama ini kita abaikan. Dan dalam perasaan terpojok itu, barulah kita melihat segala yang pernah terang, bukan karena cahaya berubah, tapi karena kita akhirnya membuka mata.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Cahayamu Bukan Untuk Dimiliki <span>Tapi Dikenang</span></h2>
+      <p>
+        Sekarang aku nggak minta apa-apa lagi sih, nggak harus balik juga, dan nggak harus sama-sama lagi. Aku cuma mau bilang ke kamu makasih ajah, karena di malam paling gelap dalam hidupku aku baru sadar ada cahayamu yang pernah bikin aku nggak takut sendirian. Kamu pernah jadi alasan aku bertahan, meski kamu sendiri nggak pernah tahu seberapa besar artimu saat itu. Dan meskipun semuanya sudah berubah, rasa terima kasih itu tetap tinggal, diam-diam tumbuh seperti bunga di tanah yang retak.
+      </p>
+      <br>
+      <p>
+        Mungkin, dalam <span>labirin kenangan,</span> cahaya itu bukan untuk ditemukan kembali, melainkan untuk diterima sebagai jejak yang menetap di ruang yang tak pernah sepenuhnya pulih. Bukan untuk dilanjutkan tapi untuk dikenang tanpa luka. Sebab beberapa hal memang hadir hanya untuk menguatkan, bukan untuk dimiliki selamanya. Dan aku belajar bahwa tidak semua <span>kehilangan</span> harus diisi ulang, ada yang cukup dengan disyukuri karena pernah ada.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Jika kamu memiliki sesuatu, maka prioritaskan itu sebagai milikmu, peluk dengan rasa syukur, rawat dengan ketulusan, dan jagalah seolah dunia bisa merenggutnya kapan saja. Jangan pernah menganggap remeh sesuatu yang tidak tampak gemerlap, karena sering kali yang paling sederhana menyimpan makna paling dalam. Apa yang ada di tanganmu hari ini bisa jadi doa orang lain semalam, dan yang kamu abaikan bisa menjadi kehilangan yang paling kamu tangisi nanti.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
+
+
+
