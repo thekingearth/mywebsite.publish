@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Disudut Malam yang Gelap Aku Baru Tersadar Cahayamu",
+      link: "../coretan/disudut-malam-yang-gelap-aku-baru-tersadar-cahayamu.html",
+      img: "https://cdn.pixabay.com/photo/2022/08/07/20/28/night-7371349_1280.jpg",
+      alt: "Tinta Pena Bash Disudut Malam yang Gelap Aku Baru Tersadar Cahayamu",
+      description: "Bukan sinar yang silau atau menyilaukan, tapi hangatnya cukup untuk membuatku tidak merasa sendirian. Dalam gelap yang menelan, justru aku melihat jelas kehadiranmu pernah menjadi arah, meski tak lagi berjalan bersisian. Cahayamu tak pernah...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas"]
+    },
+    {
       title: "Fenomena Pembusukan Otak Karena Konten Video Singkat di Medsos",
       link: "../coretan/pembusukan-otak-karena-konten-video-singkat.html",
       img: "https://cdn.pixabay.com/photo/2024/12/16/06/42/camera-9270111_1280.png",
