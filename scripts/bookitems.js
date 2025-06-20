@@ -79,11 +79,11 @@ const rupiah = (number) => {
   gtag('js', new Date());
 
 // ID Google Analytics
-  gtag('config', 'G-ZFGZ9VSYZW');
+  gtag('config', 'G-L8FC659LV7');
 
   // Buat tag script untuk gtag.js
   var script = document.createElement('script');
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZFGZ9VSYZW';
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-G-L8FC659LV7';
   script.async = true;
   document.head.appendChild(script);
 })();
