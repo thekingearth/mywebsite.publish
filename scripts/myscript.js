@@ -9,9 +9,9 @@ h3.textContent = "coretan";
 
 const h1 = document.createElement("h1");
 const span = document.createElement("span");
-span.textContent = "Kin";
+span.textContent = "Pena";
 h1.appendChild(span);
-h1.appendChild(document.createTextNode("Basari"));
+h1.appendChild(document.createTextNode("ku"));
 
 a.appendChild(h3);
 a.appendChild(h1);
