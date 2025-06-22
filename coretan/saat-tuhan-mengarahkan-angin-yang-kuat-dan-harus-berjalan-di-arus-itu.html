@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Saat Tuhan Mengarahkan Angin yang Kuat Dan Harus Berjalan di Arus Itu</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Saat Tuhan Mengarahkan <span>Angin yang Kuat</span> Dan Harus Berjalan <span>di Arus Itu</span></h1>
+      <p class="detail-tanggal">
+        Sunday, 22 June 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <br>
+      <p>
+        Kadang hidup itu seperti berdiri di tepi laut pas badai. Angin datang tanpa aba-aba, menghantam tanpa kompromi. Padahal sebelumnya kamu nggak pernah minta ombak datang seganas itu, tapi tetap saja ia menerjang. Rasanya nggak adil banget, tapi hidup memang bukan soal keadilan, ia soal bagaimana kamu berdiri saat semua hal mencoba menjatuhkan. Dalam dingin dan gemuruhnya ketidakpastian, kamu belajar untuk tidak sepenuhnya runtuh.
+      </p>
+      <br>
+      <p>
+        Nggak ada pilihan buat diem, karena kalau diem, kamu bisa terseret balik ke dalam gelap yang lebih dalam. Jadi langkah kaki ini harus tetap maju, meski basah kuyup, tubuh gemetar, dan mata perih menahan air asin dan air mata. Kadang, satu-satunya hal yang bisa kita lakukan cuma melangkah <span>(walaupun cuma satu meter).</span> Karena kalau diam nggak bakalan membawa ke mana-mana, dan pasrah tanpa perlawanan hanya memperpanjang luka yang sama.
+      </p>
+      <br>
+      <p>
+        Sebab di balik arah angin yang mengguncang, selalu ada takdir yang sedang membentuk kelenturan jiwa. Kita dibentuk bukan di tempat yang tenang, tapi di pusaran yang menuntut keberanian. Justru lewat badai, kita jadi tahu seberapa kuat hati kita bisa bertahan, dan seberapa besar harapan bisa tumbuh dari reruntuhan. Hidup bukan tentang menolak badai atau <span>mengejar badai,</span> tapi tentang berani berdiri walau diterpa. Dan dari sana, pelan-pelan, kita akan tahu bahwa luka hari ini sedang menyiapkan ketangguhan untuk besok.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Bagaikan Ulangan Dadakan <span>Tanpa Kisi-Kisi</span></h2>
+      <p>
+        Setiap masalah yang datang, rasanya kayak ujian tanpa kisi-kisi, mendadak, membingungkan, dan sering kali bikin panik. Meskipun rasanya kayak nonton film horor yang penuh jumpscare tapi justru dari situ, kamu dilatih buat tahan banting, belajar lebih sabar, dan perlahan mulai ngerti siapa diri sendiri sebenarnya. Kadang, kenyamanan yang hilang justru jadi pintu masuk menuju kesadaran. Kita mulai sadar bahwa ternyata kita bisa tetap berdiri, bahkan saat semua hal yang dulu kita andalkan perlahan runtuh satu per satu.
+      </p>
+      <br>
+      <p>
+        Dalam kekacauan yang nyaris hening, sering kali tersimpan hikmah yang tidak berteriak, tapi sabar menunggu untuk dipahami oleh hati yang tenang. Bukan dari keramaian jawaban, tapi justru dari sepi yang mengajarkan makna. Masalah memang nggak pernah kerasa nyenengin hati, tapi justru lewat masalah itu, kita ditempa menjadi pribadi yang lebih utuh.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Saat Badai Menjadi Petunjuk Menuju <span>Pelabuhan Baru</span></h2>
+      <p>
+        Tuhan nggak pernah ngasih ujian yang sia-sia. Setiap badai pasti membawa maksud, meski kadang datang tanpa aba-aba. Kalau anginnya terasa terlalu kencang, mungkin karena ada pelabuhan baru yang sedang dituju, sebuah tempat yang nggak bakalan kamu temuin kalo terus diam di tepian lama. Bukan berarti kamu harus nikmatin setiap deras hujan dan petirnya, tapi seenggaknya kamu bisa belajar bagaimana caranya bertahan, berenang, bahkan sesekali tertawa di tengah derasnya arus yang mengguncang.
+      </p>
+      <br>
+      <p>
+        Sebab nggak semua perjalanan butuh kompas yang pasti, peta yang lengkap, atau arah yang jelas. Kadang cukup percaya pada desir lembut yang terdengar dari dalam dada, <span>bukan bisikan tetangga</span> tetapi bisikan halus yang muncul saat dunia luar terlalu bising. Keyakinan seperti itu mungkin nggak terdengar keras, tapi diam-diam menuntun kamu nglewatin malam paling gelap. Dan dari situ, kamu tahu bahwa tujuan bukan selalu tentang tempat, tapi juga tentang versi diri yang tumbuh di sepanjang jalan.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Saat Langkah Tak Lagi Dipaksa <span>Tapi Dipahami</span></h2>
+      <p>
+        Dan di titik lelah, justru keikhlasan itu muncul. Bukan karena masalahnya menghilang, tapi karena hati akhirnya nerima kalo nggak semua harus dipahami saat itu juga. Kamu berhenti nanya <span>“kenapa ini terjadi?”</span> dan mulai bilang, <span>“ya udah, ayo jalan terus.”</span> Di situlah kesadaran tumbuh pelan-pelan, bukan dari kemenangan, tapi dari keheningan yang menyadarkan bahwa terus berjalan adalah bentuk kekuatan paling sunyi.
+      </p>
+      <br>
+      <p>
+        Dalam momen itu, langkah jadi lebih ringan, walau beban tetap melekat di pundak <span>(kadang malah makin berat sih).</span> Karena saat hati luruh sepenuhnya, realitas pun perlahan menyesuaikan bentuknya pada makna yang lebih tinggi. Kita mulai melihat luka bukan sebagai hukuman, tapi sebagai bentuk pembentukan. Keikhlasan membuat segalanya nggak selalu mudah, tapi bisa terasa lebih bisa dijalani. Dan mungkin, di sanalah hidup menemukan nadanya yang paling jujur.
+      </p>
+      <br>
+
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Hidup bukan tentang menghindari angin, tapi tentang menari di tengah pusaran. Jangan fokus untuk bisa mengendalikan segalanya, tapi belajarlah supaya bisa mengendalikan diri sendiri. Sebab pada akhirnya, jiwa yang tangguh adalah ia yang mampu berdamai dengan arah angin, bukan yang melawannya.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
+
+
+
