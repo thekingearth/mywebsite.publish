@@ -1,7 +1,7 @@
 
 const artikelData = [
     {
-      title: "Saat Tuhan Mengarahkan Angin yang Kuat Dan Harus Berjalan di Arus Itu",
+      title: "Saat Tuhan Mengarahkan Angin yang Kuat Dan Harus Berlayar di Arus Itu",
       link: "../coretan/saat-tuhan-mengarahkan-angin-yang-kuat-dan-harus-berjalan-di-arus-itu.html",
       img: "https://cdn.pixabay.com/photo/2017/05/01/12/24/ship-2275399_1280.jpg",
       alt: "Tinta Pena Bash Saat Tuhan Mengarahkan Angin yang Kuat Dan Harus Berjalan di Arus Itu",
