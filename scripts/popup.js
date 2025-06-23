@@ -74,9 +74,9 @@ function loadFooter() {
     document.write(`
         <footer>
             <div class="links">
-                <a href="https://www.tintapenaku.com">Home</a> - 
-                <a href="../menu/about.html">About</a> - 
-                <a href="../menu/disclaim.html">Disclaimer</a> - 
+                <a href="https://www.tintapenaku.com">Home</a>-
+                <a href="../menu/about.html">About</a>-
+                <a href="../menu/disclaim.html">Disclaimer</a>-
                 <a href="../menu/contact.html">Contact</a>
             </div>
             <div class="credit">
