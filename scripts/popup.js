@@ -80,7 +80,7 @@ function loadFooter() {
                 <a href="../menu/contact.html">Contact</a>
             </div>
             <div class="credit">
-                <p>Copyright <a href="https://www.tintapenaku.com">Coretan Penaku &trade;</a>  | &copy; 2025.</p>
+                <p>Copyright <a href="https://www.tintapenaku.com">Coretan Penaku</a>&trade; | &copy; 2025.</p>
             </div>
         </footer>
     `);
