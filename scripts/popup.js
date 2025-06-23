@@ -74,13 +74,13 @@ function loadFooter() {
     document.write(`
         <footer>
             <div class="links">
-                <a href="https://www.tintapenaku.com">Home</a>
-                <a href="../menu/about.html">About</a>
-                <a href="../menu/disclaim.html">Disclaimer</a>
+                <a href="https://www.tintapenaku.com">Home</a> - 
+                <a href="../menu/about.html">About</a> - 
+                <a href="../menu/disclaim.html">Disclaimer</a> - 
                 <a href="../menu/contact.html">Contact</a>
             </div>
             <div class="credit">
-                <p>Created by <a href="https://www.tintapenaku.com">Tinta Penaku</a> | &copy; 2025.</p>
+                <p>&copy; Copyright <a href="https://www.tintapenaku.com">Coretan Penaku</a> 2025.</p>
             </div>
         </footer>
     `);
