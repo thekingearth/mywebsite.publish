@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Saat Pemicu Kebiasaan Buruk Kamu Lakukan Tanpa Sadar</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Saat Pemicu Kebiasaan Buruk Kamu <span>Lakukan Tanpa Sadar</span></h1>
+      <p class="detail-tanggal">
+        Tuesday, 24 June 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <br>
+      <p>
+        Jadi, apa kamu pernah ngalamin tiba-tiba baru nyadar udah scroll HP selama sejam atau lebih? Padahal awalnya cuma mau cek pesan chat masuk dari ayang, tapi entah gimana malah nyasar ke media sosial, nonton video pendek, lalu tiba-tiba udah betah di sana. Atau mungkin, tanpa sadar kamu udah makan empat bungkus camilan, padahal sebenarnya nggak lapar. Rasanya tuh aneh kan, kayak tubuh kita dikendalikan sesuatu di luar kesadaran.
+      </p>
+      <br>
+      <p>
+        Hal-hal kayak gitu sering kali bukan karena niat jahat dari diri sendiri atau kurangnya kontrol, tapi karena adanya pemicu kecil yang sering lewat tanpa kita sadari. Mungkin itu suara notifikasi, aroma makanan, atau sekadar rasa bosan. Pemicu-pemicu ini menyelinap diam-diam ke sistem otomatis kita dan ngaktifin kebiasaan tertentu. Tanpa sadar, kita jadi bergerak, memilih, dan bertindak hanya karena satu dorongan singkat yang rasanya <span>“nggak penting”.</span>
+      </p>
+      <br>
+      <p>
+        Inilah yang disebut sebagai <span>otomatisasi perilaku</span> kondisi ketika tubuh bergerak lebih cepat dari niat, dan pikiran tertinggal di belakang. Kita hidup di dunia yang serba cepat, dan kebiasaan-kebiasaan ini jadi semacam <span>mode hemat energi</span> bagi otak. Tapi kalau dibiarin terus, bisa bikin kita kehilangan kendali atas diri sendiri. Maka dari itu, penting banget untuk sesekali berhenti, sadar, dan mulai tanya <span>apa aku bener-bener milih ini, atau cuma terjebak dalam pola yang berulang?</span>
+      </p>
+      <br>
+      <br>
+      <div class="images-art">
+      <img src="https://cdn.pixabay.com/photo/2020/03/23/14/08/girl-4960936_1280.jpg" alt="Tinta Penaku Saat Pemicu Kebiasaan Buruk Kamu Lakukan Tanpa Sadar">
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <h2>Saat Otak Klik Duluan Sebelum <span>Meminta Sadar</span></h2>
+      <p>
+        Lucunya, hal-hal ini sering diawali dari sesuatu yang sangat remeh. Misalnya, duduk di sofa empuk, suara notifikasi imut, atau bahkan bau wangi dari toko sebelah yang dapurnya lagi ngebul-ngebulnya bisa bikin otak langsung auto "klik" dan bawa kita ke kebiasaan lama. Bisa juga cuma karena lampu kamar yang redup atau posisi tubuh yang terlalu santai, hal-hal kecil yang tampak sepele tapi punya pengaruh besar.
+      </p>
+      <br>
+      <p>
+        Ini yang disebut dengan <span>stimulus tak sadar,</span> di mana otak merespons sebelum kita sempat mikir. Di sinilah kita sering kejebak karena nggak semua yang familiar itu baik, dan nggak semua kenyamanan itu sehat. Kenyamanan yang terasa menyenangkan di awal, bisa saja jadi jerat diam-diam yang membentuk pola tanpa kita sadari.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Kenyamanan Palsu dan Kebiasaan <span>yang Menjebak</span></h2>
+      <p>
+        Masalahnya tuh, kita baru nyadar setelah semuanya kejadian. Kayak kita mulai refleksi justru setelah perut kekenyangan gara-gara ngemil terus tanpa henti, atau nyesel setelah waktu habis buat scroll medsos nggak jelas. Kenapa bisa gitu? Karena kebiasaan buruk itu sering banget nyamar jadi rasa nyaman. Kita ngerasa chill, padahal lagi kecemplung di pola yang ngerugiin diri sendiri, tapi karena saking halusnya, kita nggak merasa ada yang salah.
+      </p>
+      <br>
+      <p>
+        Nah, di situ letak jebakannya, banyak juga orang nyebut ini <span>kognitif disonansi.</span> Istilahnya itu semacem kondisi pas pikiran kita tahu apa yang benar, tapi tindakan malah ngelakuin yang sebaliknya. Kayak udah tahu harus tidur, tapi tetep aja buka Rells sambil bilang, <span>“ah, cuma liat satu video doang.”</span> Eh tahu-tahunya udah tiga jam lewat mata menatap layar <span>yang penting nggak natep mantan hehehe...</span> Meskipun pikiran bilang cukup, tapi tangan tetep jalan. Serius deh, kadang <span>musuh terbesarnya bukan dunia luar, tapi dalih-dalih kecil yang kita buat sendiri.</span>
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Cara Kecil Lawan <span>Kebiasaan Buruk</span></h2>
+      <p>
+        Jadi penting banget buat kita mulai kenal sama pola-pola kecil yang sering kejadian sebelum kebiasaan buruk muncul. Coba deh perhatiin baik-baik, biasanya kamu ngapain sih sebelum mulai scroll tanpa henti atau ngemil tanpa sadar? Nah, di momen-momen kecil itu sebenarnya kita punya kesempatan buat nyela alias <span>intervensi</span> si otak yang udah autopilot duluan.
+      </p>
+      <br>
+      <p>
+        Nggak harus langsung jago atau sempurna kok. Cukup mulai dari langkah kecil yang gampang dijalanin, misalnya berdiri sebentar, pindah ruangan, buka jendela, atau cuma tarik napas dalam sambil bilang, <span>“eh, bentar deh.”</span> Kadang, jeda kecil itu cukup buat ngasih ruang ke otak biar mikir dulu sebelum kebiasaan lama ngambil alih lagi. Sedikit-sedikit lama-lama bisa ngerubah pola, asal kita mau sadar dan nyoba.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Karena pada akhirnya, kesadaran adalah satu-satunya cara buat keluar dari lingkaran autopilot itu. Dan ingat, setiap kebiasaan buruk dulunya adalah pilihan yang diulang-ulang. Jadi kalau kamu bisa membentuknya, kamu juga bisa <span>dekonstruksi</span> dan membongkarnya pelan-pelan. Tidak mudah, tapi sangat mungkin. Asal kamu mau berhenti sejenak, dan mulai mendengar sinyal-sinyal kecil dari dirimu sendiri.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
+
+
+
