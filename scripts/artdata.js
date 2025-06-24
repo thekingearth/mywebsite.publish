@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Saat Pemicu Kebiasaan Buruk Kamu Lakukan Tanpa Sadar",
+      link: "../coretan/saat-pemicu-kebiasaan-buruk-kamu-lakukan-tanpa-sadar.html",
+      img: "https://cdn.pixabay.com/photo/2020/03/23/14/08/girl-4960936_1280.jpg",
+      alt: "Tinta Pena Bash Saat Pemicu Kebiasaan Buruk Kamu Lakukan Tanpa Sadar",
+      description: "Seperti tubuh bergerak dalam mode otomatis, tanpa melewati ruang sadar yang semestinya jadi pengendali. Kita terjebak dalam rutinitas kompulsif, melakukan sesuatu berulang tanpa benar-benar tahu...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Saat Tuhan Mengarahkan Angin yang Kuat Dan Harus Berlayar di Arus Itu",
       link: "../coretan/saat-tuhan-mengarahkan-angin-yang-kuat-dan-harus-berjalan-di-arus-itu.html",
       img: "https://cdn.pixabay.com/photo/2017/05/01/12/24/ship-2275399_1280.jpg",
