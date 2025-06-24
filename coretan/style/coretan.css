@@ -75,6 +75,18 @@
   font-size: 8px;
 }
 
+.page-artikels .page-artikel .images-art {
+  text-align: center;
+
+}
+.page-artikels .page-artikel .images-art img {
+  width: 80vw;
+  height: auto;
+  border: 1px solid var(--alpa);
+  box-shadow: 0 0 15px var(--harga);
+  border-radius: 5px;
+}
+
 .page-artikels .page-artikel .petik {
   font-size: 20px;
   display: block;
