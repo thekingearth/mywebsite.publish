@@ -77,9 +77,17 @@
 
 .page-artikels .page-artikel .images-art {
   text-align: center;
-
 }
-.page-artikels .page-artikel .images-art img {
+
+.page-artikels .page-artikel .images-art .logo-tpb {
+  position: absolute;
+  border: none;
+  box-shadow: none;
+  width: 50px;
+  heigh: auto;
+}
+
+.page-artikels .page-artikel .images-art .imgart {
   width: 90%;
   height: auto;
   border: 1px solid var(--alpa);
