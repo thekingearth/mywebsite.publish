@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Filosofi Mengapa Sepatu yang Dijual di Toko Hanya Dipajang Sebelah Saja",
+      link: "../coretan/mengapa-sepatu-yang-dijual-ditoko-hanya-dipajang-sebelah.html",
+      img: "https://cdn.pixabay.com/photo/2024/03/19/20/30/ai-generated-8644084_1280.png",
+      alt: "Tinta Pena Bash Filosofi Mengapa Sepatu yang Dijual di Toko Hanya Dipajang Sebelah Saja",
+      description: "Sebuah simbol bahwa hal-hal yang berharga seringkali tak pernah ditampilkan sepenuhnya di depan mata. Kita hanya diberi satu sisi, satu potongan dari keseluruhan, karena menemuka...",
+      labels: ["Pena dan Kuas", "Perspektif"]
+    },
+    {
       title: "Saat Pemicu Kebiasaan Buruk Kamu Lakukan Tanpa Sadar",
       link: "../coretan/saat-pemicu-kebiasaan-buruk-kamu-lakukan-tanpa-sadar.html",
       img: "https://cdn.pixabay.com/photo/2020/03/23/14/08/girl-4960936_1280.jpg",
