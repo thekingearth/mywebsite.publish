@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Filosofi Mengapa Sepatu yang Dijual di Toko Hanya Dipajang Sebelah Saja</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Filosofi Mengapa Sepatu yang Dijual di Toko <span>Hanya Dipajang Sebelah Saja</span></h1>
+      <p class="detail-tanggal">
+        Wednesday, 25 June 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <br>
+      <p>
+        Bayangin aja dulu, kamu seorang usahawan sukses kelas dunia, bisnismu udah merajalela dari Asia sampai ke pelosok Eropa dan Amerika Latin. Setelah puluhan bisnis moncer, kamu kepikiran buat buka lini baru yaitu jadi distributor sepatu premium. Nggak main-main, kamu order langsung dari salah satu produsen top di Eropa. Beberapa hari kemudian, dua truk kontainer gede datang ke gudangmu, isinya semua sepatu pesananmu. Surat jalan dan tanda terima udah kamu tanda tangani dengan tenang, sambil senyum-senyum ngebayangin omzet yang bakal meledak.
+      </p>
+      <br>
+      <p>
+        Tapi beberapa saat setelah truk-truk itu pergi, kamu mulai buka satu per satu dus sepatu. Awalnya biasa aja. Tapi pas kamu buka lebih banyak dus, kamu mulai ngerasa ada yang aneh. Semua dus memang terisi sepasang sepatu, tapi semuanya kanan. Iya, kanan semua, nggak ada satu pun sepatu kiri. Serius, satu gudang, ribuan dus, isinya sepatu kaki kanan semua. Rasanya absurd banget. Di antara tumpukan kardus itu, kamu cuma bisa berdiri bengong, antara pengen ketawa, kesel, atau nelpon pabrik sambil teriak.
+      </p>
+      <br>
+      <p>
+        Mau marah tapi bingung ke siapa. Mau ketawa juga takut dan bingung bakalan jualan kayak gimana. Lagian siapa juga yang mau beli sepatu cuma kanan doang. Rasanya kayak ditampar kenyataan pakai tangan yang salah. Mungkinkah ini bukan sekadar kesalahan teknis? Apa ini semacam <span>"ujian spiritual"</span> dalam bentuk sepatu? Satu pertanyaan muncul di benakmu, <span>"Ini kutukan bisnis baru, atau semesta lagi ngelucu?"</span> Pikiranmu berkecamuk, mau dikembalikan ongkirnya bisa bikin bangkrut.
+      </p>
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Filosofi Mengapa Sepatu yang Dijual di Toko Hanya Dipajang Sebelah Saja">
+      <img src="https://cdn.pixabay.com/photo/2024/03/19/20/30/ai-generated-8644084_1280.png" alt="Tinta Penaku Filosofi Mengapa Sepatu yang Dijual di Toko Hanya Dipajang Sebelah Saja">
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <h2>Sepatu Sebelah Simbol Pilihan <span>Yang Belum Sempurna</span></h2>
+      <p>
+        Apa pernah kamu mikir kenapa sepatu yang dipajang di etalase toko selalu cuma satu? Padahal sepasang sepatu diciptain buat saling ngelengkapin <span>(kaya aku dan kamu),</span> kanan dan kiri dua arah yang nggak sama tapi nggak bisa dipisahin. Tapi di toko dia cuma ditampilin sebelah. Bukan sekadar strategi dagang atau alasan keamanan, tapi kalau direnungin lebih dalam, ada makna yang diam-diam terselip di balik pajangan itu. Sepatu itu berdiri sendiri di balik kaca, tanpa pasangannya. <span>Seolah sedang menunggu takdir untuk disempurnakan.</span>
+      </p>
+      <br>
+      <p>
+        Kadang hidup tuh emang gitu yah, kita cuma lihat sebagian doang dari sesuatu, nggak langsung kelihatan semuanya dari awal. Yang kita lihat tuh cuma potongan kecil, sementara sisanya masih nyimpen cerita yang belum kebuka. Kayak sepatu yang dipajang sebelah aja baru terasa lengkap kalau dia udah dideketin, dicobain, dan dikenal lebih jauh.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Menampilkan Sebagian Dan <span>Menyimpan Sebagian</span></h2>
+      <p>
+        Toko cuma majangin satu sepatu karena itu sudah cukup buat narik perhatian orang, nggak perlu majangin semuanya, karena yang satu saja sudah mampu buat bilang tentang bentuk, gaya, rasa yang mungkin cocok di kaki. Trik ini tuh mengajarin kita satu hal, bahwa kesan pertama bukan soal nunjukkin semua yang kita punya, tapi nunjukkin cukup untuk membuat orang kepengin tahu lebih.
+      </p>
+      <br>
+      <p>
+        Dan lucunya, hidup juga gitu sih. Kita nggak harus buka semua kartu soal diri kita ke semua orang. Menyimpan sebagian itu bukan berarti kita pura-pura atau nutupin, tapi lebih kayak ngasih ruang buat sesuatu yang lebih dalam, buat momen spesial, buat pertumbuhan, atau biar orang bisa kenal kita pelan-pelan. Karena kadang, hal yang bikin menarik justru yang nggak langsung dikasih lihat semuanya.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Kesempurnaan Itu Proses <span>Bukan Pajangan</span></h2>
+      <p>
+        Sepatu sebelah itu belum lengkap. Tapi justru karena belum lengkap, dia mengundang orang untuk mencari pasangannya. Seolah berkata, <span>“Ayo, temuin yang membuat aku jadi seimbang.”</span> Kesempurnaan bukan sesuatu yang dipajang sejak awal, tapi sesuatu yang ditemukan, dicoba, dicocokkan. Dalam hidup, begitu pula kita bertumbuh bukan karena sudah sempurna, tapi karena terus mencari bentuk utuh dari diri kita.
+      </p>
+      <br>
+      <p>
+        Kita tuh sering banget pengin keliatan sempurna dimata orang lain, padahal hidup bukan soal tampil keren doang. kenyataannya kayak sepatu kalau cuma satu ya nggak bisa dipake juga. Baru bisa dipake kalau udah sepasang, pas kanan kiri. Sama juga kayak hidup, nggak cukup kalau cuma kelihatan keren di luar doang, <span>maknanya baru kerasa pas kita berani nyoba, jatuh, belajar, terus nemuin diri kita yang sebenarnya.</span> Soalnya, kesempurnaan yang bener-bener berarti tuh bukan yang dipajang di etalase. Tapi yang kita bentuk pelan-pelan lewat proses hidup dari setiap langkah yang kita ambil, dari tiap luka yang kita sembuhin sendiri.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Pasangan Yang Melengkapi <span>Bukan Sekadar Pelengkap</span></h2>
+      <p>
+        Sepatu kanan tidak bisa menggantikan sepatu kiri. Mereka diciptakan berbeda, tapi untuk berjalan bersama. Begitu juga dengan aku dan kamu, kita bukan salinan satu sama lain, tapi pelengkap yang punya peran masing-masing. Kita nggak bisa jalan terlalu jauh sendirian, meski kadang sok merasa bisa. Dalam esensi keberadaan, kita memang butuh seseorang atau sesuatu yang membuat langkah terasa lebih seimbang.
+      </p>
+      <br>
+      <p>
+        Bukan berarti kita lemah kok, tapi kadang justru kita jadi lebih kuat saat mau buka diri dan jalan bareng orang lain. Soalnya, hubungan yang beneran tuh bukan cuma tempelan doang, tapi tentang saling ngisi kekosongan yang nggak bisa kita isi sendirian. Kayak sepatu sebelah dia ngingetin kita kalau semua orang tuh lagi nyari pasangannya masing-masing, dan kalau kita terus jalan, lama-lama pasti ketemu yang pas juga.
+      </p>
+      <br>
+
+      <br>
+      <br>
+      <br>
+      <h2>Melangkah Lebih Dekat Untuk <span>Menemukan Yang Utuh</span></h2>
+      <p>
+        Yang dipajang di etalase cuma satu. Tapi di dalam kotak, dia nggak sendiri. Kamu cuma perlu nanya, mendekat, dan membuka. Begitu juga dalam hidup. Kadang yang kamu lihat dari luar itu cuma sebagian kecil dari kisah yang sebenarnya. Kamu nggak bakalan tahu utuhnya seseorang, peluang, atau pengalaman kalau cuma berdiri di kejauhan. Untuk menemukan yang utuh, kamu harus ngelibatin diri.
+      </p>
+      <br>
+      <p>
+        Dan saat kamu benar-benar mendekat, mencoba, mencocokkan ukurannya, barulah kamu tahu apakah sepatu itu cocok untuk kamu. Seperti dalam hidup, setelah kamu buka hati, ngelewatin proses, dan berani melangkah, kamu bakalan tahu <span>apa yang tampak sederhana di awal ternyata menyimpan keutuhan yang telah lama menunggu ditemukan.</span>
+      </p>
+      <br>
+
+
+
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        sepatu sebelah yang terpajang itu bukan sekadar strategi toko, tapi bisa jadi cerminan hidup yang lebih dalam. Kita semua, pada titik tertentu, adalah sepatu yang sedang mencari pasangannya. Bukan hanya soal cinta, tapi juga tentang tujuan, makna, dan arah. Dan dalam pencarian itu, kita belajar bahwa tak semua hal harus ditunjukkan secara utuh sejak awal. Kadang, justru dalam kekurangan itulah, kita dipanggil untuk melangkah. Perlahan, tapi pasti.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
+
+
+
