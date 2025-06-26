@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Umur Memiliki Limit Sementara Waktu Sangatlah Berharga",
+      link: "../coretan/umur-memiliki-batas-dan-waktu-sangatlah-berharga.html",
+      img: "https://cdn.pixabay.com/photo/2020/03/22/04/10/hourglass-4955799_1280.jpg",
+      alt: "Tinta Pena Bash Umur Memiliki Limit Sementara Waktu Sangatlah Berharga",
+      description: "Setiap detik yang berlalu tidak akan pernah bisa kita putar kembali, hidup bukan hanya tentang seberapa lama kita bertahan di dunia ini, tetapi tentang bagaimana kita mengisinya dengan hal-hal yang lebih bermakna, seperti halnya...",
+      labels: ["Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Filosofi Mengapa Sepatu yang Dijual di Toko Hanya Dipajang Sebelah Saja",
       link: "../coretan/mengapa-sepatu-yang-dijual-ditoko-hanya-dipajang-sebelah.html",
       img: "https://cdn.pixabay.com/photo/2024/03/19/20/30/ai-generated-8644084_1280.png",
