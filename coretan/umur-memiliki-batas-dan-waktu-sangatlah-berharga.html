@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Umur Memiliki Limit Sementara Waktu Sangatlah Berharga</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Umur <span>Memiliki Limit</span> Sementara Waktu <span>Sangatlah Berharga</span></h1>
+      <p class="detail-tanggal">
+        Thursday, 26 June 2025
+        <br>By Siska Munirah
+      </p>
+      <br>
+      <p>
+        Kalau hidup ini kita jalanin terlalu kaku atau serius, itu rasanya seolah-olah dunia ini semacem medan tempur tanpa jeda. Padahal semesta dan jagat raya ini nggak melulu soal perjuangan, ada waktu buat menikmati cahaya oren senja, tertawa tanpa alasan, dan meresapi detak hati yang damai. Tapi seringnya, kita biarin pikiran ini dibungkus dengan kecemasan, rasa was-was akan hari esok yang belum tentu datang. Kita kejebak dalam paradoks <span>takut masa depan atau hari esok,</span> tapi lupa nikmatin hari ini.
+      </p>
+      <br>
+      <p>
+        Tapi Sebaliknya, kalau terlalu santai ngejalanin hidup itu juga nggak sehat, seakan-akan kita dikasih kontrak hidup seribu tahun untuk membenahi semuanya dengan berantakan, padahal kenyataannya umur itu punya deadline <span>(meskipun gratis tapi sebenarnya mahal).</span> Ada yang mikir semua bisa ditunda, diperbaiki nanti, diselesaikan entar, lupa kalau waktu nggak pernah bisa dikompromi, dan kita nggak tahu kapan jam pasirnya bakal habis. Kita lupa bahwa hidup ini fana, istilah kerennya temporer, cuma mampir sebentar, lalu lenyap.
+      </p>
+      <br>
+      <p>
+        Makanya, jangan nunda hal-hal baik. Jangan pelit buat senyum, jangan ragu buat mulai. Karena setiap momen adalah peluang untuk bikin hidup lebih bermakna. Menunda dengan dalih <span>“masih ada waktu”</span> bisa jadi keputusan yang kontraproduktif. Jalaniin hidup ini dengan rileks, tapi jangan sampai lalai. Karena bahagia itu bukan soal banyaknya waktu, tapi bagaimana kita menghargai tiap detik yang eksisensi-nya nggak bisa diulang.
+      </p>
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Umur Memiliki Limit Sementara Waktu Sangatlah Berharga">
+      <img src="https://cdn.pixabay.com/photo/2020/03/22/04/10/hourglass-4955799_1280.jpg" alt="Tinta Penaku Umur Memiliki Limit Sementara Waktu Sangatlah Berharga">
+      </div>
+      <br>
+
+
+      <br>
+      <br>
+      <br>
+      <h2>Eksistensi yang Terselubung <span>dalam Kebiasaan</span></h2>
+      <p>
+        Kadang kita terlalu larut dalam ritus harian yang repetitif, scroll tanpa jeda, debat absurd di kolom komentar, atau sekadar rebahan jadi ritual yang tanpa makna. Waktu kerasa elastis, padahal sejatinya ia makin menyusut, perlahan namun pasti. Dalam diamnya, waktu mencuri umur kita dengan cara yang subtil. Kita anggap enteng, padahal di balik keacuhan itu tersembunyi <span>absurditas eksistensi</span> yang bikin dada sesak kalau direnungi terlalu dalam.
+      </p>
+      <br>
+      <p>
+        Kita dikasih jatah hidup bukan buat dihamburkan ke hal yang superfisial. Tapi seringnya kita lupa bahwa kebermaknaan itu harusnya dibentuk, bukan ditunggu. Kadang kita perlu jeda, bukan buat rebahan, tapi buat refleksi. <span>Apa iya semua ini worth it?</span> Atau cuma pelarian dari kekosongan yang nggak terdefinisikan? Waktu terus jalan, dan kita masih aja stagnan dalam labirin distraksi yang kita bangun sendiri.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Tersesat di Tengah <span>Rasa Takut dan Harapan</span></h2>
+      <p>
+        Pernah nggak sih ngerasa hidupmu kayak terperangkap dalam jeda yang berkepanjangan? Kamu bilang, <span>"nanti aja",</span> padahal waktu nggak pernah benar-benar menunggu. Banyak dari kita yang menyimpan mimpi dalam laci, dikunci rapat banget sama rasa takut gagal dan ilusi kesiapan yang nggak kunjung datang. Prokrastinasi jadi semacam candu laten, halus dan nyaris nggak kerasa, tapi pelan-pelan menggerogoti semangat. Kamu jangan terlalu sibuk nyari validasi dari luar, karena nggak semua eksistensi itu cuma sah kalau disahkan oleh mata orang lain.
+      </p>
+      <br>
+      <p>
+        Dan dalam diam yang panjang itu, kamu bakalan kehilangan momen-momen penting, bukan karena kamu nggak mampu, tapi karena kamu terlalu lama berdialog dengan keraguan. Ada paradoks yang menyakitkan di situ, yaitu <span>Tahu apa yang ingin dikejar, tapi tetap memilih diam karena takut nggak sampai.</span> Hidup jadi semacam teka-teki eksistensial, penuh ambivalensi dan ketidakpastian. Sampai akhirnya, kita sadar, kadang yang bikin hidup berat bukan kenyataan, tapi bayangan kegagalan yang kita pelihara sendiri.
+      </p>
+
+      <br>
+      <br>
+      <br>
+      <h2>Selama Napas Masih Mengembang Maka <span>Masih Ada Kesempatan</span></h2>
+      <p>
+        Kamu nggak harus jadi pahlawan berjubah atau tokoh besar untuk bikin hidup punya arti. Kadang, justru gestur remeh kayak dengerin teman yang sedang limbung, nepatin janji kecil, atau sekadar senyum tulus, itu yang paling terasa genuin. Hidup bukan soal grandiositas, tapi tentang keberanian untuk hadir di momen-momen sepele yang sering kamu abaikan. Selama dada masih diberi hak prerogatif untuk mengembang, artinya semesta belum nutup pintu kesempatan.
+      </p>
+      <br>
+      <p>
+        Tapi waktu, iya bener dia memang licik, dia bisa nyuri tanpa bunyi, menyusutin peluang di balik rutinitas yang kamu anggap normal. Kamu sibuk menunda, padahal kesempatan itu nggak bersifat rekursif, <span>sekali lepas dia bisa lenyap tanpa jejak.</span> Dalam pandangan eksistensial, waktu bukan hanya detik yang bergulir, tapi entitas yang nggak bisa ditebak kapan berhenti. Maka sebelum segalanya jadi retrospektif yang penuh penyesalan, mungkin kita perlu belajar menghargai tiap detik, meski tampaknya banal dan tanpa gemerlap.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Semua kembali ke diri sendiri. Mau terus hidup dengan autopilot atau mulai sadar bahwa umur punya limit? Nggak ada yang tahu besok masih dikasih kesempatan atau nggak. Jadi, selama masih ada hari ini, maka isilah dengan hal-hal yang lebih bermakna. Karena pada akhirnya, bukan seberapa lama kita hidup yang dihitung, tapi seberapa signifikan jejak yang kita tinggalkan.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
+
+
+
