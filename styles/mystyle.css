@@ -13,6 +13,7 @@
   --harga: #008000;
   --linear: linear-gradient(45deg, #f4d430, #000);
   --nav: linear-gradient(190deg, rgba(0,0,4,0.5), rgba(25,22,211,0.6), rgba(0,0,0,0.6));
+  --navhp: linear-gradient(200deg, rgba(0,0,4,0.8), rgba(25,22,211,0.8), #000);
   --judul-font: "Kavoon", serif;
   --body1-font: "Nunito", serif;
   --sdbar-font: "Caveat", cursive;
@@ -104,8 +105,8 @@ body {
   color: var(--text);
   font-family: var(--judul-font);
   display: inline-block;
-  font-size: 2rem;
-  margin: 0 1rem;
+  font-size: 1.8rem;
+  margin: 0 0.5rem;
   
 }
 
@@ -342,6 +343,8 @@ box-shadow: 1px 1px 3px #133;
   height: auto;
   margin-right: 5px;
   border: 0.2px solid var(--text);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   }
 
 .artikels .artikel {
@@ -1071,15 +1074,15 @@ footer .credit a {
   
   .navbar .navbar-nav.active {
     left: 0;
-    background: var(--linear);
+    background: var(--navhp);
   }
   
   .navbar .navbar-nav a {
     color: var(--text);
     display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
+    margin: 1rem;
+    padding: 1% 1rem;
+    font-size: 2.3rem;
   }
   .navbar .navbar-nav a::after {
     transform-origin: 0 0;
