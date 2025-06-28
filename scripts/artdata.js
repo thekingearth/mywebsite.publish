@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Ketika Rasa Percaya Diri Tak Sejalan dengan Kenyataan",
+      link: "../coretan/ketika-rasa-percaya-diri-tak-sejalan-dengan-kenyataan.html",
+      img: "https://cdn.pixabay.com/photo/2017/06/23/08/55/board-2433978_1280.jpg",
+      alt: "Tinta Pena Bash Ketika Rasa Percaya Diri Tak Sejalan dengan Kenyataan",
+      description: "Melangkah dengan dada tegak, penuh rasa percaya diri, seolah dunia akan menyambut hangat setiap ambisi yang dibawa. Tetapi seringkali realitas tak selalu sejalan. Kenyataan bisa membenturkan pada fakta-fakta pahit, menampar euforia dengan sunyi, dan membuat sadar bahwa keyakinan tanpa pijakan bisa jadi ilusi yang...",
+      labels: ["Bangkit dan Bergerak", "Perspektif"]
+    },
+    {
       title: "Umur Memiliki Limit Sementara Waktu Sangatlah Berharga",
       link: "../coretan/umur-memiliki-batas-dan-waktu-sangatlah-berharga.html",
       img: "https://cdn.pixabay.com/photo/2020/03/22/04/10/hourglass-4955799_1280.jpg",
