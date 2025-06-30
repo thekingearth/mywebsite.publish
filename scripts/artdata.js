@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Saat Sepatu Mendapat Panggung Tapi Kaos Kaki Menahan Luka",
+      link: "../coretan/saat-sepatu-mendapat-panggung-tapi-kaos-kaki-menahan-luka.html",
+      img: "https://cdn.pixabay.com/photo/2013/09/12/19/57/boots-181744_1280.jpg",
+      alt: "Tinta Pena Bash Saat Sepatu Mendapat Panggung Tapi Kaos Kaki Menahan Luka",
+      description: "Saat sepatu melangkah di atas panggung sorotan, dipuji karena kilap dan gayanya, kaos kaki justru diam dalam bayang, menahan perih gesekan dan bau yang tak pernah dipuja, ia tak glamor, tapi tanpanya, kenyamanan hanyalah ilusi, seperti halnya tokoh tanpa nama yang menopang cerita, ia menjalani peran subversif yang tak tercatat, namun...",
+      labels: ["Pena dan Kuas", "Perspektif"]
+    },
+    {
       title: "Ketika Rasa Percaya Diri Tak Sejalan dengan Kenyataan",
       link: "../coretan/ketika-rasa-percaya-diri-tak-sejalan-dengan-kenyataan.html",
       img: "https://cdn.pixabay.com/photo/2017/06/23/08/55/board-2433978_1280.jpg",
