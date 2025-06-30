@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Saat Sepatu Mendapat Panggung Tapi Kaos Kaki Menahan Luka</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Saat Sepatu <span>Mendapat Panggung</span> Tapi Kaos Kaki <span>Menahan Luka</span></h1>
+      <p class="detail-tanggal">
+        Monday, 30 June 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+        Kita semua pernah melihatnya sepatu mengilap dipamerin di etalase, difoto dari berbagai sudut, jadi bahan pujian dan simbol gaya. Mereka tampil gagah di kaki siapa pun, melangkah penuh percaya diri, menyusuri jalanan dan sorotan. Sepatu selalu jadi pemeran utama dalam panggung penampilan, dilirik dan dinilai bahkan sebelum kata-kata diucapin.
+      </p>
+      <br>
+      <p>
+        Tapi siapa yang benar-benar mengingat kaos kaki? Seperti anak tiri yang tersembunyi di balik megahnya penampilan, nggak pernah tampil sendirian, dan seringkali dianggap pelengkap yang bisa diganti seenaknya. Padahal justru dia yang lebih dulu merasakan gesekan pertama, menahan panas, menampung keringat asin, dan menjaga kulit dari luka yang tidak kasatmata. Sayangnya udah jadi saksi diam dari langkah-langkah yang berat dan loyal, tapi nggak pernah diminta bersuara.
+      </p>
+      <br>
+      <p>
+        Seperti tokoh latar di sebuah drakor, kaos kaki mainin peran krusial yang nggak pernah dimasukkin ke dalam daftar penghargaan. Meski dia nggak butuh tepuk tangan, tapi terus bekerja dalam senyap. Mungkin dari sanalah kita belajar, bahwa dalam hidup ini, nggak semua yang penting harus terlihat. Kadang, justru yang tersembunyi adalah yang paling setia menopang.
+      </p>
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Saat Sepatu Mendapat Panggung Tapi Kaos Kaki Menahan Luka">
+      <img src="https://cdn.pixabay.com/photo/2013/09/12/19/57/boots-181744_1280.jpg" alt="Tinta Penaku Saat Sepatu Mendapat Panggung Tapi Kaos Kaki Menahan Luka">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Pelindung Yang Tak Pernah <span>Terekspos</span></h2>
+      <p>
+        Kaos kaki tahu rasanya menjadi pendiam yang memikul banyak. Ia menyerap luka-luka kecil yang tak kasatmata dari gesekan lembut yang perlahan berubah jadi perih, sampe jadi bau yang nggak enak tapi dia tanggung tanpa keluh. meskipun dia nggak pernah diminta buat tampil, nggak masuk dalam sorotan, dan bahkan sering dilupain saat pujian dilayangkan untuk sepatu yang lebih mencolok. Namun, di balik diamnya, ia terus menjalankan perannya tanpa pamrih.
+      </p>
+      <br>
+      <p>
+        Dia tetap setia buat stay di sana, berani jadi lapisan pertama dari kenyamanan yang jarang disadari. Selalu menjaga kulit dari kerasnya dunia luar, menjadi penjaga yang nggak pernah nuntut pengakuan. Dalam dunia yang kerap memuja apa yang terlihat, kaos kaki ngajarkin kita bentuk <span>altruisme tekstil</span> yang lembut tapi nyata, bahwa menjadi berguna tak harus selalu berarti menjadi terlihat.
+      </p>
+
+      <br>
+      <br>
+      <h2>Peran yang Tak Terlihat Tapi <span>Tetap Dibutuhkan</span></h2>
+      <p>
+        Kebanyakan orang sering banget kepingin jadi kayak sepatu, bisa tampil di depan, dikenal banyak orang, dan dipuji karena kilau atau gayanya. Bisa ngerasa lebih dilihat, dianggap penting, jadi sorotan di setiap langkah. Tapi nggak banyak yang sanggup jadi kayak kaos kaki, yang selalu tersembunyi, jarang dianggap, tapi tetap setia ngenjalanin peran. nggak butuh pengakuan siapapun, cukup tahu bahwa dirinya membantu orang lain melangkah dengan nyaman.
+      </p>
+      <br>
+      <p>
+        Jadi, saat kamu merasa terabaikan, nggak dianggap, atau keberadaanmu seperti nggak dihitung, coba ingat baik-baik, mungkin kamu sedang ngenjalanin peran sebagai kaos kaki. Memang tak nampak, tapi keberadaanmu krusial. Tanpamu, orang lain nggak akan bisa melangkah sejauh itu tanpa rasa sakit. Ada nilai yang diam-diam kamu berikan, bahkan ketika dunia nggak melihatnya. Dan itu adalah bentuk ketulusan paling nyata.
+      </p>
+
+      <br>
+      <br>
+      <h2>Dibalik Siapa Yang Terlindungi Dan <span>Yang Melindungi</span></h2>
+      <p>
+        Ada yang tampak kuat karena dilindungi, dan ada yang justru kuat karena melindungi. Sepatu, yang kokoh di luar, tampak gagah menyusuri jalanan. Ia adalah simbol kekuatan yang terlihat <span>representasi ketangguhan yang dipuji.</span> Tapi di balik itu, kaos kaki diam-diam menahan luka, menyerap gesekan, dan menyimpan peluh tanpa keluh. Ia tidak tampak, tapi kehadirannya imperatif. Tanpanya, sepatu hanyalah cangkang kaku yang bisa melukai.
+      </p>
+      <br>
+      <p>
+        Dunia sering memuja yang di luar, yang bersinar, yang dianggap <span>"melindungi."</span> Padahal, seperti kaos kaki yang lusuh tapi setia, ada banyak yang memilih jadi pelindung dalam senyap, tidak tersorot, tapi vital. Mereka bukan sekadar pelengkap, tapi pondasi yang esensial. Karena dalam setiap kenyamanan yang terasa, selalu ada sesuatu yang diam-diam menanggung ketidak nyamanan itu demi orang lain.
+      </p>
+
+      <br>
+      <br>
+      <h2>Sebagai Penjaga Dan Pereda Untuk <span>Melangkah Bersama</span></h2>
+      <p>
+        Dalam setiap langkah, sepatu berdiri gagah di garis depan, menjadi tameng pertama dari kerasnya jalanan. Ia menantang kerikil, genangan, dan aspal panas tanpa ragu. Sepatu adalah penjaga, simbol proteksi dan kesiapan. Tapi di balik ketegasannya, ada kehadiran yang lebih lembut namun tak kalah penting, yaitu kaos kaki. Ia tak melawan, tapi meredakan. Ketika sepatu mengeras, kaos kaki melembutkan. Ketika sepatu menekan, kaos kaki menjadi penyangga diam-diam. Mereka bukan sekadar pelengkap, tapi pasangan yang saling menggenapi.
+      </p>
+      <br>
+      <p>
+        Kaos kaki tuh emang nggak pernah jadi sorotan, tapi anehnya dia yang duluan nempel di kaki sebelum sepatu dateng bawa gaya, dia diem, dan nggak kelihatan, tapi justru paling dekat sama luka-luka kecil yang nggak disadari, semacam jadi penjaga senyap yang fungsinya krusial tapi nggak pernah dipuji. Kayak temen yang nggak banyak omong, tapi pas hidup lagi amburadul, dia tiba-tiba ada aja <span>konstan dan solutif.</span> Dalam keheningannya, dia ngeredain gesekan, ngurangin tekanan, dan nyerap letih yang kadang bahkan nggak disadari. Sepatu boleh keren dan kelihatan dominan, tapi coba deh jalan jauh tanpa kaos kaki pasti langsung kerasa disonansinya. Jadi ya, dari mereka berdua kita bisa ngerti bahwa hidup juga butuh keseimbangan antara pelindung yang tangguh dan pereda yang penuh empati, meski kadang bentuknya <span>implisit dan subtil.</span>
+      </p>
+
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Tidak semua yang bersinar itu berarti penting, dan tidak semua yang tersembunyi itu berarti sepele. Kaos kaki mengajarkan kita tentang makna <span>keheningan yang berkontribusi,</span> tentang kekuatan dalam ketertutupan. Bahwa menjadi penting tak selalu harus terlihat. Kadang, justru di balik layar itulah, peran sejati dimainkan.
+
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
