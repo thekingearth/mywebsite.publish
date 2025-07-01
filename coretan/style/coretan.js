@@ -299,7 +299,7 @@ audio.onended = () => {
   }
 };
 
-// Fungsi Load Lagu
+// Script untuk loading lagu
 function loadSong() {
   audio.src = playlist[index];
   songTitle.textContent = titles[index];
@@ -312,7 +312,7 @@ function loadSong() {
   feather.replace();
 }
 
-// Fungsi Ganti Playlist
+// Script untuk ganti playlist
 async function loadPlaylist(number) {
   try {
     const module = await import(`../../songs/playlist${number}.js`);
@@ -322,7 +322,6 @@ async function loadPlaylist(number) {
     currentPlaylistNumber = number;
     loadSong();
     
-    // Tambahkan nol di depan jika perlu
     const formattedNumber = number.toString().padStart(2, '0');
     artistSong.innerHTML = `Playlist | ${formattedNumber} <br> <button class="nextplay">Next Playlist</button>`;
   } catch (err) {
@@ -331,13 +330,12 @@ async function loadPlaylist(number) {
 }
 
 
-// Klik ganti playlist
+// Tombol untuk ganti playlist
 artistSong.onclick = () => {
-  const nextNumber = currentPlaylistNumber === 6 ? 1 : currentPlaylistNumber + 1;
+  const nextNumber = currentPlaylistNumber === 7 ? 1 : currentPlaylistNumber + 1;
   loadPlaylist(nextNumber);
 };
 
-// Pertama kali: muat playlist1
 loadPlaylist(1);
 
 
