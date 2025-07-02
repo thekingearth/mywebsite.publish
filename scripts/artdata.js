@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Hiduplah Seperti Kereta: Tabrak Yang Menghalangi Dan Tinggalkan Yang Tak Pasti",
+      link: "../coretan/tabrak-yang-menghalangi-tinggalkan-yang-tak-pasti.html",
+      img: "https://cdn.pixabay.com/photo/2020/12/19/23/19/train-5845653_1280.jpg",
+      alt: "Tinta Pena Bash Hiduplah Seperti Kereta: Tabrak Yang Menghalangi Dan Tinggalkan Yang Tak Pasti",
+      description: "Hiduplah seperti kereta tidak pernah menunggu penumpang yang masih ragu. Dia tetap jalan, lurus di atas rel keyakinan, tanpa menoleh ke belakang. Kalau kamu masih sibuk memikirkan siapa yang akan ikut atau tidak, kamu bisa meninggalkan momen yang seharusnya jadi milikmu. Dalam hidup, kadang kamu harus tegas. Tinggalkan yang membuat bimbang, lepaskan yang cuma...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Saat Sepatu Mendapat Panggung Tapi Kaos Kaki Menahan Luka",
       link: "../coretan/saat-sepatu-mendapat-panggung-tapi-kaos-kaki-menahan-luka.html",
       img: "https://cdn.pixabay.com/photo/2013/09/12/19/57/boots-181744_1280.jpg",
