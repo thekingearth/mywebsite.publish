@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Tabrak Yang Menghalangi Dan Tinggalkan Yang Tak Pasti</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Hiduplah Seperti Kereta: Tabrak Yang <span>Menghalangi</span>  Dan Tinggalkan Yang <span>Tidak Pasti</span></h1>
+      <p class="detail-tanggal">
+        Wednesday, 02 July 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+        Kalau saja hidup ini bisa milih semaunya dengan bebas mungkin hidup yang paling enak itu dijalanin kayak kereta. Soalnya nggak perlu belok-belok nyari jalur yang serba ambigu. Rel itu udah jadi garis takdir yang tegas, nggak ada drama, nggak ada ragu. Semua berjalan dalam satu lintasan <a href="https://simple.m.wikipedia.org/wiki/Determinism">deterministik</a> yang jelas. Dan kamu tinggal jalan, terus dan terus, sampai akhirnya berhenti di tempat tujuan yang mungkin nggak selalu kamu pilih, tapi kamu perlukan.
+      </p>
+      <br>
+      <p>
+        Kalaupun nanti di depan ada halangan. Kayak batu, kayu, bahkan tembok yang orang-orang bilang harus dihindari. Tapi kereta? Dia tabrak. Bukan karena dia brutal, tapi karena dia punya <span>resiliensi</span> dan keberanian buat ngadepin apa pun yang bikin jalannya berhenti. Mungkin kedengeran ekstrem, tapi ada hikmah eksistensial di situ, tentang gimana seharusnya nggak selalu kompromi sama hal-hal yang cuma bikin stuck, stagnan, dan penuh kegamangan.
+      </p>
+      <br>
+      <p>
+        Dan yang paling keren lagi dari kereta adalah, dia nggak pernah menoleh ke belakang. Dia ninggalin semua yang nggak pasti di belakang, semua yang cuma numpang lewat. Kayak kenangan sama mantan yang udah nggak relevan, atau orang-orang yang hanya jadi epilog dari kisah yang lebih besar. Itu bukan soal dingin atau egois, tapi <span>manifestasi dari keberanian buat terus bergerak.</span> Karena dalam hidup, kadang satu-satunya cara buat tetap waras adalah memilih untuk terus jalan, tanpa perlu menunggu segala sesuatu jadi sempurna dulu.
+      </p>
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Hiduplah Seperti Kereta: Tabrak Yang Menghalangi Dan Tinggalkan Yang Tak Pasti">
+      <img src="https://cdn.pixabay.com/photo/2020/12/19/23/19/train-5845653_1280.jpg" alt="Tinta Penaku Hiduplah Seperti Kereta: Tabrak Yang Menghalangi Dan Tinggalkan Yang Tak Pasti">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Lurus Tanpa Belok Dan <span>Melangkah Tanpa Ragu</span></h2>
+      <p>
+        Biasanya kalau terlalu sibuk mikirin segala kemungkinan, itu malah bakalan berakhir nggak gerak sama sekali. Galau dibebani dua pilihan, takut salah langkah, apa takut gagal, akhirnya cuma diam di titik yang sama. Padahal hidup nggak butuh semua jawaban itu sekarang juga. Ada saat di mana kamu cuma perlu jalan, meskipun pelan. Keraguan itu seperti kabut, mengaburkan pandangan, <span>bikin hati overanalisis dan akhirnya cuma jadi inertia emosional.</span> Tapi kereta nggak gitu. Dia jalan terus, lurus dan tanpa basa-basi ke samping.
+      </p>
+      <br>
+      <p>
+        Kereta nggak pernah nanya, harus belok ke mananya, karena dia tahu tujuannya, dan semua yang nggak pasti tinggal jadi pemandangan yang lewat. Dia tinggalkan yang abu-abu, yang nggak jelas, demi satu arah yang konkret. Dan mungkin itu yang kamu butuhin sekarang yaitu determinasi progresif, <span>keberanian buat melangkah, meski belum tahu akhir kisahnya bakal kayak apa.</span> Karena pada akhirnya, lebih baik melaju dalam keheningan yang mantap, daripada tenggelam dalam ambivalensi yang bikin hati terus goyah.
+      </p>
+
+      <br>
+      <br>
+      <h2>Tetap Konsisten Meski <span>Diteriaki Keraguan</span></h2>
+      <p>
+        Bukan soal jadi kepala batu looh, ini lebih ke arah ngenjaga sesuatu yang esensial dalam hidup, yaitu konsistensi dan keberanian. Meskipun kamu tahu sekarang masih berada ditengah dunia yang penuh ambiguitas dan suara-suara bising yang demen banget ngajakin kamu buat berhenti, kadang yang paling kamu butuhin justru keteguhan. Kayak kereta yang tetap melaju meski ada bisikan di pinggir rel yang bilang, <span>“Heyy berhenti dulu, kayaknya itu bukan jalanmu.”</span> Tapi dia nggak goyah. Karena yang dia percaya bukan omongan orang, tapi kompas internal yang udah ditanam jauh di dalam prinsipnya.
+      </p>
+      <br>
+      <p>
+        Dan dari situ, kamu bisa belajar soal integritas yang nggak gampang dikompromi. Kadang bentuk manifestasi eksistensial paling nyata dari seseorang adalah gimana dia tetap melangkah, meski digoda oleh ragu dan ditarik oleh distraksi yang tampak valid. Hidup emang nggak selalu linear, tapi kalau kamu udah nemu rel yang pas, tinggalin aja keraguan-keraguan itu. Tetap jalan aja, nggak perlu semua orang paham. Karena dalam sunyi perjalanan itulah, kamu bakalan nemuin diri kamu yang paling autentik.
+      </p>
+
+      <br>
+      <br>
+      <h2>Tentang Mereka Yang <span>Harus Ditanggalkan</span></h2>
+      <p>
+        Dan tahu nggak? Kereta itu nggak pernah nungguin siapa pun. Dia punya waktu, punya arah, dan dia jalan sesuai takdirnya. Kalaupum ada penumpang yang lagi galau, masih sibuk mempertimbangin bahkan nggak tahu mau naik atau turun, ya dia tinggalin. Sama kayak hidup ini, nggak semua orang harus kamu bawa sampai akhir. Ada yang cuma jadi penumpang temporer, ada yang bahkan cuma numpang duduk di stasiun hati lalu pergi tanpa pamit. Semua nggak perlu kamu pertahanin, apalagi kalau kehadirannya cuma jadi distraksi eksistensial yang bikin kamu ngopi dulu di tempat.
+      </p>
+      <br>
+      <p>
+        Terkadang yang bikin hidup ini berat bukan beban di pundak, tapi keraguan yang kamu pelihara sendiri. Ada orang-orang yang keberadaannya justru bikin kamu lupa siapa kamu sebenarnya. Mereka hadir seperti teka-teki tanpa jawaban, <span>ambiguitas emosional yang nyamar jadi cinta,</span> padahal cuma perhentian sementara. Dan di titik itu, kamu harus berani memilih lanjut atau karam. Karena hidup ini, seperti kereta, nggak akan menunggu kamu siap. Dia cuma terus melaju dengan ataupun tanpa kamu.
+      </p>
+
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Hiduplah seperti kereta api. Melaju tanpa banyak basa-basi, tabrak semua yang cuma jadi penghalang, dan tinggalkan hal-hal yang tidak pasti. Karena pada akhirnya, hidup yang penuh kejelasan, meski keras tapi akan lebih damai dari pada hidup yang penuh keraguan tapi nggak pernah sampai ke tujuan.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
