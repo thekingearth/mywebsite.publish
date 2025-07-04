@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Ketika Kamera Mengadili Dan Tangan Menjadi Tersangka</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Ketika Kamera Mengadili Dan <span>Tangan Menjadi Tersangka</span></h1>
+      <p class="detail-tanggal">
+        Friday, 04 July 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+        Di zaman sekarang ini kamera bukan lagi cuma digunakan buat nangkep momen, tapi juga buat pengintai yang nggak kenal lelah, sedihnya setiap gerak bisa jadi bahan perbincangan semesta. Sekarang ini, rasanya hidup di tengah gegap gempita sorotan digital, di mana jempol bukan cuma jadi simbol tanda like, tapi sebuah palu yang menghantam reputasi <span>(udah percis disebut palu hakim).</span> Dalam era hiperrealitas ini, batas antara nyata dan dramatis kadang terdelusi, kabur oleh sorak penonton yang nggak pernah tidur.
+      </p>
+      <br>
+      <p>
+        Viral bukan lagi soal prestasi atau tragedi besar, kadang cuma soal cara makan. Kayak video Walikota New York, <a href="https://en.m.wikipedia.org/wiki/Zohran_Mamdani">Zohran Mamdani,</a> yang cuma sedang menyantap hidangan dengan tangan kosong, sebuah gestur sederhana yang seketika jadi tema debat antar-benua. Sekarang di layar kecil itu, sentuhan budaya dianggap anomali, dan spontanitas berubah jadi perkara publik. Inilah zaman di mana otentisitas kerap disalah artikan sebagai eksentrisitas.
+      </p>
+      <br>
+      <p>
+        Ada getir yang terselip dalam keributan ini. Seolah tidak lagi diberi ruang buat jadi manusia biasa tanpa harus tunduk pada standar algoritma. Dalam pusaran kontroversialitas ini, kehangatan makan bersama berubah jadi headline yang dicurigai. Dunia kini tidak lagi bertanya <span>apa yang dimakan, tapi mengapa ia makan seperti itu,</span> seakan etika bisa diukur dari cara seseorang menyentuh nasi.
+      </p>
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Ketika Kamera Mengadili Dan Tangan Menjadi Tersangka">
+      <img src="https://cdn.pixabay.com/photo/2019/11/01/18/18/hands-4594893_1280.jpg" alt="Tinta Penaku Ketika Kamera Mengadili Dan Tangan Menjadi Tersangka">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Ketika Suapan Jadi Sorotan Dan <span>Diadili Dengan Lensa</span></h2>
+      <p>
+        Dulu tangan yang menyuap nasi cuma sebuah kebiasaan, dan sebuah kebajikan kecil yang diwarisin dari meja makan nenek hingga ke tikar-tikar penuh cerita. Tapi kini, gestur itu menjelma jadi bahan cibiran, jadi anomali dalam lanskap digital yang gemar menakar segalanya dengan standar estetika global. Tiba-tiba, yang dulu lumrah jadi aneh, yang penuh makna jadi memalukan, hanya karena ditonton dari layar tanpa konteks. Ada yang terlupa, bahwa setiap gerakan sederhana menyimpan sejarah panjang tentang rumah, akar, dan kebersahajaan.
+      </p>
+      <br>
+      <p>
+        Padahal kamera itu ya, dia tuh cuma bisa nangkep gambar, tapi nggak ngerti cerita di baliknya. Dia diem aja, nggak bisa ngerasa, cuma jepret-jepret doang, karena memang nggak pernah tahu cara gimana buat memahami. Dia cuma menciduk gambar, bukan makna, dan didalam sorot shutter yang apatis, ia memotret tangan yang sedang menyantap makanan, tapi gagal menangkap alasan kenapa tangan itu memilih menyentuh langsung. Dan disitulah tragedinya, dunia sekarang cepet banget nge-judge, lebih cepat menghakimi dari pada memahami, lebih tertarik pada sensasi dari pada substansi, padahal belum tentu ngerti. Sekarang orang-orang pun terjebak dalam era di mana keaslian dianggap salah cuma karena nggak sesuai sama standar umum di internet yang udah tampil dengan cara yang familiar.
+      </p>
+
+      <br>
+      <br>
+      <h2>Ketika Sendok Lebih Diterima <span>Dari Pada Sentuhan</span></h2>
+      <p>
+        Kadang seseorang lupa, perbedaan itu bukan ancaman, tapi semesta kecil yang ngajarin makna toleransi. Tapi entah kenapa, di zaman serba instan dan visual ini, yang nggak biasa malah bikin gelisah. Tangan yang dulu dianggap medium sakral dalam berbagai ritus dan budaya mendadak dianggap ketinggalan zaman, bahkan kotor. <span>Standar kebersihan kini disusun oleh algoritma,</span> bukan nurani oleh estetika artifisial, bukan keintiman manusiawi. Seakan kita hidup di dunia yang lebih cepat menghakimi gestur daripada memahami niat dibaliknya.
+      </p>
+      <br>
+      <p>
+        Ironisnya, simbol yang penuh cinta dari tangan yang dulu digunakan seorang ibu buat nyuapin anaknya, menyentuh bumi, dan menyampaikan kasih, kini bisa dicurigai hanya karena nggak memegang sendok. Ia diposisikan seolah tersubordinasi, dituduh ngelakuin pelanggaran nggak tertulis terhadap norma-norma yang dibentuk layar. Kita terlalu cepat menjatuhkan vonis, lupa bahwa kehangatan nggak selalu tampil memesona. Kadang, yang paling tulus justru hadir dalam kesederhanaan yang tidak <span>“instagramable”.</span>
+      </p>
+
+      <br>
+      <br>
+      <h2>Kamera Yang Menyala Dan <span>Empati Yang Mati</span></h2>
+      <p>
+        Mata publik hadir sebagai hakim bayangan, mereka mengetuk palu dari balik layar, tanpa pernah duduk di meja makan yang sama bersama Zohran. Ada absurditas yang begitu kentara bagaimana sesuatu yang seintim menyuap nasi bisa jadi polemik berbau politis. Kamera menjadi instrumentum veritatis palsu, <span>merekam tanpa empati, mengadili tanpa konteks.</span> Tangan yang cuma ingin menyambung rasa, kini dicurigai, seolah ada konspirasi tersembunyi dalam setiap gerakannya.
+      </p>
+      <br>
+      <p>
+        Kita hidup di dunia yang gampang gempar oleh hal yang remeh, tapi tuli pada esensi. Tindakan sederhana seperti makan pakai tangan dari warisan budaya, kenangan masa kecil sekarang mendadak jadi simbol yang dibedah habis oleh opini massa. Di sini, yang otentik sering dicurigai, dan yang alami malah dianggap deviasi. <span>Semua serba cepat dihakimi, tanpa ruang untuk kontemplasi.</span> Padahal, barangkali yang ia lakukan hanyalah mengikuti jejak ibunya dengan cinta, bukan agenda.
+      </p>
+
+
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Zohran Mamdani mungkin tidak berbicara terlalu panjang soal video itu, tapi gesturnya cukup menjadi pernyataan, bahwa dalam dunia yang terlalu cepat menghakimi, tindakan paling sederhana pun bisa berubah jadi kontroversi yang tak proporsional. Saat ia menyuap makanan dengan tangan, bukan hanya tradisi yang ia bawa, tapi juga keberanian untuk tetap otentik di tengah standar global yang seringkali tak ramah pada keanekaragaman. Dalam diamnya, ia seakan berkata bahwa tidak semua hal harus tunduk pada narasi mayoritas, karena kadang kesederhanaan justru adalah bentuk paling elegan dari keberpihakan pada akar dan identitas.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
