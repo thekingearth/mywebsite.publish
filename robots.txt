@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://kinbasari.my.id/sitemap.xml
+Sitemap: https://tintapenaku.com/sitemap.xml
+Sitemap: https://tintapenaku.com/coretan/style/sitemap.xml
