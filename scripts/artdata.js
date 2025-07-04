@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Ketika Kamera Mengadili Dan Tangan Menjadi Tersangka",
+      link: "../coretan/ketika-kamera-mengadili-dan-tangan-menjadi-tersangka.html",
+      img: "https://cdn.pixabay.com/photo/2019/11/01/18/18/hands-4594893_1280.jpg",
+      alt: "Tinta Pena Bash Ketika Kamera Mengadili Dan Tangan Menjadi Tersangka",
+      description: "Ketika kamera menjelma jadi hakim tak kasat mata dan publik menjadi juri yang tak kenal jeda, beredar video Zohran Mamdani tangan yang sekadar menyuap nasi pun bisa jadi tersangka. Di zaman di mana potongan video lebih dipercaya daripada konteks yang utuh, gestur sederhana berubah jadi perkara besar. Dalam ruang digital yang penuh hiperbola dan prasangka, keautentikan sering kali dikaburkan oleh...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif"]
+    },
+    {
       title: "Hiduplah Seperti Kereta: Tabrak Yang Menghalangi Dan Tinggalkan Yang Tak Pasti",
       link: "../coretan/tabrak-yang-menghalangi-tinggalkan-yang-tak-pasti.html",
       img: "https://cdn.pixabay.com/photo/2020/12/19/23/19/train-5845653_1280.jpg",
