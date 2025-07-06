@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Memberi Kesempatan Kedua Seperti Ngasih Peluru Tambahan</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Memberi <span>Kesempatan Kedua</span> Seperti Ngasih <span>Peluru Tambahan</span></h1>
+      <p class="detail-tanggal">
+        Sunday, 06 July 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+        Kecewa itu hal yang biasa dialamin, semua orang pasti pernah, entah karena teman, pasangan, keluarga, atau bahkan harapan yang kamu bangun sendiri. Yang sering bikin kecewa itu bukan cuma orangnya, tapi ekspektasi yang kita tumpuk diam-diam. Kita berharap mereka mengerti, kita pikir mereka akan tetap sama seperti dulu, padahal realitanya manusia bisa berubah, situasi bisa geser, dan janji bisa luntur tanpa aba-aba.
+      </p>
+      <br>
+      <p>
+        Tapi gimana rasanya pas orang yang udah bikin kamu kecewa dan hancur, tiba-tiba datang lagi bawa kata “maaf” dan senyum yang udah pernah kamu percaya? Pikiran kamu jadi labirin penuh belokan, penuh kemungkinan, tapi ujungnya selalu balik ke luka yang belum sembuh. Memaafkan memang terdengar virtue yang indah, tapi dibalik itu kadang tersembunyi bentuk kompromi emosional yang kamu sendiri nggak yakin kenapa harus kamu lakuin. Ada perasaan absurd kayak kamu jadi pemeran antagonis buat diri sendiri, cuma karena kamu terlalu ingin semuanya baik-baik aja.
+      </p>
+      <br>
+      <p>
+        Orang bilang ngasih <span>kesempatan kedua itu sama aja kayak ngasih peluru tambahan ke orang yang udah nembak kamu.</span> Kalimatnya memang hiperbolik, tapi ironisnya justru terasa relatable banget. Di situ, cinta jadi kedok, dan self-sabotage disulap jadi bukti ketulusan. Padahal, mungkin itu cuma manifestasi dari ketakutan kamu untuk benar-benar kehilangan, atau malah cerminan dari keenggananmu buat berdiri di sisi logika. Dan kadang, jadi manusia itu memang serumit itu selalu bertarung antara harapan dan harga diri.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Memberi Kesempatan Kedua Seperti Ngasih Peluru Tambahan">
+      <img src="https://cdn.pixabay.com/photo/2018/02/19/12/16/i-beg-your-pardon-3164883_1280.jpg" alt="Tinta Penaku Memberi Kesempatan Kedua Seperti Ngasih Peluru Tambahan">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Ketika Perubahan Cuma <span>Strategi Sementara</span></h2>
+      <p>
+        Banyak orang mikir, <span>“Ah, mungkin dia udah berubah.”</span> Tapi kenyataannya, perubahan nggak selalu bersifat eksponensial atau berkelanjutan. Kadang, orang cuma berubah secara situasional atau pas lagi butuh validasi, simpati, atau keuntungan sesaat. Begitu kebutuhan itu terpenuhi, mereka balik lagi ke modus operandi lama. Entah itu perilaku toxic, manipulatif, atau cuek bebek yang udah jadi default-nya. Jadi jangan sampai kamu terjebak dalam ilusi perubahan, karena bisa jadi semua yang kamu lihat itu cuma adaptasi sementara, bukan transformasi esensial.
+      </p>
+      <br>
+      <p>
+        Dan di titik itu, muncul yang namanya kognitif disonansi, yaitu sebuah konflik batin antara logika dan rasa. Padahal kamu tahu, secara rasional orang ini salah, tapi hatimu tetap mencari celah untuk memaklumin dia. Mungkin karena memori emosional yang masih tertinggal, atau karena kamu takut menghadapi kenyataan yang pahit dan nggak bisa diredefinisi. Dalam perspektif lain kamu udah jadi makhluk yang kontradiktif, dari yang udah tahu luka itu nyata, tapi masih berharap ada potensi rekonsiliasi. Padahal, kadang yang kamu pertahanin itu bukan cinta tapi delusi.
+      </p>
+
+      <br>
+      <br>
+      <h2>Membuka Pintu Untuk <span>Luka Itu Lagi</span></h2>
+      <p>
+        Ngasih kesempatan kedua itu sebenernya nggak keliru. Tapi seringkali, keputusan itu lahir bukan dari keyakinan rasional, melainkan dari ketakutan yang sifatnya eksistensial yaitu takut kehilangan, takut sendiri, atau takut menghadapi realitas tanpa dia. <span>Mungkin kamu yang lagi terseret dalam euforia nostalgia,</span> berharap fragmen manis di masa lalu bisa direplikasi kembali. Padahal, itu cuma fatamorgana afeksi yang bikin kamu lupa kalau luka yang sama juga bisa aja datang lagi, menyamar dalam bentuk baru yang lebih subtil tapi lebih perih.
+      </p>
+      <br>
+      <p>
+        Dan yang paling nyesek tuh, bukan cuma karena disakitin lagi. Tapi karena kamu mulai sadar kalau kamu sudah berperan dalam rekonstruksi kesalahan itu. Kamu sendirilah yang membuka pintu itu, buat ngasih akses, padahal intuisi udah ngasih sinyal merah. Ada semacam disonansi kognitif yang bikin hati dan logika berseberangan, satu bilang biarin aja, satunya lagi teriak kabur. Dan pas semuanya kejadian lagi, kamu nggak cuma nyalahin dia tapi juga diri sendiri, karena akhirnya kamu baru sadar, ternyata yang nyakitin itu bukan cuma dia, tapi juga keputusanmu buat percaya dia lagi.
+      </p>
+
+      <br>
+      <br>
+      <h2>Luka Yang Sama Tak Harus <span>Diterima Dua Kali</span></h2>
+      <p>
+        Kita tumbuh di dunia yang mendewakan sikap pemaaf, seolah memberi maaf itu adalah puncak dari kedewasaan emosional. Dan ya, itu memang sebuah tindakan yang mulia. Tapi jadi pemaaf bukan berarti kamu harus jadi figur yang permisif terhadap repetisi luka. Ada batas tipis antara kelapangan hati dan kecenderungan jadi naif. Kadang, memaafkan cukup jadi ritual batin yang intim tanpa perlu menghadirkan kembali sosok yang pernah jadi sumber turbulensi dalam hidup kamu.
+      </p>
+      <br>
+      <p>
+        Ini bukan soal menyimpan dendam yang abrasif, tapi lebih ke bentuk preservasi psikologis, yaitu melindungi ruang emosional dari potensi trauma yang rekuren. Karena hati juga butuh pagar, bukan buat menutup, tapi untuk menyaring siapa yang pantas masuk. Kadang, <span>menjaga jarak adalah bentuk lain dari kasih sayang pada diri sendiri.</span> Sebab terlalu sering membuka pintu untuk luka yang sama, hanya akan membuat kita terjebak dalam sirkulasi yang stagnan dan menyakitkan.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Kalau kamu sekarang lagi di posisi mikir mau ngasih kesempatan kedua atau nggak, coba tanya ke diri sendiri dulu “Apakah aku ngasih ini karena dia layak, atau karena aku takut sendirian?” Karena pada akhirnya, mencintai diri sendiri itu juga soal tahu kapan harus berhenti, dan kapan harus menutup pintu sebelum tangan yang sama nembak kamu lagi dengan peluru yang kamu kasih sendiri.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
