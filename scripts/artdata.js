@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Memberi Kesempatan Kedua Seperti Ngasih Peluru Tambahan",
+      link: "../coretan/memberi-kesempatan-kedua-atau-ngasih-peluru-tambahan.html",
+      img: "https://cdn.pixabay.com/photo/2018/02/19/12/16/i-beg-your-pardon-3164883_1280.jpg",
+      alt: "Tinta Pena Bash Memberi Kesempatan Kedua Seperti Ngasih Peluru Tambahan",
+      description: "Memberi kesempatan kedua kadang terasa mulia, tapi juga riskan, karena tidak semua orang belajar dari kesalahan, ada yang justru menyiapkan bidikan berikutnya. Ibarat memberi peluru tambahan ke orang yang sebelumnya udah sempat nyakitin, kita sebenarnya cuma berharap mereka tidak menarik pelatuknya lagi, padahal risikonya tetap sama, yaitu luka yang bisa berulang, cuma dengan cara...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Ketika Kamera Mengadili Dan Tangan Menjadi Tersangka",
       link: "../coretan/ketika-kamera-mengadili-dan-tangan-menjadi-tersangka.html",
       img: "https://cdn.pixabay.com/photo/2019/11/01/18/18/hands-4594893_1280.jpg",
