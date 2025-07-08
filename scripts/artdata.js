@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Jejak yang Tak Kembali: Filosofi Kehilangan Diketinggian",
+      link: "../coretan/jejak-yang-tak-kembali-filosofi-kehilangan-diketinggian.html",
+      img: "https://cdn.pixabay.com/photo/2021/10/09/00/15/landscape-6692712_1280.jpg",
+      alt: "Tinta Pena Bash Jejak yang Tak Kembali: Filosofi Kehilangan Diketinggian",
+      description: "Ditengah dinginnya kabut dan sunyinya langit Rinjani, hilangnya Juliana bukan sekadar berita, tapi menjadi semacam teka-teki semesta yang menggantung di antara realita dan mitos. Langkahnya yang menghilang seakan menyatu dengan bisikan angin dan desah awan, menciptakan ruang kosong yang tak bisa dijelaskan dengan logika semata. Gunung itu, yang agung sekaligus angkuh, seolah menyimpan jejaknya bukan di tanah, tapi di langit. Tempat di mana...",
+      labels: ["Pena dan Kuas"]
+    },
+    {
       title: "Memberi Kesempatan Kedua Seperti Ngasih Peluru Tambahan",
       link: "../coretan/memberi-kesempatan-kedua-atau-ngasih-peluru-tambahan.html",
       img: "https://cdn.pixabay.com/photo/2018/02/19/12/16/i-beg-your-pardon-3164883_1280.jpg",
