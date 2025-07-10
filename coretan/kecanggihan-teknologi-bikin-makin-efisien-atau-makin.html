@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Kecanggihan Teknologi: Bikin Makin Efisien atau Makin Nggak Punya Waktu?</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Kecanggihan Teknologi: Bikin <span>Makin Efisien</span> atau Makin <span>Nggak Punya Waktu?</span></h1>
+      <p class="detail-tanggal">
+        Thursday, 10 July 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+        Seminggu itu kan ada tujuh hari, dari Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, dan Minggu. Dulu, ada ritme yang jelas yaitu Senin sibuk, Rabu udah mulai ngos-ngosan, Jumat lega, Sabtu-Minggu healing. Sekarang? Tiap hari kayak Senin. Tiap bangun tidur langsung dihantui notifikasi. Otak belum nyala, udah mikir kerjaan. Weekend pun cuma beda suasana bukan beda tekanan.
+      </p>
+      <br>
+      <p>
+        Ini kayak dunia berjalan tanpa tombol pause. Teknologi, deadline, ekspektasi, semuanya nempel terus. Jangankan Sabtu atau Minggu, bahkan tidur pun rasanya kayak cuma nge-charge baterai setengah. Dan yang bikin lebih parah karena semua orang juga ngerasa kayak gitu, jadi kita seolah dipaksa buat ikut ritme itu kalau nggak mau "ketinggalan". <span>(Rasanya kayak hidup bukan di dunia tapi di Windows, karena semua tombol pause-nya di hidden).</span>
+      </p>
+      <br>
+      <p>
+        Padahal, manusia bukan mesin. Kita butuh jeda. Butuh ruang napas juga. Butuh hari yang benar-benar terasa bukan Senin. Jadi, kalau kamu ngerasa capek, bukan kamu yang lemah. Mungkin memang dunianya terlalu bising. Dan mungkin, sekarang saatnya kita bikin ruang sendiri meski kecil buat hari yang nggak terasa Senin.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Kecanggihan Teknologi: Bikin Makin Efisien atau Makin Nggak Punya Waktu?">
+      <img src="https://cdn.pixabay.com/photo/2021/10/09/00/15/landscape-6692712_1280.jpg" alt="Tinta Penaku Kecanggihan Teknologi: Bikin Makin Efisien atau Makin Nggak Punya Waktu?">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Makin Efisien atau <span>Makin Menguras Waktu</span></h2>
+      <p>
+        Dulu, orang kerja ngetik pakai mesin tik, mau ngirim surat, atau uang harus nunggu seminggu buat sampai tujuan, dan kalau mau cari informasi, wajib banget ke perpustakaan dulu. Semua memang butuh waktu, butuh usaha juga, udah gitu ada jeda di antaranya. Tapi kalau sekarang? Segalanya serba instan dan mudah. Mau ngirim file tinggal klik, meeting bisa sambil rebahan, dan nyari jawaban tinggal buka Google atau kalau lagi iseng, nanya aja ke AI. <span>"Walaupun kadang jawabannya sok tau juga".</span>
+      </p>
+      <br>
+      <p>
+        Teknologi memang bikin semuanya kelihatan lebih simpel dan efisien. Apa-apa jadi lebih cepat, lebih praktis. Tapi anehnya, kok malah rasanya kita makin nggak punya waktu, ya? Seolah-olah waktu yang seharusnya bisa disimpan malah dipakai buat ngerjain lebih banyak hal lagi, dan lagi, dan lagi.
+      </p>
+
+      <br>
+      <br>
+      <h2>Teknologi Makin Canggih Kenapa <span>Hidup Makin Sibuk?</span></h2>
+      <p>
+        Kadang tuh aku mikir kok bisa ya orang-orang begitu, maksudku sesuatu yang seharusnya mempermudah, malah justru bikin hidup makin riweuh? Ini menarik sih. Coba deh kamu bayangin, atau kamu pernah juga ngalamin. kan kita ini hidup di zaman yang serba cepat, dan malah saking cepatnya, waktu istirahat pun kadang ikutan dikorbanin. Banyak hal yang dulunya butuh waktu dan tempat khusus, sekarang bisa diselesaiin cuma lewat satu layar.
+      </p>
+      <br>
+      <p>
+        Teknologi bikin segalanya bisa dikerjain kapan aja dan di mana aja, itu artinya berarti kerjaan bisa nyusul kamu bahkan pas lagi makan siang, liburan, atau ngumpet di kamar mandi dong. Dan sekarang fleksibilitas yang awalnya kelihatan menyenangkan, justru perlahan mengikis batas antara kerja sama hidup pribadi. Akhirnya, yang ada bukan waktu luang, tapi waktu kerja yang diperluas tanpa henti. <span>"Yakin masih ngerasain liburan? Iya, libur dari tempat kerja, bukan dari kerjaannya".</span>
+      </p>
+
+      <br>
+      <br>
+      <h2>Jam Kerja Yang Nggak <span>Punya Jam Lagi</span></h2>
+      <p>
+        Efisiensi memang meningkat. Banyak hal bisa diselesaikan lebih cepat, lebih ringkas, dan tanpa ribet. Tapi yang nggak kita sadari, teknologi juga memperluas definisi “jam kerja.” Apa yang dulu butuh kantor dan jam formal, sekarang bisa dikerjain dari mana aja dan kapan aja dan yang awalnya terasa fleksibel, lama-lama malah bikin lelah.
+      </p>
+      <br>
+      <p>
+        Dulu, jam 5 sore pulang ya langsung pulang, kadang ada juga sih yang mampir dulu ke tempat-tempat tertentu. Intinya waktu pribadi tetap utuh. Tapi Sekarang, masih bales chat klien sampe jam 10 malam ajah udah dianggap hal biasa. Ini yang disebut blurred boundaries, di mana batas antara kerja dan waktu pribadi makin kabur, <span>"rasaya persis udah kayak sinyal Wi-Fi pas lagi ujan gede.</span>
+      </p>
+
+      <br>
+      <br>
+      <h2>Makin Canggih Tapi Makin Sibuk Dan <span>Lupa Istirahat</span></h2>
+      <p>
+        Ironisnya, teknologi yang katannya bikin “hemat waktu” justru bikin kita lebih sibuk madatin waktu. Segalanya jadi harus cepat, harus selesai hari ini juga, harus bisa dikerjain sambil ngerjain yang lain. Kita jadi multitasking level dewa, keren sih tapi kan tiap hari jadi selalu sibuk ngebut sana-sini, terus tanpa sadar kita banyak kehilangan momen-momen kecil buat sekadar diem, tarik napas, atau nikmatin detik yang berjalan pelan.
+      </p>
+      <br>
+      <p>
+        Saking terhubungnya sama teknologi, hal sederhana pun bisa jadi jebakan. Buka HP cuma mau cek jam, tapi tahu-tahu dua jam habis buat scroll TikTok atau Instagram. Efisien? Belum tentu. Produktif? Mungkin iya. Tapi sehat secara mental, fisik, dan emosional? Nah, itu yang justru makin sulit dijawab sekarang.
+      </p>
+
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Jadi, kecanggihan teknologi itu kayak pedang bermata dua. Bisa bantu banget, bisa juga merampas waktu diam-diam. Semua balik lagi ke cara yang digunakan. Bukan soal seberapa canggih alatnya, tapi seberapa bijak kamu mengatur ritmenya. Intinya jangan sampai teknologi yang harusnya menjadi alat bantu malah membuat kamu lupa cara hidup pelan-pelan.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
