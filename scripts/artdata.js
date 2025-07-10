@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Kecanggihan Teknologi: Bikin Makin Efisien atau Makin Nggak Punya Waktu?",
+      link: "../coretan/kecanggihan-teknologi-bikin-makin-efisien-atau-makin.html",
+      img: "https://cdn.pixabay.com/photo/2024/01/10/16/13/engineer-8499904_1280.jpg",
+      alt: "Tinta Pena Bash Kecanggihan Teknologi: Bikin Makin Efisien atau Makin Nggak Punya Waktu?",
+      description: "Kecanggihan teknologi masa kini membantu segalanya jadi jauh lebih efisien, hal-hal yang dulu butuh waktu berjam-jam, sekarang bisa diselesaikan dalam hitungan menit, bahkan detik. Mulai dari komunikasi, kerja, sampai urusan rumah tangga, semua jadi lebih praktis dan cepat berkat otomatisasi, kecerdasan buatan, dan konektivitas digital. Di balik layar yang kita sentuh setiap hari, ada sistem cerdas yang terus bekerja tanpa lelah, membantu manusia....",
+      labels: ["Bangkit dan Bergerak", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Jejak yang Tak Kembali: Filosofi Kehilangan Diketinggian",
       link: "../coretan/jejak-yang-tak-kembali-filosofi-kehilangan-diketinggian.html",
       img: "https://cdn.pixabay.com/photo/2021/10/09/00/15/landscape-6692712_1280.jpg",
