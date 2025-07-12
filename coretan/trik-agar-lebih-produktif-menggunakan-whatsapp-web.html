@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Trik Agar Lebih Produktif Menggunakan WhatsApp Web</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Kecanggihan Teknologi: Bikin <span>Makin Efisien</span> atau Makin <span>Nggak Punya Waktu?</span></h1>
+      <p class="detail-tanggal">
+        Saturday, 12 July 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+        Buat kamu yang kesehariannya lebih banyak ngadep laptop, WhatsApp Web udah pasti jadi salah satu “senjata” wajib. Nggak perlu ribet buka-buka HP tiap ada notifikasi, cukup buka browser, scan barcode, dan dalam hitungan detik semua chat nongol rapi di layar lebar. WhatsApp Web bikin multitasking jadi lebih gampang, apalagi pas lagi kerja serius tapi juga harus standby buat obrolan penting <span>(atau obrolan yang katanya penting).</span>
+      </p>
+      <br>
+      <p>
+        Tapi jujur aja, banyak juga yang pakai WhatsApp Web buat hal-hal receh, kayak bales chat gebetan sambil pura-pura sibuk ngoding, atau scroll grup alumni sambil nunggu loading meeting. Padahal, kalau dipakai dengan cara yang lebih strategis, WhatsApp Web bisa banget bantu ningkatin produktivitas kerja. Dengan fitur seperti pin chat, shortcut keyboard, sampai integrasi tab browser, kamu bisa kelola komunikasi kerjaan dengan lebih rapi dan cepat.
+      </p>
+      <br>
+      <p>
+        Kuncinya ada di cara kamu manfaatin WhatsApp Web, bukan cuma sebagai alat chat, tapi juga sebagai pusat koordinasi. Mau kirim file ke rekan tim? Tinggal drag and drop. Mau salin teks panjang dari dokumen ke chat? Gampang banget via laptop. WhatsApp Web jadi jembatan antara efisiensi dan konektivitas, apalagi buat kamu yang kerja remote atau hybrid. Jadi, mulai sekarang, coba pakai WhatsApp Web bukan cuma buat ngobrol, tapi buat beneran <span>ngatur ritme kerja.</span> Siapa tahu, yang tadinya cuma buka chat, jadi buka peluang.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Trik Agar Lebih Produktif Menggunakan WhatsApp Web">
+      <img src="https://cdn.pixabay.com/photo/2014/09/15/12/59/whatsapp-446970_1280.jpg" alt="Tinta Penaku Trik Agar Lebih Produktif Menggunakan WhatsApp Web">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Gunakan Fitur "Pinned Chat" <span>buat Kontak Penting</span></h2>
+      <p>
+        Lagi serius ngerjain kerjaan di laptop, tiba-tiba HRD atau klien nge-chat. Nah, ini momen krusial di mana WhatsApp Web bisa jadi penyelamat. Daripada kamu scroll panik cari chat penting yang tenggelam di antara spam grup alumni dan kiriman stiker random, mending langsung manfaatin fitur “Pin Chat” di WhatsApp Web. Caranya gampang banget, tinggal klik kanan di chat yang kamu anggap penting, entah itu bos, rekan kerja, atau klien, lalu pilih “Pin Chat.” Dengan begitu, chat mereka bakal nongkrong manis di paling atas, nggak bakal ketimpa chat receh.
+      </p>
+      <br>
+      <p>
+        Fitur ini kelihatan simpel, tapi efeknya gede banget buat efisiensi. WhatsApp Web bukan cuma alat buat balesin pesan cepat, tapi juga bisa jadi dashboard komunikasi yang rapi kalau dimanfaatkan dengan benar. Dengan pin chat di WhatsApp Web, <span>kamu bisa tetap fokus sama kerjaan tanpa harus ngubek-ngubek chat satu per satu.</span> Jadi, next time HRD nanya soal laporan atau klien minta update mendadak, kamu tinggal klik atas, bukan scroll bawah. <span>Cerdasin cara kerja, bukan cuma kerjanya aja.</span>
+      </p>
+
+      <br>
+      <br>
+      <h2>Aktifin Notifikasi <span>Khusus di Browser</span></h2>
+      <p>
+        WhatsApp Web bisa dijadiin asisten komunikasi paling setia, khususnya buat kamu yang sering kerja di depan laptop, asal tahu cara ngaturnya. Salah satu fitur yang wajib kamu manfaatin itu notifikasi desktop WhatsApp Web. Fitur ini bikin kamu nggak bakal ketinggalan chat penting dari HRD, klien, atau rekan kerja, karena notifikasi langsung muncul di pojok layar tanpa harus bolak-balik buka tab. Tapi jangan asal nyalain semuanya juga, karena kalau kamu masih gabung di grup alumni SMA yang isinya spam stiker pagi, siang, malam, layar kamu bisa berubah jadi parade notifikasi tanpa henti.
+      </p>
+      <br>
+      <p>
+        Solusinya? Gunakan fitur notifikasi WhatsApp Web secara selektif. Kamu bisa matiin notifikasi dari grup-grup yang nyeleneh, kurang penting, dan fokusin cuma ke chat yang beneran krusial. Dengan begitu, kamu tetap bisa update informasi penting tanpa harus terganggu sama obrolan receh. WhatsApp Web itu powerfull kalau kamu tahu cara ngegunainnya bukan cuma buat bales chat, tapi juga buat bantu kamu tetap fokus dan produktif di tengah padatnya kerjaan digital.
+      </p>
+
+      <br>
+      <br>
+      <h2>Pakai Mode <span>Split-Screen</span></h2>
+      <p>
+        Kalau kamu tipe multitasker sejati yang suka ngerjain banyak hal sekaligus, mode split-screen bisa jadi sahabat terbaikmu, apalagi kalau dikombinasiin sama WhatsApp Web. Bayangin setengah layar buat ngetik laporan atau desain presentasi, sementara setengah lainnya dipakai buat mantau dan balesin chat penting lewat WhatsApp Web. Nggak perlu repot-repot alt-tab atau bolak-balik buka tab browser. WhatsApp Web bikin alur kerjamu tetap lancar tanpa harus kehilangan ritme komunikasi.
+      </p>
+      <br>
+      <p>
+        Tapi di balik efisiensinya, WhatsApp Web juga penuh godaan tersembunyi. Split-screen memang praktis, tapi bukan berarti kamu bebas dari risiko scroll grup keluarga yang isinya resep viral dan kiriman video meme. Jadi, tetap kontrol diri dan pakai WhatsApp Web secara strategis. Atur prioritas, fokus ke chat yang relevan, dan jadiin WhatsApp Web bukan cuma alat komunikasi, tapi juga penunjang produktivitas di tengah dunia digital yang makin dinamis.
+      </p>
+
+      <br>
+      <br>
+      <h2>Arsip Chat Dan <span>Shortcut Keyboard</span></h2>
+      <p>
+        Kadang yang bikin kerjaan mandek bukan tugasnya, tapi notif grup WhatsApp yang isinya kayak live chat tanpa jeda. Nah, di WhatsApp Web, kamu bisa tetap waras dengan cara simpel, arsipin dulu chat-chat yang nggak penting. Fitur archive di WhatsApp Web bukan berarti ngehapus, cuma “menyimpan sementara” biar inbox kamu lebih bersih dan fokus. Jadi, obrolan soal reuni, kiriman meme, atau spam good morning bisa kamu taruh di belakang layar, dan kamu tetap bisa kerja tanpa terdistraksi.
+      </p>
+      <br>
+      <p>
+        Supaya makin efisien, manfaatin juga shortcut keyboard di WhatsApp Web. Biar tangan kamu nggak bolak-balik pegang mouse, cukup pakai kombinasi simpel: tekan <b class="qute">Ctrl + N</b> buat mulai chat baru, <b class="qute">Ctrl + Shift + ]</b> buat pindah ke chat berikutnya, dan <b class="qute">Ctrl + Shift + [</b> buat kembali ke chat sebelumnya. Shortcut ini kelihatan sepele, tapi bikin workflow kamu jauh lebih cepat dan terasa lebih profesional. WhatsApp Web itu bukan cuma alat ngobrol, tapi bisa jadi alat tempur produktivitas asal kamu tahu cara pakainya.
+      </p>
+
+      <br>
+      <br>
+      <h2>Manfaatkan WhatsApp Web buat <span>Kirim File Cepat</span></h2>
+      <p>
+        Pindah-pindah file dari HP ke laptop kadang bikin males apalagi kalau harus colok kabel atau kirim via email dulu. Padahal, kalau kamu pakai WhatsApp Web, semua bisa jadi lebih simpel. Salah satu trik keren yang bisa kamu cobain adalah bikin chat “arsip pribadi” di WhatsApp Web. Caranya? Bikin grup berdua sama salah satu teman, lalu setelah grup jadi, keluarkan dia. Sekarang kamu punya ruang chat khusus yang isinya cuma kamu sendiri. Di situlah kamu bisa kirim foto, dokumen kerja, link penting, atau bahkan catatan ide yang lagi numpuk di kepala.
+      </p>
+      <br>
+      <p>
+        WhatsApp Web jadi semacam flashdisk digital, tapi jauh lebih praktis dan real-time. Nggak perlu lagi pakai kabel atau aplikasi tambahan, cukup drag & drop dari laptop, dan semua file langsung nyangkut di chat kamu sendiri. Kapan pun butuh, tinggal buka WhatsApp Web, scroll sebentar, dan semua file ada di tempat yang sama. Trik sederhana ini bisa bantu kamu tetap rapi dan efisien, apalagi kalau kerjaan kamu banyak berpindah antara HP dan laptop. WhatsApp Web bukan cuma buat ngobrol, tapi juga bisa jadi alat kerja yang cerdas kalau kamu manfaatin dengan tepat.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Jadi, WhatsApp Web itu bukan cuma buat melihat story orang apalagi mereply-nya. Kalau dipakai dengan trik yang tepat, dia bisa sangat membantu untuk meningkatkan produktivitas harianmu. Selamat mencoba, dan semoga makin produktif, tanpa harus bales chat “kamu lagi ngapain?” tiap lima menit!
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
