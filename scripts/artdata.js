@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Trik Agar Lebih Produktif Menggunakan WhatsApp Web",
+      link: "../coretan/trik-agar-lebih-produktif-menggunakan-whatsapp-web.html",
+      img: "https://cdn.pixabay.com/photo/2014/09/15/12/59/whatsapp-446970_1280.jpg",
+      alt: "Tinta Pena Bash Trik Agar Lebih Produktif Menggunakan WhatsApp Web",
+      description: "Bukan cuma buat bales chat, tapi juga jadi alat bantu kerja yang efisien. Dari kirim file langsung lewat laptop, pin chat penting biar nggak tenggelam, sampai menyalakan notifikasi desktop untuk info real-time, semua bisa dilakukan tanpa harus bolak-balik cek HP. Dengan tampilan yang simpel dan fitur yang powerful, WhatsApp Web bisa sangat membantu untuk tetap fokus, rapi, dan terhubung, terutama untuk pekerja remote, multitasking, atau sering...",
+      labels: ["Bangkit dan Bergerak", "Wawasan Tekno"]
+    },
+    {
       title: "Kecanggihan Teknologi: Bikin Makin Efisien atau Makin Nggak Punya Waktu?",
       link: "../coretan/kecanggihan-teknologi-bikin-makin-efisien-atau-makin.html",
       img: "https://cdn.pixabay.com/photo/2024/01/10/16/13/engineer-8499904_1280.jpg",
