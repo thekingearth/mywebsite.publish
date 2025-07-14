@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Fiksi Lebih Meninabobokan Dibanding Kenyataan",
+      link: "../coretan/fiksi-lebih-meninabobokan-dibanding-keyataan.html",
+      img: "https://cdn.pixabay.com/photo/2017/08/08/20/08/fantasy-2612553_1280.jpg",
+      alt: "Tinta Pena Bash Fiksi Lebih Meninabobokan Dibanding Kenyataan",
+      description: "Dalam fiksi kamu bisa menemukan pelarian yang lembut dan terstruktur dari kekacauan hidup yang tak terprediksi. Dalam fiksi, luka punya arti, tangis punya alasan, dan setiap konflik diarahkan menuju resolusi yang memuaskan, meski kadang pahit. Sementara di kenyataan, segalanya sering terasa acak dan penuh ambiguitas, kesedihan datang tanpa narasi, keputusan lahir dari kebingungan, dan penutup cerita sering tak pernah....",
+      labels: ["Pena dan Kuas", "Perspektif"]
+    },
+    {
       title: "Trik Agar Lebih Produktif Menggunakan WhatsApp Web",
       link: "../coretan/trik-agar-lebih-produktif-menggunakan-whatsapp-web.html",
       img: "https://cdn.pixabay.com/photo/2014/09/15/12/59/whatsapp-446970_1280.jpg",
