@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Kalau Menikah Membuka Pintu Rezeki, Kenapa Banyak yang Cerai Karena Faktor Ekonomi?</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Kalau Menikah Membuka <span>Pintu Rezeki</span> Kenapa Banyak yang Cerai <span>Karena Ekonomi?</span></h1>
+      <p class="detail-tanggal">
+        Friday, 01 August 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+  Katanya sih, menikah bisa jadi pembuka pintu rezeki, semacam kunci sakral yang katanya bisa mendatangkan keberkahan dari segala arah. Tapi realitanya nggak sedikit yang justru harus melewati episode pelik, dihantam masalah finansial yang nggak kunjung selesai. Rasanya kayak mimpi manis yang tiba-tiba dibangunin paksa. Cinta yang dulu menggebu perlahan berubah jadi percakapan soal tagihan, cicilan, dan saldo yang makin menipis. Ironis, tapi nyata. Di tengah harapan akan hidup yang lebih stabil, justru datang turbulensi yang mengguncang fondasi hubungan.
+      </p>
+      <br>
+      <p>
+  Yang bikin lebih rumit, bukan cuma uangnya yang kurang, tapi ekspektasi yang diam-diam terlalu mengawang. Ada harapan bahwa setelah “sah”, semuanya akan otomatis baik-baik saja, seolah akad itu mantra magis yang bisa mengubah segalanya secara instan. Padahal menikah bukan cuma tentang menyatukan dua hati, tapi juga dua realitas yang kadang timpang, penuh perbedaan cara pandang soal uang, prioritas, bahkan mimpi. Dan ketika rezeki tak kunjung datang, frustrasi perlahan menyusup, membisikkan keraguan, memunculkan pertanyaan-pertanyaan eksistensial yang dulu nggak pernah terpikirkan.
+      </p>
+      <br>
+      <p>
+  Jadi, disini yang salah siapa? Jawabannya nggak ada yang benar-benar bisa dituding secara absolut. Mungkin bukan konsepnya yang keliru, tapi cara kita memahaminya yang terlalu simplistik. Menikah memang bisa jadi pintu rezeki, tapi bukan berarti pintu itu terbuka sendiri tanpa usaha, tanpa kesadaran, tanpa kompromi. Butuh kerja sama yang bukan cuma romantis, tapi juga realistis. Mungkin kita cuma perlu lebih jujur sejak awal, tentang harapan, ketakutan, dan kemampuan menghadapi dunia yang seringkali tidak seindah doa di hari pernikahan. Untuk itu mari kita bahas bareng dengan pelan-pelan Kalau Menikah Membuka Pintu Rezeki, Kenapa Banyak yang Cerai Karena Ekonomi.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Fiksi Lebih Meninabobokan Dibanding Kenyataan">
+      <img src="https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_1280.jpg" alt="Tinta Penaku Fiksi Lebih Meninabobokan Dibanding Kenyataan">
+      </div>
+      <br>
+
+      <br>
+      <h2>Rezeki Bisa Datang <span>Tapi Gagal Dikelola</span></h2>
+      <p>
+        Ada pasangan yang rezekinya benar-benar terbuka setelah menikah dari dapat kerjaan, bisnis lancar, anak sehat. Tapi tetap cerai juga. Kenapa? Karena rezeki itu bukan cuma soal datang, tapi juga soal cara mengelola. Kalau satu pihak boros, satu lagi nggak jujur soal keuangan, atau keduanya nggak transparan soal prioritas, maka yang tadinya berkah bisa berubah jadi beban.
+      </p>
+      <p>
+        Ini yang sering luput <span>rezeki bisa datang sebagai ujian, bukan cuma anugerah.</span> Dan ujian ekonomi bukan selalu karena miskin, kadang justru ketika uang datang, karakter asli jadi kelihatan. Mau kolaboratif atau egois? Mau saling bantu atau saling nyalahin?
+      </p>
+
+      <br>
+      <h2>Masalah Ekonomi Sering <span>Bukan Akar Utama</span></h2>
+      <p>
+        Kalau ditanya alasan cerai, jawaban paling sering memang “karena ekonomi.” Tapi coba dikupas lagi, sering kali ekonomi cuma jadi pemantik dari masalah yang lebih dalam, ekspektasi yang nggak realistis, komunikasi yang buruk, atau luka batin yang nggak pernah selesai.
+      </p>
+      <p>
+        Masalah ekonomi itu ibarat api kecil. Tapi kalau ruangannya penuh bensin berupa stres, ego, dan trauma masa lalu, ya jelas bakal meledak. Banyak pasangan yang bukan cuma nggak siap secara finansial, tapi juga belum selesai dengan dirinya sendiri. Dan pernikahan bukan tempat untuk menambal kekosongan pribadi. <span>Itu ruang untuk saling tumbuh, bukan saling sembunyi.</span>
+      </p>
+
+      <br>
+      <h2>Menikah Tanpa Kesiapan Seperti Membangun <span>Rumah Ditanah Bergoyang</span></h2>
+      <p>
+        Kalau belum siap secara mental, emosional, dan punya perencanaan jangka panjang yang matang, pernikahan justru bisa jadi cermin yang brutal, memantulkan sisi paling rapuh dari diri yang selama ini disembunyikan rapat-rapat. Di awal mungkin semua terasa manis, penuh afirmasi dan harapan yang idealistik. Tapi ketika realitas mulai mengguncang terutama soal ekonomi emosi yang selama ini dipendam mulai bergemuruh, dan ketegangan kecil berubah jadi konflik yang eksplosif. Semua yang tampak stabil perlahan terdegradasi oleh beban yang tak pernah benar-benar disiapkan.
+      </p>
+      <p>
+        Seringkali, perpisahan itu bukan karena dua orang ini nggak cocok secara esensial, tapi karena mereka belum selesai dengan urusan dalam dirinya masing-masing. Belum tuntas dengan luka lama, dengan ketakutan yang laten, atau dengan ekspektasi yang terlalu utopis. Pernikahan itu bukan pelarian dari kesepian atau tekanan sosial, tapi ruang untuk bertumbuh bersama, dan juga sendiri-sendiri. Dan kalau pondasinya masih rapuh, maka hubungan itu bisa runtuh bahkan sebelum sempat dibangun sepenuhnya.
+      </p>
+
+      <br>
+      <h2>Menikah Memang Membuka Rezeki <span>Tapi Bukan Jaminan</span></h2>
+      <p>
+        Bisa banget. Tapi bukan jaminan. Dan nggak semua rezeki berbentuk uang. Kadang bentuknya ketenangan, anak yang baik, lingkungan yang mendukung, atau pelajaran hidup yang memperkuat mental. Tapi semua itu datang kalau dua orang di dalam pernikahan siap menanggung dan membagi beban bukan saling lempar.
+      </p>
+      <p>
+        Pernikahan bukan tentang hidup enak berdua, tapi hidup susah pun tetap saling jaga. Kalau niatnya cuma “biar cepat kaya,” ya jangan heran kalau pernikahan berakhir bukan dengan bahagia, tapi dengan perpisahan.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Jadi, sebelum menikah jangan cuma tanya ke diri sendiri  “Udah siap nikah belum?” Tapi juga tanya “Udah siap miskin bareng? Udah siap gagal bareng? Udah siap berjuang bareng?" Karena kalau di ibaratkan rezeki itu sebuah pintu, maka pintu itu cuma bisa dibuka oleh pasangan yang jalanin kuncinya bareng-bareng.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
