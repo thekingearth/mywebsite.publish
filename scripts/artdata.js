@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Kalau Menikah Membuka Pintu Rezeki, Kenapa Banyak yang Cerai Karena Ekonomi",
+      link: "../coretan/menikah-membuka-pintu-rezeki-tapi-kenapa-banyak-yang-cerai.html",
+      img: "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_1280.jpg",
+      alt: "Tinta Pena Bash Kalau Menikah Membuka Pintu Rezeki, Kenapa Banyak yang Cerai Karena Ekonomi?",
+      description: "Jika menikah dipercaya membuka pintu rezeki, maka pertanyaan yang muncul adalah: mengapa banyak pasangan justru berpisah karena persoalan ekonomi? Jawabannya terletak pada pemahaman bahwa rezeki bukan sekadar soal datangnya uang, tapi bagaimana dua individu mengelola, berkomunikasi, dan berkomitmen terhadap tanggung jawab finansial bersama. Tanpa kesiapan mental, keterbukaan, dan kerja sama yang solid, potensi rezeki justru bisa berubah...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif"]
+    },
+    {
       title: "Fiksi Lebih Meninabobokan Dibanding Kenyataan",
       link: "../coretan/fiksi-lebih-meninabobokan-dibanding-keyataan.html",
       img: "https://cdn.pixabay.com/photo/2017/08/08/20/08/fantasy-2612553_1280.jpg",
