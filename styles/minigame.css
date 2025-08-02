@@ -433,3 +433,70 @@ font-size: 8rem;
 .quiz-artikel .close-result-button:hover {
   opacity: 0.8;
 }
+
+/* Penghitung Kata */
+.calculte-text .stats, #keywords {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  justify-content: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: var(--a);
+  scroll-snap-type: x mandatory;
+  }
+
+.calculte-text .stats .stats-word, .keyword-item {
+  flex: 0 0 auto;
+  min-width: 80px;
+  background: var(--nav);
+  border: 1px solid #fd0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  scroll-snap-align: start;
+  }
+
+.calculte-text .textarea-container {
+  margin-top: 1rem;
+  text-align: center;
+  }
+
+.calculte-text  textarea {
+  width: 90%;
+  height: 200px;
+  padding: 1rem;
+  font-size: 10px;
+  background: #1a1a2a;
+  color: var(--text);
+  border: 1px solid #555;
+  border-radius: 5px;
+  }
+
+.calculte-text .keywords, .readtime {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  background: var(--btn);
+  border-radius: 10px;
+  padding: 1rem;
+  }
+
+.calculte-text .statis {
+  display: grid;    
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  background: var(--nav);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  }
+
+.calculte-text .keyword-box, .read-box {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  }
