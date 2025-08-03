@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Bila Semuanya Sudah Tidak Seperti Biasanya, Maka Terbiasalah Tanpa Semuanya</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Bila Semuanya Sudah <span>Tidak Seperti Biasanya, </span>Maka Terbiasalah <span>Tanpa Semuanya</span></h1>
+      <p class="detail-tanggal">
+        Sunday, 03 August 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+          Memang kadang ada masa-masa di hidup ini yang datang tanpa aba-aba, semacam momen transisi yang belum pernah kita pesan tapi tiba-tiba hadir. Orang-orang yang dulu jadi tempat pulang, perlahan menjelma jadi siluet asing yang tak lagi nyambung dalam obrolan atau tawa. Tempat yang dulu terasa hangat malah berubah jadi ruang yang penuh kehampaan subtil. Semuanya masih terlihat sama, tapi auranya bergeser, seolah semesta diam-diam mengganti dimensinya dan kita cuma bisa terperangah dalam perasaan yang tak terdefinisikan.
+      </p>
+      <br>
+      <p>
+          Rutinitas harian pun jadi terasa ganjil. Hal-hal kecil yang dulu menyenangkan, sekarang malah bikin kikuk, seperti memutar lagu lama yang nadanya sudah nggak cocok di hati. Tawa yang dulu mengalir alami sekarang terdengar seperti gema dalam lorong kosong, ada tapi hampa. Ini bukan tentang jadi lemah atau melankolis berlebihan, tapi tentang mencoba meraba-raba ulang peta batin di tengah perubahan yang sifatnya enigmatik. Kita mulai sadar bahwa nggak semua hal bisa dipertahankan, dan nggak semua kehilangan bisa dihindari.
+      </p>
+      <br>
+      <p>
+          Lalu datanglah titik kontemplatif saat kita harus memilih, terus menggenggam yang sudah berubah bentuk, atau perlahan belajar melepaskan dan berdamai dengan kekosongan. Melepas bukan berarti menyerah, tapi bentuk lain dari keberanian yang agak implisit. Belajar terbiasa dengan kehilangan adalah proses yang diam-diam menguatkan, meski awalnya menyakitkan. Karena pada akhirnya, yang benar-benar menetap bukanlah orang atau situasi, tapi cara kita merawat diri di tengah segala ketakterdugaan hidup.
+      </p>
+
+
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Bila Semuanya Sudah Tidak Seperti Biasanya, Maka Terbiasalah Tanpa Semuanya">
+      <img src="https://cdn.pixabay.com/photo/2018/05/13/00/11/girl-3394947_1280.jpg" alt="Tinta Bila Semuanya Sudah Tidak Seperti Biasanya, Maka Terbiasalah Tanpa Semuanya">
+      </div>
+      <br>
+
+      <br>
+      <h2>Kamu Nggak Sendiri Meski <span>Rasanya Sepi</span></h2>
+      <p>
+          Kamu nggak sendirian kok kalau pernah ngerasa semuanya tiba-tiba absurd dan nggak masuk akal. Ada masanya hati jadi rawan, pikiran nyasar ke mana-mana, dan semua hal yang tadinya familiar tiba-tiba terasa asing. Fase kayak gitu bukan berarti kamu lemah, tapi itu tanda kamu lagi ada di titik transisi psikologis, semacam turbulensi batin yang bikin kamu mempertanyakan segalanya, seperti kenapa dia berubah? kenapa aku ngerasa ditinggalin? kenapa semua terasa sementara? Ini bukan drama, ini bagian dari dinamika eksistensi yang wajar banget dialami manusia.
+      </p>
+      <br>
+      <p>
+          Yang perlu diinget, perubahan itu bukan bentuk pengkhianatan, tapi bagian dari kodrat kehidupan yang fluktuatif. Kadang dunia harus kayak diacak dulu biar kita bisa belajar berdiri lebih stabil. Nggak semua kehilangan berarti akhir, ada yang justru jadi pintu buat ketenangan yang belum kita pahami sekarang. Jadi meski rasanya kayak dilindas perasaan sendiri, percaya deh kamu itu mungkin masih berada di fase sedang tumbuh, meskipun secara pelan-pelan dan nggak selalu kelihatan.
+      </p>
+
+      <br>
+      <h2>Ketika Yang Biasa <span>Tak Lagi Ada</span></h2>
+      <p>
+          Menerima kehilangan itu bukan berarti hati kita jadi kebal, atau tiba-tiba bisa lupa gitu aja, nggak semudah itu. Rasanya kayak ruang kosong yang nggak bisa diisi ulang, cuma bisa diajak berdamai pelan-pelan. Ada kenangan yang nyempil di sela-sela hari, ada kebiasaan yang sekarang cuma jadi sisa gema. Tapi dari situ kita mulai paham, bahwa absennya sesuatu yang dulu bermakna bukan akhir dari segalanya, itu cuma fase atau bagian dari proses internalisasi rasa yang bikin kita sedikit demi sedikit lebih tangguh, meski tetap rapuh.
+      </p>
+      <br>
+      <p>
+          Saat semuanya nggak lagi seperti biasanya, kita mulai menyadari bahwa keterikatan yang terlalu erat bisa jadi kontraproduktif. Melepaskan, ternyata bukan sekadar tindakan pasif, tapi bentuk elegan dari kedewasaan emosional. Kita belajar menyeduh kopi dengan takaran baru, tanpa perlu dua cangkir. Belajar menikmati senja dengan hening yang tidak lagi terasa hampa. Dan perlahan, kita tahu bahwa kehilangan bukan kehampaan mutlak hanya transisi dari yang dulu bersama, ke yang sekarang sendiri tapi tetap utuh.
+      </p>
+
+      <br>
+      <h2>Tetaplah Menjalankan Cerita Meskipun <span>Panggung Sepi</span></h2>
+      <p>
+          Terbiasa tanpa semuanya bukan berarti hati kita jadi sedingin es atau kehilangan kapabilitas untuk merasa. Justru itu pertanda bahwa kita sedang merawat daya lenting batin, membangun semacam ketahanan emosional yang nggak selalu terlihat dari luar. Rasanya kayak nyusun ulang diri sendiri dari puing-puing yang nggak kita rencanakan hancur. Kita sedang belajar resiliensi, menerima bahwa sesuatu yang dulu kita anggap permanen ternyata fana, dan itu nggak apa-apa. Nggak ada yang salah juga untuk menjadi kuat dengan cara yang sunyi.
+      </p>
+      <br>
+      <p>
+          Dunia terus bergerak, meskipun beberapa tokoh utama dalam hidup kita memutuskan untuk hengkang lebih dulu dari skenario. Ada jeda, ada duka, tapi nggak ada pilihan selain tetap melangkah. Kita belajar mengisi panggung dengan cara baru, kadang dengan peran yang berbeda, kadang dengan cerita yang lebih sederhana. Tapi bukan berarti maknanya berkurang. Justru dari kekosongan itulah kita menemukan esensi, bahwa hidup nggak selalu tentang siapa yang tetap tinggal, tapi bagaimana kita tetap utuh meski ditinggal.
+      </p>
+
+
+
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+        Ibaratkan ending dari sebuah film, yang tersisa bukan cuma kenangan, tapi versi dirimu yang lebih tangguh. Ketika semuanya tak lagi sama, bukan berarti semuanya berakhir. Kadang itu hanya cara hidup untuk mengatakan “Kamu sudah waktunya naik level.” Jadi, kalau semuanya sudah tidak seperti biasanya maka terbiasalah tanpa semuanya. Pelan-pelan saja dan tidak perlu terburu-buru. Karena pada dasarnya kamu sedang dalam keadaan yang baik-baik saja.
+
+      </p>
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
