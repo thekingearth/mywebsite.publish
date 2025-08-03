@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Bila Semuanya Sudah Tidak Seperti Biasanya Maka Terbiasalah Tanpa Semuanya",
+      link: "../coretan/bila-semuanya-sudah-tak-seperti-biasanya-maka-terbiasalah-tanpa-semuanya.html",
+      img: "https://cdn.pixabay.com/photo/2018/05/13/00/11/girl-3394947_1280.jpg",
+      alt: "Tinta Pena Bash Bila Semuanya Sudah Tidak Seperti Biasanya Maka Terbiasalah Tanpa Semuanya",
+      description: "Saat segalanya berubah dan tak lagi seperti biasanya, kadang yang bisa kita lakukan hanyalah menerima dan belajar terbiasa tanpa semua yang dulu terasa begitu lekat. Kehilangan, perubahan, atau jarak bukan akhir dari segalanya, itu adalah isyarat bahwa hidup mengajak kita tumbuh, berdamai, dan melangkah tanpa terus menoleh ke...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif"]
+    },
+    {
       title: "Kalau Menikah Membuka Pintu Rezeki, Kenapa Banyak yang Cerai Karena Ekonomi",
       link: "../coretan/menikah-membuka-pintu-rezeki-tapi-kenapa-banyak-yang-cerai.html",
       img: "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_1280.jpg",
