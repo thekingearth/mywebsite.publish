@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Roblox dan Eksistensi: Apa Arti Menjadi Seseorang dalam Dunia Virtual?",
+      link: "../coretan/roblox-dan-eksistensi-menjadi-seseorang-dalam-dunia-virtual.html",
+      img: "https://thumb.viva.id/vivanewsgames/375x211/2025/06/13/684bb6f1858ca-game-roblox_subdomain-ai.jpg",
+      alt: "Tinta Pena Bash Roblox dan Eksistensi: Apa Arti Menjadi Seseorang dalam Dunia Virtual?",
+      description: "Di dunia Roblox, kamu bukan sekadar pemain, tapi kamu bisa jadi apapun, dari tukang roti sampai petualang galaksi. Tapi di balik semua kebebasan itu, muncul pertanyaan eksistensial: siapa sebenarnya “aku” di dunia virtual ini? Ketika identitas bisa dipilih dan diubah sesuka hati, batas antara kenyataan dan imajinasi jadi kabur. Apakah eksistensi di Roblox hanyalah pelarian, atau justru cerminan dari keinginan...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Bila Semuanya Sudah Tidak Seperti Biasanya Maka Terbiasalah Tanpa Semuanya",
       link: "../coretan/bila-semuanya-sudah-tak-seperti-biasanya-maka-terbiasalah-tanpa-semuanya.html",
       img: "https://cdn.pixabay.com/photo/2018/05/13/00/11/girl-3394947_1280.jpg",
