@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Kesederhanaan Bisa Menjaga Segala Komitmenmu Dan Tidak Mengecewakanmu</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Kesederhanaan <span>Bisa Menjaga</span> Segala Komitmenmu Dan <span>Tidak Mengecewakanmu</span></h1>
+      <p class="detail-tanggal">
+        Monday, 11 August 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+          Kecantikan maupun keindahan sejati itu kadang nggak perlu lampu sorot atau tepuk tangan bahkan validasi dari orang lain. Dia bisa terbentuk sendiri tanpa harapan dari sanjungan orang lain, cuma duduk manis di sudut, diam-diam memeluk hati kita dengan rasa yang sulit dijelasin. Nggak perlu ada ambisi untuk pamer, nggak ada desakan untuk diakui, dia cuma hadir, seperti desir angin sore yang tiba-tiba bikin dada kita terasa lebih lapang. Kadang, justru yang tak terucapkan itulah yang paling membekas, semacam gema yang tinggal di relung paling sunyi.
+      </p>
+      <br>
+      <p>
+          Kecantikan dan kesederhanaan itu, kalau dipikir-pikir semacam guru yang nggak pernah marah tapi ajarannya merasuk sampai ke tulang sumsum. Dia nggak butuh kilau atau ramai sekalu untuk bikin kita mengangguk paham. Justru dari hal-hal yang lirih dan abadi, kita belajar bahwa makna nggak selalu datang dari sesuatu yang terlihat megah dan mewah. Ada ketulusan yang begitu murni, sampai-sampai rasanya kita takut mengusiknya, seperti takut menodai permukaan danau yang tenang.
+      </p>
+      <br>
+      <p>
+          Mungkin itu sebabnya, saat kita bertemu dengan kecantikan yang sederhana, hati terasa hangat tapi juga sedikit nyeri. Nyeri karena sadar, dunia ini terlalu sering melewati hal-hal kecil yang sebenarnya punya daya magis luar biasa. Dalam setiap titik nadir hidup, kita bakal mengingat lagi bahwa <span>kemegahan bisa hadir tanpa suara,</span> tanpa ornamen berlebih, cuma lewat tatapan, senyum singkat, atau bahkan diam yang penuh arti.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Kesederhanaan Bisa Menjaga Segala Komitmenmu Dan Tidak Mengecewakanmu">
+      <img src="https://cdn.pixabay.com/photo/2021/05/31/12/47/hiking-6298742_1280.jpg" alt="Tinta Penaku Kesederhanaan Bisa Menjaga Segala Komitmenmu Dan Tidak Mengecewakanmu">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Tidak Semua Yang Berkilau Itu <span>Selau Membahagiakan</span></h2>
+      <p>
+          Jangan terlalu asyik atau sibuk mengejar cahaya yang sangat silau, karena dari semua itu kamu bisa melupakan bahwa ada keindahan yang berdiam di sudut-sudut sederhana, karena sebenarnya mereka telah menunggu untuk kamu sadari. Di sana, ada rasa teduh yang nggak bisa dibeli, semacam oasis di tengah riuhnya kehidupan. Saat kamu mulai belajar mencintai diri sendiri apa adanya dengan segala cacat dan pesona yang berpadu bagai harmoni di dawai gitar, hati terasa lebih legawa. Kamu bakalan paham, <span>dan ingat nggak semua yang berkilau itu membahagiakan, dan nggak semua yang sederhana itu biasa saja.</span>
+      </p>
+      <br>
+      <p>
+          Kesederhanaan bukanlah bentuk menyerah pada nasib, tapi semacam laku eling yang membuat kita tetap teguh pada janji yang pernah kita bisikkan ke hati sendiri. Ia adalah kesahajaan yang tenang namun kokoh, <span>seperti akar pohon yang memeluk tanah tanpa gembar-gembor.</span> Dari sana, kita belajar bahwa yang paling bermakna sering kali tak kasatmata, mereka bisa dilihat dan hadir di tatapan yang tulus, di senyum yang nggak dibuat-buat, atau di diam yang menyimpan seribu pengertian.
+      </p>
+
+      <br>
+      <br>
+      <h2>Jejak Tenang Kesederhanaan <span>Di Tengah Gemerlap</span></h2>
+      <p>
+          Kesederhanaan itu semacam janji yang nggak perlu orasi, tapi selalu menepati ucapannya. Dia nggak butuh sorotan, tapi pelan-pelan memastikan langkah kita tetap terpatri di jalur yang benar. Seperti embun yang melankolis, ia hadir tanpa riuh, namun memberi kehidupan pada daun-daun yang kehausan. Dia nggak memaksa untuk terlihat, tapi kehadirannya selalu terasa menyelusup di sela napas, menenangkan hati yang nyaris goyah.
+      </p>
+      <br>
+      <p>
+          Mencintai kesederhanaan berarti membiasakan hati untuk legawa, tidak mudah gusar, dan tidak gampang silau oleh gemerlap yang dimiliki orang lain. Ia mengajarkan bahwa bahagia tidak selalu identik dengan tumpukan harta atau sorak-sorai pencapaian. Ada keindahan yang berdiam di hal-hal lirih, di tatapan yang tulus, atau bahkan di diam yang penuh makna. Dan mungkin, justru dari situ, kita menemukan versi terbaik dari diri kita sendiri.
+      </p>
+
+      <br>
+      <br>
+      <h2>Menjaga Agar Tidak <span>Mengkhianati Diri Sendiri</span></h2>
+      <p>
+          Meskipun di balik setiap langkah yang tenang selalu ada komitmen yang kadang terasa berat, tapi sejatinya adalah jangkar yang menjaga agar kamu tidak hanyut. Komitmen itu bukan tembok penghalang, tapi sebuah perisai sebagai pelindung yang merangkul di tengah badai. Dia selalu nenangin saat hatimu gamang, selalu membisikan bahwa kamu tetap cukup, bahkan saat dunia seperti menutup pintu. Ada rasa aman yang tak kasatmata, hadir dalam bentuk yang sederhana tapi mengakar.
+      </p>
+      <br>
+      <p>
+          Kesederhanaan seperti ini punya subtilitas yang jarang kita sadari, meskipun ia tidak berisik, tidak menuntut, tapi diam-diam mampu memastikan kita tidak mengkhianati diri sendiri. Ia mengajarkan kita untuk tetap teguh meski godaan datang, dan untuk tetap legawa meski keadaan tidak selalu memihak. Dan mungkin, justru dalam diamnya itulah, <span>ia sedang bekerja paling keras menjaga hati kita agar tetap utuh.</span>
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+          Cintailah kesederhanaanmu, sebab di sanalah letak kekuatan untuk menjaga setiap komitmen yang kamu genggam. Kesederhanaan membuatmu tetap teguh tanpa harus membebani hati, dan menuntun langkahmu agar tak pernah mengecewakan diri sendiri. Kesederhanaan hadir seperti pelindung yang lembut, menjaga tanpa mengekang, merangkul tanpa menyakiti, dan memberi ruang bagi hatimu untuk selalu damai.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
