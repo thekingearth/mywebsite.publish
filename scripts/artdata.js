@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Kesederhanaan Bisa Menjaga Segala Komitmenmu Dan Tidak Mengecewakanmu",
+      link: "../coretan/kesederhanaan-bisa-menjaga-segala-komitmen-dan-tidak-mengecewakan.html",
+      img: "https://cdn.pixabay.com/photo/2021/05/31/12/47/hiking-6298742_1280.jpg",
+      alt: "Tinta Pena Bash Kesederhanaan Bisa Menjaga Segala Komitmenmu Dan Tidak Mengecewakanmu",
+      description: "Mencintai kesederhanaan diri sama artinya dengan menjaga hati agar tetap teduh, jauh dari tusukan kata yang tidak perlu dan tidak berarti, dan bebas dari pertarungan yang tak berarti. Dalam kesementaraan hidup ini, mungkin yang paling layak kita peluk erat adalah rasa cukup itu sendiri, rasa yang membuat kita damai, walaupun saat tidak punya segalanya...",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Roblox dan Eksistensi: Apa Arti Menjadi Seseorang dalam Dunia Virtual?",
       link: "../coretan/roblox-dan-eksistensi-menjadi-seseorang-dalam-dunia-virtual.html",
       img: "https://thumb.viva.id/vivanewsgames/375x211/2025/06/13/684bb6f1858ca-game-roblox_subdomain-ai.jpg",
