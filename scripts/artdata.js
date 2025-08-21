@@ -1,6 +1,14 @@
 
 const artikelData = [
     {
+      title: "Antara Fiksi, Dunia Virtual, Dan Realita Yang Kadang Membosankan",
+      link: "../coretan/antara-fiksi-dunia-virtual-dan-realita-yang-membosankan.html",
+      img: "https://cdn.pixabay.com/photo/2017/10/17/19/11/fantasy-2861815_1280.jpg",
+      alt: "Tinta Pena Bash Antara Fiksi, Dunia Virtual, Dan Realita Yang Kadang Membosankan",
+      description: "Menikmati keindahan imajinasi yang penuh warna, hingga tak sadar larut dalam dunia maya yang memberi ruang untuk jadi siapa saja, atau kembali ke kenyataan yang tak jarang terasa monoton, tapi justru dari kebosanan itulah seseorang banyak disuguhi oleh ajakan untuk lebih peka, seperti menemukan makna kecil yang sering tersembunyi di balik rutinitas....",
+      labels: ["Bangkit dan Bergerak", "Pena dan Kuas", "Perspektif", "Wawasan Tekno"]
+    },
+    {
       title: "Kesederhanaan Bisa Menjaga Segala Komitmenmu Dan Tidak Mengecewakanmu",
       link: "../coretan/kesederhanaan-bisa-menjaga-segala-komitmen-dan-tidak-mengecewakan.html",
       img: "https://cdn.pixabay.com/photo/2021/05/31/12/47/hiking-6298742_1280.jpg",
