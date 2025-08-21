@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/mystyle.css">
+  <link rel="stylesheet" href="style/coretan.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>Antara Fiksi, Dunia Virtual, Dan Realita Yang Kadang Membosankan</title>
+
+  <!-- mystyle -->
+  <style>
+
+  </style>
+
+  <!-- scrip champ -->
+  <script src="../scripts/champ.js"></script>
+  <!-- my aplikasi -->
+  <script src="../scripts/bookitems.js"></script>
+
+</head>
+<body>
+  <!-- navbar start -->
+  <nav class="navbar" x-data>
+    <div class="navbar-menu">
+      <a href="#" @click.prevent="" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+    <div class="logo"></div>
+    <div id="nevbarss"></div>
+    <div class="navbar-extra">
+      <a href="#" id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show="$store.cart.quantity" x-text="$store.cart.quantity"></span>
+      </a>
+    </div>
+
+
+    <!-- shopping cart start -->
+    <div class="shopping-cart">
+      <template x-for="(item, index) in $store.cart.items" x-key="index">
+        <div class="cart-item">
+          <img :src="`../books/${item.img}`" :alt="item.name">
+          <div class="item-detail">
+            <h3 x-text="item.name"></h3>
+            <div class="item-price">
+              <span x-text="rupiah(item.price)"></span>
+              <button id="remove" @click="$store.cart.remove(item.id)">&minus;</button>
+              <span x-text="item.quantity"></span>
+              <button id="add" @click="$store.cart.add(item)">&plus;</button>
+              <span x-text="rupiah(item.total)"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Cart Is Empty</h4>
+      <h4 x-show="$store.cart.items.length" style="text-align: right;">Total = <span x-text="rupiah($store.cart.total)"></span></h4>
+
+      <div class="form-container">
+        <form x-show="$store.cart.items.length" id="checkoutForm">
+          <h5>Costomer Detail</h5>
+
+          <label for="name">
+            <span>Name</span>
+            <input type="text" name="Name" id="name">
+          </label>
+          <label for="email">
+            <span>Email</span>
+            <input type="text" name="Email" id="email">
+          </label>
+          <label for="nohp">
+            <span>No. Hp</span>
+            <input type="number" name="phone" id="phone" autocomplete="off">
+          </label>
+          <button class="checkout-button disabled trigger" type="submit" id="checkout-button" value="checkout">ChekOut</button>
+        </form>
+      </div>
+    </div>
+    <!-- shopping cart end -->
+  </nav>
+  <!-- navbar end -->
+
+  <!-- Hero Section start -->
+  <div id="hero-art"></div>
+  <!-- Hero Section end -->
+
+  <!-- Artikel Section -->
+  <div class="page-artikels">
+    <div class="page-artikel">
+      <h1>Antara Fiksi, Dunia Virtual, Dan Realita <span>Yang Kadang Membosankan</span></h1>
+      <p class="detail-tanggal">
+        Thursday, 21 August 2025
+        <br>By Kin Basari
+      </p>
+      <br>
+      <p>
+          Pernah nggak kamu tuh ngerasa dunia nyata ini terlalu riweh banget, gimana yah rasanya tuh terlalu penuh sama drama yang kadang bikin kepala serasa mau meledak. Kadang rasanya semua orang-orang di sekeliling itu sibuk banget sama urusan-urusan mereka, dan kita cuma bisa atau sekedar berdiri di tengah keramaian tanpa tahu harus ke mana dan ngapain. Terus di saat seperti itu, fiksi dan dunia virtual kerasa kayak oase di tengah gurun eksistensial, semacam tempat yang menenangkan, kenapa bisa nenangin karena di sana dunia yang kerasa super riweh itu bisa sejenak diredam.
+      </p>
+      <br>
+      <p>
+          Di sana, kita bisa bebas jadi siapa saja, ngelakuin apa saja tanpa harus mikirin konsekuensi yang kadang bikin dada sesak napas metaforis. Mau jadi pahlawan super yang tiap hari bisa nyelametin orang-orang bisa banget. Mau jadi penjelajah planet asing yang nggak ada aturan pajak dan lalu lintas, yah silakan saja. Semua batasan seolah larut dengan mudah, diganti jadi sebuah ruang tidak terbatas yang bisa kita bentuk sesuai kemauan sendiri. Rasanya terapiutis, seperti <span>perawatan jiwa yang nggak butuh uang sepeser pun,</span> cuma butuh imajinasi yang mau bekerja.
+      </p>
+      <br>
+      <p>
+          Dan di dunia itu, semua masalah punya akhir yang jelas. Konflik bisa selesai dalam beberapa halaman buku atau satu misi permainan. Nggak ada drama berlarut-larut yang bikin jiwa meriang. Kita bisa nyiptain dunia ideal sendiri, atau tempat di mana kita bisa jadi sutradara, aktor utama, sekaligus penulis takdir. Kadang, itu bukan cuma pelarian, itu semacam pengingat bahwa kita masih bisa mengendalikan sesuatu, setidaknya di semesta yang kita bangun sendiri. Tapi sebelum kita berlarut-larut ngerasa nyaman di dunia virtual kita perlu tahu beberapa hal di bawah ini:
+      </p>
+
+
+      <br>
+      <br>
+      <div class="images-art">
+      <img class="logo-tpb" src="../img/icon.png" alt="Logo Tinta Penaku Antara Fiksi, Dunia Virtual, Dan Realita Yang Kadang Membosankan">
+      <img src="https://cdn.pixabay.com/photo/2017/10/17/19/11/fantasy-2861815_1280.jpg" alt="Tinta Penaku Antara Fiksi, Dunia Virtual, Dan Realita Yang Kadang Membosankan">
+      </div>
+      <br>
+
+      <br>
+      <br>
+      <h2>Ketika Dunia Virtual Mulai <span>Mengambil Nyata</span></h2>
+      <p>
+          Dunia virtual memang sangat seru buat dieksplorisasi, tapi ada satu hal yang sering nggak kita sadari, karena kalau terlalu lama tenggelam di dunia itu bisa bikin kita apatis, alias kehilangan rasa peduli sama dunia nyata. Memang sih, realitas ini keras, sering kali jauh banget dari ekspektasi, dan rasanya pengen kabur aja. Dunia nyata nggak seindah narasi novel atau visual memukau dari dunia virtual. Kadang dia absurd, bikin bingung, dan nyaris nggak pernah ngasih kita jeda buat sekedar bernapas.
+      </p>
+      <br>
+      <p>
+          Masalahnya, kalau kita terus bersembunyi di balik tembok fiksi, lama-lama kita kehilangan koneksi sama orang-orang di sekitar. Kita lupa rasanya ngobrol sambil ketawa lepas, lupa hangatnya pelukan, atau bahkan lupa kalau ada cerita yang cuma bisa ditulis bareng di dunia nyata. Dan di saat itu, kita baru sadar bahwa <span>pelarian yang awalnya menenangkan bisa berubah jadi jarak yang nggak sengaja kita bangun sendiri.</span>
+      </p>
+
+      <br>
+      <br>
+      <h2>Realita Memang Tidak Sempurna <span>Tapi Semua Itu Nyata</span></h2>
+      <p>
+          Padahal dunia nyata ini selalu punya orang-orang yang diam-diam jadi alasan buat kita bertahan. Contohnya keluarga yang menunggu kita pulang, teman yang rindu cerita receh <i>(meskipun suka ngeselin),</i> atau pasangan yang cuma ingin kita hadir sepenuhnya tanpa terpecah oleh layar. Hal-hal kecil seperti ngobrol sambil ngopi, ketawa karena lelucon sepele dan nyeleneh, atau bahkan perdebatan trivial yang bikin hati hangat, ternyata itulah yang bikin hidup ini bisa makin kerasa hidup. Kepedulian dengan segala esensialitas nya bisa dijadiin jembatan sederhana yang bisa membuat dunia nyata nggak lagi kehilangan makna.
+      </p>
+      <br>
+      <p>
+          Kita memang nggak bisa bikin dunia nyata jadi seindah fiksi atau seideal dunia virtual, tapi kita bisa memilih untuk hadir di dalamnya dengan cara yang paling tulus. Peduli pada hal kecil, seperti mendengar dulu tanpa buru-buru membalas, memberi pelukan tulus tanpa alasan, atau sekadar duduk bareng tanpa banyak kata. Dari situ, kita belajar bahwa makna <span>hidup kadang tersembunyi dalam kesederhanaan yang nggak gemerlap tapi justru abadi.</span>
+      </p>
+
+      <br>
+      <br>
+      <h2>Antara Fiksi, Dunia Virtual, Dan <span>Realitas Yang Membosankan</span></h2>
+      <p>
+          Mungkin fiksi dan dunia virtual itu bisa jadi perisai temporer, semacam ruang singgah buat hati yang lelah. Di sana kita bisa bersembunyi, menghirup napas panjang, lalu merasa aman sejenak dari hiruk-pikuk realitas. Tapi mau sejauh apa pun kamu melarikan diri, dunia nyata tetap menunggu dengan segala ketidakteraturan-nya. Kadang ia mudah buat kamu gusar, kadang juga bikin geli, tapi justru dari situlah bisa belajar, kalau hidup itu nggak selalu harus rapi, cukup dijalani sambil tetap tersenyum.
+      </p>
+      <br>
+      <p>
+          Karena sesungguhnya, seni hidup itu bukan menghapus kekacauan, tapi menatanya sedikit demi sedikit, sampai akhirnya kita bisa berdamai dengan riuh yang ada. Fiksi boleh jadi tempat kita mencari euforia, tapi realitaslah yang memberi kita pelukan paling otentik dari orang-orang yang kita sayangi, dengan segala tawa, tangis, dan keberisikan yang nyata. Jadi nikmatilah dunia imajiner itu, tapi jangan lupa pulang, sebab kebahagiaan sejati sering berdiam di tempat yang paling sederhana, di rumah yang penuh kasih.
+      </p>
+
+      <br>
+      <br>
+      <h3 class="note-artikel">Catatan:</h3>
+      <p>
+          Fiksi dan dunia virtual memang sering jadi tempat paling nyaman untuk melarikan diri, seolah di sana hidup terasa lebih indah, lebih sederhana, bahkan lebih adil dari kenyataan. Tapi pada akhirnya, kita tetap harus pulang ke dunia nyata, karena meskipun realita penuh dengan segala riuh dan carut-marutnya, selalu menyimpan pelukan hangat yang nggak bisa digantikan. Di sanalah ada tawa yang tulus, tangis yang jujur, dan orang-orang yang sungguh mencintaimu apa adanya, dan hal-hal yang mungkin tak pernah kita temukan di dunia imajiner mana pun.
+      </p>
+
+
+      <br>
+      <br>
+      <div class="baca-juga">
+        <h2>Baca Juga:</h2>
+        <h3><ul id="related-artikel"></ul>
+        </h3>
+      </div>
+    </div>
+
+    <div class="page-sidebar">
+      <div class="sidebar-artikel">
+        <div id="clocksdb"></div>
+        <div class="label-sidebar">
+          <div id="labels"></div>
+        </div>
+
+        <div class="post">
+          <br><h1>Popular Post</h1><br>
+          <div id="popular-content"></div>
+        </div>
+
+        <div class="sidebarsatu">
+          <h1></h1>
+          <div id="extrasdbsatu"></div>
+        </div>
+
+        <div class="sidebardua">
+          <div id="extrasdbdua"></div>
+        </div>
+
+        <div class="sidebartiga">
+          <div id="extrasdbtiga"></div>
+        </div>
+
+        <div class="sidebarempat">
+          <div id="extrasdbempat"></div>
+        </div>
+
+        <div class="sidebarlima">
+          <div id="extrasdlima"></div>
+        </div>
+
+        <div class="player">
+          <h2 id="songTitle">Opening Track</h2>
+          <p id="artist-song"></p>
+          <br><br><br>
+          <input type="range" id="progress" value="0" style="width: 100%;">
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          <div class="controls">
+            <button id="shuffle"><i data-feather="shuffle"></i></button>
+            <button id="rewind"><i data-feather="rewind"></i></button>
+            <button id="prev"><i data-feather="skip-back"></i></button>
+            <button id="playPause"><i data-feather="play"></i></button>
+            <button id="next"><i data-feather="skip-forward"></i></button>
+            <button id="forward"><i data-feather="fast-forward"></i></button>
+            <button id="repeat"><i data-feather="repeat"></i></button>
+          </div>
+          <audio id="audio" src="https://airinerra.github.io/helloword/playlist/baleylot.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="sidebar-sticky">
+        <div class="sidebarenam">
+          <div id="extrasdbenam"></div>
+        </div>
+        <div id="quote-widget">
+          <button id="new-quote">Next Quote</button>
+          <br><br>
+          <p id="quote-text">
+            Loading...
+          </p>
+        </div>
+        <div class="sidebartujuh">
+          <div id="extrasdbtujuh"></div>
+        </div>
+        <div class="sidebardelapan">
+          <div id="extrasdbdelapan"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="style/coretan.js"></script>
+  <script src="../scripts/myscript.js"></script>
+  <script src="../scripts/popup.js"></script>
+
+  <!-- Footer -->
+  <script>
+    loadNavbar();
+    loadFooter();
+  </script>
+</body>
+</html>
