@@ -1,7 +1,7 @@
 const stocks = [
   "ADRO","AMRT","ASGR","ASII","AUTO","BBCA","BBRI",
   "BRPT","CDIA","COIN","CTRA","EMTK","EXCL","ISAT",
-  "PTRO","ITMG","TLKM","TPIA","UNTR","UNVR"
+  "PTRO","ITMG","SIDO","TLKM","TPIA","UNTR","UNVR"
 ];
 
 const grid = document.getElementById("stockGrid");
