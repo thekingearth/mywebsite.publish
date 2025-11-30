@@ -1,4 +1,3 @@
-<script>
 const stocks = [
   "ADRO","AMRT","ASGR","ASII","AUTO","BBCA","BBRI",
   "BRPT","CDIA","COIN","CTRA","EMTK","EXCL","ISAT",
@@ -38,4 +37,3 @@ stocks.forEach(symbol => {
   grid.appendChild(card);
 
 });
-</script>
