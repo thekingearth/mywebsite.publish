@@ -1,0 +1,41 @@
+
+  @import url(https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap);
+
+    body {
+        font-family: "Nunito", serif;
+        background: #103;
+        padding: 5px;
+    }
+    .idxbash {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #ff0;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 8fr));
+        gap: 7px;
+    }
+    .card {
+        background: #fd0;
+        border-radius: 10px;
+        padding: 1px;
+        box-shadow: 0 4px 12px rgba(25, 9, 32, 0.8);
+    }
+    .tradingview-widget-container {
+      overflow: hidden;
+      position: center;
+      transform: scale(0.94);
+      transform-origin: center;
+      border-radius: 7px;
+    }
+    
+    .tradingview-widget-container iframe {
+    pointer-events: none !important;
+    }
+    
+    .text-paragraph {
+      color: #fff;
+      text-align: center;
+    }
