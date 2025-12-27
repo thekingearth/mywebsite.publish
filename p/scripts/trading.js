@@ -11,7 +11,7 @@
     widget = new TradingView.widget({
       autosize: true,
       symbol: "IDX:" + symbol,
-      interval: "D",
+      interval: "5",
       timezone: "Asia/Jakarta",
       theme: "dark",
       style: "1",
