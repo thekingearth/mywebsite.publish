@@ -1,0 +1,81 @@
+
+    body {
+      margin: 0;
+      background: #0b0f19;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 10px 14px;
+      background: #111827;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      transition: .3s;
+      z-index: 10;
+    }
+
+    header.hidden {
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    input {
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #fc2;
+      width: 100px;
+      font-size: 14px;
+      background-color: #113;
+      color: var(--text);
+      text-transform: uppercase;
+      font-family: var(--body1-font);
+      font-style: italic;
+    }
+
+
+    .loadShare button {
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: none;
+      background: var(--bash);
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: var(--body1-font);
+    }
+
+    .loadShare button:active {
+      transform: translateY(5px);
+    }
+    #chart {
+      height: calc(100vh - 52px);
+      transition: height .3s;
+    }
+
+    #chart.full {
+      height: 100vh;
+    }
+
+    /* 🔥 FLOATING HAMBURGER */
+    .menu-btn {
+      position: fixed;
+      top: 8px;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 5px;
+      background: #fc2;
+      color: #000;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 6px 20px rgba(0,0,0,.4);
+      user-select: none;
+    }
