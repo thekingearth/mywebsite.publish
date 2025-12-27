@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Analisa Saham BEI by Kin Basari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../../styles/rootstyles.css">
+<link rel="stylesheet" href="styles/trading.css">
+  <script src="https://s3.tradingview.com/tv.js"></script>
+</head>
+<body>
+<header id="topHeader">
+  <input 
+    id="symbolInput"
+    placeholder="insert kode"
+    oninput="this.value = this.value.toUpperCase()"
+  onkeydown="if(event.key==='Enter') loadChart()"
+/>
+<div class="loadShare">
+  <button onclick="loadChart()">Search</button>
+</div>
+
+</header>
+
+<div class="menu-btn" onclick="toggleHeader()">☰</div>
+<div id="chart"></div>
+<script src="scripts/trading.js"></script>
+
+</body>
+</html>
