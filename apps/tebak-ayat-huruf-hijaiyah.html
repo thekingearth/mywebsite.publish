@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tebak Ayat Hijaiyah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kavoon&family=Miltonian+Tattoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rum+Raisin&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Sniglet:wght@400;800&display=swap);
+
+@import url(../fonts/misbah.ttf) ;
+@font-face {
+      font-family: 'Bash';
+      src: url('../fonts/misbah.ttf') format('truetype');
+    }
+body {
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(122deg,#000,#005,#060,#611,#000);
+  background-size: 1000% 1000%;
+  animation: gradientMove 10s ease infinite;
+  font-family: 'Bash', serif;
+  direction: rtl;
+}
+
+@keyframes gradientMove{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+.tittle {
+  font-family: "Kavoon", serif;
+  font-style: italic;
+  color: #fff;
+  text-shadow: 2px 3px 3px #000;
+}
+
+.tittle span {
+  color: #fd0;
+}
+.box{
+  width:120px;
+  height:120px;
+  background: #fd0;
+  border:3px solid transparent;
+  border-radius:8px;
+  font-family: "Scheherazade New", serif;
+  font-weight: normal;
+  background:
+    linear-gradient(#fd0,#088) padding-box,
+    linear-gradient(270deg, red, blue,#000 , red) border-box;
+
+  background-size:100% 100%, 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+}
+
+
+.suffle{
+  font-size:60px;
+  font-weight:bold;
+  transition: transform 0.1s linear;
+}
+
+.spin{
+  animation: spin 0.2s linear infinite;
+}
+
+@keyframes spin{
+  from{ transform:rotate(0deg); }
+  to{ transform:rotate(5deg); }
+}
+
+ .click {
+  margin-top:20px;
+  padding:10px 70px;
+  font-family: "Nunito", serif;
+  font-size:16px;
+  border: 2px solid #026;
+  border-radius: 15px;
+  background-color: #fd0;
+  box-shadow: 0 7px #922;
+}
+
+.click:active {
+  background-color: #239;
+  color: #fff;
+  box-shadow: none;
+  transform: translateY(7px);
+  font-size: 0;
+}
+.click:active::after {
+  content: "Waiting";
+  font-size: 16px;
+}
+
+.ayat {
+  font-family: "Scheherazade New", serif;
+  font-weight: normal;
+  font-size: 28px;
+  text-shadow: 2px 3px 3px #000;
+  background-image: linear-gradient(270deg, #fff, #fff, #fd0 , #fd0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+</style>
+</head>
+
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 class="tittle">Tebak Ayat Huruf <span>Hijaiyah</span></h1>
+<br>
+<div class="box">
+  <div id="suffle" class="suffle">ا</div>
+</div>
+
+<br><br>
+
+<button id="click" class="click">Shuffle</button>
+<br>
+<br>
+<br>
+<div id="ayat" class="ayat"></div>
+
+<audio id="musik"></audio>
+<!--
+<script>
+
+const hurufHijaiyah = [
+"ا","ب","ت","ث","ج","ح","خ",
+"د","ذ","ر","ز","س","ش",
+"ص","ض","ط","ظ","ع","غ",
+"ف","ق","ك","ل","م","ن","و","ه","لا","ء","ي"
+];
+
+const ayatData = {
+
+"ا":[
+  "text", "text", "text", "text", "text"
+],
+
+"title":[
+  "text", "text", "text", "text", "text"
+],
+
+"title":[
+  "text", "text", "text", "text", "text"
+],
+"title":[
+  "text", "text", "text", "text", "text"
+],
+"title":[
+  "text", "text", "text", "text", "text"
+],
+"title":[
+  "text", "text", "text", "text", "text"
+],
+
+"title":[
+  "text", "text", "text", "text", "text"
+],
+"title":[
+  "text", "text", "text", "text", "text"
+],
+"ه":[
+  "هُوَالَّذِيْ يُصَوِّرُكُمْ", "text", "text", "text", "text"
+],
+"title":[
+  "text", "text", "text", "text", "text"
+],
+"title":[
+  "text", "text", "text", "text", "text"
+],
+"title":[
+  "text", "text", "text", "text", "text"
+]
+};
+
+const suf = document.getElementById("suffle");
+const btn = document.getElementById("click");
+const ayatBox = document.getElementById("ayat");
+
+btn.addEventListener("click", function(){
+
+  suf.classList.add("spin");
+
+  let interval = setInterval(function(){
+
+    let random = Math.floor(Math.random()*hurufHijaiyah.length);
+    suf.textContent = hurufHijaiyah[random];
+
+  },80);
+
+  setTimeout(function(){
+
+    clearInterval(interval);
+    suf.classList.remove("spin");
+
+    let finalRandom = Math.floor(Math.random()*hurufHijaiyah.length);
+    let hurufFinal = hurufHijaiyah[finalRandom];
+
+    suf.textContent = hurufFinal;
+
+    tampilkanAyat(hurufFinal);
+
+  },3000);
+
+});
+
+function tampilkanAyat(huruf){
+
+  if(!ayatData[huruf]){
+    ayatBox.innerHTML = "Belum ada data ayat untuk huruf ini";
+    return;
+  }
+
+  let daftarAyat = ayatData[huruf];
+  let randomAyat = Math.floor(Math.random()*daftarAyat.length);
+
+  ayatBox.innerHTML = daftarAyat[randomAyat];
+
+}
+
+</script>
+-->
+
+<script>
+
+const hurufHijaiyah = [
+"ا","ب","ت","ث","ج","ح","خ",
+"د","ذ","ر","ز","س","ش",
+"ص","ض","ط","ظ","ع","غ",
+"ف","ق","ك","ل","م","ن","و","ه","لا","ء","ي"
+];
+
+// daftar file audio
+const daftarMusik = [
+"../sound/press.mp3",
+"../sound/correct.mp3",
+"../sound/sound01.mp3",
+"../sound/sound02.mp3",
+"../sound/sound03.mp3",
+"../sound/sound04.mp3",
+"../sound/sound05.mp3",
+"../sound/sound06.mp3",
+"../sound/sound07.mp3",
+"../sound/sound08.mp3",
+"../sound/sound09.mp3",
+"../sound/sound10.mp3",
+"../sound/sound11.mp3"
+];
+
+const suf = document.getElementById("suffle");
+const btn = document.getElementById("click");
+const musik = document.getElementById("musik");
+
+btn.addEventListener("click", function(){
+
+  suf.classList.add("spin");
+
+  let interval = setInterval(function(){
+
+    let random = Math.floor(Math.random()*hurufHijaiyah.length);
+    suf.textContent = hurufHijaiyah[random];
+
+  },80);
+
+  setTimeout(function(){
+
+    clearInterval(interval);
+    suf.classList.remove("spin");
+
+    let finalRandom = Math.floor(Math.random()*hurufHijaiyah.length);
+    suf.textContent = hurufHijaiyah[finalRandom];
+
+    // pilih musik secara acak
+    let randomMusik = Math.floor(Math.random()*daftarMusik.length);
+    musik.src = daftarMusik[randomMusik];
+
+    musik.currentTime = 0;
+    musik.play();
+
+  },3000);
+
+});
+
+</script>
+
+</body>
+</html>
